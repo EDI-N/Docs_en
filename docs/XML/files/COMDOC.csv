@@ -32,7 +32,7 @@ Field name,Type,Format,Description
 Товарна накладна (Goods invoice)
 Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
 Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)" 
+Претензія (Claim)"
 ТипСхеми,О,0 or 1,0 - standard scheme (with previous agreement); 1 - non-standard scheme (without previous agreement)
 КодТипуДокументу,М,«001» ... «030»,"Document type code:
 001 => Договір (Agreement)
