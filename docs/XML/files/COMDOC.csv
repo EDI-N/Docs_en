@@ -621,7 +621,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 СальдоКінцевеКредит,M,Decimal (#.00), Final balance Credit
 **ЗагальнеПоКонтрагенту**,,,Global contractor info (the end of the block)
 **ЗагальнеПоКонтрагентам**,,,Global contractors info (the end of the block)
-**ВсьогоПоДокументу**,О,Total values of positions per document (block start),
+**ВсьогоПоДокументу**,О,,Total values of positions per document (block start),
 СумаБезПДВ,О,Decimal (#.00),Sum without VAT
 ПДВ,О,Decimal (#.00),VAT amount per unit of goods (services)
 Сума,О,Decimal (#.00),Sum   
