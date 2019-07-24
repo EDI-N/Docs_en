@@ -34,7 +34,7 @@ Field name,Type,Format,Description
 Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
 Претензія (Claim)"
 ТипСхеми,О,0 or 1,0 - standard scheme (with previous agreement); 1 - non-standard scheme (without previous agreement)
-КодТипуДокументу,М,«001» ... «030»,"Document type code:
+КодТипуДокументу,М,001 ... 030,"Document type code:
 001 => Договір (Agreement)
 002 => Додаткова угода (Supplementary Agreement)
 003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
@@ -125,8 +125,8 @@ Field name,Type,Format,Description
 Товарна накладна (Goods invoice)
 Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
 Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)" 
-КодТипуДокументу,М,«001» ... «030»,"Document type code:
+Претензія (Claim)"
+КодТипуДокументу,М,001 ... 030,"Document type code:
 001 => Договір (Agreement)
 002 => Додаткова угода (Supplementary Agreement)
 003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
@@ -191,8 +191,8 @@ Field name,Type,Format,Description
 Товарна накладна (Goods invoice)
 Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
 Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)" 
-КодТипуДокументу,М,«001» ... «030»,"Document type code:
+Претензія (Claim)"
+КодТипуДокументу,М,001 ... 030,"Document type code:
 001 => Договір (Agreement)
 002 => Додаткова угода (Supplementary Agreement)
 003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
@@ -319,9 +319,9 @@ GLN,M,Integer (13),Counterparty Global Location Number (GLN)
 ЗаявленаКількість,О,Decimal (#.00),Declared quantity of commodity items 
 ПрийнятаКількість,О,Decimal (#.00),Accepted quantity of commodity items
 ПунктНавантаженняАдреса,М,String (200),"Load Address
-For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""ПунктРозвантаженняАдреса"" fills in one cell through a hyphen"
+For COMDOC 018 ""ПунктНавантаженняАдреса""і ""ПунктРозвантаженняАдреса""fills in one cell through a hyphen"
 ПунктРозвантаженняАдреса,М,String (200),"Unloading address
-For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""ПунктРозвантаженняАдреса"" fills in one cell through a hyphen"
+For COMDOC 018 ""ПунктНавантаженняАдреса""і ""ПунктРозвантаженняАдреса""fills in one cell through a hyphen"
 ТЗНомерАвто,М,String (10),State Vehicle Number
 ТЗНомерПричіп,О,String (10),Trailer national number
 НомерТТН,М,String (20),Waybill number
@@ -352,9 +352,9 @@ For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""Пунк�
 НомерЗамовлення,О,String (20),Order number
 ШтрихкодТрансУпаковкиSSCC,О,"Number (14, 18)",Barcode for transport packaging (Serial shipping container code)
 МаршрутВідправлено, , ,"Departure goods place
-(For COMDOC 023 items ""Відправлено"" and ""Отримано"" fills in one cell ""Маршрут"")"
+(For COMDOC 023 items ""Відправлено""and ""Отримано""fills in one cell ""Маршрут"")"
 МаршрутОтримано, , ,"Receipt goods place
-(For COMDOC 023 items ""Відправлено"" and ""Отримано"" fills in one cell ""Маршрут"")"
+(For COMDOC 023 items ""Відправлено""and ""Отримано""fills in one cell ""Маршрут"")"
 Кількість,М,Decimal (#.00),Number of units 
 Вага,О, ,Weight 
 Сума,О,Decimal (#.00),The sum of the price of the goods
@@ -410,7 +410,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""Пунк�
 ОдиницяВиміру,О,String (10) ,Units
 **ДоПовернення**, , ,Return (the end of the block)
 **Взаєморозрахунки**,O, ,Mutual settlements (block start)
-**Документ**,M,Min=1; Max=1,"Document (block start). Field may be absent with Non-conformance Report" 
+**Документ**,M,Min=1; Max=1,"Document (block start). Field may be absent with Non-conformance Report"
 Дата,M,Date (YYYY-MM-DD),"Operation date. Field may be absent with Non-conformance Report"
 Номер,M,String (20),"Field may be absent with Non-conformance Report"
 Найменування,O,String (50),"Document type"
@@ -480,8 +480,8 @@ For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""Пунк�
 Товарна накладна (Goods invoice)
 Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
 Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)" 
-КодТипуДокументу,М,«001» ... «030»,"Document type code:
+Претензія (Claim)"
+КодТипуДокументу,М,001 ... 030,"Document type code:
 001 => Договір (Agreement)
 002 => Додаткова угода (Supplementary Agreement)
 003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
