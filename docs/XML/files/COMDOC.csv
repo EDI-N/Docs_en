@@ -1,0 +1,629 @@
+Field name,Type,Format,Description
+**ЕлектроннийДокумент**,М, ,The beginning of the document
+**Заголовок**,М,Number of occurrences unit: Min = 1; Max = 1, Heading (block start)
+НомерДокументу,М,String (16),Document number
+ТипДокументу,М,String (50),"Types of documents:
+Договір (Agreement)
+Додаткова угода (Supplementary Agreement)
+Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+Акт про виявлені недоліки (Defects Certificate)
+Видаткова накладна (Delivery document/Goods Delivery Note)
+Прибуткова накладна (Receive document/Goods Received Note)
+Товарна специфікація (Specification of products)
+Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
+Накладна (Waybill)
+Повідомлення про повернення (Notice of Return)
+Накладна на повернення (Return Delivery Note)
+Акт виконаних робіт (Works Acceptance Certificate)
+Акт звірки взаєморозрахунків (Reconciliation Certificate)
+Акт взаємозаліку (Offset Certificate)
+Рахунок-фактура (Invoice)
+Акт виявлення невідповідностей (Discrepancy Certificate)
+Акт наданих послуг (Services Acceptance Certificate)
+Звіт комітенту (Report to Consigner)
+Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+Анулювання (Cancellation)
+Специфікація послуг по перевезеннях (Transportation services specification)
+Звіт комітенту по еквайрингу (Acquiring accountant report)
+Рахунок по еквайрингу (Acquiring account)
+Зведена специфікація послуг (Summary of services)
+Товарна накладна (Goods invoice)
+Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
+Претензія (Claim)" 
+ТипСхеми,О,0 or 1,0 - standard scheme (with previous agreement); 1 - non-standard scheme (without previous agreement)
+КодТипуДокументу,М,«001» ... «030»,"Document type code:
+001 => Договір (Agreement)
+002 => Додаткова угода (Supplementary Agreement)
+003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+004 => Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+005 => Акт про виявлені недоліки (Defects Certificate)
+006 => Видаткова накладна (Delivery document/Goods Delivery Note)
+007 => Прибуткова накладна (Receive document/Goods Received Note)
+008 => Товарна специфікація (Specification of products)
+009 => Акт невідповідності (Certificate of Nonconformity/Non-conformance Report)
+010 => Накладна (Waybill)
+011 => Повідомлення про повернення (Notice of Return)
+012 => Накладна на повернення (Return Delivery Note)
+013 => Акт виконаних робіт (Works Acceptance Certificate)
+014 => Акт звірки взаєморозрахунків (Reconciliation Certificate)
+015 => Акт взаємозаліку (Offset Certificate)
+016 => Рахунок-фактура (Invoice)
+017 => Акт про виявлення невідповідностей (Discrepancy Certificate)
+018 => Акт наданих послуг (Services Acceptance Certificate)
+019 => Анулювання (Report to Consigner)
+020 => Звіт комітенту (Report to Consigner)
+021 => Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+022 => Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+023 => Специфікація послуг по перевезеннях (Transportation services specification)
+024 => Звіт комітенту по еквайрингу (Acquiring accountant report)
+025 => Рахунок по еквайрингу (Acquiring account)
+026 => Зведена специфікація послуг (Summary of services)
+027 => Товарна накладна (Goods invoice)
+028 => Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+029 => Акт звірки взаєморозрахунків зведений (Act of mutual settlements reconciliation)
+030 => Претензія (Claim)"
+ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
+ПричинаАнулювання, , ,"The reason why the document is canceled"
+ДатаАнулювання, ,Date (YYYY-MM-DD),"The date from which the document is considered canceled"
+НомерЗамовлення,О,String (20),Order number
+ПроцентШтрафу,О, ,Percentage of fine
+ДатаЗамовлення,О,Date (YYYY-MM-DD),Date of the order
+НомерДоговоруПоставки,О, ,"Delivery contract number"
+ДатаДоговоруПоставки,О,Date (YYYY-MM-DD),"Delivery contract date"
+ПлановаДатаДоставки, ,Date (YYYY-MM-DD),Planned delivery date 
+МісцеСкладання, , ,Place of document assembly
+НомерТовУзгодження,О,String (16),Product adjustment number 
+ДатаТовУзгодження,О,Date (YYYY-MM-DD),Product adjustment date 
+НомерКонтракту,О,String (16),Contract number
+ДатаКонтракту,О,Date (YYYY-MM-DD),Contract date
+**ТермінДії**,О,Number of occurrences unit: Min = 0; Max = 1,"Document validity period (block start)"
+Початок,М,Date (YYYY-MM-DD),Start date of the document
+Кінець,М,Date (YYYY-MM-DD),End date of the document
+**ТермінДії**, , ,"Document validity period (the end of the block)"
+**ТермінПідпису**,О, ,"Document sign period (block start)"
+Початок, ,Date (YYYY-MM-DD),Date of the beginning of the sign period
+Кінець, ,Date (YYYY-MM-DD),Date of the end of the sign period
+**ТермінПідпису**, , ,"Document sign period (the end of the block)"
+**ПеріодНаданняПослуг**, , ,"Services provisioning term (block start)"
+Початок,О,Date (YYYY-MM-DD),"Date of the beginning of the provisioning period "
+Кінець,О,Date (YYYY-MM-DD),"Date of the end of the provisioning period"
+**ПеріодНаданняПослуг**, , ,"Services provisioning term (the end of the block)"
+МісцеСкладання,О,String (100),Place of document assembly
+Коментар,О,String (50),Comment; The maximum number of tags is 10. Each next tag identifier (ID) is incremented by one.
+**ДокПідстава**,О,Number of occurrences unit: Min = 0; Max = 10, Document basis on (block start)
+НомерДокументу,М,String (30),Number of a basic document
+ТипДокументу,М,String (50),"Types of documents:
+Договір (Agreement)
+Додаткова угода (Supplementary Agreement)
+Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+Акт про виявлені недоліки (Defects Certificate)
+Видаткова накладна (Delivery document/Goods Delivery Note)
+Прибуткова накладна (Receive document/Goods Received Note)
+Товарна специфікація (Specification of products)
+Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
+Накладна (Waybill)
+Повідомлення про повернення (Notice of Return)
+Накладна на повернення (Return Delivery Note)
+Акт виконаних робіт (Works Acceptance Certificate)
+Акт звірки взаєморозрахунків (Reconciliation Certificate)
+Акт взаємозаліку (Offset Certificate)
+Рахунок-фактура (Invoice)
+Акт виявлення невідповідностей (Discrepancy Certificate)
+Акт наданих послуг (Services Acceptance Certificate)
+Звіт комітенту (Report to Consigner)
+Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+Анулювання (Cancellation)
+Специфікація послуг по перевезеннях (Transportation services specification)
+Звіт комітенту по еквайрингу (Acquiring accountant report)
+Рахунок по еквайрингу (Acquiring account)
+Зведена специфікація послуг (Summary of services)
+Товарна накладна (Goods invoice)
+Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
+Претензія (Claim)" 
+КодТипуДокументу,М,«001» ... «030»,"Document type code:
+001 => Договір (Agreement)
+002 => Додаткова угода (Supplementary Agreement)
+003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+004 => Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+005 => Акт про виявлені недоліки (Defects Certificate)
+006 => Видаткова накладна (Delivery document/Goods Delivery Note)
+007 => Прибуткова накладна (Receive document/Goods Received Note)
+008 => Товарна специфікація (Specification of products)
+009 => Акт невідповідності (Certificate of Nonconformity/Non-conformance Report)
+010 => Накладна (Waybill)
+011 => Повідомлення про повернення (Notice of Return)
+012 => Накладна на повернення (Return Delivery Note)
+013 => Акт виконаних робіт (Works Acceptance Certificate)
+014 => Акт звірки взаєморозрахунків (Reconciliation Certificate)
+015 => Акт взаємозаліку (Offset Certificate)
+016 => Рахунок-фактура (Invoice)
+017 => Акт про виявлення невідповідностей (Discrepancy Certificate)
+018 => Акт наданих послуг (Services Acceptance Certificate)
+019 => Анулювання (Report to Consigner)
+020 => Звіт комітенту (Report to Consigner)
+021 => Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+022 => Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+023 => Специфікація послуг по перевезеннях (Transportation services specification)
+024 => Звіт комітенту по еквайрингу (Acquiring accountant report)
+025 => Рахунок по еквайрингу (Acquiring account)
+026 => Зведена специфікація послуг (Summary of services)
+027 => Товарна накладна (Goods invoice)
+028 => Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+029 => Акт звірки взаєморозрахунків зведений (Act of mutual settlements reconciliation)
+030 => Претензія (Claim)"
+ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
+**ДокПідстава**, , ,Document basis on (the end of the block)
+**ДокументЩоАнулюється**, , ,"The canceled document (block start)"
+НомерДокументу,М,String (20),"Number of the canceled document"
+ТипДокументу, , ,"Types of documents:
+Договір (Agreement)
+Додаткова угода (Supplementary Agreement)
+Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+Акт про виявлені недоліки (Defects Certificate)
+Видаткова накладна (Delivery document/Goods Delivery Note)
+Прибуткова накладна (Receive document/Goods Received Note)
+Товарна специфікація (Specification of products)
+Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
+Накладна (Waybill)
+Повідомлення про повернення (Notice of Return)
+Накладна на повернення (Return Delivery Note)
+Акт виконаних робіт (Works Acceptance Certificate)
+Акт звірки взаєморозрахунків (Reconciliation Certificate)
+Акт взаємозаліку (Offset Certificate)
+Рахунок-фактура (Invoice)
+Акт виявлення невідповідностей (Discrepancy Certificate)
+Акт наданих послуг (Services Acceptance Certificate)
+Звіт комітенту (Report to Consigner)
+Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+Анулювання (Cancellation)
+Специфікація послуг по перевезеннях (Transportation services specification)
+Звіт комітенту по еквайрингу (Acquiring accountant report)
+Рахунок по еквайрингу (Acquiring account)
+Зведена специфікація послуг (Summary of services)
+Товарна накладна (Goods invoice)
+Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
+Претензія (Claim)" 
+КодТипуДокументу,М,«001» ... «030»,"Document type code:
+001 => Договір (Agreement)
+002 => Додаткова угода (Supplementary Agreement)
+003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+004 => Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+005 => Акт про виявлені недоліки (Defects Certificate)
+006 => Видаткова накладна (Delivery document/Goods Delivery Note)
+007 => Прибуткова накладна (Receive document/Goods Received Note)
+008 => Товарна специфікація (Specification of products)
+009 => Акт невідповідності (Certificate of Nonconformity/Non-conformance Report)
+010 => Накладна (Waybill)
+011 => Повідомлення про повернення (Notice of Return)
+012 => Накладна на повернення (Return Delivery Note)
+013 => Акт виконаних робіт (Works Acceptance Certificate)
+014 => Акт звірки взаєморозрахунків (Reconciliation Certificate)
+015 => Акт взаємозаліку (Offset Certificate)
+016 => Рахунок-фактура (Invoice)
+017 => Акт про виявлення невідповідностей (Discrepancy Certificate)
+018 => Акт наданих послуг (Services Acceptance Certificate)
+019 => Анулювання (Report to Consigner)
+020 => Звіт комітенту (Report to Consigner)
+021 => Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+022 => Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+023 => Специфікація послуг по перевезеннях (Transportation services specification)
+024 => Звіт комітенту по еквайрингу (Acquiring accountant report)
+025 => Рахунок по еквайрингу (Acquiring account)
+026 => Зведена специфікація послуг (Summary of services)
+027 => Товарна накладна (Goods invoice)
+028 => Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+029 => Акт звірки взаєморозрахунків зведений (Act of mutual settlements reconciliation)
+030 => Претензія (Claim)"
+ДатаДокументу,М,Date (YYYY-MM-DD),"Date of the canceled document "
+**ДокументЩоАнулюється**, , ,"The canceled document (the end of the block)"
+**Відхилив**, , ,"Essential elements of the company which declining document (block start)"
+СтатусКонтрагента,М,String (30),"Counterparty status:
+Покупець (Buyer)
+Отримувач (Recipient)
+Продавець (Seller)
+Замовник (Customer)
+Виконавець (Performer)
+Перевізник (Carrier)
+Платник (Payer)
+Підрядник (Contractor)
+Відправник (Sender)
+Вантажоодержувач (Consignee)
+Вантажовідправник (Consignor)
+Експедитор (Forwarder)
+Клієнт (Client)
+Консультант (Consultant)"
+ВидОсоби,М,String (20),"Type of institution:
+Legal entity
+Physical person"
+НазваКонтрагента,М,String (50),Counterparty name
+КодКонтрагента,М,String (8),"Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)"
+**ІПН**, , ,Individual tax number (block start)
+СвідоцтвоПДВ,О,Integer (10),VAT certificate
+МФО,О,String,MFI bank code 
+Телефон,О,String (20),Contractor's phone number
+**ІПН**, , ,Individual tax number (the end of the block)
+**Відхилив**, , ,"Essential elements of the company which declining document (the end of the block)"
+**Заголовок**, , ,Heading (the end of the block)
+**Сторони**,M,Number of occurrences unit: Min = 1; Max = 1,"The parties between whom the document is concluded (block start)"
+**Контрагент**,М,Number of occurrences unit: Min = 2; Max = 10,"Contractor (block start). The first one indicates the sender's block, the second - the recipient"
+СтатусКонтрагента,М,String (30),"Counterparty status:
+Покупець (Buyer)
+Отримувач (Recipient)
+Продавець (Seller)
+Замовник (Customer)
+Виконавець (Performer)
+Перевізник (Carrier)
+Платник (Payer)
+Підрядник (Contractor)
+Відправник (Sender)
+Вантажоодержувач (Consignee)
+Вантажовідправник (Consignor)
+Експедитор (Forwarder)
+Клієнт (Client)
+Консультант (Consultant)"
+ВидОсоби,М,String (20),"Type of institution:
+Legal entity
+Physical person"
+НазваКонтрагента,М,String (50),Counterparty name
+КодКонтрагента,М,String (8),"Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)"
+ІПН,М,String (12),Counterparty individual tax number
+СвідоцтвоПДВ,О,Integer (10),Counterparty VAT Certificate 
+МФО,О,Integer (6),Counterparty MFI bank code 
+ПоточРах,О,String ,Current counterpart bill 
+Банк, , ,Counterparty bank
+Телефон,О,String (20),Phone number
+GUID,О,String (36),Counterparty Global Unique Identifier (GUID)
+GLN,M,Integer (13),Counterparty Global Location Number (GLN)
+ВОсобіДиректора, , ,Director
+**ЮрАдреса**,О, ,Counterparty legal address (block start)
+Індекс,М,Integer (5),Post index
+Область,О,String (50),Region
+Місто,М,String (50),City
+Вулиця,М,String (50),Street
+**ЮрАдреса**, , ,Counterparty legal address (the end of the block) 
+**ФактАдреса**,О, ,Counterparty actual address (block start)
+Індекс,М,Integer (5),Post index
+Область,О,String (50),Region
+Місто,М,String (50),City
+Вулиця,М,String (50),Street
+**ФактАдреса**, , ,Counterparty actual address (the end of the block) 
+**ПоштАдреса**,О, ,Counterparty mailing address (block start)
+Індекс,М,Integer (5),Post index
+Область,О,String (50),Region
+Місто,М,String (50),City
+Вулиця,М,String (50),Street
+**ПоштАдреса**, , ,Counterparty mailing address (the end of the block)
+**Контрагент**, , ,Counterparty (the end of the block)
+**Сторони**, , ,"The parties between whom the document is concluded (the end of the block)"
+**Параметри**,О, ,"Parameters (block start). The field provides free value. This parameter is used to transfer additional information that is not included in the specification"
+Параметр,O,String (50),Parameter. Maximum number of tags is 99. Each next tag identifier (ID) is incremented by one.
+**Параметри**,О, ,Parameters (the end of the block)
+Текст,O,String,"Text. The tag is designed to transmit large amount of text (the text of a contract, an additional agreement, etc.).  Text size is unlimited. All text should be embedded in the construction: <![CDATA[text]]>"
+**Таблиця**,О,Number of occurrences unit: Min = 0; Max = 1,Table (block start)
+**Рядок**,M,Number of occurrences unit: Min = 1;Max = 9999,Row (block start). Each next tag identifier (ID) is incremented by one
+НомПоз,М,Integer (3),Position number
+Штрихкод,О,Integer (13),Maximum number of tags is 99. Each next tag identifier (ID) is incremented by one.
+АртикулПокупця,О,String (10),Buyer article 
+АртикулПродавця,О,String (10),Seller article
+КодУКТЗЕД,О,Integer (10),Code of goods according to Ukrainian Classification of Goods of Foreign Economic Activity; for COMDOC 006 value is in 4...10  characters range
+Найменування,М,String (50),Commodity item name
+ЗаявленаКількість,О,Decimal (#.00),Declared quantity of commodity items 
+ПрийнятаКількість,О,Decimal (#.00),Accepted quantity of commodity items
+ПунктНавантаженняАдреса,М,String (200),"Load Address
+For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""ПунктРозвантаженняАдреса"" fills in one cell through a hyphen"
+ПунктРозвантаженняАдреса,М,String (200),"Unloading address
+For COMDOC 018 ""ПунктНавантаженняАдреса"" і ""ПунктРозвантаженняАдреса"" fills in one cell through a hyphen"
+ТЗНомерАвто,М,String (10),State Vehicle Number
+ТЗНомерПричіп,О,String (10),Trailer national number
+НомерТТН,М,String (20),Waybill number
+ДатаТТН,М,Date (YYYY-MM-DD),Waybill date
+МасаБрутто,М,Decimal (#.00),Goods weight
+ДовжинаВантажу,О,Decimal (#.00),Length of cargo 
+ОбємВантажу,О,Decimal (#.00),The volume of cargo
+КількістьМісць,О,Decimal (#.00),"Number of cargo places, pallets "
+СтрокТранспортування,О,Decimal (#.00),"Delivery time in days"
+Примітка,О,String (200),Note
+МісцеПроведенняРоботи,О, ,Work Place
+КількістьОдВЯщику,О, ,Number of units in the box (шт/кг) 
+ФактичнаКількістьЯщиків,О, ,The actual number of boxes 
+КількістьПоНакладній,О, ,Amount on consignment note
+ПоставляємаКількість,О, ,Number of delivered units
+ОдиницяВиміру,О,String (10),Units
+БазоваЦіна,О,Decimal (#.00),Price per unit without VAT
+ПДВ,О,Decimal (#.00),VAT amount per unit of goods (services)
+Ціна,О,Decimal (#.00),Price per unit with VAT
+ЦінаФакт, , ,Actual price
+ЦінаПостачальника, , ,Supplier price
+ЦінаПоДокументу, , ,Price per document
+СумаНакладна, , ,On the waybill amount
+СумаПрийнято, , ,Accepted Amount
+Номер,О, ,Number
+Дата,О,Date (YYYY-MM-DD),Date
+НакладнаНомер, , ,Waybill number
+НомерЗамовлення,О,String (20),Order number
+ШтрихкодТрансУпаковкиSSCC,О,"Number (14, 18)",Barcode for transport packaging (Serial shipping container code)
+МаршрутВідправлено, , ,"Departure goods place
+(For COMDOC 023 items ""Відправлено"" and ""Отримано"" fills in one cell ""Маршрут"")"
+МаршрутОтримано, , ,"Receipt goods place
+(For COMDOC 023 items ""Відправлено"" and ""Отримано"" fills in one cell ""Маршрут"")"
+Кількість,М,Decimal (#.00),Number of units 
+Вага,О, ,Weight 
+Сума,О,Decimal (#.00),The sum of the price of the goods
+СумаСтрахування,О, ,Insurance sum
+Платник,О, ,Payer Full Name 
+Відправник,О, ,Sender Full Name
+Отримувач,О, ,Recipient Full Name
+АдресаДоставки,О, ,Delivery address
+ЗонаДоставки,О, ,Delivery area
+КількістьПромо,О, ,Number of promotional items
+СтавкаПДВ, , ,VAT rate
+Текст,О,String (100),Additional Information
+**ІД**, , ,Position IDs (block start)
+НомПоз,М,Integer (3),Position number
+Штрихкод,О,Integer (13),Bar code
+**ІД**, , ,Position IDs (the end of the block)
+АртикулПокупця,О,String (10),Buyer article 
+АртикулПродавця,О,String (10),Seller article
+КодУКТЗЕД, , ,Code of goods according to Ukrainian Classification of Goods of Foreign Economic Activity
+Найменування,М,String (50),Commodity item name
+МісцеПроведенняРоботи, , ,Work Place
+ЗаявленаКількість,О,Decimal (#.00),Declared quantity of commodity items
+ПрийнятаКількість,О,Decimal (#.00),Accepted quantity of commodity items
+БазоваЦіна, , ,Price per unit without VAT
+Ціна, , ,Price
+**ВсьогоПоРядку**,О,Number of occurrences unit: Min = 0; Max = 1,Total amount per line (block start)
+СумаБезПДВ,О,Decimal (#.00),Amount without VAT
+СумаПДВ,О,Decimal (#.00),VAT amount
+Сума,О,Decimal (#.00),Sum
+СумаЗнижки, , ,The sum of the discount
+ПроцентЗнижки,О,Integer (10),Percentage of discount
+ДатаПродажу,О,Date (YYYY-MM-DD),Date of sale
+ФактЦенаПродажи, , ,Actual selling price
+ФактЦенаВозвПокуп, , ,Actual return purchase price
+ФактЦенаВозвКомис, , ,Actual commission upon return
+СумКомитенту, , ,Total committent
+СумаВинагороди, , ,Total remuneration
+СумаНестач, ,Decimal (#.00),Total lack
+СумаШтрафу, ,Decimal (#.00),Fine amount
+Вага, , ,Weight
+**ВсьогоПоРядку**, , ,Total amount per line (the end of the block)
+СумаПДВ,О,Decimal (#.00),VAT amount
+**Надлишки**,О, ,Surplus (block start)
+Кількісні,М,Decimal (#.00),Quantitative surpluses
+Цінові,М,Decimal (#.00),Price surpluses
+**Надлишки**, , ,Surplus (the end of the block)
+**Нестачі**,О, ,Lack (block start)
+Кількісні,М,Decimal (#.00),Quantitative lacks
+Цінові,М,Decimal (#.00),Price lacks
+**Нестачі**, , ,Lack (the end of the block)
+**ДоПовернення**, , ,Return (block start)
+Кількість,М,Decimal (#.00),Number of product units to return
+ОдиницяВиміру,О,String (10) ,Units
+**ДоПовернення**, , ,Return (the end of the block)
+**Взаєморозрахунки**,O, ,Mutual settlements (block start)
+**Документ**,M,Min=1; Max=1,"Document (block start). Field may be absent with Non-conformance Report" 
+Дата,M,Date (YYYY-MM-DD),"Operation date. Field may be absent with Non-conformance Report"
+Номер,M,String (20),"Field may be absent with Non-conformance Report"
+Найменування,O,String (50),"Document type"
+ВидОперації,O,String (20),"Operation type. For processor initiator only"
+Підрозділ,O,String (30),"Division. For processor initiator only"
+НомерПодатковоїНакладної,O,String (20),"Tax bill number. For processor initiator only"
+СумаПодатковоїНакладної,O,Decimal (#.00),"Tax bill amount. For processor initiator only"
+НомерДоговору,O,String (20),"Contract number"
+Дебет,O,Decimal (#.00),"Within one contractor in document fills <Debit> or <Credit> only"
+Кредит,O,Decimal (#.00),"Within one contractor in document fills <Debit> or <Credit> only"
+Текст,O,String (100),"Comment on the position"
+**Документ**,,,Document (the end of the block)
+**Взаєморозрахунки**, , ,Mutual settlements (the end of the block)
+**ЦінаРегулярна**, , ,Regular price (block start)
+ЦінаБезПДВ, , ,Price without VAT
+ЦінаЗПДВ, , ,Price with VAT
+ЦінаЗіЗнижкоюБезПДВ, , ,Discount price without VAT
+ЦінаЗіЗнижкоюЗПДВ, , ,Discount price with VAT
+**ЦінаРегулярна**, , ,Regular price (the end of the block)
+**СтараЦіна**, , ,Old price (block start)
+ЦінаБезПДВ, , ,Price without VAT
+ЦінаЗПДВ, , ,Price with VAT
+ЦінаЗіЗнижкоюБезПДВ, , ,Discount price without VAT
+ЦінаЗіЗнижкоюЗПДВ, , ,Discount price with VAT
+**СтараЦіна**, , ,Old price (the end of the block)
+**ПромоЦіна**, , ,Promotional price (block start)
+ЦінаБезПДВ, , ,Price without VAT
+ЦінаЗПДВ, , ,Price with VAT
+**ПромоЦіна**, , ,Promotional price (the end of the block)
+**ВсьогоПоДокументу**, , ,Total by Document (block start)
+СумаБезПДВ,О,Decimal (#.00),Sum without VAT for all positions  
+ПДВ, , ,VAT amount for all positions
+Сума,О,Decimal (#.00),Sum of all positions
+ВсьогоНадлишків, , ,Total surplus for all positions
+ВсьогоНестач, , ,Total lack for all positions
+Дебет, , ,Total debit for all positions
+Кредит, , ,Total credit for all positions
+**ВсьогоПоДокументу**, , ,Total by Document (the end of the block)
+НомерДокументу,М,String (20),Document number
+ТипДокументу,М,String (50),"Types of documents:
+Договір (Agreement)
+Додаткова угода (Supplementary Agreement)
+Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+Акт про виявлені недоліки (Defects Certificate)
+Видаткова накладна (Delivery document/Goods Delivery Note)
+Прибуткова накладна (Receive document/Goods Received Note)
+Товарна специфікація (Specification of products)
+Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
+Накладна (Waybill)
+Повідомлення про повернення (Notice of Return)
+Накладна на повернення (Return Delivery Note)
+Акт виконаних робіт (Works Acceptance Certificate)
+Акт звірки взаєморозрахунків (Reconciliation Certificate)
+Акт взаємозаліку (Offset Certificate)
+Рахунок-фактура (Invoice)
+Акт виявлення невідповідностей (Discrepancy Certificate)
+Акт наданих послуг (Services Acceptance Certificate)
+Звіт комітенту (Report to Consigner)
+Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+Анулювання (Cancellation)
+Специфікація послуг по перевезеннях (Transportation services specification)
+Звіт комітенту по еквайрингу (Acquiring accountant report)
+Рахунок по еквайрингу (Acquiring account)
+Зведена специфікація послуг (Summary of services)
+Товарна накладна (Goods invoice)
+Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
+Претензія (Claim)" 
+КодТипуДокументу,М,«001» ... «030»,"Document type code:
+001 => Договір (Agreement)
+002 => Додаткова угода (Supplementary Agreement)
+003 => Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
+004 => Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
+005 => Акт про виявлені недоліки (Defects Certificate)
+006 => Видаткова накладна (Delivery document/Goods Delivery Note)
+007 => Прибуткова накладна (Receive document/Goods Received Note)
+008 => Товарна специфікація (Specification of products)
+009 => Акт невідповідності (Certificate of Nonconformity/Non-conformance Report)
+010 => Накладна (Waybill)
+011 => Повідомлення про повернення (Notice of Return)
+012 => Накладна на повернення (Return Delivery Note)
+013 => Акт виконаних робіт (Works Acceptance Certificate)
+014 => Акт звірки взаєморозрахунків (Reconciliation Certificate)
+015 => Акт взаємозаліку (Offset Certificate)
+016 => Рахунок-фактура (Invoice)
+017 => Акт про виявлення невідповідностей (Discrepancy Certificate)
+018 => Акт наданих послуг (Services Acceptance Certificate)
+019 => Анулювання (Report to Consigner)
+020 => Звіт комітенту (Report to Consigner)
+021 => Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
+022 => Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
+023 => Специфікація послуг по перевезеннях (Transportation services specification)
+024 => Звіт комітенту по еквайрингу (Acquiring accountant report)
+025 => Рахунок по еквайрингу (Acquiring account)
+026 => Зведена специфікація послуг (Summary of services)
+027 => Товарна накладна (Goods invoice)
+028 => Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
+029 => Акт звірки взаєморозрахунків зведений (Act of mutual settlements reconciliation) (Act of mutual settlements reconciliation)
+030 => Претензія (Claim)"
+ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
+Індекс,М,Integer (5),Post index
+Область,О,String (50),Region
+Місто,М,String (50),City
+Вулиця,М,String (50),Street
+Текст,О,String (100),Text (Additional Information)
+ОдиницяВиміру,О,String (10) ,Units
+ПДВ,О,Decimal (#.00),VAT amount per unit (goods/services)
+СумаБезПДВ,О,Decimal (#.00),Amount without VAT
+Сума,О,Decimal (#.00),Sum
+Кількісні, , ,Quantitative
+Цінові, , ,Price
+**Причина**,O,Number of occurrences unit: Min = 0; Max = 1,Reason for return (block start)
+Код,M,Integer (3),"Return reason codes:
+1-Corrupt
+2-Defect
+3-Broken
+4-Price discrepancy
+5-No order
+6-Not reached
+7-No documents
+8-Rearrangement
+9-Barcode mismatch
+10-Absence in the database
+11-Non-commodity appearance
+12-Curve package
+13-Vacuum depressurization
+14-Over order
+15-Name mismatch
+16-Weight mismatch
+17-No certificates
+18-No shelf life
+19-No veterinary certificate
+20-No excise stamps
+21-No information for buyers
+22-No recommended price for tobacco products
+23-No manufacturing date
+24-No deadline for implementation
+25-Surplus
+26-Short term
+27-Terminated
+28-Log data
+29-Palletisation"
+Опис,O,String (50),Name of the return reason 
+Кількість,M,Decimal (#.00),Number of items to be returned
+ОдиницяВиміру,  ,String (10),Units
+НаСуму,O, ,Total cost of items to be returned
+**Причина**, , ,Reason for return (the end of the block)
+**ДоПовернення**,О, ,"Goods to be returned (block start)"
+Код,M,Integer (3),"Return reason codes:
+1-Corrupt
+2-Defect
+3-Broken
+4-Price discrepancy
+5-No order
+6-Not reached
+7-No documents
+8-Rearrangement
+9-Barcode mismatch
+10-Absence in the database
+11-Non-commodity appearance
+12-Curve package
+13-Vacuum depressurization
+14-Over order
+15-Name mismatch
+16-Weight mismatch
+17-No certificates
+18-No shelf life
+19-No veterinary certificate
+20-No excise stamps
+21-No information for buyers
+22-No recommended price for tobacco products
+23-No manufacturing date
+24-No deadline for implementation
+25-Surplus
+26-Short term
+27-Terminated
+28-Log data
+29-Palletisation"
+Опис,О,String (50),Name of the return reason 
+НаСуму,О, ,Total cost of items to be returned
+Кількість,М,Decimal (#.00),Number of items to be returned
+ОдиницяВиміру,М,String (10),Units
+**ПричинаПовернення**,О, ,The reason for goods returning (block start)
+Код,М,String (3),Return reason codes: 12E - The goods are returned according to the terms of the contract
+Опис,О,String (30),Name of the return reason 
+**ПричинаПовернення**, , ,The reason for goods returning (the end of the block)
+**ДоПовернення**, , ,"Goods to be returned (the end of the block)"
+**РозходженняПоРядку**, , ,Divergence in a row (block start)
+Сума,О,Decimal (#.00),Total
+ЦінаНеПрийнята, , ,Divergence price
+КількістьНеПрийнята, , ,Divergence amount
+СумаНеПрийнята, , ,Total divergence
+**РозходженняПоРядку**, , ,Divergence in a row (the end of the block)
+ЦінаПостачальника, , ,Supplier price
+Текст,О,String (100),Text (Additional Information)
+**Рядок**, , ,Row (the end of the block)
+**Таблиця**, , ,Table (the end of the block)
+**ЗагальнеПоКонтрагентам**,M,Min=1; Max=1, Global contractors info (block start)
+**ЗагальнеПоКонтрагенту**,M,Min=2; Max=2,Global contractor info. Field mandatory for initiator (block start)
+Текст,O,String (100),Text (Additional Information)
+СальдоПочатковеДебет,M,Decimal (#.00), Balance Initial Debit
+СальдоПочатковеКредит,M,Decimal (#.00), Balance Initial Credit
+ОборотиЗаПеріодДебет,M,Decimal (#.00), Turnovers Per Period Debit
+ОборотиЗаПеріодКредит,M,Decimal (#.00), Turnovers Per Period Credit
+СальдоКінцевеДебет,M,Decimal (#.00), Final balance Debit
+СальдоКінцевеКредит,M,Decimal (#.00), Final balance Credit
+**ЗагальнеПоКонтрагенту**,,,Global contractor info (the end of the block)
+**ЗагальнеПоКонтрагентам**,,,Global contractors info (the end of the block)
+**ВсьогоПоДокументу**,О,Total values of positions per document (block start),
+СумаБезПДВ,О,Decimal (#.00),Sum without VAT
+ПДВ,О,Decimal (#.00),VAT amount per unit of goods (services)
+Сума,О,Decimal (#.00),Sum   
+**ВсьогоПоДокументу**,О, ,Total values of positions per document (the end of the block)
+**ЕлектроннийДокумент**,О, ,End of document

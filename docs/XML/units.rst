@@ -1,0 +1,2 @@
+Units of measurement:
+"г" - "g", "кг" - "kg", "л" - "l", "м" - "m", "мм" - "mm", "м2" - "m2", "м3" - "m3", "шт" - "pieces", "кор" - "boxes", "пач" - "packs", "піддон" - "pallet", "пак" - "pack", "штука дрібна" - "small piece", "uauzd_MIL", "пляш" - "bottle", "рул" - "roll", "послуга" - "service", "uauzd_CMT", "грн" - "UAH", "ящ" - box"", "Пар" - "pair", "год." - "hour", "пог.м" - "linear meter", "компл" - "set", "Тонна" - "ton", "Блок" - "bloc", "Набір" - "set", "паков" - "packaging", "банк" - "cup", "од" - "unit", 
