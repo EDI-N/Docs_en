@@ -1,4 +1,4 @@
-Field name,Type,Format,Description
+Field name,Type [1]_,Format,Description
 **ORDRSP**, , ,The beginning of the document
 NUMBER,M,String (16),Order Confirmation Number
 DATE,M,Date (YYYY-MM-DD),Document date
@@ -51,7 +51,7 @@ POSITIONNUMBER,M,Positive number,"Commodity item number (The sequence number of 
 PRODUCT,M,"Number (8, 10, 14)",Product barcode
 PRODUCTIDBUYER,O,String (16),Item in customer database
 PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
-ORDRSPUNIT,O,String (3),Units
+ORDRSPUNIT,O,String (3),Units [2]_
 DESCRIPTION,O,String (70),Product description
 PRICE,O,Decimal,Product price
 PRICEWITHVAT,O,Decimal,Product price with VAT
@@ -79,4 +79,4 @@ PACKINGUNIT,O,Positive number,Packer
 **PACKING**, , ,Packaging (the end of the block)
 **POSITION**, , ,Commodity items (the end of the block)
 **HEAD**, , ,End of the main block
-**ORDRSP**, , ,End of document
+**ORDRSP**, , ,End of the document

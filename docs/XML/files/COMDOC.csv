@@ -1,4 +1,4 @@
-Field name,Type,Format,Description
+Field name,Type [1]_,Format,Description
 **ЕлектроннийДокумент**,М, ,The beginning of the document
 **Заголовок**,М,Number of occurrences unit: Min = 1; Max = 1, Heading (block start)
 НомерДокументу,М,String (16),Document number
@@ -337,7 +337,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 ФактичнаКількістьЯщиків,О, ,The actual number of boxes 
 КількістьПоНакладній,О, ,Amount on consignment note
 ПоставляємаКількість,О, ,Number of delivered units
-ОдиницяВиміру,О,String (10),Units
+ОдиницяВиміру,О,String (10),Units [2]_
 БазоваЦіна,О,Decimal (#.00),Price per unit without VAT
 ПДВ,О,Decimal (#.00),VAT amount per unit of goods (services)
 Ціна,О,Decimal (#.00),Price per unit with VAT
@@ -407,7 +407,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 **Нестачі**, , ,Lack (the end of the block)
 **ДоПовернення**, , ,Return (block start)
 Кількість,М,Decimal (#.00),Number of product units to return
-ОдиницяВиміру,О,String (10) ,Units
+ОдиницяВиміру,О,String (10) ,Units [2]_
 **ДоПовернення**, , ,Return (the end of the block)
 **Взаєморозрахунки**,O, ,Mutual settlements (block start)
 **Документ**,M,Min=1; Max=1,"Document (block start). Field may be absent with Non-conformance Report"
@@ -557,7 +557,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 29-Palletisation"
 Опис,O,String (50),Name of the return reason 
 Кількість,M,Decimal (#.00),Number of items to be returned
-ОдиницяВиміру,  ,String (10),Units
+ОдиницяВиміру,  ,String (10),Units [2]_
 НаСуму,O, ,Total cost of items to be returned
 **Причина**, , ,Reason for return (the end of the block)
 **ДоПовернення**,О, ,"Goods to be returned (block start)"
@@ -594,7 +594,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 Опис,О,String (50),Name of the return reason 
 НаСуму,О, ,Total cost of items to be returned
 Кількість,М,Decimal (#.00),Number of items to be returned
-ОдиницяВиміру,М,String (10),Units
+ОдиницяВиміру,М,String (10),Units [2]_
 **ПричинаПовернення**,О, ,The reason for goods returning (block start)
 Код,М,String (3),Return reason codes: 12E - The goods are returned according to the terms of the contract
 Опис,О,String (30),Name of the return reason 
@@ -626,4 +626,4 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 ПДВ,О,Decimal (#.00),VAT amount per unit of goods (services)
 Сума,О,Decimal (#.00),Sum   
 **ВсьогоПоДокументу**,О, ,Total values of positions per document (the end of the block)
-**ЕлектроннийДокумент**,О, ,End of document
+**ЕлектроннийДокумент**,О, ,End of the document

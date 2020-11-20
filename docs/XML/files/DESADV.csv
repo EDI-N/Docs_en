@@ -1,4 +1,4 @@
-Field name,Type,Format,Description
+Field name,Type [1]_,Format,Description
 **DESADV**, , ,The beginning of the document
 NUMBER,М,String (16),Shipping Notification Number
 DATE,М,Date (YYYY-MM-DD),Document date
@@ -51,13 +51,13 @@ PRODUCT,M,"Number (8, 10, 14)",Product barcode
 PRODUCTIDBUYER,O,String (16),Item in customer database
 PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
 DELIVEREDQUANTITY,М,Positive number,Delivery quantity
-DELIVEREDUNIT,О,String (3),Units
+DELIVEREDUNIT,О,String (3),Units [2]_
 ORDEREDQUANTITY,О,Positive number,Ordered quantity
-ORDERUNIT,O,String (3),Units
+ORDERUNIT,O,String (3),Units [2]_
 SSCC,O,Number (18),Serial Shipping Container Code
 PARTYNAME,O,String(70),Manufacturer name
 INVOICEDQUANTITY,O,Positive number,Invoiced quantity
-INVOICEUNIT,O,String (3),Units
+INVOICEUNIT,O,String (3),Units [2]_
 AMOUNT,O,Decimal,Sum of goods (without VAT)
 AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
 PORTAL_CERT,О,String (30),Certificate number
@@ -99,4 +99,4 @@ URL,O,String (70),"second and subsequent hash links to scanned copies with EDS. 
 **POSITION**, , ,Commodity items (the end of the block)
 **PACKINGSEQUENCE**, , ,Work with commodity positions (the end of the block)
 **HEAD**, , ,End of the main block
-**DESADV**, , ,End of document
+**DESADV**, , ,End of the document

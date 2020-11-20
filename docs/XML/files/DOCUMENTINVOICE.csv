@@ -1,0 +1,103 @@
+Field name,Type [1]_,Format,Description
+**Document-Invoice**,,, The beginning of the document
+**Invoice-Header**, М,, Start of the main block
+InvoiceNumber, М, Number (15), Invoice number
+InvoiceDate, М, Date (YYYY-MM-DD), Invoice date
+InvoiceCurrency, М, String (3), Currency
+InvoicePostDate, O, Date (YYYY-MM-DD), Invoice dispatch date
+InvoicePostTime, O, Час (год: хв), Invoice dispatch time
+DocumentFunctionCode, М,TN/CTN,"Document type code:
+TN - invoice (consignment note)
+CTN - corrective invoice (consignment note)"
+ContractNumber, О, String (16), Supply contract number
+ContractDate, М, Date (YYYY-MM-DD), Contract date
+**Invoice-Header**,,, End of the main block
+**Invoice-Reference**,,, Document basis (the beginning of the block)
+**Order**,,, Замовлення (the beginning of the block)
+BuyerOrderNumber, О, Number (6-10), Order number
+BuyerOrderDate, О, Date (YYYY-MM-DD), Order date
+**Order**,,, Order (the end of the block)
+**TaxInvoice**, М,, Tax invoice (the beginning of the block)
+TaxInvoiceNumber, М, String (35), Tax invoice number
+TaxInvoiceDate, М, Date (YYYY-MM-DD), Tax invoice date (must coincide with the date of the consignment note)
+**TaxInvoice**,,, Tax invoice (the end of the block)
+**DespatchAdvice**, М,, Shipment notification (the beginning of the block)
+DespatchAdviceNumber, М, String (16), Shipment notification number
+**DespatchAdvice**,,, Shipment notification (the end of the block)
+**ReceivingAdvice**,,, Receiving advice (the beginning of the block)
+ReceivingAdviceNumber, М, String (16),"Receiving advice number (RECADV). In case of adjustment of return, the number of the act on return should be specified"
+DeliveryDate, O, Date (YYYY-MM-DD),"Delivery date. In case of adjustment of the return, the date of the act of return should be specified"
+**ReceivingAdvice**,,, Receiving advice (the end of the block)
+**Invoice-Reference**,,, Document basis (the end of the block)
+**Invoice-Parties**,,, Counterparties (the beginning of the block)
+**Buyer**,,, Buyer (the beginning of the block)
+ILN, М, Number (13), Buyer GLN
+TaxID, М, String (35), Buyer tax identification number
+UtilizationRegisterNumber, М, String (35), Buyer USREOU
+Name, М, String (175), Buyer name
+StreetAndNumber, М, String (35), Street and number of the buyer
+CityName, М, String (35), Buyer city name
+PostalCode, М, String (9), Buyer postal code
+Country, O, String (3), Buyer country code (ISO 3166)
+PhoneNumber, М, String (35), Buyer phone number
+**Buyer**,,, Buyer (the end of the block)
+**Seller**,,, Seller (the beginning of the block)
+ILN, М, Number (13), Seller GLN
+TaxID, М, String (35), Seller tax identification number
+CodeByBuyer, М, String (35), Supply contract number
+UtilizationRegisterNumber, М, String (35), Seller USREOU
+Name, М, String (175), Seller name
+StreetAndNumber, М, String (140), Street and number of the seller
+CityName, М, String (35), Seller city name
+PostalCode, М, String (9), Seller postal code
+Country, O, String (3), Seller country code (ISO 3166)
+PhoneNumber, М, String (35), Seller phone number
+**Seller**,,, Seller (the end of the block)
+**DeliveryPoint**, M,, Delivery point (the beginning of the block)
+ILN, М, Number (13), Delivery point GLN (METRO)
+DeliveryPlace, М, String (35), Delivery point code (should not exceed two symbol)
+**DeliveryPoint**,,, Delivery point (the end of the block)
+**Invoicee**,,, Bill (the beginning of the block)
+ILN, M, Number (13), GLN to bill
+**Invoicee**,,, Bill (the end of the block)
+**Payer**,,, Payer (the beginning of the block)
+ILN, M, Number (13), Payer GLN
+**Payer**,,, Payer (the end of the block)
+**Invoice-Parties**,,, Counterparties (the end of the block)
+**Invoice-Lines**,,, Consignment note lines (the beginning of the block)
+**Line**,,, Line (the beginning of the block)
+**Line-Item**,,, Commodity position (the beginning of the block)
+LineNumber, М, Integer, Line number
+EAN, М, Number (14), Product barcode
+BuyerItemCode, О, String (16), Article in the buyer's database
+ExternalItemCode, M, String (4-10), Product code (УКТ ЗЕД - Ukrainian classification of goods of foreign economic activity)
+ItemDescription, М, String (210), Product description
+InvoiceQuantity, M, Positive number, Ordered quantity (invoiced quantity of goods)
+UnitOfMeasure, О, String (3), Units of measurement [2]_
+InvoiceUnitNetPrice, M, Positive number, The price of one unit without VAT
+TaxRate, M, Positive number,"Tax rate (20%, 7%, 0%)"
+TaxCategoryCode, M, E / S,"Tax category code:
+E - exempt from paying tax
+S - standard tax"
+TaxAmount, M, Positive number, Amount of VAT per item = sum of amounts without VAT on items * tax rate (rounded to 2 symbols)
+NetAmount, M, Positive number, Total without VAT (calculating)
+**Line-Item**,,, Commodity position (the end of the block)
+**Line**,,, Line (the end of the block)
+**Invoice-Lines**,,, Consignment note lines (the end of the block)
+**Invoice-Summary**,,, Total (the beginning of the block)
+TotalLines, M, Integer, The document number lines 
+TotalNetAmount, M, Positive number, Total amount without VAT
+TotalTaxAmount, M, Positive number, Amount of VAT
+TotalGrossAmount, M, Positive number, Total amount including VAT
+**Tax-Summary**,,, Taxes (the beginning of the block)
+**Tax-Summary-Line**,,, Taxes line (the beginning of the block)
+TaxRate, M, Positive number, "Tax rate (20%, 7%, 0%)"
+TaxCategoryCode, M, E / S,"Tax category code:
+E - exempt from paying tax
+S - standard tax"
+TaxAmount, M, Positive number, Amount of tax for each tax category
+TaxableAmount, M, Positive number, Taxable amount for the selected tax category
+**Tax-Summary-Line**,,, Taxes line (the end of the block)
+**Tax-Summary**,,, Taxes (the end of the block)
+**Invoice-Summary**,,, Total (the end of the block)
+**Document-Invoice**,,, End of the document
