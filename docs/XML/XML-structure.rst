@@ -5,10 +5,6 @@ XML Specifications
 
 The specification describes the fields XML-documents, which are used in EDI-N electronic data exchange platform.
 
-Field type abbreviation:
-– M (mandatory);
-– O (optional).
-
 ---------
 
 .. contents:: Contents:
@@ -23,8 +19,6 @@ Order (document ORDER)
   :widths:  40, 7, 12, 41
   :header-rows: 1
 
-.. include:: units.rst
-
 ---------
 
 Order Confirmation (document ORDRSP)
@@ -35,8 +29,6 @@ Order Confirmation (document ORDRSP)
   :widths:  40, 7, 12, 41
   :header-rows: 1
 
-.. include:: units.rst
-
 ---------
 
 Shipping notice (document DESADV)
@@ -46,8 +38,6 @@ Shipping notice (document DESADV)
   :file: files/DESADV.csv
   :widths:  40, 7, 12, 41
   :header-rows: 1
-
-.. include:: units.rst
 
 ---------
 
