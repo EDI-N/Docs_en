@@ -1,4 +1,4 @@
-Field name,Type,Format,Description
+Field name,Type [1]_,Format,Description
 **ORDER**, , ,The beginning of the document
 DOCUMENTNAME,М,Positive number,Title of the document (220 — order)
 NUMBER,М,String (50),Order number
@@ -72,7 +72,7 @@ PRODUCTIDBUYER,O,String (16),Item in customer database
 BUYERPARTNUMBER,О,String (16),Internal system number of the article in buyer database
 ORDEREDQUANTITY,M,Positive number,Ordered quantity
 QUANTITYOFCUINTU,О,Positive number,Amount in a package
-ORDERUNIT,О,String (3),Units
+ORDERUNIT,О,String (3),Units [2]_
 QUANTITYOFPACKS,О,Positive number,Number of packages
 ORDERPRICE,O,Decimal,Product price without VAT
 PRICEWITHVAT,O,Decimal,Product price with VAT
@@ -117,4 +117,4 @@ PACKINGUNIT,O,Positive number,Packer
 **PACKING**, , ,Packaging (the end of the block)
 **POSITION**, , ,Commodity items (the end of the block)
 **HEAD**, , ,End of the main block
-**ORDER**, , ,End of document
+**ORDER**, , ,End of the document

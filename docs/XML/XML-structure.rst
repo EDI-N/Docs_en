@@ -59,7 +59,25 @@ Commercial document (document COMDOC)
   :widths:  40, 7, 12, 41
   :header-rows: 1
 
+---------
 
-.. include:: units.rst
+Consignment note (DOCUMENTINVOICE)
+====================================
+
+.. csv-table:: DOCUMENTINVOICE - Consignment note. The document can be created on the basis of RECADV
+  :file: files/DOCUMENTINVOICE.csv
+  :widths:  40, 7, 12, 41
+  :header-rows: 1
+
+-------------------------
+
+.. [#] The definition of an abbreviated notation:
+
+   * M (mandatory);
+   * O (optional).
+
+.. [#] Units of measurement: "г", "кг", "л", "м", "мм", "м2", "м3", "шт", "кор", "пач", "піддон", "пак", "штука дрібна", "uauzd_MIL", "пляш", "рул", "послуга", "uauzd_CMT", "грн", "ящ", "Пар", "год.", "пог.м", "компл", "Тонна", "Блок", "Набір", "паков", "банк", "од"
+
+
 
 
