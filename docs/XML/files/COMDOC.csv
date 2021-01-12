@@ -66,6 +66,7 @@ Field name,Type [1]_,Format,Description
 029 => Акт звірки взаєморозрахунків зведений (Act of mutual settlements reconciliation)
 030 => Претензія (Claim)"
 ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
+ТермінОплати,O,Date (YYYY-MM-DD),Payment term (date)
 ПричинаАнулювання, , ,"The reason why the document is canceled"
 ДатаАнулювання, ,Date (YYYY-MM-DD),"The date from which the document is considered canceled"
 НомерЗамовлення,О,String (20),Order number
