@@ -73,7 +73,7 @@ BuyerItemCode, О, String (16), Article in the buyer's database
 ExternalItemCode, M, String (4-10), Product code (УКТ ЗЕД - Ukrainian classification of goods of foreign economic activity)
 ItemDescription, М, String (210), Product description
 InvoiceQuantity, M, Positive number, Ordered quantity (invoiced quantity of goods)
-UnitOfMeasure, О, String (3), Units of measurement [2]_
+UnitOfMeasure, О, String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 InvoiceUnitNetPrice, M, Positive number, The price of one unit without VAT
 TaxRate, M, Positive number,"Tax rate (20%, 7%, 0%)"
 TaxCategoryCode, M, E / S,"Tax category code:
