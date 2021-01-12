@@ -6,6 +6,8 @@ DELIVERYDATE,М,Date (YYYY-MM-DD),Delivery date
 DELIVERYTIME,O,Time (hh:mm),Delivery time
 ORDERNUMBER,M,String (50),Order number
 ORDERDATE,М,Date (YYYY-MM-DD),Order date
+ORDRSPNUMBER,O,String (16),Order confirmation number
+ORDRSPDATE,O,Date (YYYY-MM-DD),Order confirmation date
 DELIVERYNOTENUMBER,М,String (16),Invoice number
 DELIVERYNOTEDATE,М,Date (YYYY-MM-DD),Invoice date
 RECIPTYPE,О,String (1),"Available values:
@@ -14,6 +16,8 @@ RECIPTYPE,О,String (1),"Available values:
 SUPPLIERORDENUMBER,O,String (35),Order number in the supplier's accounting system
 SUPPLIERORDERDATE,O,Date (YYYY-MM-DD),Shipment notification date
 INFO,O,String (70),Free text
+PAYMENTTERM,O,Date (YYYY-MM-DD),Deadline for payment for goods
+SHIPMENTS,O,String (1),Transportation
 CAMPAIGNNUMBER,O,String (70),Supply Agreement Number
 TRANSPORTQUANTITY,O,Positive number,Machines quantity
 TRANSPORTMARK,O,String (70),Transport mark
@@ -48,16 +52,17 @@ HIERARCHICALID,М,Positive number,Packing Hierarchy Number
 **POSITION**, , ,Commodity items (the beginning of the block)
 POSITIONNUMBER,M,Positive number,"Commodity item number (The sequence number of the item in the document (1, 2, 3, 4... n))"
 PRODUCT,M,"Number (8, 10, 14)",Product barcode
-PRODUCTIDBUYER,O,String (16),Item in customer database
 PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
+IDPRODUCER,O,String (8),Manufacturer code
+PRODUCTIDBUYER,O,String (16),Item in customer database
 DELIVEREDQUANTITY,М,Positive number,Delivery quantity
-DELIVEREDUNIT,О,String (3),Units [2]_
+DELIVEREDUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 ORDEREDQUANTITY,О,Positive number,Ordered quantity
-ORDERUNIT,O,String (3),Units [2]_
+ORDERUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 SSCC,O,Number (18),Serial Shipping Container Code
 PARTYNAME,O,String(70),Manufacturer name
 INVOICEDQUANTITY,O,Positive number,Invoiced quantity
-INVOICEUNIT,O,String (3),Units [2]_
+INVOICEUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 AMOUNT,O,Decimal,Sum of goods (without VAT)
 AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
 PORTAL_CERT,О,String (30),Certificate number
