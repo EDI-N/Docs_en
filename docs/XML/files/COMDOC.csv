@@ -2,37 +2,7 @@ Field name,Type [1]_,Format,Description
 **ЕлектроннийДокумент**,М, ,The beginning of the document
 **Заголовок**,М,Number of occurrences unit: Min = 1; Max = 1, Heading (block start)
 НомерДокументу,М,String (16),Document number
-ТипДокументу,М,String (50),"Types of documents:
-Договір (Agreement)
-Додаткова угода (Supplementary Agreement)
-Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
-Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
-Акт про виявлені недоліки (Defects Certificate)
-Видаткова накладна (Delivery document/Goods Delivery Note)
-Прибуткова накладна (Receive document/Goods Received Note)
-Товарна специфікація (Specification of products)
-Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
-Накладна (Waybill)
-Повідомлення про повернення (Notice of Return)
-Накладна на повернення (Return Delivery Note)
-Акт виконаних робіт (Works Acceptance Certificate)
-Акт звірки взаєморозрахунків (Reconciliation Certificate)
-Акт взаємозаліку (Offset Certificate)
-Рахунок-фактура (Invoice)
-Акт виявлення невідповідностей (Discrepancy Certificate)
-Акт наданих послуг (Services Acceptance Certificate)
-Звіт комітенту (Report to Consigner)
-Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
-Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
-Анулювання (Cancellation)
-Специфікація послуг по перевезеннях (Transportation services specification)
-Звіт комітенту по еквайрингу (Acquiring accountant report)
-Рахунок по еквайрингу (Acquiring account)
-Зведена специфікація послуг (Summary of services)
-Товарна накладна (Goods invoice)
-Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
-Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)"
+ТипДокументу,М,String (50),`Types of documents <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 ТипСхеми,О,0 or 1,0 - standard scheme (with previous agreement); 1 - non-standard scheme (without previous agreement)
 КодТипуДокументу,М,001 ... 034,`Document type code <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
@@ -66,73 +36,13 @@ Field name,Type [1]_,Format,Description
 Коментар,О,String (50),Comment; The maximum number of tags is 10. Each next tag identifier (ID) is incremented by one.
 **ДокПідстава**,О,Number of occurrences unit: Min = 0; Max = 10, Document basis on (block start)
 НомерДокументу,М,String (30),Number of a basic document
-ТипДокументу,М,String (50),"Types of documents:
-Договір (Agreement)
-Додаткова угода (Supplementary Agreement)
-Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
-Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
-Акт про виявлені недоліки (Defects Certificate)
-Видаткова накладна (Delivery document/Goods Delivery Note)
-Прибуткова накладна (Receive document/Goods Received Note)
-Товарна специфікація (Specification of products)
-Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
-Накладна (Waybill)
-Повідомлення про повернення (Notice of Return)
-Накладна на повернення (Return Delivery Note)
-Акт виконаних робіт (Works Acceptance Certificate)
-Акт звірки взаєморозрахунків (Reconciliation Certificate)
-Акт взаємозаліку (Offset Certificate)
-Рахунок-фактура (Invoice)
-Акт виявлення невідповідностей (Discrepancy Certificate)
-Акт наданих послуг (Services Acceptance Certificate)
-Звіт комітенту (Report to Consigner)
-Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
-Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
-Анулювання (Cancellation)
-Специфікація послуг по перевезеннях (Transportation services specification)
-Звіт комітенту по еквайрингу (Acquiring accountant report)
-Рахунок по еквайрингу (Acquiring account)
-Зведена специфікація послуг (Summary of services)
-Товарна накладна (Goods invoice)
-Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
-Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)"
+ТипДокументу,М,String (50),`Types of documents <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 КодТипуДокументу,М,001 ... 034,`Document type code <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
 **ДокПідстава**, , ,Document basis on (the end of the block)
 **ДокументЩоАнулюється**, , ,"The canceled document (block start)"
 НомерДокументу,М,String (20),"Number of the canceled document"
-ТипДокументу, , ,"Types of documents:
-Договір (Agreement)
-Додаткова угода (Supplementary Agreement)
-Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
-Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
-Акт про виявлені недоліки (Defects Certificate)
-Видаткова накладна (Delivery document/Goods Delivery Note)
-Прибуткова накладна (Receive document/Goods Received Note)
-Товарна специфікація (Specification of products)
-Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
-Накладна (Waybill)
-Повідомлення про повернення (Notice of Return)
-Накладна на повернення (Return Delivery Note)
-Акт виконаних робіт (Works Acceptance Certificate)
-Акт звірки взаєморозрахунків (Reconciliation Certificate)
-Акт взаємозаліку (Offset Certificate)
-Рахунок-фактура (Invoice)
-Акт виявлення невідповідностей (Discrepancy Certificate)
-Акт наданих послуг (Services Acceptance Certificate)
-Звіт комітенту (Report to Consigner)
-Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
-Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
-Анулювання (Cancellation)
-Специфікація послуг по перевезеннях (Transportation services specification)
-Звіт комітенту по еквайрингу (Acquiring accountant report)
-Рахунок по еквайрингу (Acquiring account)
-Зведена специфікація послуг (Summary of services)
-Товарна накладна (Goods invoice)
-Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
-Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)"
+ТипДокументу, , ,`Types of documents <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 КодТипуДокументу,М,001 ... 034,`Document type code <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 ДатаДокументу,М,Date (YYYY-MM-DD),"Date of the canceled document "
 **ДокументЩоАнулюється**, , ,"The canceled document (the end of the block)"
@@ -361,37 +271,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 Кредит, , ,Total credit for all positions
 **ВсьогоПоДокументу**, , ,Total by Document (the end of the block)
 НомерДокументу,М,String (20),Document number
-ТипДокументу,М,String (50),"Types of documents:
-Договір (Agreement)
-Додаткова угода (Supplementary Agreement)
-Протокол розбіжностей (Protocol of Disagreements/Discrepancy Report)
-Акт приймання продукції (товару) за кількістю та якістю (Handover Certificate of Products (Goods) by quantity and quality)
-Акт про виявлені недоліки (Defects Certificate)
-Видаткова накладна (Delivery document/Goods Delivery Note)
-Прибуткова накладна (Receive document/Goods Received Note)
-Товарна специфікація (Specification of products)
-Акт невідповідності (Certificate of Nonconformity/Non-conformance Report),
-Накладна (Waybill)
-Повідомлення про повернення (Notice of Return)
-Накладна на повернення (Return Delivery Note)
-Акт виконаних робіт (Works Acceptance Certificate)
-Акт звірки взаєморозрахунків (Reconciliation Certificate)
-Акт взаємозаліку (Offset Certificate)
-Рахунок-фактура (Invoice)
-Акт виявлення невідповідностей (Discrepancy Certificate)
-Акт наданих послуг (Services Acceptance Certificate)
-Звіт комітенту (Report to Consigner)
-Накладна на переміщення (Dispatch invoice/Note for Internal Handling)
-Повідомлення про відмову від підписання документу (Notice of Refusal to Sign Document)
-Анулювання (Cancellation)
-Специфікація послуг по перевезеннях (Transportation services specification)
-Звіт комітенту по еквайрингу (Acquiring accountant report)
-Рахунок по еквайрингу (Acquiring account)
-Зведена специфікація послуг (Summary of services)
-Товарна накладна (Goods invoice)
-Заявка на транспортно-експедиційне обслуговування (Application for forwarding service)
-Акт звірки взаєморозрахунків зведений (Mutual settlements reconciliation act)
-Претензія (Claim)"
+ТипДокументу,М,String (50),`Types of documents <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 КодТипуДокументу,М,001 ... 034,`Document type code <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
 ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
 Індекс,М,Integer (5),Post index

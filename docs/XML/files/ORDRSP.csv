@@ -51,7 +51,7 @@ POSITIONNUMBER,M,Positive number,"Commodity item number (The sequence number of 
 PRODUCT,M,"Number (8, 10, 14)",Product barcode
 PRODUCTIDBUYER,O,String (16),Item in customer database
 PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
-ORDRSPUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
+ORDRSPUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 DESCRIPTION,O,String (70),Product description
 PRICE,O,Decimal,Product price
 PRICEWITHVAT,O,Decimal,Product price with VAT

@@ -74,7 +74,7 @@ PRODUCTIDBUYER,O,String (16),Item in customer database
 BUYERPARTNUMBER,О,String (16),Internal system number of the article in buyer database
 ORDEREDQUANTITY,M,Positive number,Ordered quantity
 QUANTITYOFCUINTU,О,Positive number,Amount in a package
-ORDERUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
+ORDERUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 QUANTITYOFPACKS,О,Positive number,Number of packages
 ORDERPRICE,O,Decimal,Product price without VAT
 PRICEWITHVAT,O,Decimal,Product price with VAT

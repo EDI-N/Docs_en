@@ -56,13 +56,13 @@ PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
 IDPRODUCER,O,String (8),Manufacturer code
 PRODUCTIDBUYER,O,String (16),Item in customer database
 DELIVEREDQUANTITY,М,Positive number,Delivery quantity
-DELIVEREDUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
+DELIVEREDUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 ORDEREDQUANTITY,О,Positive number,Ordered quantity
-ORDERUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
+ORDERUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 SSCC,O,Number (18),Serial Shipping Container Code
 PARTYNAME,O,String(70),Manufacturer name
 INVOICEDQUANTITY,O,Positive number,Invoiced quantity
-INVOICEUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
+INVOICEUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 AMOUNT,O,Decimal,Sum of goods (without VAT)
 AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
 PORTAL_CERT,О,String (30),Certificate number
