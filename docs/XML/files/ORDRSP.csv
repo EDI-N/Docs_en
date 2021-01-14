@@ -7,6 +7,8 @@ ORDERNUMBER,M,String (50),Order number
 ORDERDATE,M,Date (YYYY-MM-DD),Order date
 DELIVERYDATE,O,Date (YYYY-MM-DD),Delivery date
 DELIVERYTIME,O,Time (hh:mm),Delivery time
+SPECIFICATIONNUMBER,O,String (10),Specification number
+SPECIFICATIONDATE,O,Date (YYYY-MM-DD),Specification date
 SHIPMENTDATE,O,Date (YYYY-MM-DD),Shipment date
 CURRENCY,O,String (3),Currency code
 **LIMES**, , ,Transport details (the beginning of the block)
@@ -18,6 +20,7 @@ TIMETO,O,Time (hh:mm),Shipment End Time
 **LIMES**, , ,Transport details (the end of the block)
 VAT,O,Positive number,"VAT rate, %"
 ACTION,О,"«4», «5», «27», «29»","4 — supply changed, 5 — replacement of the document, 29 — delivery is accepted, 27 — delivery is not accepted"
+TRANSPORTATIONPAYMENTTYPE,O,String (70),Payment requirements
 TOTALPACKAGES,O,Decimal,Packages quantity
 TOTALPACKAGESSPACE,O,Decimal,Number of packaging spaces
 TRANSPORTQUANTITY,O,Positive number,Machines quantity
@@ -52,11 +55,13 @@ PRODUCT,M,"Number (8, 10, 14)",Product barcode
 PRODUCTIDBUYER,O,String (16),Item in customer database
 PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
 ORDRSPUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
+CUSTOMSTARIFFNUMBER,О,Positive number,Code for each position of goods according to Ukrainian Classification of Goods of Foreign Economic Activity
 DESCRIPTION,O,String (70),Product description
 PRICE,O,Decimal,Product price
 PRICEWITHVAT,O,Decimal,Product price with VAT
 DISCOUNT,О,Positive number,Discount
 VAT,O,String (3),"VAT rate, %"
+EXPAIRYDATE,O/M,String (30),Warranty period. Mandatory for Modern Expo clients
 AMOUNT,O,Decimal,Sum of goods (without VAT)
 AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
 TAXAMOUNT,М,Decimal,VAT
