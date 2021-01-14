@@ -245,6 +245,7 @@ For COMDOC 018 ""ПунктНавантаженняАдреса""і ""Пункт
 Текст,O,String (100),"Comment on the position"
 **Документ**,,,Document (the end of the block)
 **Взаєморозрахунки**, , ,Mutual settlements (the end of the block)
+Гарантія,O,String (30),Warranty period
 **ЦінаРегулярна**, , ,Regular price (block start)
 ЦінаБезПДВ, , ,Price without VAT
 ЦінаЗПДВ, , ,Price with VAT
