@@ -1,0 +1,52 @@
+Field name,Type [1]_,Format,Description
+**PRICAT**,,, The beginning of the document
+ACTION, O,"Number - «15», «16», «17», «18», «19»","Document type and action selection:
+
+* 15 - price list for Distribution,
+* 16 - mass cleaning of the price list,
+* 17 - price list with the characteristics of the product position,
+* 18 - price list with the prices of the commodity position,
+* 19 - request a price list for the current date"
+NUMBER, M, String (16), Document number
+DATE, M, Date (YYYY-MM-DD), Document date
+DATEFROM, M (O - if ACTION = 17), Date (YYYY-MM-DD), The price list takes effect from the date
+DATETO, M (O - if ACTION = 17), Date (YYYY-MM-DD), Expiration date of the price list
+SUPPLIER, M, Number (13), Producer GLN
+BUYER, M (O - if ACTION = 17), Number (13), Distributor GLN
+SENDER, M, Number (13), Message sender GLN
+RECIPIENT, M (O - if ACTION = 17), Number (13), Message recipient GLN
+**CATALOGUE**,,, Catalog (the beginning of the block)
+**POSITION**,,, Commodity items (the beginning of the block)
+POSITIONNUMBER, O, Positive number,"Commodity item number (The sequence number of the item in the document (1, 2, 3, 4... n))"
+ACTION, O,"Number - «2», «3», «4», «27», «29»","Action required:
+
+* 2 - add new items,
+* 3 - delete items,
+* 4 - change items data"
+PRODUCTGROUP, M (O - if ACTION = 18), String (75), Product Line name
+BRAND, M (O - if ACTION = 18), String (75), Product Category name
+SUBBRAND, M (O - if ACTION = 18), String (75), Product Subcategory name
+IDSUPPLIER, M, String (16), Article
+PRODUCTNAME, M (O - if ACTION = 18), String (255), Full product name
+PRODUCT, M, Positive integer (20), Barcode
+IDPRODUCER, O, String (8), Producer code 
+IDNATIONAL, O, Positive integer (20), Product code according to the national classifier (UKT FEA Code)
+UNITWEIGHT, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Unit weight (kg)
+QUANTITYOFCUINTU, M (O - if ACTION = 18), Positive integer (10), Units quantity in a box (pce)
+BOXWEIGHT, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Box weight (kg)
+BOXINLAYER, O, Positive integer (20), Boxes quantity in the layer (pce in 1 level)
+BOXINPALLET, O, Positive integer (20), Boxes quantity on the pallet (pce)
+PALLETWEIGHT, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Pallet weight (kg)
+UNIT, M, String (3), `Units of measurement <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/units_distr.html>`__
+ACTUALQUANTITY, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Items balance
+UNITPRICE, M (O - if ACTION = 17), Floating point number (maximal 6 symbols before dot, 6 symbols after dot), Price per unit without VAT (UAH)
+PRICEWITHVAT, O, Floating point number (maximal 6 symbols before dot, 6 symbols after dot), Price per unit with VAT (UAH)
+TAXRATE, O, "Positive integer - «20», «0», «7»", "VAT rate, %"
+QUOTA, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Quota to order
+INFO, O, String (255), Comment
+NEWPOSITION, O,"Number - «0», «1»", Novelty
+PROMO, О,"Number - «0», «1»", Action
+PUBLICPOSITION, О,"Number - «0», «1»", Public position
+**POSITION**,,, Commodity items (the end of the block)
+**CATALOGUE**,,, Catalog (the end of the block)
+**PRICAT**,,, End of the document

@@ -10,7 +10,12 @@ Contents:
    
 .. toctree::
    :maxdepth: 2
-   
-   XML/XML-structure.rst
+   :caption: EDIN 2.0
 
-   
+   XML/XML-structure
+
+.. toctree::
+   :maxdepth: 2
+   :caption: EDIN-Distribution
+
+   Distribution/EDIN_2_0/XML/XML_structure

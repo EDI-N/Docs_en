@@ -1,0 +1,20 @@
+Field name,Type [1]_,Format,Description
+**DISTRIBEX_LIMITS**,,, The beginning of the document	
+**HEAD**,,, Start of the main block	
+SENDER, M, Number (13), Producer GLN
+RECIPIENT, M, Number (13), Distributor GLN
+**LIMIT**,,, Limitation (the beginning of the block)	
+NAME, M, "String - «min_sum_nds», «max_sum_nds», «credit_limit», «max_weight», «max_pos_qty», «max_pack_qty», «max_pallet_qty», «multiplicity_packing»", Limitation name
+VALUE, M, "Number (the format depends on NAME):
+
+* Minimal order sum with tax - float (10,4)
+* Maximal order sum with tax - float (10,4)
+* Credit limit - float (10,4)
+* Maximal order weight - float (13,3)
+* Maximal position quantity in order - Positive number (10)
+* Maximal packages quantity - Positive number (10)
+* Maximal pallets quantity - Positive number (10)
+* Multiplicity to package - 0-no; 1-yes", Limitation meaning
+**LIMIT**,,, Limitation (the end of the block)
+**HEAD**,,, End of the main block
+**DISTRIBEX_LIMITS**,,, End of the document
