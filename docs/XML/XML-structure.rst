@@ -19,6 +19,8 @@ Order (document ORDER)
   :widths:  40, 7, 12, 41
   :header-rows: 1
 
+:download:`ORDER example<examples/ORDER_example_f.xml>`
+
 ---------
 
 Order Confirmation (document ORDRSP)
@@ -48,6 +50,18 @@ Commercial document (document COMDOC)
   :file: files/COMDOC.csv
   :widths:  40, 7, 12, 41
   :header-rows: 1
+
+---------
+
+Sales Invoice (COMDOC_006)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table:: Sales Invoice (COMDOC_006)
+  :file: files/COMDOC_006.csv
+  :widths:  40, 7, 12, 41
+  :header-rows: 1
+
+:download:`COMDOC_006 example<examples/comdoc_006_example.xml>`
 
 ---------
 
