@@ -45,11 +45,18 @@ Field name,Type [1]_,Format,Description
 НазваКонтрагента,М,String (50),Counterparty name
 КодКонтрагента,М,String (8),"Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)"
 ІПН,М,String (12),Counterparty individual tax number
-IBAN,О,Рядок ,IBAN (international bank account number; use in international settlements)
+IBAN,О,String (35),IBAN (international bank account number; use in international settlements)
 Телефон,О,String (20),Phone number
 GLN,M,Integer (13),Counterparty Global Location Number (GLN)
 **Контрагент**, , ,Counterparty (the end of the block)
 **Сторони**, , ,"The parties between whom the document is concluded (the end of the block)"
+**МісцеДоставки**,O, ,Delivery place (block start)
+GLN,O,Integer (13),Delivery place Global Location Number (GLN)
+Індекс,O,Integer (5),Post index
+Область,O,String (50),Region
+Місто,O,String (50),City
+Вулиця,O,String (50),Street
+**МісцеДоставки**, , ,Delivery place (the end of the block)
 **Параметри**,О, ,"Parameters (block start). The field provides free value. This parameter is used to transfer additional information that is not included in the specification"
 Параметр,O,String (50),Parameter. Maximum number of tags is 99. Each next tag identifier (ID) is incremented by one.
 **Параметри**,О, ,Parameters (the end of the block)
