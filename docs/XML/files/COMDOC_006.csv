@@ -2,8 +2,8 @@ Field name,Type [1]_,Format,Description
 **ЕлектроннийДокумент**,М, ,The beginning of the document
 **Заголовок**,М,Number of occurrences unit: Min = 1; Max = 1, Heading (block start)
 НомерДокументу,М,String (16),Document number
-ТипДокументу,М,String (50),`Types of documents <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
-КодТипуДокументу,М,«006»,`Document type code <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
+ТипДокументу,М,String (50),Type of document: Sales Invoice
+КодТипуДокументу,М,«006»,"Allowed value COMDOC code: 006 => Sales Invoice (`all COMDOC types <https://wiki.edin.ua/en/latest/XML/comdoc_type.html>`__)"
 ДатаДокументу,М,Date (YYYY-MM-DD),Document date
 ТермінОплати,O,Date (YYYY-MM-DD),Payment term (date)
 **ТермінПідпису**,O, ,"Document sign period (block start)"

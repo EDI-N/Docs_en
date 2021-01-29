@@ -2,9 +2,9 @@ Field name,Type [1]_,Format,Description
 **ЕлектроннийДокумент**,М, ,The beginning of the document
 **Заголовок**,М,Number of occurrences unit: Min = 1; Max = 1, Heading (block start)
 НомерДокументу,М,String (16),Document number
-ТипДокументу,М,String (50),`Types of documents <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
+ТипДокументу,М,String (50),COMDOC type (`all COMDOC types <https://wiki.edin.ua/en/latest/XML/comdoc_type.html>`__)
 ТипСхеми,О,0 or 1,0 - standard scheme (with previous agreement); 1 - non-standard scheme (without previous agreement)
-КодТипуДокументу,М,001 ... 034,`Document type code <https://wiki.edin.ua/en/latest/XML/code_doctype.html>`__
+КодТипуДокументу,М,005 ... 034,COMDOC code (`all COMDOC types <https://wiki.edin.ua/en/latest/XML/comdoc_type.html>`__)
 ДатаДокументу,М,Date (YYYY-MM-DD),Date of the document
 ТермінОплати,O,Date (YYYY-MM-DD),Payment term (date)
 ПричинаАнулювання, , ,"The reason why the document is canceled"
