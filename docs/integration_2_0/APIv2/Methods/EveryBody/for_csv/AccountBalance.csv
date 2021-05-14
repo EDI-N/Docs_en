@@ -1,0 +1,23 @@
+Parameter,Format,Description 
+.. _AccountBalance: ,Object **AccountBalance**,
+productId,long,product identifier
+month,int,month (duration of product activity)
+year,int,year (duration of product activity)
+price,double,cost of the tariff plan (euro)
+multiplierCount,int,"number of units of the ordered service (if tariff provides it)"
+limit,int,limit transactions according to the tariff plan
+count,int,number of transactions
+countDate,String,the date of the last transaction
+dateExpiry,String,expiration date
+priceUAH,double,cost of the tariff plan (UAH)
+transactionID,long,transaction identifier (refill / write-off from the Balance)
+debt,boolean,debt note
+autoRenewal,boolean,automatic prolongation
+extraTariff,boolean,extra tariff (additional)
+individual,boolean,individual tariff
+tariff2accountId,long,identifier of connection of the tariff with the account
+account2servicesId,long,identifier of the paid service
+tariffId,long,tariff plan identifier
+tariffName,String,tariff plan name
+paymentID,long,service payment ID
+maxTariff,boolean,maximum tariff (other tariffs for the service cannot be selected)

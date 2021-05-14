@@ -19,12 +19,12 @@ DATETO,O,Date (YYYY-MM-DD),Shipment End date
 TIMETO,O,Time (hh:mm),Shipment End Time
 **LIMES**, , ,Transport details (the end of the block)
 VAT,O,Positive number,"VAT rate, %"
-ACTION,О,"«4», «5», «27», «29»","4 — supply changed, 5 — replacement of the document, 29 — delivery is accepted, 27 — delivery is not accepted"
+ACTION,M,"«4», «5», «27», «29»","4 — supply changed, 5 — replacement of the document, 29 — delivery is accepted, 27 — delivery is not accepted"
 TRANSPORTATIONPAYMENTTYPE,O,String (70),Payment requirements
 TOTALPACKAGES,O,Decimal,Packages quantity
 TOTALPACKAGESSPACE,O,Decimal,Number of packaging spaces
 TRANSPORTQUANTITY,O,Positive number,Machines quantity
-DOCTYPE,О,String (1),"Document type: O — original, R — replacement, D — deletion"
+DOCTYPE,M,String (1),"Document type: O — original, R — replacement, D — deletion"
 SUPORDER,O,String (35),Supplier Order Number
 KDKNUM,O,String (35),FTC General Order Number
 ORDRTYPE,O,String (35),Order type
@@ -40,7 +40,7 @@ FINALRECIPIENT,O,Number (13),Final consignee GLN
 INVOICEPARTNER,O,Number (13),Payer GLN
 SENDER,M,Number (13),Message sender GLN
 RECIPIENT,M,Number (13),Message recipient GLN
-CONSIGNEE,О,Number (13),Consignee GLN
+CONSIGNEE,M,Number (13),Consignee GLN
 RECIPIENTCODE,O,String (35),Recipient Code
 RECIPIENTNAME,O,String (70),Recipient's name
 RECIPIENTCONTACTFACE,O,String (70),Contact person
@@ -55,15 +55,15 @@ PRODUCT,M,"Number (8, 10, 14)",Product barcode
 PRODUCTIDBUYER,O,String (16),Item in customer database
 PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
 ORDRSPUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
-CUSTOMSTARIFFNUMBER,О,Positive number,Code for each position of goods according to Ukrainian Classification of Goods of Foreign Economic Activity
+CUSTOMSTARIFFNUMBER,M,Positive number,Code for each position of goods according to Ukrainian Classification of Goods of Foreign Economic Activity
 DESCRIPTION,O,String (70),Product description
 PRICE,O,Decimal,Product price
 PRICEWITHVAT,O,Decimal,Product price with VAT
-DISCOUNT,О,Positive number,Discount
+DISCOUNT,M,Positive number,Discount
 VAT,O,String (3),"VAT rate, %"
 EXPAIRYDATE,O/M,String (30),Warranty period. Mandatory for Modern Expo clients
 AMOUNT,O,Decimal,Sum of goods (without VAT)
-AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
+AMOUNTWITHVAT,M,Decimal,Sum of goods (with VAT)
 TAXAMOUNT,М,Decimal,VAT
 QUANTITYOFCUINTU,O,Positive number,Amount in a package
 PRODUCTTYPE,M,"«1», «2», «3»","1—the goods will be delivered without change,"
@@ -71,13 +71,13 @@ PRODUCTTYPE,M,"«1», «2», «3»","1—the goods will be delivered without cha
 3— refused delivery,,,
 ORDEREDQUANTITY,M,Positive number,Ordered quantity
 ACCEPTEDQUANTITY,M,Positive number,Available quantity
-MINIMUMORDERQUANTITY,О,Positive number,Minimum ordered quantity
-MAXIMUMORDERQUANTITY,О,Positive number,Maximum allowable shipping quantity
+MINIMUMORDERQUANTITY,M,Positive number,Minimum ordered quantity
+MAXIMUMORDERQUANTITY,M,Positive number,Maximum allowable shipping quantity
 INFO,O,String (70),Free text
-CONDITIONSTATUS,О,String (3),Condition Status
+CONDITIONSTATUS,M,String (3),Condition Status
 PACKAGEID,O,Positive number,Package ID
-COUNTRYORIGIN,О,String (2),Manufacturer country
-CALIBRE,О,Positive number,Packing caliber (Diameter)
+COUNTRYORIGIN,M,String (2),Manufacturer country
+CALIBRE,M,Positive number,Packing caliber (Diameter)
 **PACKING**, , ,Packaging (the beginning of the block)
 PACKINGTYPE,O,String (3),Type of packaging
 PACKINGQUANTITY,O,Positive number,Number of packages

@@ -3,7 +3,7 @@ Field name,Type [1]_,Format,Description
 DOCUMENTNAME,М,Positive number,Title of the document (220 — order)
 NUMBER,М,String (50),Order number
 DATE,М,Date (YYYY-MM-DD),Document date
-ACTION,О,"«4», «5», «27», «29»","4 — supply changed, 5 — replacement of the document, 29 — delivery is accepted, 27 — delivery is not accepted"
+ACTION,M,"«4», «5», «27», «29»","4 — supply changed, 5 — replacement of the document, 29 — delivery is accepted, 27 — delivery is not accepted"
 EXCHANGE_SCHEMA_TYPE, O,, "only for Fozzy: document flow scheme: 0-normal, 1-special"
 VERSION,O,Positive number,Order version
 PROMO,O,"«0», «1»","Promotion: 0 — no, 1 — yes"
@@ -56,7 +56,7 @@ ORDERPARTNER,O,Number (13),Customer GLN
 INVOICEPARTNER,O,Number (13),Payer GLN
 SENDER,M,Number (13),Message sender GLN
 RECIPIENT,M,Number (13),Message recipient GLN
-CONSIGNEE,О,Number (13),Consignee GLN
+CONSIGNEE,M,Number (13),Consignee GLN
 RECIPIENTCODE,O,String (35),Recipient Code
 RECIPIENTNAME,O,String (70),Recipient's name
 INFO,O,String (70),Free text
@@ -71,30 +71,30 @@ POSITIONNUMBER,М,Positive number,"Commodity item number (The sequence number of
 PRODUCT,M,"Number (8, 10, 14)",Product barcode
 PRODUCTIDSUPPLIER,O,String (16),Products in database
 PRODUCTIDBUYER,O,String (16),Item in customer database
-BUYERPARTNUMBER,О,String (16),Internal system number of the article in buyer database
+BUYERPARTNUMBER,M,String (16),Internal system number of the article in buyer database
 ORDEREDQUANTITY,M,Positive number,Ordered quantity
-QUANTITYOFCUINTU,О,Positive number,Amount in a package
-ORDERUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
-QUANTITYOFPACKS,О,Positive number,Number of packages
+QUANTITYOFCUINTU,M,Positive number,Amount in a package
+ORDERUNIT,M,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
+QUANTITYOFPACKS,M,Positive number,Number of packages
 ORDERPRICE,O,Decimal,Product price without VAT
 PRICEWITHVAT,O,Decimal,Product price with VAT
 AMOUNT,O,Decimal,Sum of goods (without VAT)
-AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
+AMOUNTWITHVAT,M,Decimal,Sum of goods (with VAT)
 VAT,O,Decimal,"VAT rate, %"
 CLAIMEDDELIVERYDATE,O,Date (YYYY-MM-DD),Announced Delivery Date
 CLAIMEDDELIVERYTIME,O,Time (hh:mm),Announced Delivery Time
-DELIVERYPLACE,О,Number (13),Final delivery location GLN
+DELIVERYPLACE,M,Number (13),Final delivery location GLN
 INFOCODED,O,String (35),Info code
 MINIMUMORDERQUANTITY,O,Positive number,Minimum ordered quantity
 MAXIMUMORDERQUANTITY,O,Positive number,Maximum allowable shipping quantity
-PRODUCTIONCODE,О,String (16),Alcohol Code
+PRODUCTIONCODE,M,String (16),Alcohol Code
 POSITIONKGM,М, ,Total kilogram of position
 INFO,O,String (90),Free text
 COMPAIGNNUMBER,O,String (70),Supplier number
 EARLIESTDELIVERYDATE,O,Date (YYYY-MM-DD),Delivery not earlier than the specified date
 LATESTDELIVERYDATE,O,Date (YYYY-MM-DD),Delivery no later than the specified date
 LATESTDELIVERYTIME,O,Time (hh:mm),Delivery no later than the specified time
-CONDITIONSTATUS,О,String (3),Condition Status
+CONDITIONSTATUS,M,String (3),Condition Status
 PACKAGEID,O,Positive number,Package ID
 CATEGORYNAME,O,String (70),Item category name
 BRENDNAME,O,String (70),Brand name
@@ -105,13 +105,13 @@ COUNTBOXESINLAYER,O,Positive number,Number of packages per level
 COUNTPERPALLET,O,Positive number,Quantity on a pallet
 WEIGHT,O,Decimal,Weight
 PALLETS,O,Positive number,Number of pallets
-COUNTRYORIGIN,О,String (2),Manufacturer country
+COUNTRYORIGIN,M,String (2),Manufacturer country
 CALIBRE,O,Positive number,Packing caliber (Diameter)
 PRICEWITHDISCOUNT,O,Decimal,Price with discount
 BOXESCOUNT,O,Positive number,Number of packages
 **CHARACTERISTIC**, , ,Characteristics (the beginning of the block)
 SERVICEDESCRIPTION,О/M (is mandatory only for the Order of service - ORDER with DOCTYPE=OS),String (500),Name of service
-DESCRIPTION,О,String (70),Product Description
+DESCRIPTION,M,String (70),Product Description
 **CHARACTERISTIC**, , ,Characteristics (the end of the block)
 **PACKING**, , ,Packaging (the beginning of the block)
 PACKINGTYPE,O,String (3),Type of packaging

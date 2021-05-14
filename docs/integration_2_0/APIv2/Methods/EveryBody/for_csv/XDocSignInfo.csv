@@ -1,0 +1,7 @@
+Parameter,Format,Description 
+.. _XDocSignInfo: ,**Object XDocSignInfo** ,
+doc_id,long,document/chain id
+date,long,signing date; unix timestamp format
+count,short,amount of signatures
+info,String,additional information
+hash,String,"the hash value obtained as a result of processing"

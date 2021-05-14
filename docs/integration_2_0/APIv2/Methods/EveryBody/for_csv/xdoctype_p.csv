@@ -1,0 +1,48 @@
+Type,Name,Description
+0,all,all
+1,invoice,`Invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#invoice>`__
+2,orders,`Order <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#order>`__
+3,recadv,`Receipt notification <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#recadv>`__
+4,desadv,`Shipment notification <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#desadv>`__
+5,ordrsp,`Order confirmation <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#ordrsp>`__
+6,pricat,`Price List <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#pricat>`__
+7,comdis,`Commercial discussion <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdis>`__
+10,declar,`Tax invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#declar>`__
+11,insdes,`Delivery instructions <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#insdes>`__
+13,slsrpt,`Sales report <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#slsrpt>`__
+14,invrpt,`Inventory report <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#invrpt>`__
+15,coacsu,`The act of mutual reconciliation <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#coacsu>`__
+17,iftmin,`Інструкція про транспортування <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#iftmin>`__
+18,retann,`Return notification <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#retann>`__
+19,iftmbf,`Application for transportation <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#iftmbf>`__
+20,partin,`Contractor information for the supplier <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#partin>`__
+21,mscons,`Report on provided services <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#mscons>`__
+25,retins,`Return instructions <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#retins>`__
+28,comdoc,`Commercial document <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc>`__
+29,declarj12,`Adjustments to the tax invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#declarj12>`__
+30,condra,`Unstructured document <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#condra>`__
+40,prodlist,`Electronic specification <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#productlist>`__
+41,agreem,`Commodity coordination <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#agreem>`__
+42,iftmbc,`Confirmation of the application for transportation <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#iftmbc>`__
+59,documentinvoice,`Consignment note <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
+67,doccorinvoice,`Adjustment to the consignment note <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#doccorinvoice>`__
+98,quotes,`Addition to the Shipment Notice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#quotes>`__
+111,transhipment,`The act of goods reloading <https://wiki.edin.ua/uk/latest/Docs_ETTN/TRANSHIPMENTpage.html>`__
+117,acceptance,`Act of acceptance-transfer <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/AcceptancePage_v2.html>`__
+113,booking,`Application for transportation <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/BOOKINGpage_v2.html>`__
+114,bookingconfirmation,`Confirmation of transportation <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/BookingConfirmationPage_v2.html>`__
+112,completion,`Act of work performed <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/COMPLETIONpage_v2.html>`__
+118,docinvoiceact,`Act of provided services (Metro) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#docinvoiceact>`__
+119,discrepancy,`The act of disagreement <https://wiki.edin.ua/uk/latest/Docs_ETTN/DISCREPANCYPage.html>`__
+120,contrl,`Shipment report <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#contrl>`__
+121,ttn,`Electronic consignment note (e-TTN) <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/Docs_ETTNv2_list.html>`__
+122,simple_doc,Vilnyi service document
+123,reload,`Act of overload <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/Docs_ETTNv2_list.html>`__
+124,disagreement,`Act of disagreement to e-TTN <https://wiki.edin.ua/uk/latest/Docs_ETTNv2/Docs_ETTNv2_list.html>`__
+125,adjustment,Act of adjustment
+126,warehouse_change,Act of change of destination
+127,unload_storage,Act of unloading at the intermediate warehouse
+128,load_storage,Act of loading in the intermediate warehouse
+129,ettn_stop,Act of forced termination of TTN
+130,resealing,The act of resealing
+131,load_reject,Act of refusal to download

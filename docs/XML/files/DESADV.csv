@@ -10,7 +10,7 @@ ORDRSPNUMBER,O,String (16),Order confirmation number
 ORDRSPDATE,O,Date (YYYY-MM-DD),Order confirmation date
 DELIVERYNOTENUMBER,М,String (16),Invoice number
 DELIVERYNOTEDATE,М,Date (YYYY-MM-DD),Invoice date
-RECIPTYPE,О,String (1),"Available values:
+RECIPTYPE,M,String (1),"Available values:
 0 – «Direct delivery to the ATB» (default),
 1 – «Delivery from Logistic Union warehouses»."
 SUPPLIERORDENUMBER,O,String (35),Order number in the supplier's accounting system
@@ -24,15 +24,15 @@ TRANSPORTMARK,O,String (70),Transport mark
 TRANSPORTID,O,String (70),Vehicle number
 TRANSPORTERNAME,O,String (70),Driver name
 TRANSPORTERTYPE,O,String (70),Transport type
-TRANSPORTTYPE,О,"String (2, 3)","Transportation type:
+TRANSPORTTYPE,M,"String (2, 3)","Transportation type:
 20 — railway,
 30 — road,
 40 — air,
 60 — combine,
 100 — delivery service"
 PACKAGEWIGHT,O,Decimal,Weight
-TOTALPACKAGES,О,Decimal,Packages quantity
-TOTALPALLETS,О,Decimal,Pallets quantity
+TOTALPACKAGES,M,Decimal,Packages quantity
+TOTALPALLETS,M,Decimal,Pallets quantity
 **HEAD**, , ,Start of the main block
 SUPPLIER,М,Number (13),Supplier GLN
 SUPPLIERNAME,O,String (70),Supplier name
@@ -56,27 +56,27 @@ PRODUCTIDSUPPLIER,O,String (16),Item in supplier database
 IDPRODUCER,O,String (8),Manufacturer code
 PRODUCTIDBUYER,O,String (16),Item in customer database
 DELIVEREDQUANTITY,М,Positive number,Delivery quantity
-DELIVEREDUNIT,О,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
-ORDEREDQUANTITY,О,Positive number,Ordered quantity
+DELIVEREDUNIT,M,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
+ORDEREDQUANTITY,M,Positive number,Ordered quantity
 ORDERUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 SSCC,O,Number (18),Serial Shipping Container Code
 PARTYNAME,O,String(70),Manufacturer name
 INVOICEDQUANTITY,O,Positive number,Invoiced quantity
 INVOICEUNIT,O,String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
 AMOUNT,O,Decimal,Sum of goods (without VAT)
-AMOUNTWITHVAT,О,Decimal,Sum of goods (with VAT)
-PORTAL_CERT,О,String (30),Certificate number
-CUSTOMSTARIFFNUMBER,О,String (30),State Customs Declaration Number (CCD)
+AMOUNTWITHVAT,M,Decimal,Sum of goods (with VAT)
+PORTAL_CERT,M,String (30),Certificate number
+CUSTOMSTARIFFNUMBER,M,String (30),State Customs Declaration Number (CCD)
 PRICE,O,Decimal,Product price without VAT
 PRICEWITHVAT,O,Decimal,Product price with VAT
 DISCOUNT,O,Positive number,Discount
 TAXRATE,O,Number (3),"VAT rate, %"
-CONDITIONSTATUS,О,String (3),Condition Status
-DESCRIPTION,О,String (70),Product description
+CONDITIONSTATUS,M,String (3),Condition Status
+DESCRIPTION,M,String (70),Product description
 PACKAGEID,O,Positive number,Package ID
 PARTNUMBER,O,String (35),Batch number
-SERIALNUMBER,О,String,"Serial number (feature for medical providers)"
-GOODDATE,О,String,"Shelf life (feature for medical providers)"
+SERIALNUMBER,M,String,"Serial number (feature for medical providers)"
+GOODDATE,M,String,"Shelf life (feature for medical providers)"
 MINIMUMORDERQUANTITY,O,Positive number,Minimum ordered quantity
 **OCERTS**, , ,Certificate data attached to the commodity item  (the beginning of the block). Can contain multiple certificates [CERT]
 **CERT**, , ,the beginning of the block под один конкретный сертификат

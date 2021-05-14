@@ -1,0 +1,4 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _Limitation: ,, Object **Limitation** ,
+offset,O,int,offset the first element of the list relative to the upper limit of the sample (by default 0)
+count,O,int,sampling limit (amount)

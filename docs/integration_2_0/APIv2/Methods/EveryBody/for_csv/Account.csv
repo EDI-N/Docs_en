@@ -1,0 +1,22 @@
+Parameter,Format,Description
+.. _Account:, Object **Account**,
+accountId,long,Account ID 
+companyId,long,Company ID 
+**company**,Company_,object; information about company
+mfo,String,bank MFI
+paymentAccount,String,checking account
+tariffId,int,tariff ID
+fullName,String,user full name
+phone,String,phone
+email,String,Email
+dirPosition,String,director position
+activityBase,String,activity basis
+isIndivOffer,int,"a note on the existence of an individual contract; 0 - no, 1 - yes"
+adminAccountId,long,Account ID in Admin
+addInfo,String,Additional Information
+**whiteList**,List<String>,"array; list of white ip addresses"
+decryptType,int,"decryption type; 1 - WEB; 2 - Cryptex"
+cryptexServer,String,client-side cryptex server address
+status,int,"status; 0 - blocked; 1 - active"
+**accountInfo**,AccountInfo_,object; additional account information
+**adminAccount**,AdminAccount_,object; account data in Admin

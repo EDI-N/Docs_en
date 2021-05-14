@@ -1,0 +1,20 @@
+Parameter,Format,Description
+.. _EndUserOwnerInfo:, Object **EndUserOwnerInfo**,
+isFilled,boolean,mark of completion of the certificate
+issuer,string,certificate issuer
+issuerCN,string,the name of the issuer of the certificate
+serial,string,certificate serial number
+subject,string,general information about the certificate owner
+subjCN,string,certificate owner's name
+subjOrg,string,owner certificate organization
+subjOrgUnit,string,certificate owner subdivision
+subjTitle,string,certificate owner position
+subjState,string,certificate owner region
+subjLocality,string,certificate owner location
+subjFullName,string,certificate owner full name
+subjAddress,string,certificate owner address
+subjPhone,string,certificate owner phone
+subjEMail,string,certificate owner e-mail
+subjDNS,string,certificate owner VAT
+subjEDRPOUCode,string,certificate owner USREOU code
+subjDRFOCode,string,certificate owner state register of individuals code

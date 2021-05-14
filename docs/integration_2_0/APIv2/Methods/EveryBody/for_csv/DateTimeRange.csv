@@ -1,0 +1,4 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _DateTimeRange: ,, Object **DateTimeRange** ,
+startTimestamp, ,long,the beginning of the time range
+finishTimestamp, ,long,end of time range

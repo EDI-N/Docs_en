@@ -1,0 +1,12 @@
+Parameter,Format,Description 
+.. _User: , Object **User**,
+id,long,user id
+accountId,long,account id
+login,String(50),user login 
+stringEmails,String(255),E-mail
+emails,List<String>,E-mail array
+blocked,int,"blocking mark; numeric; 0 - no, 1 - yes"
+allowFTP,int,"FTP access mark; numeric; 0 - no, 1 - yes"
+autoSending,boolean,"auto sending; numeric; 0 - No, 1 - Yes (documents are automatically sent when the document is transferred to the outbox)"
+statusFile,int,"creation of status files; numeric; 0 - No, 1 - Yes, 2 - Yes, about delivery, 3 - Yes, about reading"
+isAdmin,boolean,"does the user have administrator rights (mark); numeric; 0 - no, 1 - yes"

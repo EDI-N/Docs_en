@@ -1,0 +1,26 @@
+**URL**       ,
+Method  , GET
+URL query    , **/api/eds/doc/ticket/body?doc_uuid=533c45ec-f51a-456a-a0f2-ba7b17f3b95b&transaction_type=1&body_type=-1&gln=9864067620417&family=edi**
+URL parameters,"**gln** - string (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level;
+OR
+**guid** - string; unique identifier of the organization at EDIN 2.0 platform
+
+**doc_uuid** - string; document UUID
+
+**transaction_type** - numeric; transaction type
+
+* 1 - the document is signed by one party (one counterparty)
+* 2 - the document is signed by both parties (two counterparties)
+* 11 - cancellation request
+* 12 - cancellation confirmation
+* 13 - the refusal to sign (with Specifying the reasons for refusal)
+
+**body_type** - numeric; ticket body type (content index)
+
+* -1 - signature data (info in json format)
+* 1 - signature content (content in base64 format)
+
+**family** (optional) - service; possible values: edi"
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , application/octet-stream

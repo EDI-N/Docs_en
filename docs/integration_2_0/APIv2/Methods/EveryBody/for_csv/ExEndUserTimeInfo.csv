@@ -1,0 +1,5 @@
+Parameter,Format,Description
+.. _ExEndUserTimeInfo:, Object **ExEndUserTimeInfo**,
+isTimeAvail,boolean,the presence of a signing time
+isTimeStamp,boolean,the presence of a timestamp
+dateTime,long,signing time stamp (Unix timestamp)

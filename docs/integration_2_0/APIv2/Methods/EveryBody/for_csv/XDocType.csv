@@ -1,0 +1,5 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _XDocType:,, Object **XDocType** , param-desc_
+type, ,int,document / ticket type id
+title, ,String,document / ticket name
+description, ,String,document / ticket description

@@ -1,0 +1,9 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _Direction: ,, Object **Direction** ,
+**type**, ,"enum (EQ, OR, IN)","sample type; possible values: EQ/OR/IN
+
+* EQ - select documents with same mentioned sender and receiver parameter only;
+* OR - select documents with mentioned sender OR receiver parameter only;
+* IN - select documents with mentioned sender OR receiver parameter which is one of those specified in the sender and receiver arrays"
+sender,О/Н,List<String>,"array; senders; senders GLN - mandatory, but may be empty if the GLN receiver array is specified"
+receiver,О/Н,List<String>,"array; receivers; receivers GLN - mandatory, but may be empty if the GLN sender array is specified"

@@ -1,0 +1,6 @@
+Parameter,Format,Description
+.. _ExEndUserSignInfo:, Object **ExEndUserSignInfo**,
+isStamp,boolean,true - stamp; false - signature
+**ownerInfo**,EndUserOwnerInfo_,object; certificate owner data
+**timeInfo**,ExEndUserTimeInfo_,object; certificate signing date
+**certificateInfo**,EndUserCertificateInfo,object; certificate data

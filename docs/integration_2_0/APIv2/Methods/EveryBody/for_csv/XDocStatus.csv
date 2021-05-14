@@ -1,0 +1,4 @@
+Parameter,Format,Description 
+.. _XDocStatus: ,**Object XDocStatus** , more_
+state,int,status id
+title,String,status

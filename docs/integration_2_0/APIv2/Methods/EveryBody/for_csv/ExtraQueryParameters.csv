@@ -1,0 +1,6 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _ExtraQueryParameters: ,, Object **ExtraQueryParameters**,
+**operator**, ,"enum (AND, OR)", 
+**type**,M,"enum (EQUALS, EQUALS_UUID, EQUALS_MD5, LIKE, MORE, MORE_EQ, LESS, LESS_EQ, IN)",
+fieldName_ , ,String, parameter name
+value, ,String, parameter id

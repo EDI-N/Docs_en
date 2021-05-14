@@ -1,0 +1,10 @@
+Ticket,exchange_status,sub_status_id,Status,Comment
+T0,«000000000000000000000000»,«0»,«Not signed»,Integrated sending of unsigned document
+T1,«000000000000000000000001»,**«1»**,«Requires signing by the recipient»,Signed by Sender only
+T1,«000000000000000000000001»,**«2»**,«Requires signing by sender»,Signed by Recipient only
+T2,«000000000000000000000011»,«2»,«Confirmed on both sides»,Signed on both sides **no matter in what order**
+T **11** 2,«000000000000010000000011»,«3»,«Repeal request», 
+T **12** 1,«000000000000110000000001», ,«Repeal request acceptance», 
+T **12** 2,«000000000000110000000011»,«4»,«Repealed», 
+T **13** 1,«000000000001000000000001»,«5»,«Signature rejected», 
+T **14** 1,«000000000010000000000001», ,«Revoked», 

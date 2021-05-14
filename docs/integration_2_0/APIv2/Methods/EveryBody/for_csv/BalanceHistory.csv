@@ -1,0 +1,15 @@
+Parameter,Format,Description 
+.. _BalanceHistory: ,Object **BalanceHistory**,
+id,long,record ID
+date,String,record date
+description,String,description of the performed action
+summ,double,amount (minus value - write-off; plus - refill)
+type,int,"record type:
+
+* 0 - technical record, for example, the fact of creating a balance sheet;
+* 1 - extract;
+* 2 - acquiring;
+* 3 - automatic actions;
+* 4 - payment for the service;
+* 5 - refund for previously paid service;
+* 6 - write-off for AT (additional transactions)"

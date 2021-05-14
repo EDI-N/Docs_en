@@ -1,0 +1,24 @@
+Parameter,Format,Description 
+.. _TariffProduct: ,Object **TariffProduct**,
+id, long, product identifier
+name, String, product name
+type, int, "tariff model; 0 - old, 1 - new"
+period, int, "the minimum period available for selection:
+
+* 1 month
+* 4 - year
+* 5 - once
+* 6 - no period (product is only available for *Ordering* action)"
+multiplier,boolean,"possibility to order several services (availability indicates a service that can be sold individually)"
+sortPosition,int,serial number of the product
+description, String, product description
+hasOptions, boolean, mark of additional options in the tariff package
+onlyOneTariffByMonth, boolean, mark of only one tariff per month
+extraTariff, boolean, the ability to purchase an additional tariff in the current month
+billingCountType, int, "billing type:
+
+* 0 - no traffic control is required within the service
+* 1 - EDI transaction count
+* 2 - calculation of UZD transactions"
+shortName, String, short product name
+tariffs,List<Tariff_>,array of objects; tariff packages data

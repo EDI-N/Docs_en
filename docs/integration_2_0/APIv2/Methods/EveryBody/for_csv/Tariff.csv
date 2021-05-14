@@ -1,0 +1,8 @@
+Parameter,Format,Description 
+.. _Tariff: ,Object **Tariff**,
+id, long, tariff package identifier
+name, String, name of the tariff package
+price, double, the cost of the tariff package per month
+priceWithoutVAT, double, the cost of the tariff package per month without VAT
+limit, int, transaction limit (0 = unlimited)
+currencyID, int, currency code of the tariff plan

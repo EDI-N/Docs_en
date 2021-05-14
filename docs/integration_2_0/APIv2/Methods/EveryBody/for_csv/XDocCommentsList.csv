@@ -1,0 +1,3 @@
+Parameter,Format,Description 
+.. _XDocCommentsList: ,**Object XDocCommentsList** ,
+XDocCommentsList,List<XDocComment_>,array of objects; comments to the document

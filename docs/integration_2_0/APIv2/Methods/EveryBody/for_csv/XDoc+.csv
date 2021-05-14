@@ -1,0 +1,3 @@
+Parameter,Format,Description 
+items,List<XDoc_> ,array of objects; list of documents
+totalCount,int ,documents amount

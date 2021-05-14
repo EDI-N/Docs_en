@@ -1,0 +1,4 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _Signs: ,, Object **Signs** ,
+sign, ,string,signed data
+type, ,number,*sign* amount in Signs_ object (number N)
