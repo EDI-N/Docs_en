@@ -1,0 +1,34 @@
+Parameter,Format,Description 
+.. _XDoc: ,**Object XDoc** ,
+body,XDocBodyForms_ ,object; documents body
+attachments, List <XDocAttachment_>, array of objects; attachments (may not be used)
+comments, XDocCommentsList_, object (include an array of objects); list of comments
+doc_id, long, document id
+doc_uuid, UUID, unique document/ticket ID
+uuidSender, String, unique sender ID
+uuidReceiver, String, the unique identifier of the recipient
+docNumber, String, document number
+dateCreated, long, document creation date (unix timestamp)
+dateChanged, long, date of last document change (unix timestamp)
+dateRead, long, document read date (unix timestamp)
+docDate, long, "document date specified in the document"
+chain_id, long, document chain id
+chain_uuid, UUID, a unique document chain identifier
+family, int, "service
+
+* 1 - EDI
+* 6 - ATS
+* 7 - ETTN
+* 8 - DISTRIBUTION
+* 9 - SIMPLEDOC (Vilnyi) "
+hash, String, "hash value obtained as a result of processing"
+type, XDocType_, object; document type
+status, XDocStatus_, object; the status of a pair of documents from the sender and recipient
+exchange_status, String, document substatus (`more <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/Ticket_exchange_status.html>` __)
+is_archive, boolean, document marked as **Archived**
+signInfo, XDocSignInfo_, object; signature data
+chain, XChain, object; data of related chains
+extraFields, "Map <String, String>", array of objects; set of indexes (analog of index tables)
+tags, List <XTag_>, array of objects; attached tags
+statuses, List <XStatus_>, array of objects; sent documents processing statuses 
+multiExtraFields,"Map<String, List<String>>","array of objects; multiindex. Example: {'key1': ['val1', 'val2'], 'key2': ['val1', 'val2']}. Used, for example, to process the transmitted string => break the string condition => index each piece"

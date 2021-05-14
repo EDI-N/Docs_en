@@ -1,0 +1,11 @@
+**URL**       ,
+Method  , POST                                          
+URL query    , **/api/v2/eds/comdoc/repeal/accept?gln=9864065702429&doc_uuid=c1f6a1d0-5aaf-4a06-b78d-71c238f70986**
+URL parameters,"**gln** - string (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level
+
+**doc_uuid** - string; document UUID COMDOC"
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , application/pkcs7-signature                              
+**REQUEST**   ,
+JSON Body     ,"The body of the request method transmit signed p7s data in binary form"

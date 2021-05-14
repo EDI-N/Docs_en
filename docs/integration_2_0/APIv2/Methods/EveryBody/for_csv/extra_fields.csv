@@ -1,0 +1,107 @@
+Parameter id,Parameter name,Mandatory/Optional,Format,Description
+1, created_from ,, UUID, document or chain ID
+2, is_signed ,, TINYINT, signing mark
+3, encrypted ,, TINYINT, encryption mark
+4, comdoc_reestr_id ,, INT,factoring Register id (on the basis of a commercial document)
+5, comdoc_reestr_is_active ,, TINYINT, activity note of the factoring agreement
+6, ftpex_file_name ,, VARCHAR, "the name of the file sent via FTP"
+7, ftpex_file_date ,, INT, the document date / time of sending via FTP
+8, inv_date ,, INT, invrpt document date (Inventory Report)
+9, inv_num ,, VARCHAR, invrpt document number (Inventory Report)
+11, sub_doc_type_id ,, INT, document subtype id ( subtype_description_ )
+12, sub_status_id ,, INT, document status id (`in more detail <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/Ticket_exchange_status.html>`__); characterizes the state of the document chain 
+13, action ,, VARCHAR, "status / state of the document according to the user's actions;
+
+For EDI:
+
+    ORDER (document type):
+
+    * 0 - original (O)
+    * 1 - replacement (R)
+    * 2 - deletion (D)
+    * 3 - order fictitiousness (F)
+
+    RETANN:
+
+    * 1 - RETANN document sent 
+    * 2 - RETINS sent in response
+
+    PRICAT (document type):
+
+    * 9 - price list (full)
+    * 13 - EDIN price list request
+    * 15 - for EDIN Distribution service
+    * 19 - EDIN 2.0 price list request
+    * 51 - response to the price list
+    * 21 - addition to the existing price list
+    * 99 - price list refusal
+
+    COACSU (document type):
+
+    * 49E - original document
+    * 397 - document at response
+
+    CONDRA:
+
+    * 1 - sent 
+    * 2 - accepted by the other party
+    * 3 - denied by the other party
+    * 4 - revoked by the sender
+
+For Vilnyi:
+
+* 0 - Pending signing
+* 1 - Signed
+* 2 - Rejected"
+14, buyer_uuid ,, VARCHAR, sender of the document
+15, consignee_uuid ,, VARCHAR, consignee
+16, consignor_uuid ,, VARCHAR, consignor
+17, customer_uuid ,, VARCHAR, buyer
+18, performer_uuid ,, VARCHAR, performer
+19, supplier_uuid ,, VARCHAR, supplier
+20, delivery_place_uuid ,, VARCHAR, place of delivery
+21, contract_date ,, VARCHAR, date of contract
+22, contract_number ,, VARCHAR, contract number
+23, delivery_date, O, INT, delivery date
+24, order_number, O, VARCHAR, order number
+25, order_date ,, INT, order date
+26, return_date ,, INT, return date
+27, summ ,, VARCHAR, amount including VAT
+28, parent_chain_hash ,, MD5, chain hash
+29, period ,, VARCHAR, deadline for signing the document
+31, trans_id ,, VARCHAR, transaction id
+32, ttn ,, VARCHAR, number of the consignment note
+33, doc_start_date ,, VARCHAR, the beginning of the document signing period
+34, doc_end_date ,, VARCHAR, the deadline for document signing
+35, delivery_note_number ,, VARCHAR, tax invoice number
+42, contract_gln ,, VARCHAR, delivery place GLN at the goods agreement (Agreem-> Comdoc)
+43, doc_date ,, INT, date from document
+44, delivery_agreement_number ,, VARCHAR, number of agreements
+45, delivery_agreement_date ,, INT, date of agreement
+46, varn ,, VARCHAR, legally significant document id
+47, other_info ,, TEXT, additional data
+48, sub_doc_date ,, INT, document subtype date
+49, sub_doc_number ,, VARCHAR, document subtype number
+50, doc_error ,, TEXT, working with the document error
+51, doc_info ,, TEXT, comment to the document
+52, old_doc_id ,, INT, document id
+53, sub_status_date ,, INT, document status date (document chain status)
+54, from_doc_id ,, INT, the serial number of the document in the chain
+56, doc_num ,, VARCHAR, document number
+57, sender ,, VARCHAR, sender GLN
+58, recipient ,, VARCHAR, recipient GLN
+59, file_name ,, VARCHAR, "name of the attached file (attachment)"
+60, xml_hash ,, VARCHAR, content hash of the document
+61, answer_doc_id ,, INT, COMDOC id which is sent in response
+80, identifier ,, VARCHAR, document ID in the client system
+82, compound_number ,, VARCHAR, component number
+85, doc_process ,, TINYINT,
+87, users ,, VARCHAR,
+88, basis_doc_subtype,, INT, base document subtype
+89, basis_doc_number,, INT, base document number
+90, basis_doc_date, , INT, base document date
+, summ_without_tax,, INT, amount without VAT
+, tax_summ,, INT, VAT amount
+, summ,, INT, amount including VAT
+129, receiving_note_number,, VARCHAR, Reception notification number (DOCUMENTINVOICE ... ReceivingAdviceNumber)
+137, branch_uuid,, VARCHAR, «branch supplies» uuid (АТБ COMDOC+DESADV)

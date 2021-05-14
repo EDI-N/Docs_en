@@ -1,0 +1,6 @@
+**URL**       ,
+Method  , GET                                          
+URL query    , **/api/auth_check**
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , application/json                              

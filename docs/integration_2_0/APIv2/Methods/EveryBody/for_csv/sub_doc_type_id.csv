@@ -1,0 +1,27 @@
+Commercial document subtype,Name and description
+5,`Defects Certificate (COMDOC_005) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-005>`__
+6,`Delivery document/Goods Delivery Note (COMDOC_006) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-006>`__
+7,`Receive document/Goods Received Note (COMDOC_007) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-007>`__
+8,`Product specification (COMDOC_008) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-008>`__
+9,`Certificate of Nonconformity/Non-conformance Report (COMDOC_009) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-009>`__
+11,`Notice of Return/Return notification (COMDOC_011) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-011>`__
+12,`Return Delivery Note (COMDOC_012) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-012>`__
+13,`Works Acceptance Certificate (COMDOC_013) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-013>`__
+15,`Offset Certificate (COMDOC_015) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-015>`__
+16,`Invoice (COMDOC_016) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-016>`__
+18,`Services Acceptance Certificate (COMDOC_018) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-018>`__
+19,`Annulment (COMDOC_019) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-019>`__
+21,`Notice of Refusal to Sign Document (COMDOC_021) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-021>`__
+22,`Dispatch invoice/Note for Internal Handling (COMDOC_022) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-022>`__
+23,`Transportation services specification (COMDOC_023) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-023>`__
+24,`Acquiring accountant report (COMDOC_024) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-024>`__
+25,`Acquiring account (COMDOC_025) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-025>`__
+26,`Summary of services (COMDOC_026) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-026>`__
+27,`Goods invoice/Consignment note (COMDOC_027) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-027>`__
+28,`Application for forwarding service (COMDOC_028) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-028>`__
+29,`Act of mutual settlements reconciliation (COMDOC_029) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-029>`__
+30,`Claim (COMDOC_030) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-030>`__
+31,`Returnable packaging invoice (COMDOC_031) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-031>`__
+32,`Act of acceptance of goods (warehouse logistics) (COMDOC_032) <https://wiki.edin.ua/uk/latest/RetailersLists/ATB/ATB_XML-structure.html#comdoc-032>`__
+33,`Act of acceptance of goods (COMDOC_033) <https://wiki.edin.ua/uk/latest/RetailersLists/ATB/ATB_XML-structure.html#comdoc-033>`__
+34,`The act of disagreement to the Act of transfer (COMDOC_034) <https://wiki.edin.ua/uk/latest/RetailersLists/ATB/ATB_XML-structure.html#comdoc-034>`__

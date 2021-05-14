@@ -1,0 +1,9 @@
+Parameter,Format,Description 
+.. _XStatus: ,**Object XStatus** ,
+docId,long,document/chain id
+date,long,status date; unix timestamp format
+type,int,"status type: 
+
+* 0 - positive (accepted)
+* 1 - negative (rejected)"
+text,String,status content

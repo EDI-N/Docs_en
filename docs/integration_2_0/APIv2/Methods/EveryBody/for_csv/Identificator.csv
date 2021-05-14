@@ -1,0 +1,31 @@
+Parameter,Format,Description
+.. _Identificator:, Object **Identificator**,
+guid, String, organization GUID
+taxNum, String (50), Tax identification number
+ndsNum, String(50), № VAT certificates
+manager, String(100), manager full name
+accountant, String(100), accountant name
+id, long, user ID
+gln, String (13), "organization GLN"
+companyId, long, account id; numeric
+retailerId, long, network id (retailer); numeric
+name, String(100), organization name 
+companyType, String(5), "form of ownership; jur - Legal entity, fiz - Individual"
+companyInn, String(50), company TIN code
+companyKpp, String(50), USREOU / PPC code
+companyOgrn, String(15), Primary State Registration Number
+companyTaxDepartmentID, String, tax office department identifier
+dirLastName, String(150), director's last name
+dirFirstName, String(150), director's name
+apartment, String(20), apartment
+zip, String(20), zip code
+city, String(50), city
+street, String(100), street name
+regionCode, String(3), region code
+bankName, String(100), bank name
+bankMfo, String, "MFI bank code, bank requisites"
+phone, String(50), phone
+bankAccount, String(50), bank checking account
+otherInfo, String, comments
+email, String(255), Email
+metroCode, String(20), delivery point code 

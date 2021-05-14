@@ -1,0 +1,3 @@
+Parameter,Format,Description 
+.. _XDocBodyForms: ,**Object XDocBodyForms** ,
+forms,"HashMap<String, XDocBody_>",array of objects; document body

@@ -1,0 +1,9 @@
+Status id,Status
+0, ALL - any status
+1, OPEN - draft (sender)
+2, SENT - sent (sender)
+3, DELIVERED - delivered (sender)
+4, INBOX - incoming (recipient)
+5, READ - read (recipient)
+6, ERROR - error
+7, DELETED - deleted 

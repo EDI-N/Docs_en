@@ -1,0 +1,16 @@
+Parameter,Format,Description
+.. _Company:, Object **Company**,
+id, long, company id; numeric
+**account**, Account_, object; account data
+name, String, full name of the organization or name of the individual entrepreneur
+ownership, String (5), "ownership: jur - Legal entity, fiz - Individual"
+edrpou, String (50), USREOU / PPC code
+inn, String (50), TIN code
+mail, String, mail
+phone, String (50), phone
+ndsNumber, String (50), VAT certificates number
+bankAccount, String (50), bank account
+bankName, String (100), bank name
+bankMfo, String, "MFIs bank code, bank details"
+bankAddress, String (150), bank address
+**users**, List<User_>, array of objects; users

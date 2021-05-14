@@ -1,0 +1,7 @@
+Parameter,Format,Description 
+.. _XDocComment: ,**Object XDocComment** ,
+id,long,comment id
+docUUID,UUID,unique document ID
+createTimestamp,long,the date of comment creation in timestamp format
+authorLogin,String,comment author
+comment,String,comment content

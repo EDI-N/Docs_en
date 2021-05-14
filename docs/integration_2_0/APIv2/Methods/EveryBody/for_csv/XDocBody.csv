@@ -1,0 +1,10 @@
+Parameter,Format,Description 
+.. _XDocBody: ,**Object XDocBody** ,
+type,XDocBodyType_ ,"object; document body type:
+CONTENT = 1 - content in bytes;
+JSON = 2 - content in json;
+SIGN = 3 - signature content;
+STAMP = 4;
+CRYPTED = 5 - content in encrypted form;
+UZDRESPONSE = 6"
+base64content,String,document body content in BASE64

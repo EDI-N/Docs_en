@@ -1,0 +1,7 @@
+Parameter,Format,Description 
+.. _TariffBalanceData: ,Object **TariffBalanceData**,
+**tariffProducts**,List<TariffProduct_>,array of objects; tariff packages data
+balance, double, funds on the balance
+rate, double, exchange rate
+** userProducts **, AccountBalance_, object with arrays of active and purchased products in the form of objects
+history, List <BalanceHistory_>, array of objects; history of operations

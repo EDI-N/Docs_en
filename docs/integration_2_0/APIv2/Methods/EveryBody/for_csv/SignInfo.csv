@@ -1,0 +1,7 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _SignInfo: ,, Object **SignInfo** ,
+doc_id,, number, document id
+date,, any, date of signing
+count,, number, amount of signatures
+hash,, string, signature content hash 
+certData, ,{...},"object; {} - conditional element of the array with information about signatures that contain data (fields) from the certificate : ownerName, EDRPOUCode, subjTitle, subjOrg, signDate, isTimeStamp, serial"

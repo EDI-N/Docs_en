@@ -1,0 +1,46 @@
+Parameter,Mandatory/Optional,Format,Description
+.. _StorageQuery: ,, Object **StorageQuery** ,
+**extraParams**, ,List<ExtraQueryParameters_>,array of objects;
+**multiExtraParams**, ,List<ExtraQueryParameters_>,array of objects;
+**type**,M,List<XDocType_>,"array of objects; document types list: 0 - all types, 1/2/3 ... and more - specific document type"
+**statuses**,M,**List<Integer>**,"array; a list of statuses (states) of documents according to which the selection will take place:
+
+* 0 - all
+* 1 - open (drafts)
+* 2 - sent (sent-Sender)
+* 3 - delivered (delivered-Sender)
+* 4 - inbox (incoming-Recipient)
+* 5 - read (read-Recipient)
+* 6 - error
+* 7 - deleted"
+**tags**, ,**List<Long>**,array; tag
+**exchangeStatus**,O,**List<Integer>**,array; document flow status 
+**docs**, ,**List<Long>**,array; documents
+**direction**,M,Direction_,"object; document flow direction; specified Sender, Recipient and the connection between them in terms of document selection"
+**limit**,O,Limitation_,object; selection filter (data output settings)
+orderBy,O,OrderBy,filter document by it date or description
+groupBy,O,String,united by chain / document id
+number,O,String,document number
+family,O,int,"service
+
+* 1 - EDI
+* 6 - ATS
+* 7 - ETTN
+* 8 - DISTRIBUTION
+* 9 - SIMPLEDOC (Vilnyi)"
+partnerId, ,Long,retail network id
+chainHash, ,String,"the hash value obtained by chain processing"
+docHash, ,String,"the hash value obtained by document processing"
+**docDate**,O,DateTimeRange_,object; the date which is specified in the document (according to Kyiv time relative to UTC in UNIX-timestamp format) from / to
+**docCreate**,O,DateTimeRange_,object; document creation date (according to Kyiv time relative to UTC in UNIX-timestamp format) from / to
+**docRead**,O,DateTimeRange_,object; date of reading the document (according to Kyiv time relative to UTC in UNIX-timestamp format) from / to
+**docChanged**,O,DateTimeRange_,object; the date of the last change of the document (according to Kyiv time relative to UTC in UNIX-timestamp format) from / to
+archive, ,Boolean,mark of an archival feature presence in a document
+important, ,boolean,"**important** document mark"
+visible, ,boolean,visibility mark
+loadBody, ,boolean,mark of the body presence in a document
+loadComments, ,boolean,mark of the comments presence in a document
+loadStatuses, ,boolean,mark of the statuses presence in a document
+loadTags, ,boolean,mark of the tags presence in a document
+loadChain, ,boolean,mark of the chains presence in a document
+loadAttachments, ,boolean,mark of the attachments presence in a document

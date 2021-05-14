@@ -1,0 +1,23 @@
+**URL**       ,
+Method  , GET
+URL query    , **/api/eds/chain?gln=9864065702429&chain_uuid=9fe45d32-35c7-44d0-9131-7257fc0c0f39&load_docs=true&load_bodies=true&load_package=true&load_comments=true&load_tags=true&load_statuses=true**
+URL parameters,"**gln** - string (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level
+
+**chain_uuid** - string; Chain ID
+
+**Optional url-parameters (boolean filters):**
+
+**load_docs** - whether to download documents related to the chain
+
+**load_bodies** - whether to download documents body
+
+**load_package** - whether to download packages
+
+**load_comments** - whether to download comments
+
+**load_tags** - whether to download documents tags
+
+**load_statuses** - whether to download statuses to documents"
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , application/json

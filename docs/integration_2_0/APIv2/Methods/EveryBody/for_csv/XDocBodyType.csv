@@ -1,0 +1,4 @@
+Parameter,Format,Description 
+.. _XDocBodyType: ,**Object XDocBodyType** ,
+id,int,document body type id
+name,String,document body type name

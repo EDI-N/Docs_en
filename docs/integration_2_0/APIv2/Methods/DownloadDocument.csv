@@ -1,0 +1,28 @@
+**URL**       ,
+Method  , GET
+URL query    , **/api/eds/doc/download?gln=9864067620417&doc_uuid=f7b2c329-58ea-4800-a984-3bfba37824bd&file_name=dokdok1&format=pdf**
+URL parameters,"**gln** - String (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level;
+
+OR
+
+**guid** - String; the GUID of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level 
+
+**doc_uuid** - UUID; document UUID
+
+**file_name** (optional) - String; file name to download
+
+**format** (optional) - String; file format for download (ZIP if not specified); possible values:
+
+* XLS
+* PDF
+* XML
+* P7S
+* ZIP
+
+**response_type** (optional) - String; server response format (file if not specified); possible values:
+
+* bytes - the response is transmitted in binary form;
+* file - the response is transmitted as a file"
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , application/octet-stream

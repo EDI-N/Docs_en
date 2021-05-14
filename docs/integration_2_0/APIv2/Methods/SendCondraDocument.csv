@@ -1,0 +1,21 @@
+**URL**       ,
+Method  , PATCH                                          
+URL query    , **/api/eds/doc/condra/send?partner_id=0&gln=9864067620417&doc_uuid=226907d8-dacd-475e-9521-8a998825cc46&doc_hash=133BF38FC2763511E284879177A3F111&chain_hash=51F061AF9D41407AFCCBD1B7E089CE8E**
+URL parameters,"**gln** - string (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level
+OR
+**guid** - string; unique identifier of the organization at EDIN 2.0 platform
+
+**doc_uuid** - string; document UUID
+
+**doc_hash** (optional) - string; document hash
+
+**chain_hash** (optional) - string; chain hash
+
+**chain_uuid** (optional) - string; chain ID
+
+**partner_id** (optional) - numeric; retail network id (can be obtained from the `directory of retail networks <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Allretailers.html>`__)
+
+**chain_type** (optional) - numeric; document chain type; 0 - ordinary, 1 - special (TM Fozzy)"
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , text/plain; charset=UTF-8                             

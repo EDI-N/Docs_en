@@ -1,0 +1,9 @@
+Parameter,Format,Description 
+.. _XDocAttachment: ,**Object XDocAttachment** ,
+id,long,attachment id
+docUUID,UUID,unique document ID
+fileName,String,file name
+createDate,long,attachment date creation; unix timestamp format
+type,String,attachment type
+base64content,String,attachment content in BASE64
+content,byte[],attachment content in integer form

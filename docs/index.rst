@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
    :caption: EDIN 2.0
 
+   integration_2_0/integration_2_0_list
    XML/XML-structure
 
 .. toctree::

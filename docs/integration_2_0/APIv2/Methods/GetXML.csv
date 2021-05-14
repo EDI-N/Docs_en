@@ -1,0 +1,15 @@
+**URL**       ,
+Method  , GET
+URL query    , **/api/eds/doc/xml?gln=9864232319979&doc_uuid=c1f6a1d0-5aaf-4a06-b78d-71c238f70986**
+URL parameters,"**gln** - string (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level
+
+**doc_uuid** - string; document UUID
+
+**response_type** (optional) - the format of the expected response; possible values:
+
+- ``bytes`` - xml file (by default)
+- ``zip`` - archive that contains the xml file and all related files to it (if the document type is COMDOC, then the archive will contain xml file and all of its signatures)
+- ``base64`` - xml file в форматі Base64"
+**Headers**   ,
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Content-Type  , application/json

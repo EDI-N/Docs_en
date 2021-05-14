@@ -10,8 +10,8 @@ Field name,Type [1]_,Format,Description
 Початок,M,Date (YYYY-MM-DD),Date of the beginning of the sign period
 Кінець,M,Date (YYYY-MM-DD),Date of the end of the sign period
 **ТермінПідпису**, , ,"Document sign period (the end of the block)"
-НомерЗамовлення,О,String (20),Order number
-ДатаЗамовлення,О,Date (YYYY-MM-DD),Order date
+НомерЗамовлення,M,String (20),Order number
+ДатаЗамовлення,M,Date (YYYY-MM-DD),Order date
 МісцеСкладання, , ,Place of document assembly
 **ДокПідстава**,M, , Document basis on (block start)
 НомерДокументу,М,String (30),Basis document number
@@ -45,8 +45,8 @@ Field name,Type [1]_,Format,Description
 НазваКонтрагента,М,String (50),Counterparty name
 КодКонтрагента,М,String (8),"Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)"
 ІПН,М,String (12),Counterparty individual tax number
-IBAN,О,String (35),IBAN (international bank account number; use in international settlements)
-Телефон,О,String (20),Phone number
+IBAN,M,String (35),IBAN (international bank account number; use in international settlements)
+Телефон,M,String (20),Phone number
 GLN,M,Integer (13),Counterparty Global Location Number (GLN)
 **Контрагент**, , ,Counterparty (the end of the block)
 **Сторони**, , ,"The parties between whom the document is concluded (the end of the block)"
@@ -57,41 +57,41 @@ GLN,O,Integer (13),Delivery place Global Location Number (GLN)
 Місто,O,String (50),City
 Вулиця,O,String (50),Street
 **МісцеДоставки**, , ,Delivery place (the end of the block)
-**Параметри**,О, ,"Parameters (block start). The field provides free value. This parameter is used to transfer additional information that is not included in the specification"
+**Параметри**,M, ,"Parameters (block start). The field provides free value. This parameter is used to transfer additional information that is not included in the specification"
 Параметр,O,String (50),Parameter. Maximum number of tags is 99. Each next tag identifier (ID) is incremented by one.
-**Параметри**,О, ,Parameters (the end of the block)
-**Таблиця**,О,Number of occurrences unit: Min = 0; Max = 1,Table (block start)
+**Параметри**,M, ,Parameters (the end of the block)
+**Таблиця**,M,Number of occurrences unit: Min = 0; Max = 1,Table (block start)
 **Рядок**,M,Number of occurrences unit: Min = 1;Max = 9999,Row (block start). Each next tag identifier (ID) is incremented by one
 НомПоз,М,Integer (3),Position number
-Штрихкод,О,Integer (13),Barcode
-АртикулПокупця,О,String (10),Buyer article 
-АртикулПродавця,О,String (10),Seller article
-КодУКТЗЕД,О,Integer (4...10),Product code according to the national classifier (UKT FEA Code)
+Штрихкод,M,Integer (13),Barcode
+АртикулПокупця,M,String (10),Buyer article 
+АртикулПродавця,M,String (10),Seller article
+КодУКТЗЕД,M,Integer (4...10),Product code according to the national classifier (UKT FEA Code)
 Найменування,М,String (50),Commodity item name
-ПрийнятаКількість,О,Decimal (#.00),Accepted quantity of commodity items
-ОдиницяВиміру,О,String (10),Units [2]_
-БазоваЦіна,О,Decimal (#.00),Price per unit without VAT
-ПДВ,О,Decimal (#.00),VAT amount per unit of goods (services)
-Ціна,О,Decimal (#.00),Price per unit with VAT
-**ВсьогоПоРядку**,О,Number of occurrences unit: Min = 0; Max = 1,Total amount per row (block start)
-СумаБезПДВ,О,Decimal (#.00),Amount without VAT and without discount
-СумаПДВ,О,Decimal (#.00),VAT amount
-Сума,О,Decimal (#.00),Sum
-СумаЗіЗнижкоюБезПДВ,О,Decimal (#.00),Amount without VAT and with discount
-СумаЗіЗнижкоюЗПДВ,О,Decimal (#.00),Amount with VAT and with discount
+ПрийнятаКількість,M,Decimal (#.00),Accepted quantity of commodity items
+ОдиницяВиміру,M,String (10),Units [2]_
+БазоваЦіна,M,Decimal (#.00),Price per unit without VAT
+ПДВ,M,Decimal (#.00),VAT amount per unit of goods (services)
+Ціна,M,Decimal (#.00),Price per unit with VAT
+**ВсьогоПоРядку**,M,Number of occurrences unit: Min = 0; Max = 1,Total amount per row (block start)
+СумаБезПДВ,M,Decimal (#.00),Amount without VAT and without discount
+СумаПДВ,M,Decimal (#.00),VAT amount
+Сума,M,Decimal (#.00),Sum
+СумаЗіЗнижкоюБезПДВ,M,Decimal (#.00),Amount without VAT and with discount
+СумаЗіЗнижкоюЗПДВ,M,Decimal (#.00),Amount with VAT and with discount
 **ВсьогоПоРядку**, , ,Total amount per row (the end of the block)
-**ЦінаРегулярна**,О, ,Regular price (block start)
-ЦінаБезПДВ,О,Decimal (#.00),Price without VAT
-ЦінаЗіЗнижкоюБезПДВ,О,Decimal (#.00),Price without VAT and with discount
-ЦінаЗіЗнижкоюЗПДВ,О,Decimal (#.00),Price with VAT and with discount
+**ЦінаРегулярна**,M, ,Regular price (block start)
+ЦінаБезПДВ,M,Decimal (#.00),Price without VAT
+ЦінаЗіЗнижкоюБезПДВ,M,Decimal (#.00),Price without VAT and with discount
+ЦінаЗіЗнижкоюЗПДВ,M,Decimal (#.00),Price with VAT and with discount
 **ЦінаРегулярна**, , ,Regular price (the end of the block)
 **Рядок**, , ,Row (the end of the block)
 **Таблиця**, , ,Table (the end of the block)
-**ВсьогоПоДокументу**,О,,Total by Document (block start)
-СумаБезПДВ,О,Decimal (#.00),Sum without VAT for all positions and without discount
-ВсьогоЗіЗнижкоюБезПДВ,О,Decimal (#.00),Sum without VAT for all positions and with discount
-ВсьогоЗіЗнижкоюЗПДВ,О,Decimal (#.00),Sum with VAT for all positions and with discount
-ПДВ,О,Decimal (#.00),VAT amount for all positions
-Сума,О,Decimal (#.00),Sum of all positions   
-**ВсьогоПоДокументу**,О, ,Total by Document (the end of the block)
-**ЕлектроннийДокумент**,О, ,End of the document
+**ВсьогоПоДокументу**,M,,Total by Document (block start)
+СумаБезПДВ,M,Decimal (#.00),Sum without VAT for all positions and without discount
+ВсьогоЗіЗнижкоюБезПДВ,M,Decimal (#.00),Sum without VAT for all positions and with discount
+ВсьогоЗіЗнижкоюЗПДВ,M,Decimal (#.00),Sum with VAT for all positions and with discount
+ПДВ,M,Decimal (#.00),VAT amount for all positions
+Сума,M,Decimal (#.00),Sum of all positions   
+**ВсьогоПоДокументу**,M, ,Total by Document (the end of the block)
+**ЕлектроннийДокумент**,M, ,End of the document

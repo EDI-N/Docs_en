@@ -1,0 +1,56 @@
+######################################################################
+**Creating a ticket №12 (acceptance of the COMDOC repeal request)**
+######################################################################
+
+.. role:: red
+
+.. role:: green
+
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+
+:green:`New:`
+
+.. important:: It is not possible to confirm (accept) the request to repeal a COMDOC document if the document:
+
+    - repealed (the document has ticket №12)
+    - has no request of repeal (the document **is missing** ticket №11)
+
+    The USREOU must comply with the signature *[КодКонтрагента]* or *[ІПН]* in one of the blocks *[ЕлектроннийДокумент/Сторони/Контрагент]*
+
+.. csv-table:: 
+  :file: RepealAccept2.csv
+  :widths:  10, 41
+  :stub-columns: 0
+
+**RESPONSE**
+
+**Response** transmits
+
+**chain_uuid** - the identifier of the chain in which the document is located
+
+**doc_uuid** - document ID with a ticket
+
+**ticket_uuid** - ticket ID
+
+**Example (JSON):**
+
+.. code:: json
+
+	{
+	  "chain_uuid": "7b6aef20-9f42-460e-9031-bb81c91e3b03",
+	  "doc_uuid": "e013510a-4267-4553-80f0-eb5ebabdfd05",
+	  "ticket_uuid": "1003706c-3656-497b-9438-c6f33e27c36d"
+	}
+
+----------------------------------------------
+
+:red:`Deprecated:`
+
+.. csv-table:: 
+  :file: RepealAccept.csv
+  :widths:  10, 41
+  :stub-columns: 0
+
+**RESPONSE**
+
+Server code 200 (ok).
