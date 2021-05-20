@@ -345,4 +345,4 @@ If necessary, the ATB network can generate a "Universal Document" (CONDRA) in re
 
 -------------------------------------
 
-.. include:: ../../_static/files/kontakti.rst
+.. include:: /_static/files/kontakti.rst
