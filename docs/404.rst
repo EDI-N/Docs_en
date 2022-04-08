@@ -1,23 +1,16 @@
 :orphan:
 
-===============
- Oh, no -- 404
-===============
+==============================
+Page not found -- 404
+==============================
 
-We could not find this page!.
+Oh, no page found! Use the search or go to the `main page <https://wiki.edin.ua/en/latest>`__.
 
 .. raw:: html
 
    <!DOCTYPE html>
    <html>
-   <head>
-   <script src="galaga.js"></script>
-   </head>
    <body>
-   <p class="center">Space Invadors destroyed this page! Take revenge on them! Use <span class="label label-danger">Space</span> to shoot and <span class="label label-danger">←</span>&#160;<span class="label label-danger">→</span> to move!&#160;&#160;&#160;</p>
-
-   <canvas id="space-invaders"/>
+   <img alt="404" itemprop="image" data-src="https://wiki.edin.ua/en/latest/_static/404-animated.gif" class="fl-photo-img wp-image-11837 size-full lazyloaded" src="https://wiki.edin.ua/en/latest/_static/404-animated.gif" title="404" width="946" height="530"><noscript><img class="fl-photo-img wp-image-11837 size-full" src="https://wiki.edin.ua/en/latest/_static/404-animated.gif" alt="404" itemprop="image" height="530" width="946" title="404"  /></noscript>
    </body>
    </html>
-
-Please, try using the links from the sidebar to find what you are looking for.
