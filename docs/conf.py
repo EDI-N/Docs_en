@@ -135,7 +135,7 @@ def setup(app):
     app.add_javascript('galaga.js')
 
 html_js_files = [
-    '_static/lang.js',
+    'lang.js',
 ]
 
 # А это то, что я нагородил (не используй это):
