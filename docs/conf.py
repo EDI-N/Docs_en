@@ -134,8 +134,14 @@ def setup(app):
     app.add_stylesheet('theme_overrides.css')
     app.add_javascript('galaga.js')
 
+# old js was added like this
+#def setup(app):
+#    app.add_stylesheet('theme_overrides.css')
+#    app.add_javascript('galaga.js')
+
 html_js_files = [
     'lang.js',
+    'galaga.js',
 ]
 
 # А это то, что я нагородил (не используй это):
