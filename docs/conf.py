@@ -134,6 +134,10 @@ def setup(app):
     app.add_stylesheet('theme_overrides.css')
     app.add_javascript('galaga.js')
 
+html_js_files = [
+    '_static/lang.js',
+]
+
 # А это то, что я нагородил (не используй это):
 # import os
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
