@@ -164,7 +164,7 @@ The registered user becomes the owner of the account and is given maximum author
 
 .. _join-request:
 
-**2.3 Join an existing account*
+**2.3 Join an existing account**
 -----------------------------------------------------------------
 
 .. attention::
