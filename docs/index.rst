@@ -10,7 +10,7 @@ Contents:
    
 .. toctree::
    :maxdepth: 2
-   :caption: EDIN Network
+   :caption: EDI Network
 
    general_2_0/general_2_0_list
    integration_2_0/integration_2_0_list
@@ -18,6 +18,12 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: EDIN-Distribution
+   :caption: Distribution
 
    Distribution/EDIN_2_0/XML/XML_structure
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Legal info
+
+   Legal_info/Rules
