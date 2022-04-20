@@ -73,6 +73,8 @@ The side menu of the **"Have Product"** service contains the following sections:
 
 Filters of documents by date are made separately (**"Today"**, **"Yesterday"**). The last entered search is saved by the platform automatically and when you press the button **"Last filter"** it is performed again in that folder ("Inbox" / "Outbox" / "Archive" / etc.), where you were before (you will be redirected).
 
+.. _sale:
+
 2 Work with Buyers (sale)
 ===================================
 
@@ -167,6 +169,8 @@ You can delete positions with |смітник| button or completely **"Delete"**
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_041.png
    :align: center
+
+.. _purchase:
 
 3 Work with Sellers (purchase)
 ===================================================
