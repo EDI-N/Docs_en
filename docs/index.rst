@@ -18,6 +18,12 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Have Product
+
+   Instruction <https://wiki.edin.ua/uk/latest/Openprice/Instructions/Openprice_instruction.html>
+
+.. toctree::
+   :maxdepth: 2
    :caption: Distribution
 
    Distribution/EDIN_2_0/XML/XML_structure
