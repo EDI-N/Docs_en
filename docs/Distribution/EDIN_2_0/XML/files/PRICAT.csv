@@ -29,20 +29,21 @@ SUBBRAND, M (O - if ACTION = 18), String (75), Product Subcategory name
 IDSUPPLIER, M, String (16), Article
 PRODUCTNAME, M (O - if ACTION = 18), String (255), Full product name
 PRODUCT, M, Positive integer (20), Barcode
+MINORDERQUANTITY, O (M-for Rozetka),"Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Minimum order quantity
 IDPRODUCER, O, String (8), Producer code 
 IDNATIONAL, O, Positive integer (20), Product code according to the national classifier (UKT FEA Code)
-UNITWEIGHT, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Unit weight (kg)
+UNITWEIGHT, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Unit weight (kg)
 QUANTITYOFCUINTU, M (O - if ACTION = 18), Positive integer (10), Units quantity in a box (pce)
-BOXWEIGHT, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Box weight (kg)
+BOXWEIGHT, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Box weight (kg)
 BOXINLAYER, O, Positive integer (20), Boxes quantity in the layer (pce in 1 level)
 BOXINPALLET, O, Positive integer (20), Boxes quantity on the pallet (pce)
-PALLETWEIGHT, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Pallet weight (kg)
+PALLETWEIGHT, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Pallet weight (kg)
 UNIT, M, String (3), `Units of measurement <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/units_distr.html>`__
-ACTUALQUANTITY, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Items balance
-UNITPRICE, M (O - if ACTION = 17), Floating point number (maximal 6 symbols before dot, 6 symbols after dot), Price per unit without VAT (UAH)
-PRICEWITHVAT, O, Floating point number (maximal 6 symbols before dot, 6 symbols after dot), Price per unit with VAT (UAH)
+ACTUALQUANTITY, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Items balance
+UNITPRICE, M (O - if ACTION = 17), "Floating point number (maximal 6 symbols before dot, 6 symbols after dot)", Price per unit without VAT (UAH)
+PRICEWITHVAT, O, "Floating point number (maximal 6 symbols before dot, 6 symbols after dot)", Price per unit with VAT (UAH)
 TAXRATE, O, "Positive integer - «20», «0», «7»", "VAT rate, %"
-QUOTA, O, Floating point number (maximal 10 symbols before dot, 3 symbols after dot), Quota to order
+QUOTA, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Quota to order
 INFO, O, String (255), Comment
 NEWPOSITION, O,"Number - «0», «1»", Novelty
 PROMO, О,"Number - «0», «1»", Action

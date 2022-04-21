@@ -39,7 +39,7 @@ Introduction
 
 **"Have Product"** - it is a complex electronic solution focused primarily on quick product search and easy creation of electronic orders.
 
-**"Have Product"** service allows contractors to act in the roles of **Buyer** (**Distributor**) and **Seller** (**Producer**) depending on the actions in the service. This instruction describes the procedure for creating your own `"Price list" (PRICAT) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ and the formation of `"Order" (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ based on the "Price list" (PRICAT) of other users of **"Have Product"** service.
+**"Have Product"** service allows contractors to act in the roles of **Buyer** (**Distributor**) and **Seller** (**Producer**) depending on the actions in the service. This instruction describes the procedure for creating your own `"Price list" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ and the formation of `"Order" (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ based on the "Price list" (PRICAT) of other users of **"Have Product"** service.
 
 .. note:: All data given in the Instructions - fictitious, are used only as an example.
 
@@ -63,8 +63,8 @@ The side menu of the **"Have Product"** service contains the following sections:
    :align: center
 
 * **Available pricelists** - section, which displays all available price lists of users **"Have Product"** service;
-* **My price list** - section that displays your (current GLN) `"Price List" (PRICAT) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__;
-* **Mass uploading** - functionality of mass loading of goods in Your `"Price List" (PRICAT) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__;
+* **My price list** - section that displays your (current GLN) `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__;
+* **Mass uploading** - functionality of mass loading of goods in Your `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__;
 
 * **Inbox** - all incoming documents for your organization from contractors;
 * **Outbox** - all documents sent from your organization to contractors;
@@ -78,7 +78,7 @@ Filters of documents by date are made separately (**"Today"**, **"Yesterday"**).
 2 Work with Buyers (sale)
 ===================================
 
-In order to start working with your customers, you need to submit Your `"Price List" (PRICAT) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__: go to the section **Mass uploading** and read the rules for creating your price list by downloading it in .xls format:
+In order to start working with your customers, you need to submit Your `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__: go to the section **Mass uploading** and read the rules for creating your price list by downloading it in .xls format:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_029.png
    :align: center
@@ -133,7 +133,7 @@ Published positions are immediately reflected in all ** Buyers ** and will be va
 2.1 View and edit Your "Price List"
 ---------------------------------------------------------
 
-Your `"Price List" (PRICAT) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ of the current GLN with all current items is in the section **"My price list"**. When you go to the section, a new price list window opens with all the added items grouped by the following: ``Line -> Category -> Subcategory`` product hierarchy:
+Your `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ of the current GLN with all current items is in the section **"My price list"**. When you go to the section, a new price list window opens with all the added items grouped by the following: ``Line -> Category -> Subcategory`` product hierarchy:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_036.gif
    :align: center
@@ -175,7 +175,7 @@ You can delete positions with |смітник| button or completely **"Delete"**
 3 Work with Sellers (purchase)
 ===================================================
 
-After selecting **"Have Product"** service, the page with all available `"Price Lists" (PRICAT) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ ("Available pricelists") is automatically displayed:
+After selecting **"Have Product"** service, the page with all available `"Price Lists" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ ("Available pricelists") is automatically displayed:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_007.png
    :align: center
@@ -194,7 +194,7 @@ A new price list window will open with all added items grouped by the following:
 .. image:: pics_Openprice_instruction/Openprice_instruction_013.gif
    :align: center
 
-Each of these three levels by clicking on the name can be hidden / opened for easier viewing and next `"Order" (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ creation. The "Name" column is sorted by ascending value according to the rule:
+Each of these three levels by clicking on the name can be hidden / opened for easier viewing and next `"Order" (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ creation. The "Name" column is sorted by ascending value according to the rule:
 
 ``voids, numbers (0 to 9), spaces, special characters, letters A to Z, letters A to Z`` and in descending order:
 
@@ -218,12 +218,12 @@ Only the **Seller** adds :red:`Novelty!`, :blue:`Action!` and :orange:`In-pickup
 3.1 Creating an "Order" according to the "Price List"
 ----------------------------------------------------------------------------------
 
-To create an `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__, you need to fill in the **Ordered quantity** and **Ordered box quantity** columns. It is necessary to reckon in the quotas and the balance of the goods if **Seller** set them to price list:
+To create an `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__, you need to fill in the **Ordered quantity** and **Ordered box quantity** columns. It is necessary to reckon in the quotas and the balance of the goods if **Seller** set them to price list:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_016.png
    :align: center
 
-The values are calculated automatically for all selected items and for the entire `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ document in EDIN **"Have Product"** service:
+The values are calculated automatically for all selected items and for the entire `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ document in EDIN **"Have Product"** service:
 
 * Total number of items in the order = number of blocks in POSITION in the Order (ORDERS)
 * Total number of boxes = sum of all BOXESCOUNT values in the Order (ORDERS)
@@ -278,17 +278,17 @@ The sent document is displayed in **"Outbox"** folder (more details at `link <ht
 4 View "Order"
 ===================================================
 
-Depending on the role of the user-participant (**Buyer** / **Seller**) the `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ document gets in **"Outbox"** (for **Buyer**) or in **"Inbox"** (for **Seller**), for example:
+Depending on the role of the user-participant (**Buyer** / **Seller**) the `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ document gets in **"Outbox"** (for **Buyer**) or in **"Inbox"** (for **Seller**), for example:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_022.png
    :align: center
 
-In these directories `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ is not available for editing, it can only be viewed, check the specified data (GLN Buyer, GLN Place of delivery, delivery date ...), the tabular part with product items.
+In these directories `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ is not available for editing, it can only be viewed, check the specified data (GLN Buyer, GLN Place of delivery, delivery date ...), the tabular part with product items.
 
 .. admonition::
    For **Buyer**:
 
-   This `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ may be replaced by the **"New"** (1) document at review form. In this case, the process of cloning the contents of the document for further editing is started. Such document is added to the document chain automatically (`more details <https://wiki.edin.ua/uk/latest/Openprice/Instructions/Openprice_instruction.html#edi-uzd>`__ about integration with **"EDI+ESD"** service):
+   This `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ may be replaced by the **"New"** (1) document at review form. In this case, the process of cloning the contents of the document for further editing is started. Such document is added to the document chain automatically (`more details <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#edi-uzd>`__ about integration with **"EDI+ESD"** service):
 
    .. image:: pics_Openprice_instruction/Openprice_instruction_023.png
       :align: center
@@ -296,12 +296,12 @@ In these directories `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distributio
 .. admonition::
    For **Seller**:
 
-   You may be able to create a document view form **"Order response" (ORDRSP), "Despatch advice" (DESADV), "Receipt advice" (RECADV), "Invoice" (INVOICE), "Sales Invoice" (COMDOC_006)** (`more details <https://wiki.edin.ua/uk/latest/Openprice/Instructions/Openprice_instruction.html#edi-uzd>`__ about integration with **"EDI+ESD"** service):
+   You may be able to create a document view form **"Order response" (ORDRSP), "Despatch advice" (DESADV), "Receipt advice" (RECADV), "Invoice" (INVOICE), "Sales Invoice" (COMDOC_006)** (`more details <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#edi-uzd>`__ about integration with **"EDI+ESD"** service):
 
    .. image:: pics_Openprice_instruction/Openprice_instruction_042.png
       :align: center
 
-Regardless of the user role, You can **"Download"** (2) `Order (ORDERS) <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ in .pdf, .xls, .xml, .zip format or immediately **"Print"** the document.
+Regardless of the user role, You can **"Download"** (2) `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ in .pdf, .xls, .xml, .zip format or immediately **"Print"** the document.
 
 The tabular part displays the basic information about product position. Product positions has **∨** / **∧** buttons in the "№" and **"Show all"** / **"Hide"** buttons for the whole table:
 
@@ -325,12 +325,12 @@ The tabular part displays the basic information about product position. Product 
 
 The user has access to work with the following documents:
 
-* `Order (ORDERS) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#order>`__
-* `Order response (ORDRSP) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#ordrsp>`__
-* `Despatch advice (DESADV) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#desadv>`__
+* `Order (ORDERS) <https://wiki.edin.ua/en/latest/XML/XML-structure.html#order>`__
+* `Order response (ORDRSP) <https://wiki.edin.ua/en/latest/XML/XML-structure.html#ordrsp>`__
+* `Despatch advice (DESADV) <https://wiki.edin.ua/en/latest/XML/XML-structure.html#desadv>`__
 * `Receipt advice (RECADV) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#recadv>`__
 * `Invoice (INVOICE) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#invoice>`__
-* `Sales Invoice (COMDOC_006) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-006>`__
+* `Sales Invoice (COMDOC_006) <https://wiki.edin.ua/en/latest/XML/XML-structure.html#comdoc-006>`__
 
 The documents are logically linked in so-called chains:
 

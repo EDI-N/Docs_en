@@ -8,7 +8,9 @@ CURRENCY, O, String (3), Currency code (UAH / RUB / USD / EUR / MDL / BYR...)
 DOCTYPE, O, String (1), "Document type:
 
 * O — original"
-DISTRIBUTOR, М,, Filled in for Distribution service only
+DISTRIBUTOR, М,, "Filled in for Distribution service only
+
+* 1 — Distribution service document"
 **HEAD**,,, Start of the main block
 SUPPLIER, M, Number (13), Producer GLN
 BUYER, M, Number (13), Distributor GLN
