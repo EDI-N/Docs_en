@@ -2,7 +2,7 @@
 **Creating a "Cancellation" ticket on the Server (COMDOC_019)**
 #######################################################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 Using the GET method **api/v2/eds/comdoc/repeal** it is possible to create a "Repeal" COMDOC.
 

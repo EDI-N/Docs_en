@@ -1,0 +1,14 @@
+Parameter, Format, Description
+.. _Limits: , Object **Limits** ,
+credit_limit, "float (10.4)", "credit limit, UAH"
+max_pack_qty, positive number (10), maximum number of boxes
+max_pallet_qty, positive number (10), maximum number of pallets
+max_pos_qty, positive number (10), maximum number of items in the order
+max_sum_nds, "float (10,4)", "maximum amount of the order with VAT, UAH."
+max_sum_without_nds, "float (10,4)", "maximum order amount without VAT, UAH."
+max_weight, "float (13,3)", "maximum order weight, kg"
+min_sum_nds, "float (10.4)", "minimum order amount including VAT, UAH."
+min_sum_without_nds, "float (10,4)", "minimum order amount without VAT, UAH."
+multiplicity_packing, int, "multiplicity of packing; 0-no, 1-yes"
+surcharge_rate, "float (10.2)", "Surcharge rate, UAH."
+multiplicity_min_order_qty, int, "Multiplicity of minimum order quantity; 0-no, 1-yes"

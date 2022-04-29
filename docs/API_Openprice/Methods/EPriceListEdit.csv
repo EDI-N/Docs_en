@@ -1,0 +1,9 @@
+**URL**       ,
+Method  , PUT                                          
+URL query    , **/api/distribex/epricelist?gln=9864065732303**
+URL parameters ,"**gln** (required) String - GLN of your own Company-Seller (Manufacturer)"
+**Headers**   ,
+Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
+Content-Type  , application/json                              
+**REQUEST**   ,
+JSON Body     ,"In the body of the method request new / updated `data of the commodity position of the Price list <https://wiki.edin.ua/en/latest/API_Openprice/Methods/EveryBody/XPriceListElementRequest.html>`__ are transferred."

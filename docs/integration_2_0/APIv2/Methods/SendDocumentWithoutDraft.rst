@@ -2,7 +2,7 @@
 **Send a document (without creating a draft)**
 ######################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 This POST method **/api/eds/doc/create_and_send** creates and sends the document at the same time. 
 

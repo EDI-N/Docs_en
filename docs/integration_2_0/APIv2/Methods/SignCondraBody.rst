@@ -5,7 +5,7 @@
 **File signing (for CONDRA)**
 ######################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 .. csv-table:: 
   :file: SignCondraBody.csv

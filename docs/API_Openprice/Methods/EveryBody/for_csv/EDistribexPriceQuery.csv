@@ -1,0 +1,8 @@
+Parameter, Format, Description
+.. _EDistribexPriceQuery: , Object **EDistribexPriceQuery**,
+producerName,String,name of the Seller (Manufacturer) company
+categoryName,String,product category
+**regions**,List<String>,array; region or country of availability of the goods
+**producerIDs**,List<Long>,array; identifier of the Seller (Manufacturer) company
+isPickup,boolean,presence of a "In-pickup!" mark
+**limit**,Limitation_,object; selection filter (data output settings)

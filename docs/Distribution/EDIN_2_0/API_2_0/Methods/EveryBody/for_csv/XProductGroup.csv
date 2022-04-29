@@ -1,0 +1,6 @@
+Parameter, Format, Description
+.. _XProductGroup: , Object **XProductGroup** ,
+groupd_id, long, group identifier (lines / categories / subcategories)
+parent_group_id, long, identifier of the highest level in the structure (lines / categories)
+name, String, group name (line / category / subcategory)
+children, List <groupd_id>, array; list of all child group IDs

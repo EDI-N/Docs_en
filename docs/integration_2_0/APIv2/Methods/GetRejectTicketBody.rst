@@ -2,7 +2,7 @@
 **Creating a "Notice of refusal to sign the document" ticket on the server (COMDOC_021)**
 #######################################################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 Using the GET method **api/v2/eds/comdoc/reject** it is possible to create a "Reject" COMDOC.
 

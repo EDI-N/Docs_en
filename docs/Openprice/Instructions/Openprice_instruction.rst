@@ -131,7 +131,7 @@ Selected items can be **"Publish"** - products are automatically added to your p
    .. image:: pics_Openprice_instruction/Openprice_instruction_033.png
       :align: center
 
-Published positions are immediately reflected in all ** Buyers ** and will be valid for "Orders" forming.
+Published positions are immediately reflected in all **Buyers** and will be valid for "Orders" forming.
 
 2.1 View and edit Your "Price List"
 ---------------------------------------------------------
@@ -252,7 +252,7 @@ The values are calculated automatically for all selected items and for the entir
 * Order amount with VAT = sum of all values of ORDEREDQUANTITY multipliers * PRICEWITHVAT in Order (ORDERS)
 * Order amount without VAT = sum of all values of ORDEREDQUANTITY multipliers * ORDERPRICE in Order (ORDERS)
 
-You can **Save** entered information and return to `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>` __ later (to continue processing the Order You need to :underline:`anew` open the same price list of the **Seller**):
+You can **Save** entered information and return to `Order (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ later (to continue processing the Order You need to :underline:`anew` open the same price list of the **Seller**):
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_018.png
    :align: center

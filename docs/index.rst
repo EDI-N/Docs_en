@@ -20,7 +20,8 @@ Contents:
    :maxdepth: 2
    :caption: Have Product
 
-   Instruction <https://wiki.edin.ua/uk/latest/Openprice/Instructions/Openprice_instruction.html>
+   Instruction <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html>
+   API_Openprice/API_Openprice_list
 
 .. toctree::
    :maxdepth: 2

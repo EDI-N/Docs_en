@@ -2,7 +2,7 @@
 **Obtaining a chain of documents**
 ######################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 .. hint::
   Documents are linked in one chain, if they have identical values of the fields **"Sender"**, **"Recipient"**, **"Buyer"**, **"Delivery point"** (GLNs) and **"Order number"** (if not then **"Document number"**).
