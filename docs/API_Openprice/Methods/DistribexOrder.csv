@@ -20,4 +20,4 @@ URL параметри ,"**gln** (required) String - GLN of your own Company;
 Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
 Content-Type  , application/json                           
 **REQUEST**   ,
-JSON Body     ,"In the request body of the method, the `product items for the Order <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/PutOrderRequest.html>`__) as an array of objects are transmitted."
+JSON Body     ,"In the request body of the method, the `product items for the Order <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/PutOrderRequest.html>`__) as an array of objects are transmitted."

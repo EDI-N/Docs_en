@@ -13,5 +13,5 @@ To work with this method, the user must be `authorized <https://wiki.edin.ua/en/
 
 **RESPONSE**
 
-Method will send in **response** (json) `details of the "Order" (ORDER) document creation result <https://wiki.edin.ua/uk/latest/Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/DistribexOrderResult.html>`__ as object.
+Method will send in **response** (json) `details of the "Order" (ORDER) document creation result <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/DistribexOrderResult.html>`__ as object.
 

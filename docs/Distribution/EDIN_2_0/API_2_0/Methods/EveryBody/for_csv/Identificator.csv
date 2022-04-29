@@ -28,7 +28,7 @@ city, String, city; 50 characters
 street, String, street name; 100 characters
 regionCode, String, region code; 3 characters
 bankName, String, bank name; 100 characters
-bankMfo, String, "Bank MFO, bank details
+bankMfo, String, "Bank MFO, bank details"
 phone, String, № phone; 50 characters
 bankAccount, String, bank current account; 50 characters
 otherInfo, String, comments
