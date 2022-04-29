@@ -2,7 +2,7 @@
 **Creating a ticket №14 (revoke COMDOC signing)**
 ######################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 .. important:: Only the sender of the document can revoke the signing of the COMDOC document before the document changes its status to:
 

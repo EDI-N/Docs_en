@@ -1,0 +1,5 @@
+Parameter, Format, Description
+.. _DistribexOrderResult: , Object **DistribexOrderResult** ,
+status,String,request execution status
+doc_uuid,String,document ID
+errors,List<String>,array; errors in order formation

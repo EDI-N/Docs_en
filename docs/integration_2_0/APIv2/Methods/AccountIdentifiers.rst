@@ -2,7 +2,7 @@
 **Receiving information on GLN numbers associated with the authorized user (at the account level)**
 ###########################################################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 The method allows the user to view additional information about other users at the level of one shared account.
 

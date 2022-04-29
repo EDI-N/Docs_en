@@ -2,10 +2,17 @@
 **Authorization**
 ######################
 
+.. початок блоку для Authorization
+
+.. _token:
+
+**1 Token-Based Authorization**
+================================================
+
 After service activation the user receives a login and password for authorization and can work with the API. 
 
 .. csv-table:: 
-  :file: Authorization.csv
+  :file: ../../../integration_2_0/APIv2/Methods/Authorization.csv
   :widths:  10, 41
   :stub-columns: 0
 
@@ -27,5 +34,26 @@ The **response body** (json-format) transfer the "session key" which is necessar
 
 .. hint::
   The duration of the session when the user is idle is 20 minutes (meaning that the key will be deleted in 20 minutes if the user is not active (will not send HTTP requests)).
+
+---------------------------------
+
+.. _basic:
+
+**2 HTTP Basic Authentication**
+================================================
+
+Also, when executing requests instead of "SID", the value in the HTTP header "Authorization" can be sent to the server login and password as basic authentication (HTTP Basic Authentication). With basic authentication, the client sends a login and password to the server with each request. This data is sent in the header of the "Authorization" query in the form of base64 code:
+
+.. code:: json
+
+  Authorization: Basic base64_encode(login:password)
+
+For example, if the login and password are admin, the header will look like:
+
+.. code:: json
+
+  Authorization: Basic YWRtaW46YWRtaW4=
+
+.. кінець блоку для Authorization
 
 

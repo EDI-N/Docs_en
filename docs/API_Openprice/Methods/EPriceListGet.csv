@@ -1,0 +1,9 @@
+**URL**       ,
+Method  , GET                                          
+URL query    , **/api/distribex/epricelist?gln=9864065732303&gln_id=13200665**
+URL parameters ,"**gln** (required) String - GLN of your own Company;
+
+**gln_id** (optional) String - GLN identifier of another company; if the parameter gln_id is passed, the Price list of this company is sent in response, if this parameter is missing or equal to 0, then the Price list of the company-initiator of the request is sent in response"
+**Headers**   ,
+Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
+Content-Type  , application/json                              

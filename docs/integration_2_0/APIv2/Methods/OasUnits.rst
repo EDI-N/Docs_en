@@ -2,7 +2,7 @@
 **Obtaining a list of available units of measurement**
 ######################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 Method **api/oas/units** allows you to display a directory of units of measurement.
 

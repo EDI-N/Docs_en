@@ -1,0 +1,5 @@
+Parameter, Format, Description
+.. _XPriceList: , Object **XPriceList** ,
+period,XPriceListPeriod_,object; period of validity of product data
+price,List<XPriceListElement_>,array of objects; Price list product data
+distributors,List<XPriceListDistributor_>,array of objects; data of Buyers (Distributors)

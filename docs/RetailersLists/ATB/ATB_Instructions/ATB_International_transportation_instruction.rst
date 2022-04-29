@@ -104,7 +104,7 @@ The tabular part displays the basic information on the ordered **product items**
 .. image:: pics_ATB_International_transportation_instruction/ATB_International_transportation_instruction_007.png
    :align: center
 
-When you insert data manually via the ** "+Add"** button, the product items are filled in from the product directory (all required fields are marked with a red asterisk :red:`*`):
+When you insert data manually via the **"+Add"** button, the product items are filled in from the product directory (all required fields are marked with a red asterisk :red:`*`):
 
 .. image:: pics_ATB_International_transportation_instruction/ATB_International_transportation_instruction_008.png
    :align: center

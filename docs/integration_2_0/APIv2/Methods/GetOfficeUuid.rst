@@ -4,7 +4,7 @@
 **Getting the UUID (for CONDRA)**
 #######################################################################################################
 
-To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ .
+To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__.
 
 Using **/api/office/uuid** GET method generate one UUID. To create a CONDRA, you must run the method twice.
 
