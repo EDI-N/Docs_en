@@ -110,6 +110,9 @@ Required data in the template:
 
 After filling out the template, save it! To upload the price list to the platform, click on the **"Upload from Excel"** button and select the saved file in a new window.
 
+.. note::
+   If the user does not have a contact person with the type "Responsible for the price list" in the `account <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#account-profile>`__, then at first a modal window appears for `adding this contact person <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#contacts>`__.
+
 If one of the columns is filled in incorrectly, the position will be painted orange and an error message will appear indicating which column needs to be corrected:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_031.png
@@ -138,9 +141,7 @@ Your `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_
 .. image:: pics_Openprice_instruction/Openprice_instruction_036.gif
    :align: center
 
-Each of these three levels by clicking on the name can be hidden / opened for easier **viewing / editing / deleting**. The "Name" column is sorted by ascending value according to the rule:
-
-``voids, numbers (0 to 9), spaces, special characters, letters A to Z, letters A to Z`` and in descending order:
+Each of these three levels by clicking on the name can be hidden / opened for easier **viewing / editing / deleting**. The "Name" column is sorted by ascending value according to the rule: ``voids, numbers (0 to 9), spaces, special characters, letters A to Z, letters A to Z`` and in descending order:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_035.gif
    :align: center
@@ -170,6 +171,22 @@ You can delete positions with |смітник| button or completely **"Delete"**
 .. image:: pics_Openprice_instruction/Openprice_instruction_041.png
    :align: center
 
+.. _contacts:
+
+With the **"My contact person"** button it is possible to add a new or edit an existing contact with the type "Responsible for the price list", which will be displayed to contractors when they viewing your "Price list":
+
+.. image:: pics_Openprice_instruction/Openprice_instruction_045.png
+   :align: center
+
+All your contacts can be viewed / edited / deleted in the `account <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#account-profile>`__.
+
+In the pop-up window you must to specify the name of the contact (enter manually and **"Apply the entered value"** or select from the list of users (search is possible)), mobile phone number, select from the list of positions and **"Save"** contact.
+
+If the contact with the type "Responsible for the price list" already exists, then clicking on the **"My contact person"** button opens an already filled pop-up window for editing:
+
+.. image:: pics_Openprice_instruction/Openprice_instruction_046.png
+   :align: center
+
 .. _purchase:
 
 3 Work with Sellers (purchase)
@@ -194,14 +211,17 @@ A new price list window will open with all added items grouped by the following:
 .. image:: pics_Openprice_instruction/Openprice_instruction_013.gif
    :align: center
 
-Each of these three levels by clicking on the name can be hidden / opened for easier viewing and next `"Order" (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ creation. The "Name" column is sorted by ascending value according to the rule:
-
-``voids, numbers (0 to 9), spaces, special characters, letters A to Z, letters A to Z`` and in descending order:
+Each of these three levels by clicking on the name can be hidden / opened for easier viewing and next `"Order" (ORDERS) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#order>`__ creation. The "Name" column is sorted by ascending value according to the rule: ``voids, numbers (0 to 9), spaces, special characters, letters A to Z, letters A to Z`` and in descending order:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_014.gif
    :align: center
 
 Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ line (at the top of the screen) it is possible to filter the list of goods.
+
+By clicking on the **"Seller's contacts"** button it is possible to view the contact details of the responsible person:
+
+.. image:: pics_Openprice_instruction/Openprice_instruction_047.png
+   :align: center
 
 To display detailed information about the product, click on these items:
 
