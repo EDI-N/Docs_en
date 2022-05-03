@@ -5,12 +5,8 @@ Initiative Letter
 
 --------------------------------------------
 
-.. image:: pics_Initiative_Letter/Initiative_Letter_001.png
-   :align: middle
-   :width: 100
-
-.. image:: pics_Initiative_Letter/Initiative_Letter_002.png
-   :width: 100
+.. image:: pics_Initiative_Letter/Initiative_Letter_003.png
+   :align: center
 
 Dear Partners,
 
