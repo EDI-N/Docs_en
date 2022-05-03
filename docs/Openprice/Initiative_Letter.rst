@@ -5,37 +5,47 @@ Initiative Letter
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_001.png
    :align: left
+   :width: 100
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
    :align: right
 
 --------------------------------------------------
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
 
 
 --------------------------------------------------
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
    :align: left
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
 
 --------------------------------------------------
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
    :align: middle
    
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
 
 --------------------------------------------------
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
    :align: middle
   
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
+   :width: 100
    :align: middle
   
 
