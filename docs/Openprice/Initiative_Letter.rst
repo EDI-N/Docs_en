@@ -49,11 +49,11 @@ Initiative Letter
    :align: middle
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_001.png
-   :align: center
+   :align: right
    :width: 100
 
 .. image:: pics_Initiative_Letter/Initiative_Letter_002.png
-   :align: center
+   :align: left
    :width: 100
 
 Dear Partners,
