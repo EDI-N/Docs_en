@@ -3,7 +3,7 @@ Method  , DELETE
 URL query    , **/api/distribex/epricelist?gln=9864065732303&list_id=29**
 URL parameters ,"**gln** (required) String - GLN of your own Company;
 
-**list_id** long - commodity item identifier"
+**list_id** long - commodity item identifier (here **list_id** = **id** from object `XPriceListProduct <https://wiki.edin.ua/en/latest/API_Openprice/Methods/EveryBody/XPriceListElementResponse.html>`__)"
 **Headers**   ,
 Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
 Content-Type  , application/json                              
