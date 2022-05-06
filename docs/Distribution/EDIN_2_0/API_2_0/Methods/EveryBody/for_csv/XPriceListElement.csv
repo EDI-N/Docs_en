@@ -1,6 +1,6 @@
-Parameter, Format, Description
-.. _XPriceListElement: , Object **XPriceListElement** ,
-category_id,long,category identifier
-category_name,String,line / category / subcategory name
-children,List<XPriceListElement_>,array of objects; line / category element data
-prods,List<XPriceListProduct_>,array of objects; product data
+Parameter,Mandatory/Optional, Format, Description
+.. _XPriceListElement:,, Object **XPriceListElement** ,
+category_id,O,long,category identifier
+category_name,M,String,line / category / subcategory name
+children,O/M,List<XPriceListElement_>,array of objects; line / category element data
+prods,M,List<XPriceListProduct_>,array of objects; product data
