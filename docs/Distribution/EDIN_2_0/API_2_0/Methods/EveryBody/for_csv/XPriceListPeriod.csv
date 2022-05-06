@@ -1,4 +1,4 @@
-Parameter, Format, Description
-.. _XPriceListPeriod: , Object **XPriceListPeriod** ,
-date_from,long,start period of validity
-date_to,long,end period of validity
+Parameter,Mandatory/Optional, Format, Description
+.. _XPriceListPeriod:,, Object **XPriceListPeriod** ,
+date_from,,long,start period of validity
+date_to,,long,end period of validity

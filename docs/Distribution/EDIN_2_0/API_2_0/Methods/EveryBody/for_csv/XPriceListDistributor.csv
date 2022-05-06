@@ -1,5 +1,5 @@
-Parameter, Format, Description
-.. _XPriceListDistributor: , Object **XPriceListDistributor** ,
-name, String, name of the Buyer (Distributor)
-id, long, Buyer (Distributor) ID
-gln, String, Buyer (Distributor) GLN
+Parameter,Mandatory/Optional, Format, Description
+.. _XPriceListDistributor:,, Object **XPriceListDistributor** ,
+name,, String, name of the Buyer (Distributor)
+id,, long, Buyer (Distributor) ID
+gln,, String, Buyer (Distributor) GLN

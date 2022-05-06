@@ -1,38 +1,38 @@
-Parameter, Format, Description
-.. _XPriceListProduct: , Object **XPriceListProduct** ,
-group_id, long, group ID
-article, String, article
-name, String, the name of the product
-barcode, String, barcode
-user_code, String, УКТ ЗЕД code
-unit_weight, String, "unit weight, kg"
-box_qty, String, units in a box
-box_weight, String, "box weight, kg"
-box_in_layer, String, "number of boxes in a layer, pcs."
-box_in_palette, String, "number of boxes per pallet, pcs."
-palette_weight, String, "pallet weight, kg"
-producer_code, String, Seller (Manufacturer) Code
-min_order_qty, "float (10.3)", "Minimum order quantity"
-regions, String, region / countries of availability of the goods (list of names through a comma)
-id, long, item identifier
-date_created, long, the date the product was created
-date_changed, long, date of changes in product data
-producer_id, long, Seller ID
-product_id, long, product identifier
-unit_id, long, "unit identifier; valid values:
+Parameter,Mandatory/Optional, Format, Description
+.. _XPriceListProduct:,, Object **XPriceListProduct** ,
+group_id,, long, group ID
+article,M, String, article
+name,M, String, the name of the product
+barcode,M, String, barcode
+user_code,O, String, УКТ ЗЕД code
+unit_weight,O, String, "unit weight, kg"
+box_qty,M, String, units in a box
+box_weight,O, String, "box weight, kg"
+box_in_layer,O, String, "number of boxes in a layer, pcs."
+box_in_palette,O, String, "number of boxes per pallet, pcs."
+palette_weight,O, String, "pallet weight, kg"
+producer_code,O, String, Seller (Manufacturer) Code
+min_order_qty,O, "float (10.3)", "Minimum order quantity"
+regions,M, String, region / countries of availability of the goods (list of names through a comma)
+id,, long, item identifier
+date_created,, long, the date the product was created
+date_changed,, long, date of changes in product data
+producer_id,, long, Seller ID
+product_id,, long, product identifier
+unit_id,O, long, "unit identifier; valid values:
 
 * 2 - kilogram;
 * 8 - piece "
-price_without_vat, Double, "unit price without VAT, UAH"
-vat, int, "VAT rate,%"
-price_with_vat, Double, "unit price including VAT, UAH"
-date_from, long, period from
-date_to, long, period of validity
-stock_balance, Double, balance
-comment, String, comments
-quota, Double, quota to order
-is_promo,boolean, «Novelty!» mark
-is_new,boolean, «Action!» mark
-is_public,boolean, «Public!» mark
-is_surcharge,boolean, «Surcharge!» mark
-is_pickup,boolean, «In-pickup!» mark
+price_without_vat,M, Double, "unit price without VAT, UAH"
+vat,O, int, "VAT rate,%"
+price_with_vat,O, Double, "unit price including VAT, UAH"
+date_from,, long, period from
+date_to,, long, period of validity
+stock_balance,O, Double, balance
+comment,O, String, comments
+quota,O, Double, quota to order
+is_promo,O,boolean, «Novelty!» mark
+is_new,O,boolean, «Action!» mark
+is_public,O,boolean, «Public!» mark
+is_surcharge,O,boolean, «Surcharge!» mark
+is_pickup,O,boolean, «In-pickup!» mark

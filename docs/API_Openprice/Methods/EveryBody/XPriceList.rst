@@ -130,7 +130,7 @@ Table 1 - Parameters description of object XPriceList
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceList.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 
@@ -138,7 +138,7 @@ Table 2 - Parameters description of object XPriceListPeriod
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceListPeriod.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 
@@ -146,7 +146,7 @@ Table 3 - Parameters description of object XPriceListElement
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceListElement.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 
@@ -154,7 +154,7 @@ Table 4 - Parameters description of object XPriceListDistributor
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceListDistributor.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 
@@ -162,7 +162,7 @@ Table 5 - Parameters description of object XPriceListProduct
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceListProduct.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 

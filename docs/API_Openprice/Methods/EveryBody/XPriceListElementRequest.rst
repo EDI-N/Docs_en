@@ -62,7 +62,7 @@ Table 1 - Parameters description
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceListElement.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 
@@ -70,7 +70,7 @@ Table 2 - Parameters description of object XPriceListProduct
 
 .. csv-table:: 
   :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/XPriceListProduct.csv
-  :widths:  1, 12, 41
+  :widths:  1, 2, 12, 41
   :header-rows: 1
   :stub-columns: 0
 
