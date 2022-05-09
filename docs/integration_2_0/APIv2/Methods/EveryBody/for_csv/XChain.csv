@@ -3,15 +3,15 @@ Parameter,Format,Description
 id, long, shard ID
 uuid, UUID, document chain UUID
 packageID, long, package ID
-** type **, XDocType_, object; document type
+**type**, XDocType_, object; document type
 docsCount, int, the amount of documents in the chain
 lastInDocID, long, id of the last incomed document in the chain
 lastOutDocID, long, id of the last outgoing document in the chain
 partnerId, long, id of the retail network
 important, boolean, "**important** document mark"
-** status **, XChainStatus_, object; the status of a pair of documents from the sender and recipient
+**status**, XChainStatus_, object; the status of a pair of documents from the sender and recipient
 visualStatus, int, "icon number"
 archive, boolean, "document marked as **Archived**"
-** childs **, List <XDoc_>, array of objects; documents / tickets data
-** chainsInPackage **, List <XChain_>, array of objects; data of related chains
+**childs**, List <XDoc_>, array of objects; documents / tickets data
+**chainsInPackage**, List <XChain_>, array of objects; data of related chains
 hash, String, "hash value obtained as a result of processing" 
