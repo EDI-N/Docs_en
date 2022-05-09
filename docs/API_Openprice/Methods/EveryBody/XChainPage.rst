@@ -174,7 +174,7 @@ Table 2 - Parameters description of object **XChainStatus**
 Table 3 - **ChainStatus** description (object XChainStatus_)
 
 .. csv-table:: 
-  :file: for_csv/xchainstatus_p.csv
+  :file: ../../../integration_2_0/APIv2/Methods/EveryBody/for_csv/xchainstatus_p.csv
   :widths:  1, 60
   :header-rows: 1
   :stub-columns: 0
