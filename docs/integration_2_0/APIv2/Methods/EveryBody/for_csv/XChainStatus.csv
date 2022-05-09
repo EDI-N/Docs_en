@@ -1,4 +1,4 @@
-Parameter,Format,Description 
+Parameter,Format,Description
 .. _XChainStatus:,Object **XChainStatus**, more_
 state,int,status id
 title,String,status
