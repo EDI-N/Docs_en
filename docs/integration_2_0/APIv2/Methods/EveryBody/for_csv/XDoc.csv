@@ -26,7 +26,7 @@ family, int, "service
 hash, String, "hash value obtained as a result of processing"
 type, XDocType_, object; document type
 status, XDocStatus_, object; the status of a pair of documents from the sender and recipient
-exchange_status, String, document substatus (`more <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/Ticket_exchange_status.html>` __)
+exchange_status, String, document substatus (`more <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/Ticket_exchange_status.html>`__)
 is_archive, boolean, document marked as **Archived**
 signInfo, XDocSignInfo_, object; signature data
 chain, XChain, object; data of related chains
