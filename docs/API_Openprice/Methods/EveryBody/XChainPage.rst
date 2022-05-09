@@ -179,5 +179,24 @@ Table 3 - **ChainStatus** description (object XChainStatus_)
   :header-rows: 1
   :stub-columns: 0
 
+Table 4 - Parameters description of object **XDocType**
+
+.. csv-table:: 
+  :file: ../../../integration_2_0/APIv2/Methods/EveryBody/for_csv/XDocType.csv
+  :widths:  1, 7, 12, 41
+  :header-rows: 1
+  :stub-columns: 0
+
+.. _param-desc:
+
+Table 5 - **DocType** description (object XDocType_)
+
+.. csv-table:: 
+  :file: ../../../integration_2_0/APIv2/Methods/EveryBody/for_csv/xdoctype_p.csv
+  :widths:  1, 19, 41
+  :header-rows: 1
+  :stub-columns: 0
+
+
 .. _XDoc: https://wiki.edin.ua/en/latest/API_Openprice/Methods/EveryBody/XDocPage.html
 
