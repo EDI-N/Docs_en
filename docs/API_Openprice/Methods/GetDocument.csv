@@ -1,0 +1,11 @@
+**URL**       ,
+Method  , GET
+URL query    , **/api/eds/doc?gln=9864232319979&doc_uuid=c1f6a1d0-5aaf-4a06-b78d-71c238f70986**
+URL parameters ,"**gln** (required) String - GLN of your own Company;
+OR
+**guid** (required) String - unique identifier of your own Company
+
+**doc_uuid** - String; document UUID"
+**Headers**   ,
+Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
+Content-Type  , application/json

@@ -2,7 +2,7 @@
 Method  , POST                                          
 URL query    , **/api/distribex/producers/search?gln=9864067620417**
 URL parameters ,"**gln** (required) String - GLN of your own Company; 
-АБО 
+OR 
 **guid** (required) String - unique identifier of your own Company"
 **Headers**   ,
 Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"

@@ -6,6 +6,6 @@ URL parameters,"**gln** - string (13); the GLN number of the organization that i
 **doc_type** - string; document type (`parameter description <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/XDocPage.html#param-desc>`__)"
 **Headers**   ,
 Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
-Content-Type  , ``application/json`` або ``application/xml`` або ``application/pkcs7-signature``
+Content-Type  , ``application/json`` OR ``application/xml`` OR ``application/pkcs7-signature``
 **REQUEST**   ,
 JSON Body     ,"The body of the request method transmit a document in JSON or XML or P7S format in binary form (`Request example <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/CreateDocExample.html>`__ + `document specifications <https://wiki.edin.ua/en/latest/XML/XML-structure.html>`__)"

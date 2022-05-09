@@ -1,0 +1,20 @@
+**URL**       ,
+Method  , POST                                          
+URL query    , **/api/eds/chains/search?gln=9864066822430&status_id=3**
+URL parameters ,"**gln** (required) String - GLN of your own Company;
+OR
+**guid** (required) String - unique identifier of your own Company
+
+**status_id** (optional) int - document folder id:
+
+* 0 - All
+* 1 - Inbox;
+* 2 - Outbox;
+* 3 - Archive;
+* 4 - Draft;
+* 5 - Important."
+**Headers**   ,
+Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
+Content-Type  , application/json                              
+**REQUEST**   ,
+JSON Body     ,"In the request body of the method, the data for filtering (object `StorageQuery <https://wiki.edin.ua/en/latest/API_Openprice/Methods/EveryBody/StorageQuery.html>`__) are transmitted."

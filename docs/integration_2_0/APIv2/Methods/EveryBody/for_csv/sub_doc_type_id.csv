@@ -22,6 +22,7 @@ Commercial document subtype,Name and description
 29,`Act of mutual settlements reconciliation (COMDOC_029) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-029>`__
 30,`Claim (COMDOC_030) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-030>`__
 31,`Returnable packaging invoice (COMDOC_031) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-031>`__
-32,`Act of acceptance of goods (warehouse logistics) (COMDOC_032) <https://wiki.edin.ua/uk/latest/RetailersLists/ATB/ATB_XML-structure.html#comdoc-032>`__
-33,`Act of acceptance of goods (COMDOC_033) <https://wiki.edin.ua/uk/latest/RetailersLists/ATB/ATB_XML-structure.html#comdoc-033>`__
-34,`The act of disagreement to the Act of transfer (COMDOC_034) <https://wiki.edin.ua/uk/latest/RetailersLists/ATB/ATB_XML-structure.html#comdoc-034>`__
+32,`Acceptance-transfer act (Annex 8) (COMDOC_032) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-032>`__
+33,`Act of acceptance-transfer (Annex 9) (COMDOC_033) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-033>`__
+34,`The act of disagreement to the Act of transfer (COMDOC_034) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-034>`__
+35,`Act of acceptance of goods for the consignment note (COMDOC_035) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-035>`__

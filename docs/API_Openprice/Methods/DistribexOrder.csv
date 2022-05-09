@@ -2,7 +2,7 @@
 Метод запиту  , POST                                          
 URL запиту    , **/api/distribex/doc/order?gln=9864065732327&recipient_gln=9864065732303&number=apitest07&delivery_gln=9864065732327&delivery_terms=1**
 URL параметри ,"**gln** (required) String - GLN of your own Company;
-АБО
+OR
 **guid** (required) String - unique identifier of your own Company
 
 **recipient_gln** (required) String - Seller's (Manufacturer) GLN
