@@ -190,7 +190,7 @@ Table 8 - **fieldName** parameters description (object ExtraQueryParameters_)
   :header-rows: 1
   :stub-columns: 0
 
-.. _опис_параметрів:
+.. _param-desc:
 
 Table 9 - **DocType** parameters description (object XDocType_)
 
@@ -200,7 +200,7 @@ Table 9 - **DocType** parameters description (object XDocType_)
   :header-rows: 1
   :stub-columns: 0
 
-.. _опис_підтипів:
+.. _subtype_description:
 
 Table 10 - Description of COMDOC subtypes
 
