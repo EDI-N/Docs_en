@@ -1,0 +1,7 @@
+Parameter,Format,Description
+.. _XDocAttachmentSign: ,**Object XDocAttachmentSign** ,
+attachmentId,long,attachment id
+identifierId,long,record id
+crc32hash,long,signature checksum hash (CRC32 encoding)
+signerUUID,String,unique signatory identifier
+signBody,transient byte[],the byte array of the signature body

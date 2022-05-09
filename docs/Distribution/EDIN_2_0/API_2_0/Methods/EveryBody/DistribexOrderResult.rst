@@ -14,7 +14,7 @@ Successful request fulfillment:
 	    "errors": []
 	}
 
-Таблиця 1 - Description of parameters
+Table 1 - Description of parameters
 
 .. csv-table:: 
   :file: for_csv/DistribexOrderResult.csv

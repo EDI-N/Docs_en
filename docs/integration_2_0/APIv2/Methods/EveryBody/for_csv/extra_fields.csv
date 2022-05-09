@@ -1,6 +1,9 @@
 Parameter id,Parameter name,Mandatory/Optional,Format,Description
 1, created_from ,, UUID, document or chain ID
-2, is_signed ,, TINYINT, signing mark
+2, is_signed ,, TINYINT, "signing mark
+
+* 0 - without signature;
+* 1 - signed"
 3, encrypted ,, TINYINT, encryption mark
 4, comdoc_reestr_id ,, INT,factoring Register id (on the basis of a commercial document)
 5, comdoc_reestr_is_active ,, TINYINT, activity note of the factoring agreement
@@ -51,8 +54,19 @@ For EDI:
 For Vilnyi:
 
 * 0 - Pending signing
-* 1 - Signed
-* 2 - Rejected"
+* 1 - Partially signed (for Sender)
+* 1 - Awaiting signature of the recipient (for the Recipient)
+* 1 - Signed (for the Recipient, if the parameter is_signed = 1 in the document)
+* 2 - Signed
+* 3 - Rejected by the recipient
+* 4 - Rejected by the sender
+* 5 - Completed
+* Copy - sub_status_id = 1
+
+For ETTN:
+
+* 101 - document without errors (status);
+* 102 - document with errors (status)"
 14, buyer_uuid ,, VARCHAR, sender of the document
 15, consignee_uuid ,, VARCHAR, consignee
 16, consignor_uuid ,, VARCHAR, consignor
@@ -105,3 +119,14 @@ For Vilnyi:
 , summ,, INT, amount including VAT
 129, receiving_note_number,, VARCHAR, Reception notification number (DOCUMENTINVOICE ... ReceivingAdviceNumber)
 137, branch_uuid,, VARCHAR, «branch supplies» uuid (АТБ COMDOC+DESADV)
+, parent_doc_uuid, ,VARCHAR, uuid initial e-TTN (recorded when replacing the sent draft)
+139, format_version, ,VARCHAR, version number (field C_DOC_VER) from Tax Invoice (DECLAR) or Adjustment to Tax Invoice (DECLARj12)
+142, parent_docs_match,,INT, 0 - comdoc_007 with changed data for reconciliation by desadv; 1 - comdoc_007 with correct / unchanged data for reconciliation on desadv
+149, post_start_date, ,[yyyy-MM-dd], eadline date for Metro 7a documents
+153, review_deadline_date, ,[yyyy-MM-dd], deadline for review for Metro 7b documents (ReviewDeadlineDate)
+, sign_hash,, VARCHAR, signature hash
+, draft_date_created,, INT, draft creation date
+, carrier_b_uuid ,, BINARY, carrier identifier
+, consignee_b_uuid ,, BINARY, consignee identifier
+, consignor_b_uuid ,, BINARY, shipper ID
+, external_doc_id ,, INT, id TTN document in ЦБД

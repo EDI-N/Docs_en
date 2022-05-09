@@ -4,6 +4,6 @@ docId,long,document/chain id
 date,long,status date; unix timestamp format
 type,int,"status type: 
 
-* 0 - positive (accepted)
-* 1 - negative (rejected)"
+* 101 - positive (accepted)
+* 102 - negative (rejected)"
 text,String,status content
