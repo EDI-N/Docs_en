@@ -169,5 +169,15 @@ Table 2 - Parameters description of object **XChainStatus**
   :header-rows: 1
   :stub-columns: 0
 
+.. _more:
+
+Table 3 - **ChainStatus** description (object XChainStatus_)
+
+.. csv-table:: 
+  :file: for_csv/xchainstatus_p.csv
+  :widths:  1, 60
+  :header-rows: 1
+  :stub-columns: 0
+
 .. _XDoc: https://wiki.edin.ua/en/latest/API_Openprice/Methods/EveryBody/XDocPage.html
 
