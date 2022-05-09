@@ -174,7 +174,7 @@ Table 11 - Parameters description of object **XDocBodyType**
   :header-rows: 1
   :stub-columns: 0
 
-.. _детальніше:
+.. _more:
 
 Table 12 - **DocStatus** parameters description (object XDocStatus_)
 
@@ -192,7 +192,7 @@ Table 13 - Parameters description of object **XDocType**
   :header-rows: 1
   :stub-columns: 0
 
-.. _опис_параметрів:
+.. _param-desc:
 
 Table 14 - **DocType** parameters description (object XDocType_)
 
@@ -220,7 +220,7 @@ Table 16 - Extrafields description
   :header-rows: 1
   :stub-columns: 0
 
-.. _опис_підтипів:
+.. _subtype_description:
 
 Table 17 - Description of COMDOC subtypes
 
@@ -229,6 +229,7 @@ Table 17 - Description of COMDOC subtypes
   :widths:  1, 7, 41
   :header-rows: 1
   :stub-columns: 0
+
 
 
 

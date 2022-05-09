@@ -147,8 +147,6 @@ Table 11 - Parameters description of object **XDocType**
 
 .. _param-desc:
 
-.. _param-desc:
-
 Table 12 - **DocType** description (object XDocType_)
 
 .. csv-table:: 
