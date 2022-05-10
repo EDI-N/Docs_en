@@ -36,7 +36,8 @@ Contents:
    Legal_info/Rules
    Legal_info/Dogovir_oferta
    Legal_info/Politic
-   Legal_info/Promotions/Promotions_list
+   Legal_info/Promotions/EDIN_Openprice_promotion
 
 
 .. Dogovir_oferta to Oferta when another docs will be ready
+.. EDIN_Openprice_promotion to Promotions_list
