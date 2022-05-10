@@ -34,3 +34,9 @@ Contents:
    :caption: Legal info
 
    Legal_info/Rules
+   Legal_info/Dogovir_oferta
+   Legal_info/Politic
+   Legal_info/Promotions/Promotions_list
+
+
+.. Dogovir_oferta to Oferta when another docs will be ready
