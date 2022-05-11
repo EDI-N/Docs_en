@@ -35,7 +35,7 @@ Contents:
 
    Legal_info/Rules
    Legal_info/Dogovir_oferta
-   Legal_info/Politic
+   Legal_info/Politic_list
    Legal_info/Promotions/EDIN_Openprice_promotion
 
 
