@@ -31,6 +31,12 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Private area
+
+   Personal_Cabinet/PCInstruction
+
+.. toctree::
+   :maxdepth: 2
    :caption: Legal info
 
    Legal_info/Rules
