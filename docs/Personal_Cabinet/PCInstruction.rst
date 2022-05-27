@@ -67,7 +67,7 @@ After successful authorization, the main menu of EDIN products and solutions wil
 
 .. _account:
 
-**1 Аккаунт**
+**1 Account**
 ================================================
 
 .. hint::
@@ -76,7 +76,7 @@ After successful authorization, the main menu of EDIN products and solutions wil
    .. image:: pics_PCInstruction/PCInstruction_114.png
       :align: center
 
-**"Account"** is a section of the Client's Private area, which is designed to interact with the provider, receive and sign documents from the provider, manage the Personal Account (Balance), select, change and configure tariff packages. **"Account"** contains the following subsections: **"Company profile"**, **"Balance and tariff" **, **"Documents ATS"** and **"Billing"**.
+**"Account"** is a section of the Client's Private area, which is designed to interact with the provider, receive and sign documents from the provider, manage the Personal Account (Balance), select, change and configure tariff packages. **"Account"** contains the following subsections: **"Company profile"**, **"Balance and tariff"**, **"Documents ATS"** and **"Billing"**.
 
 .. note::
    The **"Account"** section is available only to users who use the New Tariff Model. To connect a new tariff model, you need to send an email to sales@edin.ua.
@@ -461,7 +461,7 @@ For **"Balance top up"** you need to specify the amount of replenishment and cli
 .. image:: pics_New_balance_tariff/New_balance_tariff_04.png
    :align: center
 
-Then the system automatically creates an invoice (more details in `"Invoices" <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#invoice>`__):
+Then the system automatically creates an invoice (more details in `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__):
 
 .. image:: pics_PCInstruction/PCInstruction_008.png
    :align: center
