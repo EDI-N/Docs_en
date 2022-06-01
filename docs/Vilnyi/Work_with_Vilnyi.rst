@@ -1,0 +1,750 @@
+Work with "Vilnyi"
+#############################################################
+
+.. role:: red
+
+.. role:: green
+
+.. role:: orange
+
+.. role:: olive
+
+.. role:: navy
+
+.. role:: underline
+
+.. сюда закину немного картинок для текста
+
+.. |пресуха| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_03.png
+
+.. |звезда| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_06.png
+
+.. |звезда2| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_07.png
+
+.. |прокрутка1| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_12.png
+
+.. |прокрутка2| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_11.png
+
+.. |download| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_17.png
+
+.. |trash| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_18.png
+
+.. |print| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_52.png
+
+.. |non| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_21.png
+
+.. |лупа| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_49.png
+
+.. |save| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_50.png
+
+.. |yellow_tag| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_58.png
+
+.. |red_tag| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_59.png
+
+.. |green_tag| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_57.png
+
+.. |зареєстрований| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_74.png
+
+.. |незареєстрований| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_73.png
+
+.. |trash2| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_81.png
+
+.. |clock| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_90.png
+
+.. |round| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_88.png
+
+.. |accepted| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_89.png
+
+.. |denied| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_92.png
+
+.. |edit_tag| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_118.png
+
+.. |del_tag| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_119.png
+
+.. |ring| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_134.gif
+
+.. |success| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_131.png
+
+.. |error| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_130.png
+
+.. contents:: Contents:
+   :depth: 3
+
+---------
+
+**1 Login to the platform**
+================================================
+
+.. include:: /general_2_0/rabota_s_platformoj_EDIN_2.0.rst
+   :start-after: .. початок блоку для Enter
+   :end-before: .. кінець блоку для Enter
+
+After successful authorization, the main menu of EDIN products and solutions will open: **"Vilnyi", "EDI+UZD", "E-TTN", "Distribution", "Have Product", "Commercial offer", "E-Specification", "Counterparties", "Tender", "E-Certificates", "White Doc", "Integration"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_02n.png
+   :align: center
+
+To go to the service you need to click on the **"Vilnyi"** tile.
+
+.. hint::
+   You can use the |пресуха| button or EDIN logo to return to the services menu.
+
+**2 Service general view**
+================================================
+
+**"Vilnyi"** service contains `common functional elements of the platform <https://wiki.edin.ua/en/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#header>`__ and among the main elements: own folders with documents (1) and a journal of documents (2) for viewing and working with documents. `Search <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#search>`__ and `Tags <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#tags>`__ functionality significantly simplify the work in the service.
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_105.png
+   :align: center
+
+There is an opportunity to switch to the folders of other employees and perform actions with documents on their behalf if the user is configured `access to service documents of other employees of the company <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#shard-entrance>`__ :
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_102.gif
+   :align: center
+
+**3 Browse service folders**
+================================================
+
+The current location of the user in the service marked by a green line and a path is highlighted in a "breadcrumbs".
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_05n.png
+   :align: center
+
+To go to the folder you need, you need to select it:
+
+#. **"Inbox"** - folder of incoming documents of the organization (from contractors).
+#. **"Outbox"** - folder of sent documents of the organization (to contractors).
+#. **"Important"** - folder of all documents that have been marked as "important" with a star symbol ("important" |звезда| / |звезда2| "ordinary").
+#. **"Drafts"** - folder for documents that were created but not sent yet. 
+#. **"Archive"** - folder for documents that have been transferred to the archive.
+#. **"Counterparties"** - allows you to find your unregistered counterparties and send them invitations by e-mail.
+
+.. _doc-statuses:
+
+**3.1 Document statuses**
+-------------------------------------------------
+
+**"Vilnyi"** service have the following statuses:
+
+For **inbox** documents:
+
+* :navy:`"Pending signature of the recipient"` - signed/unsigned document sent (Recipient has not signed the document yet);
+* :navy:`"Pending acceptance of the recipient"` - signed/unsigned document sent (Recipient has not accepted the document yet);
+* :olive:`"Signed"` - the incoming document was signed by the Recipient; may be the final status if the Sender has not signed the document;
+* :olive:`"Accepted"` - the incoming document was accepted by the Recipient; may be the final status if the Sender has not signed the document;
+* :green:`"Processed"` - final status of the document; sent document signed by the Sender, which was signed/accepted by all Recipients;
+* :red:`"Rejected by recipient"` - final status of the document; sent signed/unsigned document was rejected by one of the counterparties (the document is considered rejected despite the actions of other counterparties);
+* "Copy" - not available for editing "snapshot"-copy of the document (contains the status of the original and information about the signatures at the time of copying). No actions are available with the document (exclusion: Sender can `add Recipients <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#new-counterparty-add>`__ to a copy that has already been sent).
+
+For **outbox** documents:
+
+* :navy:`"Pending signature of the recipient"` - signed/unsigned document sent (none of Recipients has not signed the document yet);
+* :navy:`"Pending acceptance of the recipient"` - signed/unsigned document sent (none of Recipients has not accepted the document yet);
+* :orange:`"Partially signed by recipients"` - a signed / unsigned document was sent and some of the Recipients signed it;
+* :orange:`"Partially accepted"` - a signed / unsigned document was sent and some of the Recipients accepted it;
+* :olive:`"Signed"` - final status of the document; Sender sent an unsigned document which was signed by all Recipients;
+* :olive:`"Accepted"` - final status of the document; Sender sent an unsigned document which was accepted by all Recipients;
+* :green:`"Processed"` - final status of the document; sent document signed by the Sender, which was signed/accepted by all Recipients;
+* :red:`"Rejected by recipient"` - final status of the document; sent signed / unsigned document was rejected by one of the counterparties (the document is considered rejected despite the actions of other counterparties);
+* "Copy" - not available for editing "snapshot"-copy of the document (contains the status of the original and information about the signatures at the time of copying). No actions are available with the document (exclusion: Sender can `add Recipients <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#new-counterparty-add>`__ to a copy that has already been sent).
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_121.png
+   :align: center
+
+.. hint::
+   Additionally, in the service folders, documents signed by the Sender have a green mark :green:`"Signed by the sender"`.
+
+.. _create-and-send:
+
+**4 Creating and sending a document**
+================================================
+
+Для створення документа на платформі необхідно натиснути кнопку - **"Створити"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_08n.png
+   :align: center
+
+Після цього на формі створення документа обов'язково потрібно вказати "Отримувачів", "Правила обробки документа отримувачами", "Тему документа" (від 1 до 100 символів) та додати файли-вкладення.
+
+.. note::
+   Поля "Номер документу", "Дата документу", "Сума (грн)", "Повідомлення" не є обов'язковими до заповнення.
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_124.png
+   :align: center
+
+.. _rules-for-recipients:
+
+**4.1 Правила обробки документів отримувачами**
+-------------------------------------------------
+
+Ініціатор документообігу (Відправник) налаштовує вимоги завершення документообігу за допомогою доступних **"Правил обробки документа отримувачами"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_126.png
+   :align: center
+
+* **Всі отримувачі мають підписати документ** - документ отримує кінцевий статус "Підписано" / "Завершено" після того, як всі вказані Контрагенти-отримувачі підпишуть документ;
+* **Один з отримувачів має підписати документ** - документ отримує кінцевий статус "Підписано" / "Завершено" одразу після того, як один з Контрагентів-отримувачів (хто перший) підписує документ;
+* **Всі отримувачі мають прийняти документ** - документ отримує кінцевий статус "Підписано" / "Завершено" після того, як всі вказані Контрагенти-отримувачі приймуть документ;
+* **Один з отримувачів має прийняти документ** - документ отримує кінцевий статус "Підписано" / "Завершено" одразу після того, як один з Контрагентів-отримувачів (хто перший) прийме документ.
+
+.. _counterparty-add:
+
+**4.2 Додавання отримувачів**
+-------------------------------------------------
+
+Отримувачам документа відображається лише контрагент-Відправник, однак Отримувачам відображається статус документа і загальна кількість
+
+Для вибору потрібних **Отримувачів** (може бути декілька) потрібно в полі почати вводити прізвище, пошту чи ЕДРПОУ контрагента (min 3 символи) і обрати зі списку зареєстрованих на платформі користувачів:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_13.gif
+   :align: center
+
+При введенні в поле Отримувачів пошти, що є аліасом (детальніше про `налаштування аліасів <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#alias>`__) відображається ПІБ контрагента, основний email та аліас:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_106.png
+   :align: center
+
+Реалізована можливість вказати Email незареєстрованого на платформі користувача в полі **"Отримувачі"**. При додаванні такого користувача потрібно обрати "Запросити нового користувача" в результатах випадаючого списка:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_37.png
+   :align: center
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_38.png
+   :align: center
+
+При відправці документа у відправника з'являється попередження, що потребує підтвердження:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_39.png
+   :align: center
+
+Незареєстрованому отримувачу на вказаний Email відправляється запрошення з посиланням на `реєстрацію <https://wiki.edin.ua/uk/latest/general_2_0/User_registration.html>`__ та вкладеним одним (першим) файлом без підпису:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_68.png
+   :align: center
+
+Також :underline:`незареєстрованим отримувачам` на Email приходять нагадування про запрошення на наступний день, 3-ій, 6-ий, 12-ий та 27-ий зі списком відправників та темами повідомлень:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_60.png
+   :align: center
+
+Також можливе масове додавання зареєстрованих / незареєстрованих Отримувачів, скопіювавши (Ctrl+C) список (значення через кому, пробіл чи крапку з комою) потрібних Email-адрес та вставши (Ctrl+V) їх з буфера обміну:  
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_67.gif
+   :align: center
+
+.. _files-add:
+
+**4.3 Додавання файлів**
+-------------------------------------------------
+
+Файли можливо додати з локального носія через кнопку "Додати файл" чи "Drag-and-drop" способом:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_09n.png
+   :align: center
+
+.. note::
+   Один документ може містити не більше 10 файлів в наступних форматах: PDF/JPG/JPEG/PNG/BMP/DOC/DOCX/XLS/XLSX/PPT/PPTX/CSV/TXT/XML/P7S (попередній перегляд працює лише для PDF/JPG/JPEG/PNG/BMP/TXT/XML) з розміром файлу не більше 5 Мб.
+
+При додаванні більше 3 файлів частина файлів прихована за стрілками прокручування (|прокрутка1| |прокрутка2|). Для доданих файлів доступний попередній перегляд їх вмісту:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_10n.gif
+   :align: center
+
+При перегляді доданого файлу можливо масштабувати попередній перегляд файлу (1), використовувати пагінацію сторінок (2), роздрукувати макет з візуалізацією підпису в вигляді водяного знаку та листом підписання (3) |print| (кнопка активна лише для файлів в форматі PDF/JPG/JPEG/PNG/BMP), завантажити (4) |download| чи видалити (5) |trash| файл.
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_51.png
+   :align: center
+
+.. note::
+   При завантаженні (4) |download| файлу:
+
+   * якщо документ НЕ підписано, то завантажується лише оригінал файлу;
+   * якщо документ підписано, то завантажується zip-архів (найменування архіву = назва файлу + Дата + Час створення), що містить оригінал файлу та підписаний файл в форматі p7s;
+   * якщо документ підписано і файл має розширення формату PDF/JPG/JPEG/PNG/BMP, то завантажується zip-архів (найменування архіву = назва файлу + Дата + Час створення), що містить оригінал файлу, підписаний файл в форматі p7s та друкований макет з візуалізацією підпису в вигляді водяного знаку та листом підписання в форматі pdf (`детальніше <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#signing-watermark>`__).
+
+Після додавання файлу/-ів та заповнення всіх обов'язковий полей можливо масово **"Підписати всі"** файли документа та **"Відправити"** документ (також можливо "Відправити документ без підписання"). При відправці непідписанного документа з'являється підказка, що потребує підтвердження дії:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_14.png
+   :align: center
+
+Однак "Підписати" файли документа можливо і після відправки документа (якщо він не був відхилений):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_107.png
+   :align: center
+
+Підписання Відправника не є обов'язковим, однак такий функціонал дозволяє реалізувати схеми документообігу, в яких Отримувач першим виконує підписання.
+
+.. _sign:
+
+**4.4 Підписання та відправка документа**
+-------------------------------------------------
+
+Для підписання при перегляді документа необхідно натиcнути на кнопку **"Підписати всі"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_15n.png
+   :align: center
+
+.. hint::
+   Також в папці **Чернетки** доступний `функціонал масового підписання <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#mass-sign>`__.
+
+.. include:: /_constant/signing/signing.rst
+   :start-after: .. початок блоку для Signing
+   :end-before: .. кінець блоку для Signing
+
+.. attention::
+   При масовому підписанні наноситься лише один підпис за раз. При додаванні/видаленні файлів в/з документа - раніше накладені підписи видаляються!
+
+.. _signing-watermark:
+
+.. note::
+   Після підписання файлів в форматах PDF, JPG (JPEG), PNG, BMP при їх попередньому перегляді додається водяний знак в верхньому лівому куті кожної сторінки файлу, а також додається сторінка листа підписання:
+
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_53.png
+      :align: center
+   
+   Водяний знак містить інформацію, про те що файл було підписано в EDI Network, GUID документа та поточну сторінку файлу.
+
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_54.png
+      :align: center
+
+   Лист підписання містить посилання та QR-код для скачування архіва документа, інформацію по документу та його підписантів.
+
+Після підписання під даними документа відображається інформація щодо підписантів. Для відправки документів потрібно натиснути на кнопку **"Відправити"**.
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_55.png
+   :align: center
+
+.. hint::
+   Також в папці **Чернетки** доступний `функціонал масової відправки <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#mass-send>`__.
+
+В випадку підписання документа Відправником (після відправки документа) на Email приходить повідомлення всім Отримувачам:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_110.png
+   :align: center
+
+Після відправки документа контрагентам він відображається в журналі надісланих документів і має статус **Очікує підпису** (кнопки додавання файлів та підписання не активні):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_56.png
+   :align: center
+
+.. note::
+   Надіслані документи мають мітки (з підказками при наведенні курсора):
+
+   * |yellow_tag| - "Частково доставлено" (серед отримувачів є зареєстровані і незареєстровані користувачі)
+   * |green_tag| - "Доставлено" (всі отримувачі зареєстровані на платформі)
+   * |red_tag| - "Очікуємо реєстрації отримувача" (всі отримувачі - незареєстровані користувачі)
+
+Також при відправці документа, на вказаний e-mail **"Отримувача"** відправляється лист:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_36n.png
+   :align: center
+
+.. _new-counterparty-add:
+
+**5 Додавання отримувачів до відправленого документа**
+===================================================================
+
+.. attention::
+   Лише Відправник документа має можливість додавати нових контрагентів. Додавання отримувачів до вже відправленого документа можливо поки документ (оригінал) знаходиться в статусі :navy:`"Очікує на підпис одержувача"` / :navy:`"Очікує прийняття одержувача"` / :orange:`"Частково підписано"` / :orange:`"В обробці"` (`детальніше про статуси документів <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#doc-statuses>`__).
+
+Для цього Відправнику потрібно перейти у документ і натиснути кнопку **"+Додати"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_63.png
+   :align: center
+
+Пошук і додавання нового отримувача аналогічно `формуванню нового документа <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#counterparty-add>`__ (з можливістю додавання незареєстрованого учасника):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_64.gif
+   :align: center
+
+Документ відправляється новим контрагентам кнопкою **"Відправити"**.
+
+.. _inbox-doc:
+
+**6 Робота з вхідними документами**
+================================================
+
+Всі непрочитані **"Вхідні"** документи відображаються жирним шрифтом:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_28n.png
+   :align: center
+
+При переході в сам документ відкриваються дані про підписанта (якщо Відправник підписував документ), файли доступні до перегляду та скачування (|download|), а з документом можливо виконати наступні дії: **"Відхилити всі"** вкладені файли чи **"Підписати"** / **"Прийняти"** їх у відповідь (в залежності від встановлених `правил обробки <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#rules-for-recipients>`__ для цього документа):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_125.png
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_30n.png
+
+.. hint::
+   Процес **Підписання** "Отримувачем" документа не відрізняється від підписання "Відправника" та описаний в `розділі вище <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#sign>`__.
+
+Після приймання / підписання документ змінює свій статус на :orange:`"Частково підписано"` / :orange:`"В обробці"` / :olive:`"Підписано"` / :olive:`"Прийнято"` / :green:`"Завершено"` в залежності від встановлених правил обробки документа, дій Контрагентів-Отримувачів (`детальніше про статуси документів <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#doc-statuses>`__).
+
+При підписанні/прийманні документа Отримувачем на email Відправника приходить лист-сповіщення, наприклад:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_108.png
+   :align: center
+
+.. _rejection:
+
+**6.1 Відхилення документа**
+-------------------------------------------------
+
+.. attention::
+   Відхилити можливо лише вхідні документи! Відхилити можливо документ до того, як він змінить свій статус на кінцевий (`детальніше про статуси документів <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#doc-statuses>`__)! Відхилений документ змінює свій статус на **"Відхилено"** для всіх учасників, після чого його підписання/приймання будь-яким учасником стає неможливим.
+
+Для відхилення всіх вкладених файлів потрібно відкрити сам документ і натиснути кнопку **"Відхилити всі"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_42.png
+   :align: center
+
+При відхиленні потрібно обов'язково вказати причину відхилення та **"Відправити"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_34.png
+   :align: center
+
+Після відхилення документ змінює свій статус на **"Відхилено"**. Контрагент, що виконав відхилення вказується під статусом разом з причиною відхилення.
+
+.. Відхилений документ можливо лише **"Переслати"** (кнопки відхилення файлів, приймання/підписання не активні):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_43.png
+   :align: center
+
+При відхиленні документа на email Відправника приходить лист-сповіщення:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_109.png
+   :align: center
+
+Документообіг завершено.
+
+.. _forward-doc:
+
+**7 Переслати документ**
+================================================
+
+"Вхідні" чи "Надіслані" документи можливо **"Переслати"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_135.png
+   :align: center
+
+Пошук і додавання нового отримувача аналогічно `формуванню нового документа <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#counterparty-add>`__ (з можливістю додавання незареєстрованого учасника):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_66.gif
+   :align: center
+
+При цьому формується "snapshot"-копія документа зі статусом "Не доступна до редагування копія" (містить статус оригіналу й інформацію про підписи на момент формування копії):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_65.png
+   :align: center
+
+Жодні дії з документом-копією недоступні (окрім можливості завантажити вкладення).
+
+.. _contractors:
+
+**8 Контрагенти (відправка запрошень)**
+================================================
+
+Розділ дозволяє знайти своїх незареєстрованих контрагентів та масово відправити їм запрошення на e-mail. Для початку потрібно долучити контрагентів до журналу - це можливо зробити за допомогою кнопки **"Створити контрагента"**, після чого **"Зберегти"** дані в журналі:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_77.png
+   :align: center
+
+Також розроблено функціонал масового завантаження e-mail адрес через xls-файл, що повинен відповідати шаблону. Для коректного додавання даних спочатку потрібно завантажити **"Шаблон"** (1), орієнтуючись на який буде можливо без помилок долучити список своїх контрагентів кнопкою **"З Excel"** (2):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_71.png
+   :align: center
+
+Дані контрагентів в журналі можливо відредагувати:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_76.png
+   :align: center
+
+.. attention::
+   Якщо Excel-документ містить поля з помилками чи невідповідним шаблону змістом, то такі поля виділяються жовтим кольором, виводиться повідомлення про необхідність внесення правок (такі поля можливо видалити кнопкою |trash2|):
+
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_80.png
+      :align: center
+
+   При редагуванні конкретного рядка вказується помилка:
+
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_82.png
+      :align: center
+
+   ⠀⠀⠀⠀⠀⠀⠀
+   
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_83.png
+      :align: center
+
+Після того, як контрагенти успішно завантажені сервіс **"Vilnyi"** перевіряє введені адреси, чи зареєстровані вони в сервісі і проставляє "Статус реєстрації" (зареєстрований |зареєстрований| чи незареєстрований |незареєстрований|):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_72.png
+   :align: center
+
+Кожного з незареєстрованих контрагентів |незареєстрований| можливо **"Запросити"** індивідуально клікаючи на кнопку в рядку контрагента чи масово: відмітивши незареєстрованих контрагентів |незареєстрований| та надіславши **"Запрошення"** всім одразу:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_75.png
+   :align: center
+
+Незареєстрованим контрагентам на e-mail відправляється запрошення:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_84.png
+   :align: center
+
+Після відправки запрошення проставляється дата його відправлення зі статусом "Відправлено":
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_78.png
+   :align: center
+
+Після того, як запрошений користувач пройде реєстрацію в полі запрошення з'явиться відмітка зареестрованого користувача |зареєстрований| - такому користувачу немає можливості повторно відправити запрошення:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_79.png
+   :align: center
+
+.. _mass-operations:
+
+**9 Масові операції**
+================================================
+
+За допомогою масових операцій в сервісі легко завантажувати, підписувати, відправляти, видаляти одразу кілька документів в один клік! При запуску масових операцій в правому нижньому куті екрану запускається віджет, що відображає :navy:`процес` та :green:`результат` виконання поставлених задач для кожного документа/дії окремо:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_129.png
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_128.png
+
+Навпроти назви документа/дії у віджеті відображається статус:
+
+* |ring| - задача в процесі обробки;
+* |success| - задача успішно виконана;
+* |error| - помилка виконання задачі.
+
+А іконка на початку завершеної дії підкаже, який процес було виконано:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_136.png
+   :align: center
+
+Віджет можливо згорнути чи закрити навіть під час виконання задач. Віджет можливо відновити, натиснувши на іконку процесу/помилки в нижній частині екрану (віджет з усіма успішно виконаними задачами не відновлюється після закривання):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_127.png
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_132.png
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_133.png
+
+.. _mass-download:
+
+**9.1 Масове завантаження документів**
+-------------------------------------------------
+
+**Масово завантажити документи** можливо за допомогою кнопки **"Завантажити"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_44.png
+   :align: center
+
+Документи завантажуються у вигляді zip-архівів (найменування архіву = перші 10 символів теми документа + Дата + Час створення). Кожен з архівів містить каталоги (найменування=назві файлу з роширенням) для кожного вкладення. Кожен каталог містить:
+
+* якщо документ не підписаний: оригінал файлу;
+* якщо документ підписаний: оригінал файлу та підписаний файл в форматі p7s.
+
+.. note::
+   Якщо підписаний документ містить файл в форматі PDF/JPG/JPEG/PNG/BMP, то завантажуваний zip-архів для кожного такого файлу додатково містить друкований макет з візуалізацією підпису в вигляді водяного знаку та листом підписання в форматі pdf (`детальніше <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#signing-watermark>`__).
+
+.. _reestr:
+
+**9.2 Формування та завантаження реєстру документів**
+---------------------------------------------------------
+
+Для бухгалтерського обліку передбачене консолідоване вивантаження даних обраних документів каталога (не більше 100 документів). Для цього потрібно відмітити потрібні документи і натиснути кнопку **"Завантажити реєстр в Excel"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_69.png
+   :align: center
+
+Реєстр формується з обраних документів в xlsx-файл з назвою, що формується згідно шаблону: *List_of_documents _НазваПапки_Дата(YYYY-MM-DD)_час(hh-mm-ss)*, наприклад: List_of_documents_Inbox_2021-06-30_12-47-31.xlsx. В реєстр з документів записуються наступні поля: Отримувач (для "Надіслані"/"Важливі"), Відправник (для "Вхідні"/"Важливі"), Ім’я файлу вкладення, Тема документу, Статус, Дата відправки, Дата зміни статусу, Дата документу, Номер документу, Сума документу:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_70.png
+   :align: center
+
+.. note::
+   Перезавантаження сторінки може перервати процес формування файлу (файл реєстра не зберігається)! При виникненні помилки в правому верхньому куті екрану відображається повідомлення "Помилка створення реєстра."
+
+.. _mass-sign:
+
+**9.3 Масове підписання документів**
+---------------------------------------------------------
+
+Функціонал масового підписання (не більше 100 документів) доступний лише в папці **Чернетки**. Для масового підписання потрібно спочатку відібрати всі готові до підписання документи (непідписані документи з вкладеннями) за допомогою зручного фільтра **"Готові до підписання"** (1): 
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_93.png
+   :align: center
+
+Далі потрібно відмітити бажані документи зі списку для того, щоб **"Підписати"** (2) їх:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_94.png
+   :align: center
+
+.. _mass-send:
+
+**9.4 Масова відправка документів**
+---------------------------------------------------------
+
+Функціонал масової відправки (не більше 100 документів) доступний лише в папці **Чернетки**. Для масової відправки потрібно спочатку відібрати всі готові до відправки документи (документи з вкладеннями, заповненими полями "Отримувач" і "Тема") за допомогою зручного фільтра **"Готові до відправки"** (1): 
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_97.png
+   :align: center
+
+Далі потрібно відмітити бажані документи зі списку для того, щоб **"Відправити"** (2) їх:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_98.png
+   :align: center
+
+.. _mass-pdf:
+
+**9.5 Масове завантаження pdf-файлів**
+-------------------------------------------------
+
+В каталозі **"Чернетки"** можливо масово завантажити pdf-файли за допомогою кнопки **"Завантажити PDF"**. Після натискання кнопки в popup вікні вказуються правила до завантаження: 
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_85.png
+   :align: center
+
+Для вибору та завантаження pdf-файлів потрібно вказати папку, в якій знаходяться ці файли (кнопка **"Вибрати папку з файлами"**), після чого відобразиться процес завантаження:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_87.png
+   :align: center
+
+Процес завантаження можливо перервати кнопкою **"Зупинити процес завантаження"**. Навпроти кожного документа показується відмітка статусу завантаження конкретного файлу:
+
+* |clock| - файл в черзі;
+* |round| - файл в процесі обробки/завантаження;
+* |accepted| - файл успішно завантажено;
+* |denied| - помилка завантаження файлу (такий файл супроводжується детальним описом причини помилки):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_91.png
+   :align: center
+
+Після того, як процес завантаженя завершено можливо ознайомитись з результатом (за потреби виправити помилки, що могли виниктути при завантаженні) та **"Закрити"** вікно результатів завантаження:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_86.png
+   :align: center
+
+.. _tags:
+
+**10 Теги**
+================================================
+
+До документів сервісу можливо "прив'язувати" теги - Ваші ідентифікатори, що відображаються лише Вам. Теги полегшують `пошук <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#search-by-tags>`__ потрібного документа чи групи документів:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_122.png
+   :align: center
+
+Для того, щоб **створити новий тег** потрібно натиснути на кнопку **"Теги"**, в pop-up вікні ввести *унікальну* назву майбутнього тега (не більше 20 символів) та натиснути на кнопку **"Створити"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_111.png
+   :align: center
+
+Останні 10 створених тегів відображаються при повторному натисканні кнопки **"Теги"** (інші теги потрібно шукати за назвою):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_112.png
+   :align: center
+
+Для того, щоб додати / вилучити тег/-и потрібно обрати документ/-и, натиснути на кнопку **"Теги"**, поставити / забрати відмітку відповідно та натиснути на кнопку **"Застосувати"**:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_113.png
+   :align: center
+
+Теги відображаються в журналі документів:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_114.png
+   :align: center
+
+.. hint::
+   Якщо обрати кілька документів в pop-up **"Теги"** спільні і унікальні призначені теги матимуть різні помітки:
+
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_117.png
+      :align: center
+
+Повний список тегів відображається при перегляді документа:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_115.png
+   :align: center
+
+При перегляді документа присутня кнопка **"Теги"**, що має аналогічний функціонал по створенню / редагуванню / видаленню тегів, дозволяє додати теги до відкритого документа:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_116.png
+   :align: center
+
+За допомогою спеціальних кнопок створені теги можливо **Редагувати** - |edit_tag| чи **Видалити** |del_tag|. При редагуванні назви тега потрібно **"Зберегти"** зміни - всі документи, що вже мали цей тег оновлюються автоматично:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_120.gif
+   :align: center
+
+.. _search:
+
+**11 Пошук і фільтрація документів**
+================================================
+
+**11.1 Пошук документів**
+-------------------------------------------------
+
+Фільтрування документів в сервісі зручно здійснювати за допомогою функціоналу **"Пошук"** (всі "Доступні ключі пошуку" можливо переглянути в один клік):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_23.png
+   :align: center
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_48.png
+   :align: center
+
+Потрібно обрати/ввести параметр (кілька параметрів вводяться через кому), текст за потреби і натиснути |лупа|. Часто використовувані пошукові запити для зручності рекомендовано зберігати (|save|) до власного пошуку (блок "**Збережений пошук**"):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_45.png
+   :align: center
+
+Збережений пошук відноситься тільки до певного статусу документа: "Вхідні", "Надіслані". У блоці "Збережений пошук" за замовчуванням доступні фільтри по документам за сьогодні та вчора. Вилучити збережений пошук можна за допомогою хрестика. Очистити рядок "Пошук" можна за допомогою кнопки **"Скинути фільтри"** |non| . При переході між папками "Вхідні", "Надіслані" пошуковий рядок очищається. Якщо користувач відфільтрував список документів, після чого перейшов до перегляду цього документа та повернувся назад, — пошук зберігається.
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_27.png
+   :align: center
+
+**11.2 Швидкі фільтри по документам**
+-------------------------------------------------
+
+Кнопка швидкої фільтрації доступна для папок "Вхідні" та "Надіслані" і розташована в правому верхньому куті журнала документів:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_61.png
+   :align: center
+
+Для "Вхідні":
+
+* Всі - всі вхідні документи;
+* Непрочитані - документи, що ще не були переглянуті (відкриті);
+* Прочитані - документи, що вже були переглянуті (відкриті).
+
+Для "Надіслані":
+
+* Всі - всі надіслані (вихідні) документи;
+* Доставлені - документи, всі Отримувачі яких отримали документ (відмічені |green_tag|);
+* Помилка - документи з помилками (Отримувачі їх не отримають);
+* Відправлені - надіслані (вихідні) документи, що очікують дій Отримувачів (в статусі "Очікує"). 
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_62.png
+   :align: center
+
+.. hint::
+   Значення фільтру дублюється в рядок пошуку і зберігається при переході між папками під час даної сесії.
+
+.. _search-by-tags:
+
+**11.3 Пошук за тегами**
+-------------------------------------------------
+
+Завдяки функціоналу `тегів <https://wiki.edin.ua/uk/latest/Vilnyi/Work_with_Vilnyi.html#tags>`__, можливо створити персональну систему "маркування" документів, що значно прискорить Ваш особистий пошук:
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_122.png
+   :align: center
+
+Пошук за тегами можливо скинути при повторному натисканні на вже обраний тег чи хрестиком скинути всі фільтри. В блоці "Теги" відображаються 15 часто використовуваних тегів (решта доступні через кнопку **"Показати ще"**):
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_123.png
+   :align: center
+
+----------------------------
+   
+.. include:: /_constant/kontakti.rst
