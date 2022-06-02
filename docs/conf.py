@@ -414,7 +414,7 @@ epub_exclude_files = ['search.html']
 
 versionwarning_messages = {
     "latest": (
-        "<a href="https://bank.gov.ua/ua/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi" target="_blank"><span нelpapu="lang"><svg width="22" height="29" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="5.5" width="22" height="19.8" fill="#0082D1"></rect><rect y="15.4" width="22" height="9.9" fill="#0082D1"></rect></g></svg> Допомогти ЗСУ </span></a>"
+        "<strong>Text</strong>"
     ),
 }
 
