@@ -135,7 +135,7 @@ def setup(app):
     app.add_stylesheet('theme_overrides.css')
     app.add_stylesheet('toogle.css')
     app.add_stylesheet('dark.css')
-    app.add_javascript('toggle.js')
+    app.add_javascript('toogle.js')
 
 # old js was added like this
 #def setup(app):
