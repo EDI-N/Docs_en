@@ -415,7 +415,7 @@ epub_exclude_files = ['search.html']
 
 versionwarning_messages = {
     "latest": (
-        "<strong>Text</strong><img src='https://wiki.edin.ua/en/latest/_static/Trident_b.png' alt='alternatetext' style='height:45px;'>"
+        "<img src='https://wiki.edin.ua/en/latest/_static/Trident_b.png' alt='alternatetext' style='height:22px;'><strong><a href='https://bank.gov.ua/ua/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi'> Help Ukraine’s Armed Forces </a></strong>"
     ),
 }
 
