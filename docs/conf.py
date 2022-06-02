@@ -415,7 +415,7 @@ epub_exclude_files = ['search.html']
 
 versionwarning_messages = {
     "latest": (
-        "<strong>Text</strong><img src='https://wiki.edin.ua/en/latest/_static/Trident_b.png' alt='alternatetext'>"
+        "<strong>Text</strong><img src='https://wiki.edin.ua/en/latest/_static/Trident_b.png' alt='alternatetext' style='height:45px;'>"
     ),
 }
 
