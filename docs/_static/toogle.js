@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
        var daysheet = $('link[href="_static/pygments.css"]')[0].sheet;
        daysheet.disabled = !isDay;
 
-       var nightsheet = $('link[href="_static/css/dark.css"]')[0];
+       var nightsheet = $('link[href="_static/dark.css"]')[0];
        if (!isDay && nightsheet === undefined) {
            var element = document.createElement("link");
            element.setAttribute("rel", "stylesheet");
            element.setAttribute("type", "text/css");
-           element.setAttribute("href", "_static/css/dark.css");
+           element.setAttribute("href", "_static/dark.css");
            document.getElementsByTagName("head")[0].appendChild(element);
            return;
        }
