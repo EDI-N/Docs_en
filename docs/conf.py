@@ -35,6 +35,7 @@ extensions = [
     'sphinxcontrib.contentui',
     'sphinxcontrib.plantuml',
     'notfound.extension',
+    'versionwarning.extension',
 ]
 
 # for 404 page
