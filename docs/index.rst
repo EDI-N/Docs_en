@@ -30,6 +30,12 @@ Contents:
    Distribution/EDIN_2_0/XML/XML_structure
 
 .. toctree::
+   :caption: Vilnyi
+   :titlesonly:
+
+   Vilnyi/Work_with_Vilnyi
+
+.. toctree::
    :maxdepth: 2
    :caption: Private area
 

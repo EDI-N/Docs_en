@@ -259,7 +259,7 @@ htmlhelp_basename = 'Docsdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_engine = 'xelatex'
+# latex_engine = 'xelatex' have no idea why it was here
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
