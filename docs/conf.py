@@ -409,3 +409,17 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
+
+# -- sphinx-version-warning config ----------------------------------------------
+
+versionwarning_messages = {
+    "latest": (
+        "<span><svg width="22" height="29" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> Допомогти ЗСУ </span>"
+    ),
+}
+
+# Show warning at top of page
+versionwarning_body_selector = "div.document"
+versionwarning_banner_title = ""
+# For debugging locally
+# versionwarning_project_version = "stable"
