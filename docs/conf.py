@@ -414,7 +414,7 @@ epub_exclude_files = ['search.html']
 
 versionwarning_messages = {
     "latest": (
-        "<strong>Text</strong><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/%D0%A2%D1%80%D0%B8%D0%B7%D1%83%D0%B1.svg/20px-%D0%A2%D1%80%D0%B8%D0%B7%D1%83%D0%B1.svg.png" alt="alternatetext">"
+        "<strong>Text</strong><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/%D0%A2%D1%80%D0%B8%D0%B7%D1%83%D0%B1.svg/20px-%D0%A2%D1%80%D0%B8%D0%B7%D1%83%D0%B1.svg.png' alt='alternatetext'>"
     ),
 }
 
