@@ -65,7 +65,7 @@ When you click on the **"Order created"** button in the :green:`Published` statu
    :align: center
 
 .. hint::
-   "Transport order" is sent **"To trash"** in case when the vehicle was found or mistakes were made in the order. When "Transport order" is sent **"To trash"** order changes it status at :red:`Deleted`.
+   "Transport order" is sent **"To trash"** in case when the vehicle was found or mistakes were made in the order. When "Transport order" is sent **"To trash"** order changes it status at :red:`Deleted`. Also, the status automatically changes when you delete / confirm / block the "Transport order" from the **Lardi Trans** platform.
 
 When "Transport order" is sent **"To trash"** order is available for viewing, You may **"Restore"** it (order returns to :green:`Published` status) or You may irrevocably **"Delete"** it:
 
