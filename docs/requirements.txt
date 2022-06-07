@@ -12,3 +12,4 @@ git+https://github.com/humitos/sphinx-version-warning@master#egg=sphinx-version-
 # sphinx-version-warning == 1.1.2
 # Tabs
 git+https://github.com/executablebooks/sphinx-tabs@master#egg=sphinx-tabs
+sphinx-tabs==3.3.0
