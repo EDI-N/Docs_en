@@ -36,6 +36,7 @@ extensions = [
     'sphinxcontrib.plantuml',
     'notfound.extension',
     'versionwarning.extension',
+    'sphinx_tabs.tabs',
 ]
 
 # for 404 page
