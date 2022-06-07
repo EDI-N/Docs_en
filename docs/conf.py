@@ -39,6 +39,10 @@ extensions = [
     'sphinx_tabs.tabs',
 ]
 
+# Tabs. If needed, there is a configuration option to allow additional builders to be considered compatible. For example, to add the linkcheck builder, add the following to your conf.py:
+
+sphinx_tabs_valid_builders = ['linkcheck']
+
 # Tabs. By default, tabs can be closed by selecting the open tab. This functionality can be disabled using the sphinx_tabs_disable_tab_closing configuration option:
 
 sphinx_tabs_disable_tab_closing = True
