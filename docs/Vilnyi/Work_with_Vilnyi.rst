@@ -505,11 +505,13 @@ When the invited user has registered, a mark of the registered user will appear 
 **9 Mass operations**
 ================================================
 
-It is easy to download, sign, send, delete several documents at once in one click with the help of mass operations! When you start any mass operation in the lower right corner of the screen, a widget is launched that displays :navy:`process` and :green:`result` of the tasks for each document / action separately:
+It is easy to download, sign, send, delete several documents at once in one click with the help of mass operations! When you start any mass operation in the lower right corner of the screen, a widget is launched that displays :navy:`process` and :green:`successful` / :red:`with mistakes` result of the tasks for each document / action separately:
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_129.png
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_128.png
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_137.png
 
 The status is displayed next to the document / action name in the widget:
 
