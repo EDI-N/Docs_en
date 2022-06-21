@@ -246,6 +246,8 @@ It is possible to make a purchase by paying an invoice (section `"Invoices" <htt
 
    The block will be removed if there are enough funds on the balance to cover the Additional Transaction / Tariff (after that it is possible to get 2-day access to services before an invoice payment again).
 
+   2 days of loyalty (access) are not activated for invoices issued as part of the automatic prolongation procedure.
+
 .. warning::
    When replenishing the balance, if its amount exceeds the cost of services / services that **"Awaiting payment"**, these funds are debited automatically!
 
@@ -398,6 +400,8 @@ The purchase of an additional tariff package is carried out through **"Cart"** (
 
    The block will be removed if there are enough funds on the balance to cover the Additional Transaction / Tariff (after that it is possible to get 2-day access to services before an invoice payment again).
 
+   2 days of loyalty (access) are not activated for invoices issued as part of the automatic prolongation procedure.
+
 .. _continue-tariff:
 
 **1.2.3.2 Prolong the tariff package**
@@ -423,6 +427,8 @@ Prolongation of the tariff package is carried out through **"Cart"** (more detai
 
    The block will be removed if there are enough funds on the balance to cover the Additional Transaction / Tariff (after that it is possible to get 2-day access to services before an invoice payment again).
 
+   2 days of loyalty (access) are not activated for invoices issued as part of the automatic prolongation procedure.
+
 **1.2.3.3 Edit the tariff package**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -446,6 +452,8 @@ Changing the tariff package of the service is carried out through **"Cart"** (mo
 
    The block will be removed if there are enough funds on the balance to cover the Additional Transaction / Tariff (after that it is possible to get 2-day access to services before an invoice payment again).
 
+   2 days of loyalty (access) are not activated for invoices issued as part of the automatic prolongation procedure.
+
 .. _balance:
 
 **1.2.4 Balance top up**
@@ -456,18 +464,29 @@ The balance panel displays the current balance (available for purchases of tarif
 .. image:: pics_New_balance_tariff/New_balance_tariff_03.png
    :align: center
 
-For **"Balance top up"** you need to specify the amount of replenishment and click **"Create invoice"**:
+For **"Balance top up"** you need to specify the amount of replenishment (uah) and choose the method: **"Online payment"** (LiqPay) or **"Create invoice"**:
 
 .. image:: pics_New_balance_tariff/New_balance_tariff_04.png
    :align: center
 
-Then the system automatically creates an invoice (more details in `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__):
+.. tabs::
 
-.. image:: pics_PCInstruction/PCInstruction_008.png
-   :align: center
+   .. tab:: Online payment
 
-.. hint::
-   When you create an invoice, it is also automatically sent to email.
+      With **"Online payment"** You will be redirected to the page for entering card data or using Google Pay / Apple Pay / Privat24 services or You can pay in **"Another method"**, which is available on this page:
+
+      .. image:: pics_PCInstruction/PCInstruction_258.png
+         :align: center
+
+   .. tab:: Create invoice
+
+      When You **"Create invoice"** the system automatically creates an invoice (more details in `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__):
+
+      .. image:: pics_PCInstruction/PCInstruction_008.png
+         :align: center
+
+      .. hint::
+         When you create an invoice, it is also automatically sent to email.
 
 **"History of transactions"** (has a convenient search) is kept for all transactions with the balance:
 
