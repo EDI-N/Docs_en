@@ -466,7 +466,7 @@ The balance panel displays the current balance (available for purchases of tarif
 
 For **"Balance top up"** you need to specify the amount of replenishment (uah) and choose the method: **"Online payment"** (LiqPay) or **"Create invoice"**:
 
-.. image:: pics_New_balance_tariff/New_balance_tariff_04.png
+.. image:: pics_New_balance_tariff/New_balance_tariff_04n.png
    :align: center
 
 .. tabs::
