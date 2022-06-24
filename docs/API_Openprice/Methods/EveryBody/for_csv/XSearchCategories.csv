@@ -1,0 +1,7 @@
+Parameter,Type [1]_,Format,Description
+.. _XSearchCategories: ,, Object **XSearchCategories** ,
+all, O, boolean, the whole directory
+withSubCategories, O, boolean, including child subcategories
+ids, O, List <Long>, by list of identifiers (array of values)
+name, O, String, by name
+names, O, List <String>, by list of names (array of values)

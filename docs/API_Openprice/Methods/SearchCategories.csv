@@ -1,0 +1,11 @@
+**URL**       ,
+Метод запиту  , POST
+URL запиту    , **/api/oas/categories/search?gln=9864232319979**
+URL параметри ,"**gln** (required) String - GLN of your own Company;
+OR
+**guid** (required) String - unique identifier of your own Company"
+**Headers**   ,
+Authorization ,"**SID** - token received at `authorization <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__"
+Content-Type  , application/json
+**REQUEST**   ,
+JSON Body     ,"In the request body of the method, the `parameters (filters) for selecting values from the category directory <https://wiki.edin.ua/uk/latest/API_Openprice/Methods/EveryBody/XSearchCategories.html>`__ as XSearchCategories object are transmitted."
