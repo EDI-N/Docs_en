@@ -1,6 +1,15 @@
 Parameter,Mandatory/Optional, Format, Description
 .. _XPriceListElement:,, Object **XPriceListElement** ,
-category_id,O,long,category identifier
-category_name,M,String,line / category / subcategory name
-children,O/M,List<XPriceListElement_>,array of objects; line / category element data
+category_id,O,long,"identifier
+
+* for Distribution service: line / category / subcategory
+* for Have Product service: category / group / subgroup"
+category_name,M,String,"name
+
+* for Distribution service: line / category / subcategory
+* for Have Product service: category / group / subgroup"
+children,O/M,List<XPriceListElement_>,"array of objects;
+
+* for Distribution service: category / subcategory data
+* for Have Product service: group / subgroup data"
 prods,M,List<XPriceListProduct_>,array of objects; product data

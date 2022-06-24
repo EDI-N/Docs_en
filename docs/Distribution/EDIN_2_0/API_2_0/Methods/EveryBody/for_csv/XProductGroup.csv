@@ -1,6 +1,18 @@
 Parameter, Format, Description
 .. _XProductGroup: , Object **XProductGroup** ,
-groupd_id, long, group identifier (lines / categories / subcategories)
-parent_group_id, long, identifier of the highest level in the structure (lines / categories)
-name, String, group name (line / category / subcategory)
-children, List <groupd_id>, array; list of all child group IDs
+groupd_id, long,"identifier
+
+* for Distribution service: line / category / subcategory
+* for Have Product service: category / group / subgroup"
+parent_group_id, long,"identifier of the highest level in the structure:
+
+* for Distribution service: line / category
+* for Have Product service: category / group"
+name, String,"name
+
+* for Distribution service: line / category / subcategory
+* for Have Product service: category / group / subgroup"
+children, List <groupd_id>,"array; list of all child IDs:
+
+* for Distribution service: category / subcategory identifier
+* for Have Product service: group / subgroup identifier"
