@@ -16,10 +16,10 @@
 	  }
 	]
 
-Table 1 - Parameters description of object **EDistribexPriceQuery**
+Table 1 - Parameters description of object **ProductCategory**
 
 .. csv-table:: 
-  :file: for_csv/EDistribexPriceQuery.csv
+  :file: for_csv/ProductCategory.csv
   :widths:  1, 12, 41
   :header-rows: 1
   :stub-columns: 0
