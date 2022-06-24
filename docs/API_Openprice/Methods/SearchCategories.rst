@@ -11,4 +11,4 @@ To work with this method, the user must be `authorized <https://wiki.edin.ua/en/
 
 **RESPONSE**
 
-Method will send in **response** (json) `category tree data <https://wiki.edin.ua/uk/latest/API_Openprice/Methods/EveryBody/ProductCategory.html>`__ (array of objects ProductCategory) according to the set parameters.
+Method will send in **response** (json) `category tree data <https://wiki.edin.ua/en/latest/API_Openprice/Methods/EveryBody/ProductCategory.html>`__ (array of objects ProductCategory) according to the set parameters.
