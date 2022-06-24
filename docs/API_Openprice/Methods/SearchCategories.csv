@@ -1,7 +1,7 @@
 **URL**       ,
-Метод запиту  , POST
-URL запиту    , **/api/oas/categories/search?gln=9864232319979**
-URL параметри ,"**gln** (required) String - GLN of your own Company;
+Method  , POST
+URL query    , **/api/oas/categories/search?gln=9864232319979**
+URL parameters ,"**gln** (required) String - GLN of your own Company;
 OR
 **guid** (required) String - unique identifier of your own Company"
 **Headers**   ,
