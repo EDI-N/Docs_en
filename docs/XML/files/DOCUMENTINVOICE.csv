@@ -6,9 +6,12 @@ InvoiceDate, М, Date (YYYY-MM-DD), Invoice date
 InvoiceCurrency, М, String (3), Currency
 InvoicePostDate, O, Date (YYYY-MM-DD), Invoice dispatch date
 InvoicePostTime, O, Час (год: хв), Invoice dispatch time
-DocumentFunctionCode, М,TN/CTN,"Document type code:
-TN - invoice (consignment note)
-CTN - corrective invoice (consignment note)"
+DocumentFunctionCode, М,TN/CTN/PRN/DRN,"Document type code:
+
+* TN - invoice (consignment note)
+* CTN - corrective invoice (consignment note)
+* PRN- Price invoice
+* DRN - Sales Invoice"
 ContractNumber, О, String (16), Supply contract number
 ContractDate, М, Date (YYYY-MM-DD), Contract date
 **Invoice-Header**,,, End of the main block
@@ -73,12 +76,17 @@ BuyerItemCode, О, String (16), Article in the buyer's database
 ExternalItemCode, M, String (4-10), Product code (УКТ ЗЕД - Ukrainian classification of goods of foreign economic activity)
 ItemDescription, М, String (210), Product description
 InvoiceQuantity, M, Positive number, Ordered quantity (invoiced quantity of goods)
+BuyerUnitOfMeasure, О, String (10),"Units of measurement according to `Класифікатора системи позначень одиниць вимірювання та обліку (КСПОВО) <https://dovidnyk.in.ua/directories/kspovo>`_"
 UnitOfMeasure, О, String (3),`Units of measurement <https://wiki.edin.ua/en/latest/XML/units_edi.html>`__
+InvoiceUnitGrossPrice,O,"Decimal (18,2)",The price of one unit with VAT
 InvoiceUnitNetPrice, M, Positive number, The price of one unit without VAT
-TaxRate, M, Positive number,"Tax rate (20%, 7%, 0%)"
-TaxCategoryCode, M, E / S,"Tax category code:
-E - exempt from paying tax
-S - standard tax"
+TaxRate, M, 20/19/16/14/7/2/0, "Tax rate (20%, 19%, 16%, 14%, 7%, 2%, 0%)"
+TaxCategoryCode, O, S / E / Z,"Tax category code:
+
+* S - standard tax; possible TaxRate values: 20/19/16/14/7/2 (otherwise an error)
+* E - exempt from paying tax; possible TaxRate values: 0 (otherwise an error)
+* Z - zero rate (0%); possible TaxRate values: 0 (otherwise an error)"
+GrossAmount,O,"Decimal (18,2)", Amount with VAT
 TaxAmount, M, Positive number, Amount of VAT per item = sum of amounts without VAT on items * tax rate (rounded to 2 symbols)
 NetAmount, M, Positive number, Total without VAT (calculating)
 **Line-Item**,,, Commodity position (the end of the block)
@@ -91,10 +99,12 @@ TotalTaxAmount, M, Positive number, Amount of VAT
 TotalGrossAmount, M, Positive number, Total amount including VAT
 **Tax-Summary**,,, Taxes (the beginning of the block)
 **Tax-Summary-Line**,,, Taxes line (the beginning of the block)
-TaxRate, M, Positive number, "Tax rate (20%, 7%, 0%)"
-TaxCategoryCode, M, E / S,"Tax category code:
-E - exempt from paying tax
-S - standard tax"
+TaxRate, M, 20/19/16/14/7/2/0, "Tax rate (20%, 19%, 16%, 14%, 7%, 2%, 0%)"
+TaxCategoryCode, O, S / E / Z,"Tax category code:
+
+* S - standard tax; possible TaxRate values: 20/19/16/14/7/2 (otherwise an error)
+* E - exempt from paying tax; possible TaxRate values: 0 (otherwise an error)
+* Z - zero rate (0%); possible TaxRate values: 0 (otherwise an error)"
 TaxAmount, M, Positive number, Amount of tax for each tax category
 TaxableAmount, M, Positive number, Taxable amount for the selected tax category
 **Tax-Summary-Line**,,, Taxes line (the end of the block)

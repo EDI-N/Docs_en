@@ -1,0 +1,7 @@
+Parameter, Format, Description
+.. _ProductCategory: , Object **ProductCategory** ,
+id, long, category / group / subgroup identifier
+parentId, long, parent category / group ID
+name, String, category / group / subgroup name
+nameEng, String, the English name of the category / group / subgroup
+status, int, status
