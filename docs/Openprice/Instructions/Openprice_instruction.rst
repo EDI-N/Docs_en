@@ -88,17 +88,25 @@ You can add your own price list using the **"Upload from Excel"** button (2). At
 .. important::
    Pay attention! You cannot delete or swap columns in a template. You may not fill in optional columns, but do not delete them.
 
-Open and fill the Excel file. Columns highlighted in green - **required**! Some columns have tooltips - place the cursor in the top corner of the column name to display a tooltip: 
+Open and fill the Excel file. Columns highlighted in green - **required**! Some columns have tooltips - place the cursor to the cell name to display a tooltip: 
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_030.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_030n.png
    :align: center
+
+There are filters in the table header that allow you to select the displayed values.
+
+ .. hint::
+   The value of the cells ``Category -> Group -> Subgroup`` are selected sequentially from a multi-level drop-down list:
+
+   .. image:: pics_Openprice_instruction/Openprice_instruction_048.png
+      :align: center
 
 Required data in the template:
 
 - The region or country where the goods are available
-- Line
 - Category
-- Subcategory
+- Group
+- Subgroup
 - Vendor code
 - Description
 - Barcode
@@ -128,15 +136,15 @@ Selected items can be **"Publish"** - products are automatically added to your p
 .. note::
    Note that before **"Publish"** operation, you can check and edit (|pencil|) the data of each downloaded position:
 
-   .. image:: pics_Openprice_instruction/Openprice_instruction_033.png
+   .. image:: pics_Openprice_instruction/Openprice_instruction_033n.png
       :align: center
 
-Published positions are immediately reflected in all **Buyers** and will be valid for "Orders" forming.
+Published positions are immediately reflected in all **Buyers** and will be valid for "Orders" forming. Notification of the publication of new products will be sent by e-mail with the main criteria of the products and a link to company price list.
 
 2.1 View and edit Your "Price List"
 ---------------------------------------------------------
 
-Your `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ of the current GLN with all current items is in the section **"My price list"**. When you go to the section, a new price list window opens with all the added items grouped by the following: ``Line -> Category -> Subcategory`` product hierarchy:
+Your `"Price List" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ of the current GLN with all current items is in the section **"My price list"**. When you go to the section, a new price list window opens with all the added items grouped by the following: ``Category -> Group -> Subgroup`` product hierarchy:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_036.gif
    :align: center
@@ -146,7 +154,7 @@ Each of these three levels by clicking on the name can be hidden / opened for ea
 .. image:: pics_Openprice_instruction/Openprice_instruction_035.gif
    :align: center
 
-Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ line (at the top of the screen) it is possible to filter the list of goods.
+Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ Category (at the top of the screen) it is possible to filter the list of goods.
 
 To display detailed information about the product, press the **∨** button next to an Article:
 
@@ -155,7 +163,7 @@ To display detailed information about the product, press the **∨** button next
 
 To **edit** position data, you need to click on its name, then a modal window will open with position data (fields marked with a red asterisk :red:`*` **are required**):
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_038.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_038n.png
    :align: center
 
 The data of the field "Region or country of availability of goods" is selected from the list (the list is automatically filtered when you enter the region / country name):
@@ -194,19 +202,25 @@ If the contact with the type "Responsible for the price list" already exists, th
 
 After selecting **"Have Product"** service, the page with all available `"Price Lists" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ ("Available pricelists") is automatically displayed:
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_007.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_007n.png
    :align: center
 
-The table shows brief information about the **Seller** (Name, USREOU, GLN), indicates the region or country of availability of goods, product category.
+The table shows brief information about the **Seller** (Name, USREOU, GLN), indicates the region or country of availability of goods, product Group.
 
-Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ line (at the top of the screen) it is possible to filter the desired counterparties.
+Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ (at the top of the screen) it is possible to filter the desired counterparties by Name/USREOU/GLN of the company, by region/country of goods availability or by product hierarchy (``Category -> Group -> Subgroup``):
+
+.. image:: pics_Openprice_instruction/Openprice_instruction_049.gif
+   :align: center
+
+.. attention::
+   Only one parameter can be specified for search / filtering. In order to  **"Reset Price list filters"** you need to click on the |non| button in the Search line.
 
 For more detailed information on the content of any document in the journal, you can use the **"View Price list"** button in the appropriate column against the selected **Seller**:
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_012.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_012n.png
    :align: center
 
-A new price list window will open with all added items grouped by the following: ``Line -> Category -> Subcategory`` product hierarchy:
+A new price list window will open with all added items grouped by the following: ``Category -> Group -> Subgroup`` product hierarchy:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_013.gif
    :align: center
@@ -216,7 +230,7 @@ Each of these three levels by clicking on the name can be hidden / opened for ea
 .. image:: pics_Openprice_instruction/Openprice_instruction_014.gif
    :align: center
 
-Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ line (at the top of the screen) it is possible to filter the list of goods.
+Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html#search>`__ Category (at the top of the screen) it is possible to filter the list of goods.
 
 By clicking on the **"Seller's contacts"** button it is possible to view the contact details of the responsible person:
 
@@ -383,14 +397,14 @@ There are possible document flow schemes / combinations (the sender of the docum
 6 Search
 =====================================================
 
-The **Search** line allows you to use following "Search keys list":
+The **Search** Category allows you to use following "Search keys list":
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_008.png
    :align: center
 
 As well as the "Advanced Search" menu (|advserch|):
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_010.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_010n.png
    :align: center
 
 .. important::
@@ -402,15 +416,15 @@ At **"My price list"** and **"Available price lists"** sections Search is availa
 * Vendor code
 * Barcode
 * Producer code
-* Line
 * Category
-* Subcategory
+* Group
+* Subgroup
 
-When entering the value is completed, You need to press **"Search"** / |лупа|. The **Search** line is cleared by the **"Reset filters"** button / |non|.
+When entering the value is completed, You need to press **"Search"** / |лупа|. The **Search** Category is cleared by the **"Reset filters"** button / |non|.
 
-In the case of a complex search with many keys, all parameters must be separated by commas, for example, ``Line: Tea, Category: Greenfield``:
+In the case of a complex search with many keys, all parameters must be separated by commas, for example, ``Group: Dairy products and eggs, Category: Food and beverages``:
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_011.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_011n.png
    :align: center
 
 The search works only on a complete match.
