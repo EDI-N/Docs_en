@@ -65,8 +65,8 @@ Sales Invoice (COMDOC_006)
 
 ---------
 
-Consignment note (DOCUMENTINVOICE)
-====================================
+Consignment note/corrective consignment note/price invoice/sales invoice (DOCUMENTINVOICE)
+============================================================================================================
 
 .. csv-table:: DOCUMENTINVOICE - Consignment note. The document can be created on the basis of RECADV
   :file: files/DOCUMENTINVOICE.csv
