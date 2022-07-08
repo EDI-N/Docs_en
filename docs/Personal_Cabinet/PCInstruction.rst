@@ -293,12 +293,19 @@ To purchase licenses for the above products, go to **"Cart"**, click **"Buy"** o
 
 After "Buying" / "Ordering" of the license, it appears in the main menu of the **"Awaiting payment"** section:
 
-.. image:: pics_PCInstruction/PCInstruction_184.png
+.. image:: pics_PCInstruction/PCInstruction_184n.png
    :align: center
 
-The **"Awaiting payment"** section also contains unpaid special services (licenses) and allows you to view / download the created account agreement (**"Invoice"** button ) for further payment through banking institutions or **"Delete"** position.
+The **"Awaiting payment"** section in this case contains unpaid special services (licenses) and allows you:
 
-The created invoice-agreement is in the `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__ menu section.
+* to pay online for the issued bill by using a bank card or in another way (**"Online payment"** button);
+* to view/download the created contract invoice (**"Invoice"** button) for further payment through banking institutions (the created invoice-agreement is in the `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__ menu section);
+* to **"Delete"** position from **"Awaiting payment"** section.
+
+With **"Online payment"** You will be redirected to the page for entering card data or using Google Pay / Apple Pay / Privat24 services or You can pay in **"Another method"**, which is available on this page:
+
+.. image:: pics_PCInstruction/PCInstruction_258.png
+   :align: center
 
 .. _support-buy:
 
@@ -347,10 +354,19 @@ The selected service can be added to Cart (**"Add to cart and continue shopping"
 
    Therefore, after clicking **"Buy"** / **"Order"** "Service Support" buttons in the **"Cart"** section funds from the Balance are not written off - an invoice is formed (available in the section `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__), and the service itself is displayed in the **"Awaiting payment"** section:
 
-   .. image:: pics_PCInstruction/PCInstruction_222.png
+   .. image:: pics_PCInstruction/PCInstruction_222n.png
       :align: center
 
-The **"Awaiting payment"** section contains unpaid services / licenses and allows you to view / download the created invoice (button **"Invoice"**) for further payment through banking institutions or **"Delete"** position.
+The **"Awaiting payment"** section in this case contains unpaid services of additional service support and allows you:
+
+* to pay online for the issued bill by using a bank card or in another way (**"Online payment"** button);
+* to view/download the created contract invoice (**"Invoice"** button) for further payment through banking institutions (the created invoice-agreement is in the `"Invoices" <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#invoice>`__ menu section);
+* to **"Delete"** position from **"Awaiting payment"** section.
+
+With **"Online payment"** You will be redirected to the page for entering card data or using Google Pay / Apple Pay / Privat24 services or You can pay in **"Another method"**, which is available on this page:
+
+.. image:: pics_PCInstruction/PCInstruction_258.png
+   :align: center
 
 --------------------------------------------------------------------------
 
