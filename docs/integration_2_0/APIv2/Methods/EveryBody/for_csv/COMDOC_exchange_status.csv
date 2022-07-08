@@ -7,4 +7,5 @@ T **11** 2,«000000000000010000000011»,«3»,«Repeal request»,
 T **12** 1,«000000000000110000000001», ,«Repeal request acceptance», 
 T **12** 2,«000000000000110000000011»,«4»,«Repealed», 
 T **13** 1,«000000000001000000000001»,«5»,«Signature rejected», 
-T **14** 1,«000000000010000000000001», ,«Revoked», 
+T **14** 1,«000000000010000000000001», ,«Revoked»,
+T **15**,«000000000100010000000011»,«2»,«Repeal denied,Can be sent in response to «Repeal request» (11 Ticket)
