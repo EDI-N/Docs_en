@@ -24,10 +24,15 @@ number,O,String,document number
 family,O,int,"service
 
 * 1 - EDI
+* 2 - UZD
+* 4 - CERTIFICATS
 * 6 - ATS
 * 7 - ETTN
 * 8 - DISTRIBUTION
-* 9 - SIMPLEDOC (Vilnyi)"
+* 9 - SIMPLEDOC (Vilnyi)
+* 10 - TENDER
+* 11 - AGREEMENT
+* 12 - OPENPRICE (Have Product)"
 partnerId, ,Long,retail network id
 chainHash, ,String,"the hash value obtained by chain processing"
 docHash, ,String,"the hash value obtained by document processing"

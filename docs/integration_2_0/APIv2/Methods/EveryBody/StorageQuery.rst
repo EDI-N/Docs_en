@@ -2,6 +2,14 @@
 **Data for filtering (StorageQuery object)**
 #############################################################
 
+.. contents:: Contents:
+   :depth: 6
+
+---------
+
+Examples for "EDI+ESD" service
+*****************************************************************
+
 **JSON:**
 
 Get all incoming "Expense Invoices" in the status "Requires signing by the recipient" 
@@ -178,6 +186,57 @@ Get all documents except drafts for sender GLN 9864232304302, created in May 201
             "startTimestamp": "1556668800",
             "finishTimestamp": "1559347199"
         }
+    }
+
+Examples for "Distribution" service
+*****************************************************************
+
+Get a list of all sent "Orders" for sender GLN 9864232324065
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: json
+
+    {
+        "archive": false,
+        "direction": {
+            "receiver": [],
+            "sender": ["9864232324065"],
+            "type": "EQ"
+        },
+        "exchangeStatus": [],
+        "extraParams": [],
+        "family": 8,
+        "multiExtraFields": [],
+        "statuses": [2],
+        "type": [
+            {
+                "type": 2
+            }
+        ]
+    }
+
+Get a list of all "Orders" drafts for GLN 9864232324065 (originator-sender)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: json
+
+    {
+        "archive": false,
+        "direction": {
+            "receiver": [],
+            "sender": ["9864232324065"],
+            "type": "EQ"
+        },
+        "exchangeStatus": [],
+        "extraParams": [],
+        "family": 8,
+        "multiExtraFields": [],
+        "statuses": [1],
+        "type": [
+            {
+                "type": 2
+            }
+        ]
     }
 
 .. _Таблиця_2:

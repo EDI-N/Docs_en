@@ -1,9 +1,33 @@
 **URL**       ,
 Method  , POST                                          
 URL query    , **/api/eds/docs/search?gln=9864065702429**
-URL parameters,"**gln** - string (13); the GLN number of the organization that is associated with the authorized user of the EDIN 2.0 platform at the account level"
+URL parameters,"**gln** (required) String - GLN of your own Company;
+OR
+**guid** (required) String - unique identifier of your own Company
+
+**status_id** (optonal) int - document folder id:
+
+* 0 - All
+* 1 - Inbox;
+* 2 - Outbox;
+* 3 - Archive;
+* 4 - Drafts;
+* 5 - Important.
+
+**family** (опціонально) String - назва сімейства документів:
+
+* edi
+* uzd
+* certificats
+* ats
+* ettn
+* distribex
+* simple-doc (Vilnyi)
+* tender
+* agreement
+* openprice (Have Product)"
 **Headers**   ,
-Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__ "
+Authorization ,"**SID** - token obtained during `authorization <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/Authorization.html>`__"
 Content-Type  , application/json                              
 **REQUEST**   ,
 JSON Body     ,"In the body of the request method transmitted `required and optional search/filtering criterias <https://wiki.edin.ua/en/latest/integration_2_0/APIv2/Methods/EveryBody/StorageQuery.html>`__"

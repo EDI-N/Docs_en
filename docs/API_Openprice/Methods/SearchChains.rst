@@ -2,6 +2,8 @@
 **Receiving a journal of Inbox/Outbox/Archive documents (Orders) of the "Have Product" service**
 ##########################################################################################################################
 
+.. загальний метод
+
 To work with this method, the user must be `authorized <https://wiki.edin.ua/en/latest/API_Openprice/Methods/Authorization.html>`__.
 
 .. csv-table:: 
