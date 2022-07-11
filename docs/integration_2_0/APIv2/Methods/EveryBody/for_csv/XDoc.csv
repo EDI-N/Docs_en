@@ -18,10 +18,14 @@ chain_uuid, UUID, a unique document chain identifier
 family, int, "service
 
 * 1 - EDI
+* 2 - UZD
+* 4 - CERTIFICATS
 * 6 - ATS
 * 7 - ETTN
 * 8 - DISTRIBUTION
 * 9 - SIMPLEDOC (Vilnyi)
+* 10 - TENDER
+* 11 - AGREEMENT
 * 12 - OPENPRICE (Have Product)"
 hash, String, "hash value obtained as a result of processing"
 type, XDocType_, object; document type
