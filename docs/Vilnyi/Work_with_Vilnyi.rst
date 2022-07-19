@@ -700,7 +700,15 @@ You need to select / enter a parameter (several parameters are entered through a
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_45.png
    :align: center
 
-Saved search applies only to a specific folder of the query: "Inbox" / "Outbox" / "Important" / "Drafts" / "Archive". By default, filters for Today's and Yesterday's documents are available in the **"Saved search"** block. You can delete a saved search using the cross icon. You can clear the "Search" line with the **"Reset filters"** |non| button. When you switch between the folders, the search bar is cleared. If the user has filtered a list of documents, then switched to viewing this document and back, the search is saved.
+Saved search applies only to a specific folder of the query: "Inbox" / "Outbox" / "Important" / "Drafts" / "Archive". By default, filters for Today's and Yesterday's documents are available in the **"Saved search"** block. 
+
+.. note::
+   The Sender/Recipient filter displays the document's name, email, and UUID during search and filtering, but when you save these filters and select them later, only the uuid is saved and displayed:
+
+   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_138.png
+      :align: center
+
+You can delete a saved search using the cross icon. You can clear the "Search" line with the **"Reset filters"** |non| button. When you switch between the folders, the search bar is cleared. If the user has filtered a list of documents, then switched to viewing this document and back, the search is saved.
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_27.png
    :align: center

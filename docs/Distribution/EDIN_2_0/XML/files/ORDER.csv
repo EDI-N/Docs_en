@@ -5,6 +5,10 @@ NUMBER,М,String (50),Order number
 DATE,М,Date (YYYY-MM-DD),Document date
 DELIVERYDATE,М,Date (YYYY-MM-DD),Delivery date
 CURRENCY, O, String (3), Currency code (UAH / RUB / USD / EUR / MDL / BYR...)
+PAYMENTMETHOD, O, String (1), "Payment method code:
+
+* 1 - Cash payment
+* 2 - Cashless payment"
 DOCTYPE, O, String (1), "Document type:
 
 * O — original"
@@ -32,6 +36,7 @@ ORDERUNIT, M, String (3), `Units of measurement <https://wiki.edin.ua/en/latest/
 ORDERPRICE, O, Decimal, Product price without VAT
 PRICEWITHVAT, O, Decimal, Product price with VAT
 VAT, O, Decimal,"VAT rate, %"
+MAXIMUMORDERQUANTITY, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Quota to order
 CATEGORYNAME, O, String (70), Product Line name
 BRENDNAME, O, String (70), Product Category name
 GROUPNAME,,, Product Subcategory name
@@ -40,6 +45,7 @@ COUNTPIECESINBOX, O, Positive number, Units quantity in a box
 COUNTBOXESINLAYER, O, Positive number, Boxes quantity in the layer (in 1 level)
 COUNTPERPALLET, O, Positive number, Boxes quantity on the pallet
 WEIGHT, O, Decimal, Box weight
+UNITWEIGHT, O, "Floating point number (maximal 10 symbols before dot, 3 symbols after dot)", Unit weight (kg)
 PALLETS, O, Positive number, Pallets amount
 BOXESCOUNT, O, Positive number, Boxes amount
 **CHARACTERISTIC**,,, Characteristic (the beginning of the block)
