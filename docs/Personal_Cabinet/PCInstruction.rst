@@ -712,6 +712,23 @@ Sending a document requires its signing (signing is a standard operation on the 
 .. image:: pics_PCInstruction/PCInstruction_169.png
    :align: center
 
+.. _act-request:
+
+**1.3.3 Request for the Act**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The functionality is available in the **Inbox** folder and allows You to make a **"Request for the Act"** to "ATS" LLC directly from the platform:
+
+.. image:: pics_PCInstruction/PCInstruction_259.png
+   :align: center
+
+After clicking on the **"Request for the Act"** button, a modal window opens with mandatory fields: "Document type" (Act / Act of reconciliation), "Your e-mail", "Description of the request" . After you enter the request data, it is possible to **"Send a request"** to ATS LLC. You will be informed about the successful sending of the request by a notification on the platform:
+
+.. image:: pics_PCInstruction/PCInstruction_260.png
+   :align: center
+
+Primary documents from LLC "ATS" are created in electronic form with the signing of the QES - you will receive them in the **Inbox** folder. Additionally (if necessary), an explanation and a copy of the document can be sent to the specified e-mail address.
+
 .. _billing:
 
 **1.4 Billing**
