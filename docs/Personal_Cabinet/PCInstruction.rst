@@ -655,9 +655,25 @@ To sign the contract you need to click on the **"Sign"** button.
 
 .. загальне підписання на платформі
 
-.. include:: /_constant/signing/signing.rst
-   :start-after: .. початок блоку для Signing
-   :end-before: .. кінець блоку для Signing
+.. tabs::
+
+   .. tab:: File key
+
+      .. include:: /_constant/signing/signing.rst
+         :start-after: .. початок блоку для Signing
+         :end-before: .. кінець блоку для Signing
+
+   .. tab:: Token
+
+      .. include:: /_constant/token_signing/token_signing.rst
+         :start-after: .. початок блоку для TokenSign
+         :end-before: .. кінець блоку для TokenSign
+
+   .. tab:: Cloud
+
+      .. include:: /_constant/cloud_signing/cloud_signing.rst
+         :start-after: .. початок блоку для CloudSign
+         :end-before: .. кінець блоку для CloudSign
 
 After signing the document, its status changes to **"Provider signature required"**, and when viewing detailed information, information about the signatories is additionally displayed:
 

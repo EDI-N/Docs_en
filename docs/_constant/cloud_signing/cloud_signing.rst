@@ -15,6 +15,9 @@ With cloud signing (**Cloud** tab) are available for use:
 .. note::
    Cloud signing requires a mobile with a pre-installed app from the relevant signing provider!
 
+.. attention::
+   You can sign a document only with one key (that means that signing a single document with a Signature and Seal will not work).
+
 After you have chosen a cloud signing provider, a qr-code is generated to go to the mobile application of the signing provider.
 
 .. tabs::

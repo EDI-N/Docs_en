@@ -287,9 +287,31 @@ You can sign the document while viewing the document - **"Sign all"** button:
 .. hint::
    Also in the **Drafts** folder is available `mass signing functionality <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#mass-sign>`__.
 
-.. include:: /_constant/signing/signing.rst
-   :start-after: .. початок блоку для Signing
-   :end-before: .. кінець блоку для Signing
+.. tabs::
+
+   .. tab:: File key
+
+      .. include:: /_constant/signing/signing.rst
+         :start-after: .. початок блоку для Signing
+         :end-before: .. кінець блоку для Signing
+
+   .. tab:: Token
+
+      .. include:: /_constant/token_signing/token_signing.rst
+         :start-after: .. початок блоку для TokenSign
+         :end-before: .. кінець блоку для TokenSign
+
+   .. tab:: Дія.Підпис
+
+      .. include:: /_constant/diya_signing/diya_signing.rst
+         :start-after: .. початок блоку для DiyaPidps
+         :end-before: .. кінець блоку для DiyaPidps
+
+   .. tab:: Cloud
+
+      .. include:: /_constant/cloud_signing/cloud_signing.rst
+         :start-after: .. початок блоку для CloudSign
+         :end-before: .. кінець блоку для CloudSign
 
 .. attention::
    In case of mass signing, only one signature is applied at a time. When adding / deleting files to / from a document - previously overlaid signatures will be deleted!
