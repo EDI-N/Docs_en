@@ -8,7 +8,7 @@ Signing with file key at the EDIN 2.0 platform
 
 .. _sign:
 
-After initializing the signing library, the system will be able to add a file or hardware key (Token). With :underline:`first` signing in the modal window you need to select a file or token (1), enter the password (2) and press **"Browse"** (3) key to sign:
+After initializing the signing library, the system will be able to add a file key. With :underline:`first` signing in the modal window you need to select a file (1), enter the password (2) and press **"Browse"** (3) key to sign:
 
 .. image:: /_constant/signing/file1.png
    :align: center
