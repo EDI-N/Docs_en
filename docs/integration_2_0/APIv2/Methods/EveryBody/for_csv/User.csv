@@ -1,12 +1,67 @@
 Parameter,Format,Description 
 .. _User: , Object **User**,
+**blockedServices**,List<String>,"array; a list of short names of blocked services, for example:
+
+* cert
+* conv
+* edi
+* edi_uzd
+* ftp
+* offer
+* price
+* tender
+* ttn
+* user
+* uzd"
+role,int,"user access role id:
+
+* 1 - Super administrator;
+* 2 - Administrator;
+* 3 - Accountant (Financier);
+* 4 - User."
+roleAccess,int,"role type id:
+
+* 0 - All;
+* 1 - Review;
+* 2 - Editing;
+* 3 - Signature."
+accountRole,int,account role id
+**access**,"Map<String, AccessStatus>",array; access
+**identificators**,List<Identificator_>,array; identificators
+filters,List<UserFilterData>,filters
 id,long,user id
 accountId,long,account id
 login,String(50),user login 
 stringEmails,String(255),E-mail
-emails,List<String>,E-mail array
+phone,String,phone
+**emails**,List<String>,E-mail array
 blocked,int,"blocking mark; numeric; 0 - no, 1 - yes"
 allowFTP,int,"FTP access mark; numeric; 0 - no, 1 - yes"
-autoSending,boolean,"auto sending; numeric; 0 - No, 1 - Yes (documents are automatically sent when the document is transferred to the outbox)"
+autoSending,boolean,"auto sending (documents are automatically sent when the document is transferred to the outbox)"
 statusFile,int,"creation of status files; numeric; 0 - No, 1 - Yes, 2 - Yes, about delivery, 3 - Yes, about reading"
+isNotificationEnabled,int,"message to E-mail
+
+* 0 - Do not receive
+* 1 - Receive (EDI + Distribution)
+* 2 - Receive (ЮЗД)
+* 3 - Receive (E-Specification)
+* 4 - Receive (EDI + Distribution + E-Specification)"
+isSatusFromOut,boolean,
 isAdmin,boolean,"does the user have administrator rights (mark); numeric; 0 - no, 1 - yes"
+isSpecXML,boolean,"file conversion included"
+isCerts,int,"access to the E-Certificates service; 0 - no, 1 - yes, 2 - yes (Administrator)"
+XMLConv,int,"XML converter
+
+* 0 - no
+* 1 - EANCOM | .edi
+* 2 - X12 | .x12
+* 3 - CSV | .csv
+* 4 - DBF (dBase_V) | .dbf"
+**account**,Account_,Object; account details
+**companies**,List<Company_>,array of Objects; company data
+**employee**,Employee,Object; employee data
+isStatusNotification,boolean,message status
+isPasswordChange,boolean,password change
+isSpecification,int,"access to the E-Specification service; 0-no, 1-yes"
+**statusNotifyTypes**,List<Integer>,array; statuses types
+**otherInfo**,UserOtherInfo,Object;additional info

@@ -76,10 +76,34 @@
 	  ]
 	}
 
-Table 1 - Response parameters description
+Table 1 - Parameters description of object **User**
 
 .. csv-table:: 
   :file: for_csv/User.csv
   :widths:  1, 19, 41
   :header-rows: 1
-  :stub-columns: 1
+  :stub-columns: 0
+
+Table 2 - Parameters description of object **Identificator**
+
+.. csv-table:: 
+  :file: for_csv/Identificator.csv
+  :widths:  1, 19, 41
+  :header-rows: 1
+  :stub-columns: 0
+
+Table 3 - Parameters description of object **Account**
+
+.. csv-table:: 
+  :file: for_csv/Account.csv
+  :widths:  1, 19, 41
+  :header-rows: 1
+  :stub-columns: 0
+
+Table 4 - Parameters description of object **Company**
+
+.. csv-table:: 
+  :file: for_csv/Company.csv
+  :widths:  1, 19, 41
+  :header-rows: 1
+  :stub-columns: 0
