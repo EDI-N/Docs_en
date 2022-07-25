@@ -347,7 +347,7 @@ Table 1 - Parameters description of object
 Table 2 - Parameters description of object **Identificator**
 
 .. csv-table:: 
-  :file: ../../../Distribution/EDIN_2_0/API_2_0/Methods/EveryBody/for_csv/Identificator.csv
+  :file: ../../../integration_2_0/APIv2/Methods/EveryBody/for_csv/Identificator.csv
   :widths:  1, 12, 41
   :header-rows: 1
   :stub-columns: 0

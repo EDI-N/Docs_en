@@ -5,11 +5,16 @@ taxNum, String (50), Tax identification number
 ndsNum, String(50), № VAT certificates
 manager, String(100), manager full name
 accountant, String(100), accountant name
-id, long, user ID
+id, long, GLN ID
 gln, String (13), "organization GLN"
 companyId, long, account id; numeric
 retailerId, long, network id (retailer); numeric
-name, String(100), organization name 
+isUzdAts,int,"ESD from АТС; 0-no, 1-yes"
+isFinCrypt,int,"FINDOC encryption; 0-no, 1-yes"
+countryId,int,country identifier
+isERNN,int,"DECLAR processing scheme; 0 - sending to the recipient only after successful registration in the registry, 1 - registration after verification by the recipient, 3 - sending to the recipient without registration"
+name, String(100), the name of the organization
+nameEn, String, the name of the organization in Latin
 companyType, String(5), "form of ownership; jur - Legal entity, fiz - Individual"
 companyInn, String(50), company TIN code
 companyKpp, String(50), USREOU / PPC code
@@ -17,6 +22,7 @@ companyOgrn, String(15), Primary State Registration Number
 companyTaxDepartmentID, String, tax office department identifier
 dirLastName, String(150), director's last name
 dirFirstName, String(150), director's name
+director,String(100),full name of the director
 apartment, String(20), apartment
 zip, String(20), zip code
 city, String(50), city
@@ -28,4 +34,22 @@ phone, String(50), phone
 bankAccount, String(50), bank checking account
 otherInfo, String, comments
 email, String(255), Email
-metroCode, String(20), delivery point code 
+metroCode, String(20), delivery point code
+IBAN,String,IBAN (International Bank Account Number)
+district,String,district name
+dpiCReg,String,region/area of the tax office
+dpiCRaj,String,district (by region) binding to the tax office
+**account**,Account_,account id
+isDeclarDateNumRequired, boolean, Tax invoice in the Commodity invoice binding № and date (METRO)
+distribexUser, int, service user; 1-Manufacturer; 2-Distributor
+isWithoutTax,boolean,VAT non-payer
+**additionalInfo**,IdentificatorAdditionalInfo_,Additional Information
+taxSource,int,"Identification code of the tax number source
+
+* 0 - absent
+* 1 - Unified State Register of Enterprises and Organizations of Ukraine (USREOU);
+* 2 - State register of natural persons – taxpayers (SRNP);
+* 3 - registration (account) number (for taxpayers who are not included in the USREOU);
+* 4 - passport series and number (for individuals who, due to religious beliefs, refuse to accept a registration number)"
+isSignConfirm,int,gln confirmed by QES (0-no; 1-yes)
+isSpecification,int,access to the E-Specification service (0-no; 1-yes)
