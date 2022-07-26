@@ -33,6 +33,7 @@ TRANSPORTTYPE,M,"String (2, 3)","Transportation type:
 PACKAGEWIGHT,O,Decimal,Weight
 TOTALPACKAGES,M,Decimal,Packages quantity
 TOTALPALLETS,M,Decimal,Pallets quantity
+PACKAGEWEIGHT,O,"Decimal (18,3) / Separation with a dot",Weight according to the invoice
 **HEAD**, , ,Start of the main block
 SUPPLIER,М,Number (13),Supplier GLN
 SUPPLIERNAME,O,String (70),Supplier name
@@ -78,6 +79,7 @@ PARTNUMBER,O,String (35),Batch number
 SERIALNUMBER,M,String,"Serial number (feature for medical providers)"
 GOODDATE,M,String,"Shelf life (feature for medical providers)"
 MINIMUMORDERQUANTITY,O,Positive number,Minimum ordered quantity
+BRUTTOWEIGHT,O,"Decimal (18,3) / Separation with a dot",Gross weight
 **OCERTS**, , ,Certificate data attached to the commodity item  (the beginning of the block). Can contain multiple certificates [CERT]
 **CERT**, , ,the beginning of the block под один конкретный сертификат
 CERT_NUM,M,String (16),Document number (may contain special characters)
