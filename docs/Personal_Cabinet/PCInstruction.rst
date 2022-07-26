@@ -834,7 +834,7 @@ For security reasons and correct identification of the Supplier, the application
 .. hint::
    The signing process is typical for the platform and is described in the `section above <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#sign>`__. If the USREOU of the key coincides with the USREOU of the account, the account is automatically "confirmed".
 
-However, signing during the request is not required if you select a GLN that has already been `confirmed with QES <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#gln>`__:
+However, signing during the request is not required if you select a GLN that has already been `confirmed with QES <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#gln-main>`__:
 
 .. image:: pics_PCInstruction/PCInstruction_151.png
    :align: center
@@ -901,7 +901,7 @@ After all the required fields are filled in, it is possible to **"Generate an ap
 .. image:: pics_PCInstruction/PCInstruction_194.png
    :align: center
 
-For security reasons and correct identification Supplier / Retail application is sent only after `confirmation of GLN <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#gln>`__ of a Sender (USREOU in QES must comply with USREOU specified in GLN).
+For security reasons and correct identification Supplier / Retail application is sent only after `confirmation of GLN <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#gln-main>`__ of a Sender (USREOU in QES must comply with USREOU specified in GLN).
 
 .. image:: pics_PCInstruction/PCInstruction_188.png
    :align: center
@@ -909,7 +909,7 @@ For security reasons and correct identification Supplier / Retail application is
 .. hint::
    The signing process is typical for the platform and is described in the `section above <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#sign>`__. If the USREOU of the key coincides with the USREOU of the account, the account is automatically "confirmed".
 
-However, signing during the request is not required if you select a GLN that has already been `confirmed with QES <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#gln>`__:
+However, signing during the request is not required if you select a GLN that has already been `confirmed with QES <https://wiki.edin.ua/uk/latest/Personal_Cabinet/PCInstruction.html#gln-main>`__:
 
 .. image:: pics_PCInstruction/PCInstruction_195.png
    :align: center
