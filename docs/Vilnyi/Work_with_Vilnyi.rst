@@ -79,12 +79,10 @@ Work with "Vilnyi"
    :start-after: .. початок блоку для Enter
    :end-before: .. кінець блоку для Enter
 
-After successful authorization, the main menu of EDIN products and solutions will open: **"Vilnyi", "EDI+UZD", "E-TTN", "Distribution", "Have Product", "Commercial offer", "E-Specification", "Counterparties", "Tender", "E-Certificates", "White Doc", "Integration"**:
+After successful authorization, the main menu of EDIN products and solutions will open. In the **"Services"** tab you need to select the **"Vilnyi"** tile:
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_02n.png
+.. image:: /_constant/pics_landing/landing_vilnyi.png
    :align: center
-
-To go to the service you need to click on the **"Vilnyi"** tile.
 
 .. hint::
    You can use the |пресуха| button or EDIN logo to return to the services menu.
@@ -169,7 +167,17 @@ After that, on the form of creating a document you must specify "Receivers", "Do
 .. note::
    Fields "Doc number", "Doc date", "Sum (uah)", "Comment" are not required.
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_124.png
+.. початок блоку для Repeat
+
+.. warning::
+   The fields "USREOU of the recipient" and "USREOU sender" are optional to be filled out. The fields can be filled in to form control of the correctness of signing documents according to USREOU. If the fields are filled in, the "Vilnyi" service will check You and Your counterparties at the stage of signing documents (the specified value of the USREOU and USREOU of the signatory QES key must match). If the value is incorrect (8,9,10,12 digits, a combination of 2 letters and 6 digits are allowed), You will not be able to sign/send the document, and if the value does not match, an error will occur during signing:
+
+   .. image:: /Vilnyi/pics_Work_with_Vilnyi/Work_with_Vilnyi_140.png
+      :align: center
+
+.. кінець блоку для Repeat
+
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_139.png
    :align: center
 
 .. _rules-for-recipients:
@@ -196,20 +204,20 @@ Recipients of the document are shown only the sending counterparty, but Recipien
 
 To choose the right **Recipients** (several possible) you need to start entering the name, mail or USREOU of the counterparty (min 3 characters) in the field and select from the list of registered users on the platform:
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_13.gif
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_141.gif
    :align: center
 
 When entering an alias in the Mail Recipients field (read more about `alias settings <https://wiki.edin.ua/en/latest/Personal_Cabinet/PCInstruction.html#alias>`__) the name of the counterparty, his main email and the alias are displayed:
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_106.png
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_142.png
    :align: center
 
 Implemented the ability to specify the Email of an unregistered user on the platform in the **"Receivers"** field. When adding such a user, select "Add Recipient" in the results of the drop-down list:
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_37.png
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_143.png
    :align: center
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_38.png
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_144.png
    :align: center
 
 When sending a document, the sender receives a warning that requires confirmation:
@@ -229,7 +237,7 @@ Also :underline:`not registered recipient` get on Email reminders about invitati
 
 It is also possible to add registered / unregistered Recipients in bulk by copying (Ctrl+C) a list (values separated by commas, spaces or semicolons) of the required Email addresses and paste (Ctrl + V) them from the clipboard:  
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_67.gif
+.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_145.gif
    :align: center
 
 .. _files-add:
@@ -279,6 +287,10 @@ The Sender's signature is not mandatory, but this functionality allows you to im
 **4.4 Signing and sending the document**
 -------------------------------------------------
 
+.. include:: /Vilnyi/Work_with_Vilnyi.rst
+   :start-after: .. початок блоку для Repeat
+   :end-before: .. кінець блоку для Repeat
+
 You can sign the document while viewing the document - **"Sign all"** button:
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_15n.png
@@ -286,6 +298,9 @@ You can sign the document while viewing the document - **"Sign all"** button:
 
 .. hint::
    Also in the **Drafts** folder is available `mass signing functionality <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#mass-sign>`__.
+
+.. attention::
+   With mass signing, only one signature is applied at a time. When adding/deleting files to/from the document, previously applied signatures will be deleted!
 
 .. tabs::
 
@@ -312,9 +327,6 @@ You can sign the document while viewing the document - **"Sign all"** button:
       .. include:: /_constant/cloud_signing/cloud_signing.rst
          :start-after: .. початок блоку для CloudSign
          :end-before: .. кінець блоку для CloudSign
-
-.. attention::
-   In case of mass signing, only one signature is applied at a time. When adding / deleting files to / from a document - previously overlaid signatures will be deleted!
 
 .. _signing-watermark:
 
@@ -396,6 +408,10 @@ When you go to the document, the data about the signatory is opened (if the Send
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_125.png
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_30n.png
+
+.. include:: /Vilnyi/Work_with_Vilnyi.rst
+   :start-after: .. початок блоку для Repeat
+   :end-before: .. кінець блоку для Repeat
 
 .. hint::
    The process of **Signing** of the document is typical and described in the `section above <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#sign>`__.
@@ -595,7 +611,13 @@ The registry is formed from selected documents into an xlsx-file with a name tha
 **9.3 Mass signing of the documents**
 ---------------------------------------------------------
 
-The mass signing functionality (maximum 100 documents) is available only in the **Drafts** folder. For mass signing, you must first select all documents ready for signing (unsigned documents with attachments) using a convenient filter **"Ready to sign"** (1): 
+The mass signing functionality (maximum 100 documents) is available only in the **Drafts** folder. 
+
+.. include:: /Vilnyi/Work_with_Vilnyi.rst
+   :start-after: .. початок блоку для Repeat
+   :end-before: .. кінець блоку для Repeat
+
+For mass signing, you must first select all documents ready for signing (unsigned documents with attachments) using a convenient filter **"Ready to sign"** (1): 
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_93.png
    :align: center
@@ -604,6 +626,12 @@ Next, you need to mark the desired documents from the list in order to **"Sign"*
 
 .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_94.png
    :align: center
+
+.. attention::
+   With mass signing, only one signature is applied at a time. When adding/deleting files to/from the document, previously applied signatures will be deleted!
+
+.. hint::
+   The process of **Signing** of the document is typical and described in the `section above <https://wiki.edin.ua/en/latest/Vilnyi/Work_with_Vilnyi.html#sign>`__.
 
 .. _mass-send:
 
