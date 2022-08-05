@@ -26,3 +26,9 @@ Commercial document subtype,sub_doc_type_id,Name and description
 033,33,`Act of acceptance-transfer (Annex 9) (COMDOC_033) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-033>`__
 034,34,`The act of disagreement to the Act of transfer (COMDOC_034) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-034>`__
 035,35,`Act of acceptance of goods for the consignment note (COMDOC_035) <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#comdoc-035>`__
+**Invoice subtipe (DOCUMENTINVOICE.DocumentFunctionCode)**,**sub_doc_type_id**,**Name and description**
+TN,0,`Commodity invoice / Invoice by quantity (for Metro and Leroy Merlin) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
+СTN,1,`Corrective commodity invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
+TN,1,`Invoice by quantity <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
+PRN,2,`Price invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
+DRN,3,`Sales Invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
