@@ -55,6 +55,15 @@ CityName, М, String (35), Seller city name
 PostalCode, М, String (9), Seller postal code
 Country, O, String (3), Seller country code (ISO 3166)
 PhoneNumber, М, String (35), Seller phone number
+IBAN, O,"UA + NN + 351005 + XXXXXXXXXXXXXXXXXXX
+
+UA — (2 letters) — country code (GOST ISO 3166-1);
+
+NN — (2 digits) — control number;
+
+351005 — (6 digits) — IBT;
+
+XXX...XXX — (19 digits) — customer account.",IBAN (international bank account number; used for international payments)
 **Seller**,,, Seller (the end of the block)
 **DeliveryPoint**, M,, Delivery point (the beginning of the block)
 ILN, М, Number (13), Delivery point GLN (METRO)

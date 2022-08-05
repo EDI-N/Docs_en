@@ -1,8 +1,8 @@
 #################################################################################################################
-**Description of subtypes of commercial documents (ExtraQueryParameters.fieldName.sub_doc_type_id)**
+**Description of subtypes of commercial documents / invoices (ExtraQueryParameters.fieldName.sub_doc_type_id)**
 #################################################################################################################
 
-Table 1 - COMDOC subtypes description
+Table 1 - COMDOC / DOCUMENTINVOICE subtypes description
 
 .. csv-table:: 
   :file: for_csv/sub_doc_type_id.csv
