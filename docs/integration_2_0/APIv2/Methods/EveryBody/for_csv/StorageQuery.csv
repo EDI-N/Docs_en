@@ -13,9 +13,16 @@ Parameter,Mandatory/Optional,Format,Description
 * 5 - read (read-Recipient)
 * 6 - error
 * 7 - deleted"
+**extraStatuses**, ,**List<Integer>**,"array; extrastatuses list"
 **tags**, ,**List<Long>**,array; tag
 **exchangeStatus**,O,**List<Integer>**,array; document flow status 
 **docs**, ,**List<Long>**,array; documents
+**docUUIDs**, ,**List<UUID>**,array; unique document identifiers
+**partners**, ,**List<Long>**,array; counterparty identifiers
+**families**, ,**List<Integer>**,"array; service attribute (family)
+
+* 1 - EDI+UZD
+* 7 - ETTN"
 **direction**,M,Direction_,"object; document flow direction; specified Sender, Recipient and the connection between them in terms of document selection"
 **limit**,O,Limitation_,object; selection filter (data output settings)
 orderBy,O,OrderBy,filter document by it date or description
