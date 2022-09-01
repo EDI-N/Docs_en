@@ -376,7 +376,13 @@ Table 5 - Parameters description of object **ProductCategory**
   :header-rows: 1
   :stub-columns: 0
 
+Table 6 - Parameters description of object **EDistribexRegion**
 
+.. csv-table:: 
+  :file: for_csv/EDistribexRegion.csv
+  :widths:  1, 12, 41
+  :header-rows: 1
+  :stub-columns: 0
 
 
 
