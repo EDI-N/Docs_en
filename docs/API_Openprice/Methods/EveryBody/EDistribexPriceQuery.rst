@@ -33,3 +33,11 @@ Table 2 - Parameters description of object **Limitation**
   :widths:  1, 7, 12, 41
   :header-rows: 1
   :stub-columns: 0
+
+Table 3 - Parameters description of object **EDistribexRegion**
+
+.. csv-table:: 
+  :file: for_csv/EDistribexRegion.csv
+  :widths:  1, 12, 41
+  :header-rows: 1
+  :stub-columns: 0

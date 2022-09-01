@@ -90,7 +90,7 @@ You can add your own price list using the **"Upload from Excel"** button (2). At
 
 Open and fill the Excel file. Columns highlighted in green - **required**! Some columns have tooltips - place the cursor to the cell name to display a tooltip: 
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_030n.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_030.png
    :align: center
 
 There are filters in the table header that allow you to select the displayed values.
@@ -98,12 +98,12 @@ There are filters in the table header that allow you to select the displayed val
  .. hint::
    The value of the cells ``Category -> Group -> Subgroup`` are selected sequentially from a multi-level drop-down list:
 
-   .. image:: pics_Openprice_instruction/Openprice_instruction_048.png
+   .. image:: pics_Openprice_instruction/Openprice_instruction_048n.png
       :align: center
 
 Required data in the template:
 
-- The region or country where the goods are available
+- Country product availability
 - Category
 - Group
 - Subgroup
@@ -136,7 +136,13 @@ Selected items can be **"Publish"** - products are automatically added to your p
 .. note::
    Note that before **"Publish"** operation, you can check and edit (|pencil|) the data of each downloaded position:
 
-   .. image:: pics_Openprice_instruction/Openprice_instruction_033n.png
+   .. image:: pics_Openprice_instruction/Openprice_instruction_033.png
+      :align: center
+
+.. hint::
+   "Country product availability" can be selected from the list, and filling in the optional field "Product availability area" is available only for "Country product availability"=Ukraine:
+
+   .. image:: pics_Openprice_instruction/Openprice_instruction_050.gif
       :align: center
 
 Published positions are immediately reflected in all **Buyers** and will be valid for "Orders" forming. Notification of the publication of new products will be sent by e-mail with the main criteria of the products and a link to company price list.
@@ -163,8 +169,14 @@ To display detailed information about the product, press the **∨** button next
 
 To **edit** position data, you need to click on its name, then a modal window will open with position data (fields marked with a red asterisk :red:`*` **are required**):
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_038n.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_038.png
    :align: center
+
+.. hint::
+   "Country product availability" can be selected from the list, and filling in the optional field "Product availability area" is available only for "Country product availability"=Ukraine:
+
+   .. image:: pics_Openprice_instruction/Openprice_instruction_050.gif
+      :align: center
 
 The data of the field "Region or country of availability of goods" is selected from the list (the list is automatically filtered when you enter the region / country name):
 
@@ -202,7 +214,7 @@ If the contact with the type "Responsible for the price list" already exists, th
 
 After selecting **"Have Product"** service, the page with all available `"Price Lists" (PRICAT) <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/XML/XML_structure.html#pricat>`__ ("Available pricelists") is automatically displayed:
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_007n.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_007.png
    :align: center
 
 The table shows brief information about the **Seller** (Name, USREOU, GLN), indicates the region or country of availability of goods, product Group.
@@ -217,7 +229,7 @@ Also with the help of the `Search <https://wiki.edin.ua/en/latest/Openprice/Inst
 
 For more detailed information on the content of any document in the journal, you can use the **"View Price list"** button in the appropriate column against the selected **Seller**:
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_012n.png
+.. image:: pics_Openprice_instruction/Openprice_instruction_012.png
    :align: center
 
 A new price list window will open with all added items grouped by the following: ``Category -> Group -> Subgroup`` product hierarchy:
