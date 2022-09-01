@@ -368,7 +368,13 @@ Table 4 - Parameters description of object **XProductGroup**
   :header-rows: 1
   :stub-columns: 0
 
+Table 5 - Parameters description of object **ProductCategory**
 
+.. csv-table:: 
+  :file: for_csv/ProductCategory.csv
+  :widths:  1, 12, 41
+  :header-rows: 1
+  :stub-columns: 0
 
 
 

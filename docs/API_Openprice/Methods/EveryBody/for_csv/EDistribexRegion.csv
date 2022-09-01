@@ -1,0 +1,7 @@
+Parameter, Format, Description
+.. _EDistribexRegion: , Object **EDistribexRegion** ,
+id,int,record identifier
+countryId, int, country identifier
+countryRegionId, int, region identifier
+name, String, the name of the region or country
+nameEn,String, the name of the region or country in English

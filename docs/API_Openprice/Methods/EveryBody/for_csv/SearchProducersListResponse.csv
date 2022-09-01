@@ -1,6 +1,7 @@
 Parameter, Format, Description
 .. _SearchProducersListResponse: , Object,
 **id**,Identificator_,object; information about the organization
-**limit**,Limits_,object; limitation
-**regions**,List<String>,array; region or country of availability of the goods
+**limits**,Limits_,object; limitation
+**regions**,List<EDistribexRegion_>,array; region or country of availability of the goods
 **categories**,List<XProductGroup_>,array of objects; groups / categories of goods
+**categoriesNew**,List<ProductCategory_>,array of objects; groups / categories of goods

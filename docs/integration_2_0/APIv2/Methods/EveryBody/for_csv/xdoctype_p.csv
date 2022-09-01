@@ -21,6 +21,8 @@ Type,Name,Description
 28,comdoc,`Commercial document <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc>`__
 29,declarj12,`Adjustments to the tax invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#declarj12>`__
 30,condra,`Unstructured document <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#condra>`__
+35,metro7a,`Annex to the contract 7A <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#metro-7a>`__
+39,metro7b,`Annex to the contract 7B <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#metro-7b>`__
 40,prodlist,`Electronic specification <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#productlist>`__
 41,agreem,`Commodity coordination <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#agreem>`__
 42,iftmbc,`Confirmation of the application for transportation <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#iftmbc>`__
@@ -46,3 +48,13 @@ Type,Name,Description
 129,ettn_stop,Act of forced termination of TTN
 130,resealing,The act of resealing
 131,load_reject,Act of refusal to download
+132,ttn_ecmr,ETTN (v3)
+133,reload_ecmr,Act of overload (v3)
+134,disagreement_ecmr,Act of disagreements (v3)
+135, consignee_change_ecmr,Act of change of destination (v3)
+136,storage_delivery_ecmr,Act of unloading at an intermediate warehouse (v3)
+137,adjustment_ecmr,Act of adjustment (v3)
+138,storage_pickup_ecmr,Act of loading in intermediate storage (v3)
+139, resealing_ecmr,Act of resealing (v3)
+140,load_reject_ecmr,Act of load rejection (v3)
+141, stop_ecmr,Act of forced termination of e-ttn (v3)

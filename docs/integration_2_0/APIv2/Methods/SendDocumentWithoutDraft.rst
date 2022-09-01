@@ -16,11 +16,9 @@ This POST method **/api/eds/doc/create_and_send** creates and sends the document
 
 **RESPONSE**
 
-**chain_uuid** - the identifier of the chain in which the document is located;
-
-**doc_uuid** - document ID on the EDIN 2.0 platform;
-
-**ticket_uuid** - ticket ID (for COMDOC documents).
+* **chain_uuid** - the identifier of the chain in which the document is located;
+* **doc_uuid** - document ID on the EDIN 2.0 platform;
+* **ticket_uuid** - ticket ID (for COMDOC documents).
 
 **Response example (JSON):**
 
