@@ -409,35 +409,53 @@ There are possible document flow schemes / combinations (the sender of the docum
 6 Search
 =====================================================
 
-The **Search** Category allows you to use following "Search keys list":
+The search for documents/items in the **Have Product** service is performed via the **"Search"** line:
+
+.. image:: pics_Openprice_instruction/Openprice_instruction_051.png
+   :align: center
+
+.. hint::
+   The general concept of `working with the search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__ is outlined in the link.
+
+When entering the value is completed, You need to press **"Search"** / |лупа|. The **Search** Category is cleared by the **"Reset filters"** button / |non|.
+
+----------------------------------------------------------------------------------------------------
+
+1) The search line can be filled in by choosing **"Search keys list"**:
 
 .. image:: pics_Openprice_instruction/Openprice_instruction_008.png
    :align: center
 
-As well as the "Advanced Search" menu (|advserch|):
+.. note::
+   Depending on the type of journal the user is viewing (opened **Pricelist**, **Available pricelists** of counterparties or "document exchange" folders (**Inbox**, **Outbox**, **Drafts**, **Archive**)) search keys will be different:
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_010n.png
-   :align: center
+   .. image:: pics_Openprice_instruction/Openprice_instruction_052.png
+      :align: center
 
-.. important::
-   Depending on the part of "Have Product" service, the list of search keys and the "Advanced Search" menu will be different!
+   ⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-At **"My price list"** and **"Available price lists"** sections Search is available for the following product characteristics:
+   .. image:: pics_Openprice_instruction/Openprice_instruction_053.png
+      :align: center
 
-* Description
-* Vendor code
-* Barcode
-* Producer code
-* Category
-* Group
-* Subgroup
+   ⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-When entering the value is completed, You need to press **"Search"** / |лупа|. The **Search** Category is cleared by the **"Reset filters"** button / |non|.
+   .. image:: pics_Openprice_instruction/Openprice_instruction_054.png
+      :align: center
 
-In the case of a complex search with many keys, all parameters must be separated by commas, for example, ``Group: Dairy products and eggs, Category: Food and beverages``:
+----------------------------------------------------------------------------------------------------
 
-.. image:: pics_Openprice_instruction/Openprice_instruction_011n.png
-   :align: center
+2) It is also possible to fill in the search bar using the **"Advanced Search"** filter set (|advserch|):
+
+.. note::
+   Depending on the type of journal the user is viewing (opened **Pricelist** or **Available pricelists** of counterparties) search menu will be different:
+
+   .. image:: pics_Openprice_instruction/Openprice_instruction_055.png
+      :align: center
+
+   ⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+   .. image:: pics_Openprice_instruction/Openprice_instruction_056.png
+      :align: center
 
 The search works only on a complete match.
 

@@ -21,9 +21,9 @@ Work with "Vilnyi"
 
 .. |звезда2| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_07.png
 
-.. |прокрутка1| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_12.png
+.. |прокрутка1| image:: /Vilnyi/pics_Work_with_Vilnyi/Work_with_Vilnyi_12.png
 
-.. |прокрутка2| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_11.png
+.. |прокрутка2| image:: /Vilnyi/pics_Work_with_Vilnyi/Work_with_Vilnyi_11.png
 
 .. |download| image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_17.png
 
@@ -86,6 +86,8 @@ After successful authorization, the main menu of EDIN products and solutions wil
 
 .. hint::
    You can use the |пресуха| button or EDIN logo to return to the services menu.
+
+.. _main:
 
 **2 Service general view**
 ================================================
@@ -253,10 +255,14 @@ Files can be added from local media via the "Add File" or "Drag-and-drop" way:
 .. note::
    One document can contain no more than 10 files in the following formats: PDF/JPG/JPEG/PNG/BMP/DOC/DOCX/XLS/XLSX/PPT/PPTX/CSV/TXT/XML/P7S (previews are available except for CSV and P7S) with a file size no more than 5 MB.
 
+.. початок блоку для GS1
+
 When adding more than 3 files, else files are hidden behind the scroll arrows (|прокрутка1| |прокрутка2|). A preview of their contents is available for the attached files:
 
-.. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_10n.gif
+.. image:: /Vilnyi/pics_Work_with_Vilnyi/Work_with_Vilnyi_10n.gif
    :align: center
+
+.. кінець блоку для GS1
 
 When viewing an attached file, you can scale the file preview (1), use pagination (2), print a file (if it signed: layout with the signature visualization in the form of a watermark and a signature letter) (3) |print| (the button is active only for files in PDF/JPG/JPEG/PNG/BMP formats), download (4) |download| or delete (5) |trash| file.
 
@@ -302,6 +308,8 @@ You can sign the document while viewing the document - **"Sign all"** button:
 .. attention::
    With mass signing, only one signature is applied at a time. When adding/deleting files to/from the document, previously applied signatures will be deleted!
 
+.. початок блоку для GS1_sign
+
 .. tabs::
 
    .. tab:: File key
@@ -333,15 +341,17 @@ You can sign the document while viewing the document - **"Sign all"** button:
 .. note::
    After signing files in PDF, JPG (JPEG), PNG, BMP formats, a watermark is added in the upper left corner of each page of the file when previewing them, and a signing letter page will be added:
 
-   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_53.png
+   .. image:: /Vilnyi/pics_Work_with_Vilnyi/Work_with_Vilnyi_53.png
       :align: center
    
    The watermark contains information that the file was signed in the EDI Network, the GUID of the document and the current page of the file.
 
-   .. image:: pics_Work_with_Vilnyi/Work_with_Vilnyi_54.png
+   .. image:: /Vilnyi/pics_Work_with_Vilnyi/Work_with_Vilnyi_54.png
       :align: center
 
    The signing letter contains a link and QR-code for downloading the document archive, information on the document and its signatories.
+
+.. кінець блоку для GS1_sign
 
 After signing the document, information about the signatories is displayed. To send documents you need to click on the **"Send"** button.
 
