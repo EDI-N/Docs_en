@@ -43,6 +43,13 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :caption: WhiteDoc
+
+   API <https://wd-api.edin.ua/swagger-ui/#/>
+   WhiteDoc/API/errors
+
+.. toctree::
+   :maxdepth: 2
    :caption: Legal info
 
    Legal_info/Rules
