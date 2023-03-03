@@ -1,0 +1,151 @@
+Field name,Type [1]_,Format,Description
+**TRANSPORTATIONORDER**,M,, Start of document
+NUMBER,M,String (50), Document number
+DATE,M,YYYY-MM-DD, Document date
+SUBDOCTYPE,M,Numeric (1),"Document subtype:
+
+* 1 - Application for transportation (ORDER)
+* 2 - Confirmation of application for transportation (CONFIRMATION)"
+**ASSOCIATEDREFERENCEDDOCUMENT**,O,, Link to the base document (block start)
+NUMBER,O,String (50), Number of the base document
+DATE,O,YYYY-MM-DD, Date of the base document
+UUID,O,String, UUID of the base document
+**ASSOCIATEDREFERENCEDDOCUMENT**,,, Link to the base document (the end of the block)
+TRANSPORTATIONTYPE,M,Numeric (1),"Type of transportation:
+
+* 1 - per kilometer tariff;
+* 2 - hourly rate;
+* 3 - unit tariff;
+* 4 - centralized transportation;
+* 5 - inner city;
+* 6 - suburban;
+* 7 - intercity;
+* 8 - international transportation;
+* 9 - transportation between warehouses (shuttle);
+* 10 - delivery to the distributor and key customers (distribution);
+* 11 - transportation of collective cargo (pooling)"
+CAMPAIGNNUMBER,O,String (100), Contract number
+CAMPAIGNDATE,O (M - if CAMPAIGNNUMBER is filled),YYYY-MM-DD, Date of the contract
+PURCHASEORDERNUMBER,O,String, Purchase order
+TRANSPORTATIONPAYMENTTYPE,O,Numeric (1),"Tariff method:
+
+* 1 - fixed cost;
+* 2 - for mileage;
+* 3 - for tonnage"
+**TRANSPORTATIONCOST**,O,, Transportation cost (block start)
+WITHOUTVAT,O (M - if TRANSPORTATIONPAYMENTTYPE = 1),"A positive floating point number (10,2)", The cost of transportation does not include VAT
+VAT,O,Numeric (2),"VAT rate, %: 20, 7, 0"
+WITHVAT,O (M - if TRANSPORTATIONPAYMENTTYPE = 1),"A positive floating point number (10,2)", The cost of transportation includes VAT
+**TRANSPORTATIONCOST**,,, Transportation cost (the end of the block)
+**TRANSPORTATIONMEANS**,O (М - if SUBDOCTYPE = 2),, Vehicle information (block start)
+CATEGORYCODE,M,String,"Type of vehicle:
+
+* TRUCK - Cargo (if nothing is specified)
+* TE - Trailer (trailer/semi-trailer)"
+CHARACTERISTICCODE,О (М - if CATEGORYCODE = TE),Numeric (2),"Identification code of Trailer/semi-trailer:
+
+* 14 - Trailer
+* 17 - Semi-trailer"
+ID,M,String (16), Registration number
+MODEL,M,String, Model
+BRAND,M,String, Brand
+TYPE,M,String, Type
+COLOR,O,String, Color
+**TEMPERATURE**,O,, Temperature (block start)
+MIN,M,String, Minimum temperature
+MAX,M,String, Maximum temperature
+**TEMPERATURE**,,, Temperature (the end of the block)
+**TRANSPORTATIONMEANS**,,, Vehicle information (the end of the block)
+LENGTHROUTE,O (M - if TRANSPORTATIONPAYMENTTYPE = 2),"A positive floating point number (10,3)",Total transportation distance (kilometer)
+TRANSPORTTYPE,O,String, Type of transport
+**TEMPERATURE**,O,, Temperature (block start)
+MIN,M,String, Minimum temperature
+MAX,M,String, Maximum temperature
+**TEMPERATURE**,,, Temperature (the end of the block)
+DESCRIPTION,O,String, Cargo name
+TOTALPACKAGEWEIGHT,M,"A positive floating point number (10,3)"," Total gross weight, kg"
+TOTALPACKAGEQUANTITY,O,"A positive floating point number (10,3)", Total number of seats
+LOADFACTOR,O,"A positive floating point number (10,2)", Load factor
+INFO,O,String, Additional Information
+FINANCIALINFO,O,String, Additional information for the finance department
+**HEAD**,M,, The beginning of the main block
+**CUSTOMER**,M,, Customer data (block start)
+GLN,M,Numeric (13), GLN of the Customer (sender)
+ID,M,"* A positive integer (8) - USREOU
+* A positive integer (10) - TIN
+* String (8) - series, passport number
+* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the Customer"
+NAME,M,String, Customer's company name
+ADDRESS,M,String, Legal address of the Customer
+**CUSTOMER**,,, Customer data (the end of the block)
+**CARRIER**,M,, Carrier data (block start)
+GLN,M,Numeric (13), GLN of the Carrier (recipient)
+ID,M,"* A positive integer (8) - USREOU
+* A positive integer (10) - TIN
+* String (8) - series, passport number
+* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the Customer"
+NAME,M,String,Company name of the Carrier
+ADDRESS,M,String, Legal address of the Carrier
+**CARRIER**,,, Carrier data (the end of the block)
+**CONSIGNOR**,M,,Consignor data (block start)
+GLN,M,Numeric (13), Consignor's GLN
+ID,M,"* A positive integer (8) - USREOU
+* A positive integer (10) - TIN
+* String (8) - series, passport number
+* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the consignor"
+NAME,M,String, Consignor's company name
+ADDRESS,M,String, Legal address of the Consignor
+**CONSIGNOR**,,, Consignor data (the end of the block)
+**DRIVER**,O,, Driver data (block start)
+GLN,M,Numeric (13), GLN Driver
+ID,M,"* A positive integer (8) - USREOU
+* A positive integer (10) - TIN
+* String (8) - series, passport number
+* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, driver's passport number"
+NAME,M,String, Name of the Driver
+LICENSE,M,"String (9) - 3 letters, 6 numbers"," Series, driver's license number"
+**DRIVER**,,, Data Driver (the end of the block)
+**POSITION**,M,, Information about the route and cargo (block start)
+POSITIONNUMBER,M,A positive integer,Position number
+**LOAD**,M,, Load point (block start)
+**ADDRESS**,M,, Address of the loading point (block start)
+GLN,M,Numeric (13), GLN of the load point
+ID,M,String (19), Code CATUTTC
+NAME,M,String, Load settlement
+ADDRESS,M,String, Address of the loading point
+**ADDRESS**,,, Address of the loading point  (the end of the block)
+DATE,M,YYYY-MM-DD HH:MM, Date-time of loading
+CONSIGNORCONTACTFACENAME,O,String, Name of the responsible person of the Consignor
+CONSIGNORCONTACTFACENUMBER,O,String, Mob. phone number of the responsible person of the Consignor
+**LOAD**,,, Load point (the end of the block)
+**UNLOAD**,M,, Unloading point (block start)
+**ADDRESS**,M,, Address of the unloading point (block start)
+GLN,M,Numeric (13), GLN of the unloading point
+ID,M,String (19), Code CATUTTC
+NAME,M,String, Unloading settlement
+ADDRESS,M,String,Address of the unloading point
+**ADDRESS**,,,Address of the unloading point (the end of the block)
+DATE,O,YYYY-MM-DD HH:MM, Date-time of unloading
+**CONSIGNEE**,M,, Consignee data (block start)
+GLN,M,Numeric (13), Consignee GLN
+ID,M,"* A positive integer (8) - USREOU
+* A positive integer (10) - TIN
+* String (8) - series, passport number
+* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the Consignee"
+NAME,M,String, Company name of the Consignee
+ADDRESS,M,String, Legal address of the Consignee
+**CONSIGNEE**,,, Consignee data (the end of the block)
+CONSIGNEECONTACTFACENAME,O,String, Name of the responsible person of the Consignee
+CONSIGNEECONTACTFACENUMBER,O,String, Mob. phone number of the responsible person of the Consignee
+**UNLOAD**,,, Unloading point (the end of the block)
+PACKAGEWEIGHT,O,"A positive floating point number (10,3)"," Gross weight, kg"
+PACKAGEQUANTITY,O,"A positive floating point number (10,3)", Number of seats
+TRANSPORTTYPE,O,String, Type of transport
+**TEMPERATURE**,O,, Temperature (block start)
+MIN,M,String, Minimum temperature
+MAX,M,String, Maximum temperature
+**TEMPERATURE**,,, Temperature (the end of the block)
+INFO,O,String, Additional Information
+**POSITION**,,,Information about the route and cargo (the end of the block)
+**HEAD**,,, Completion of the main block
+**TRANSPORTATIONORDER**,,, Completion of the document

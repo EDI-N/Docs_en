@@ -1,0 +1,8 @@
+Code,Description
+220,`Order (ORDERS) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#order>`__
+351,`Despatch advice (DESADV) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#desadv>`__
+335,`Transportation application (TRANSPORTATIONORDER/SUBDOCTYPE=1) <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/TRANSPORTATIONORDER/TRANSPORTATIONORDERpage_v3.html>`__
+770,`Confirmation of Transportation Application (TRANSPORTATIONORDER/SUBDOCTYPE=2) <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/TRANSPORTATIONORDER/TRANSPORTATIONORDERpage_v3.html>`__
+362,`The invoice by quantity (DOCUMENTINVOICE (DocumentFunctionCode = TN)) <https://wiki.edin.ua/uk/latest/ClientProcesses/Fozzy/Fozzy_XML-structure.html#documentinvoice-tn>`__
+361,`Price invoice (DOCUMENTINVOICE (DocumentFunctionCode = PRN)) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#documentinvoice>`__
+395,`Commodity invoice (COMDOC_027) <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#comdoc-027>`__
