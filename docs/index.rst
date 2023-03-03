@@ -15,6 +15,7 @@ Contents:
    general_2_0/general_2_0_list
    integration_2_0/integration_2_0_list
    XML/XML-structure
+   Docs_ETTNv3/Docs_ETTNv3_list
 
 .. toctree::
    :maxdepth: 2
