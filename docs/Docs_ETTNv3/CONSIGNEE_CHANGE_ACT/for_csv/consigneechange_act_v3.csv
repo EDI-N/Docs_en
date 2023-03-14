@@ -1,0 +1,189 @@
+Field name,Type [1]_,Format,Description
+**UAECMR_ACT**,M,, (beginning of the document)
+**ACT**,M,, (beginning of the document content)
+**ExchangedDocumentContext**,M,, Technical data (beginning of block)
+ram:SpecifiedTransactionID,M,string, Version number of the document (transaction) in the document signing chain
+**ram:BusinessProcessSpecifiedDocumentContextParameter**,M,, Document context parameter defined by the business process (start of block)
+ram:ID,M,string, Document code
+**ram:BusinessProcessSpecifiedDocumentContextParameter**,,, Document context parameter defined by the business process (end of block)
+**ram:GuidelineSpecifiedDocumentContextParameter**,M,, Parameter of the context of the specified document (beginning of the block)
+ram:ID,M,unsignedByte, Document subtype (Consignee change act)
+**ram:GuidelineSpecifiedDocumentContextParameter**,,, Parameter of the context of the specified document (end of block)
+**ExchangedDocumentContext**,,, Technical data (end of block)
+**ExchangedDocument**,M,,Details of the Act (beginning of the block)
+ram:ID,M,string, Document number
+**ram:IssueDateTime**,M,, Date and time of drafting the document (beginning of the block)
+**udt:DateTime**,,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the Act
+**ram:IssueDateTime**,,, Date and time of drafting the document (end of block)
+ram:Remarks,O,string, Other notes
+**ram:IssueLogisticsLocation**,M,,Place of drafting of the document (beginning of the block)
+ram:Name,M,string, Name of the place of drafting of the Act
+ram:Description,M,string, Description (address) of the place of drafting the Act
+**ram:IssueLogisticsLocation**,,,Place of drafting of the document (end of block)
+**ExchangedDocument**,,, Details of the Act (end of block)
+**ConsigneeChangeActPayload**,M,, Information about the Act (beginning of the block)
+**PreviousAdministrativeReferencedDocument**,M,,"Information about e-TTN, for which the act is drafting (beginning of the block)"
+ram:TypeCode,M,string,Document type (730 - TTN). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:ID,M,string, Basic document number (TTN); must correspond to the document number ExchangedDocument.ID eTTN
+**ram:FormattedIssueDateTime**,M,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eTTN (beginning of the block)
+qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
+**ram:FormattedIssueDateTime**,,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eTTN (end of block)
+**ram:AttachedSpecifiedBinaryFile**,M,, e-TTN data for which the act is drafting (beginning of the block)
+ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to the document.id of eTTN in the Central Bank (the **ettnId** value from the method ``Getting a list of events from the Central Bank <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value **external_doc_id** `Getting document metadata <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
+ram:URIID,O,string, link to the document
+ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
+ram:SizeMeasure,O,long, file size in bytes
+**ram:AttachedSpecifiedBinaryFile**,,, Data of e-TTN for which the act is drafting (end of block)
+**PreviousAdministrativeReferencedDocument**,,,"Information about e-TTN, for which the act is drafting (end of block)"
+**PreviousAdministrativeReferencedDocument**,-/M,,"Information about the previous act, in the case of the next transaction (beginning of the block)"
+ram:TypeCode,M,string, Document type. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:ID,M,string, Number of the basic document (Act); must correspond to the document number ExchangedDocument.ID of the Act
+**ram:FormattedIssueDateTime**,M,, Date of the basic document (Act); must match the date of the document ExchangedDocument.IssueDateTime Act (beginning of the block)
+qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (Act)
+**ram:FormattedIssueDateTime**,,, Date of the basic document (Act); must match the date of the document ExchangedDocument.IssueDateTime Act (end of block)
+**PreviousAdministrativeReferencedDocument**,,,"Information about the previous act, in the case of the next transaction (end of the block)"
+**InitiatorTradeParty**,M,,"The initiator of the act is the Consignee (beginning of the block). Here is an example for the option when the Act is initiated by the Consignee - the document will have three signatories: the Consignee, the Carrier and the Customer (if he is not the Consignee)."
+**ram:ID**,M,, Identification code of the Consignee (beginning of the block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Consignee (end of block)
+ram:Name,M,string, Full name of the Consignee
+ram:RoleCode,M,string,Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**InitiatorTradeParty**,,,"The initiator of the act is the Consignee (the end of the block). Here is an example for the option when the Act is initiated by the Consignee - the document will have three signatories: the Consignee, the Carrier and the Customer (if he is not the Consignee)."
+**CarrierTradeParty**,M,, Carrier (start of block)
+**ram:ID**,M,, Identification code of the Carrier (beginning of the block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Carrier (end of block)
+ram:Name,M,string, Full name of the Carrier
+ram:RoleCode,M,string,Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**CarrierTradeParty**,,, Carrier (end of block)
+**CustomerTradeParty**,M,, Customer (start of block)
+**ram:ID**,M,, Identification code of the Customer (beginning of the block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Customer (end of block)
+ram:Name,M,string, Full name of the Customer
+ram:RoleCode,M,string, Participant role (Customer - OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**CustomerTradeParty**,,, Customer (end of block)
+**ConsigneeTradeParty**,O,, New Consignee (beginning of block)
+**ram:ID**,M,, Identification code of the Consignee (beginning of the block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Consignee (end of block)
+ram:Name,M,string, Full name of the Consignee
+ram:RoleCode,M,string,Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,O,,Contacts of the responsible representative of the Consignee (beginning of the block)
+ram:PersonName,O,string, Full name
+**ram:TelephoneUniversalCommunication**,O,, Main phone (beginning of block)
+ram:CompleteNumber,O,string, Contacts
+**ram:TelephoneUniversalCommunication**,,, Main phone (end of block)
+**ram:MobileTelephoneUniversalCommunication**,O,, Mobile phone (beginning of block)
+ram:CompleteNumber,O,string, Contacts
+**ram:MobileTelephoneUniversalCommunication**,,, Mobile phone (end of block)
+**ram:EmailURIUniversalCommunication**,O,, Email address (start of block)
+ram:CompleteNumber,O,string, Contacts
+**ram:EmailURIUniversalCommunication**,,, Email address (end of block)
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative of the Consignee (end of block)
+**ram:PostalTradeAddress**,M,, Legal address of the Consignee (legal address of a legal entity or address of registration of an individual entrepreneur) (beginning of the block)
+ram:PostcodeCode,O,string, Index
+ram:StreetName,M,string,Address (street name + building number)
+ram:CityName,M,string, City (name of settlement)
+ram:CountryID,M,string, Country (UA)
+ram:CountrySubDivisionName,O,string, Region and district (if available)
+**ram:PostalTradeAddress**,,, Legal address of the Consignee (legal address of a legal entity or address of registration of an individual entrepreneur) (end of block)
+**ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (beginning of the block)
+ram:ID,O,string, RNTAC of the responsible person
+**ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (end of block)
+**ConsigneeTradeParty**,,, New Consignee (end of block)
+**ConsigneeReceiptLogisticsLocation**,M,, Unloading point (beginning of block)
+**ram:ID**,M,,CATUTTC code of the unloading point in accordance with the Codifier of administrative-territorial units and territories of territorial communities (beginning of the block)
+schemeAgencyID,M,string, CATUTTC
+value,M,decimal, Value
+**ram:ID**,,, CATUTTC code of the unloading point in accordance with the Codifier of administrative-territorial units and territories of territorial communities (end of block)
+ram:Name,M,string, Name of the unloading point
+ram:TypeCode,M,string, Type of operation: 5 - load; 10 — unload
+ram:Description,M,string, Description (address) of the unloading point
+**ram:PhysicalGeographicalCoordinate**,M,, Geographical coordinates (start of the block)
+ram:LatitudeMeasure,O,string, Latitude
+ram:LongitudeMeasure,O,string, Longitude
+**ram:SystemID**,M,, GLN code (start of block)
+schemeAgencyID,M,string, GLN
+value,M,decimal, Value
+**ram:SystemID**,,,GLN code (end of block)
+**ram:PhysicalGeographicalCoordinate**,,, Geographic coordinates (end of block)
+**ConsigneeReceiptLogisticsLocation**,,, Unloading point (end of block)
+InitiatorNotes,M,string, Brief or full description of the reasons for drafting the act (Initiator)
+CarrierNotes,O,string, Special notes / Information regarding disagreement with the contents of the Act (Carrier)
+CustomerNotes,O,string, Special notes / Information regarding disagreement with the content of the Act (Customer)
+**ConsigneeChangeActPayload**,,, Information about the Act (end of block)
+**CertifyingPartyPayload**,M,, Information about responsible persons (beginning of the block)
+**ram:CertifyingTradeParty** (RoleCode=CN),O,, Information on responsible persons of the Consignee (beginning of the block)
+**ram:ID**,O,,Identification code - RNTAC of the responsible person of the Consignee (beginning of the block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the responsible person of the Consignee (end of block)
+ram:Name,M,string, The position of the responsible person of the Consignee
+ram:RoleCode,M,string,Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of the block)
+ram:PersonName,M,string, Name of the responsible person of the Consignee
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CN),,, Information on responsible persons of the Consignee (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CA),M,, Information about the Carrier (beginning of the block)
+**ram:ID**,O,,Identification code - RNTAC of the Carrier (beginning of the block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the Carrier (end of block)
+ram:Name,M,string, Carrier position
+ram:RoleCode,M,string,Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of the block)
+ram:PersonName,M,string, Name of the Carrier
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CA),,, Information about the Carrier (end of block)
+**ram:CertifyingTradeParty** (RoleCode=ОВ),M,, Information about the responsible persons of the Customer (beginning of the block)
+**ram:ID**,O,, Identification code - RNTAC of the Customer (beginning of the block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the driver (end of block)
+ram:Name,M,string, Position of the Customer
+ram:RoleCode,M,string, Participant role (Customer — OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of the block)
+ram:PersonName,M,string, Name of the Customer
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=ОВ),,,Information about the responsible persons of the Customer (end of block)
+**CertifyingPartyPayload**,,, Information about responsible persons (end of block)
+**ACT**,,, (end of the document content)
+**UaSignatureStorage**,M,, Signatures (beginning of block)
+**VisualReferencedDocument**,O,, Graphic display of the document (beginning of the block)
+ram:TypeCode,O,string, Type (916 - Act). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:Remarks,O,string, Graphic representation of Act in base64
+**VisualReferencedDocument**,,, Graphic display of the document (end of block)
+**Signature** (SigningPartyRoleCode=CN),M,, Consignee QES (start of block)
+SigningPartyRoleCode,M,string,Signatory role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Name of the signatory (responsible person of the Consignee)
+Position,O,string, Position of the signatory (responsible person of the Consignee)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the responsible person of the Consignee (beginning of the block)
+ram:ID,M,string, RNTAC of the signatory (responsible person of the Consignee)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person of the Consignee (end of block)
+**Signature** (SigningPartyRoleCode=CN),,, Consignee QES (end of block)
+**Signature** (SigningPartyRoleCode=CA),M,,Carrier&apos;s QES (beginning of block)
+SigningPartyRoleCode,M,string, Signatory role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Name of signatory (Carrier)
+Position,O,string, Position of signatory (Carrier)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the Carrier (beginning of the block)
+ram:ID,M,string, RNTAC of the signatory (Carrier)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=CA),,, Carrier QES (end of block)
+**Signature** (SigningPartyRoleCode=OB),M,, QES of the Customer (beginning of the block)
+SigningPartyRoleCode,M,string, Signatory role (Customer - OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Name of the signatory (Customer)
+Position,O,string, Position of signatory (Customer)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the Customer (beginning of the block)
+ram:ID,M,string, RNTAC of the signatory (Customer)
+**ram:SpecifiedTaxRegistration**,,, Customer identification code (end of block)
+**Signature** (SigningPartyRoleCode=OB),,,QES of the Customer (end of block)
+**UaSignatureStorage**,,,Signatures (end of block)
+**UAECMR_ACT**,,, (end of the document)

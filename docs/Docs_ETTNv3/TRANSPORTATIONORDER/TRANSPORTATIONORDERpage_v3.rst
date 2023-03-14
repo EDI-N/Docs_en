@@ -10,7 +10,7 @@ Table 1 - "Application for transportation" / "Confirmation of application for tr
   :header-rows: 1
   :stub-columns: 0
 
-:download:`Example "Application for transportation" / "Confirmation of application for transportation"<examples/transportationorder_v3.xml>`
+:download:`Example of "Application for transportation" / "Confirmation of application for transportation"<examples/transportationorder_v3.xml>`
 
 -------------------------
 

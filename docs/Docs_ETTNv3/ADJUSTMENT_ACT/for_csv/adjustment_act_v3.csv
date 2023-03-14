@@ -19,7 +19,7 @@ ram:Remarks,O,string, Other notes
 **ram:IssueLogisticsLocation**,M,, Place of drafting the document (block start)
 ram:Name,M,string, Name of the place of drafting of the Act
 ram:Description,M,string, Description (address) of the place of drafting the Act
-**ram:IssueLogisticsLocation**,,, Place of compilation of the document (the end of the block)
+**ram:IssueLogisticsLocation**,,, Place of drafting of the document (the end of the block)
 **ExchangedDocument**,,, Details of the Act (the end of the block)
 **AdjustmentActPayload**,M,, Information about the Act (block start)
 **PreviousAdministrativeReferencedDocument**,M,,"Information about e-TTN, for which the act were drafted (block start)"
