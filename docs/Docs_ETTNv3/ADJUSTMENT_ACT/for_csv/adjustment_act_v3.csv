@@ -22,19 +22,19 @@ ram:Description,M,string, Description (address) of the place of drafting the Act
 **ram:IssueLogisticsLocation**,,, Place of compilation of the document (the end of the block)
 **ExchangedDocument**,,, Details of the Act (the end of the block)
 **AdjustmentActPayload**,M,, Information about the Act (block start)
-**PreviousAdministrativeReferencedDocument**,M,," Information about e-TTN, for which the act were drafted (block start)"
+**PreviousAdministrativeReferencedDocument**,M,,"Information about e-TTN, for which the act were drafted (block start)"
 ram:TypeCode,M,string, Document type (730 - TTN). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
 ram:ID,M,string,Basic document number (TTN); must correspond to the document number ExchangedDocument.ID eTTN
 **ram:FormattedIssueDateTime**,M,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eТТН (block start)
 qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
 **ram:FormattedIssueDateTime**,,, Date of the basic document (TTN); must match the date of the document ExchangedDocument.IssueDateTime eТТН (the end of the block)
 **ram:AttachedSpecifiedBinaryFile**,M,, e-TTN data for which the act were drafted (block start)
-ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to the document.id of eTTN in the Central Bank (the **ettnId** value from the method ``Getting a list of events from the Central Bank <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value **external_doc_id** `Getting document metadata <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
+ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to the document.id of eTTN in the Central Base (the **ettnId** value from the method `Getting a list of events from the Central Base <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value **external_doc_id** `Getting document metadata <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
 ram:URIID,O,string, link to the document
 ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
 ram:SizeMeasure,O,long, file size in bytes
 **ram:AttachedSpecifiedBinaryFile**,,, e-TTN data for which the act were drafted (the end of the block)
-**PreviousAdministrativeReferencedDocument**,,," Information about e-TTN, for which the act were drafted (the end of the block)"
+**PreviousAdministrativeReferencedDocument**,,,"Information about e-TTN, for which the act were drafted (the end of the block)"
 **PreviousAdministrativeReferencedDocument**,-/M,,"Information about the previous act, in the case of the next transaction (block start)"
 ram:TypeCode,M,string, Document type. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
 ram:ID,M,string, Number of the basic document (Act); must correspond to the document number ExchangedDocument.ID of the Act
@@ -42,14 +42,14 @@ ram:ID,M,string, Number of the basic document (Act); must correspond to the docu
 qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (Act)
 **ram:FormattedIssueDateTime**,,, Date of the basic document (Act); must correspond to the date of the ExchangedDocument.IssueDateTime Act (the end of the block)
 **PreviousAdministrativeReferencedDocument**,,,"Information about the previous act, in the case of the next transaction (the end of the block)"
-**InitiatorTradeParty**,M,," Initiator of the act (Customer) (block start). Here is an example when the initiator of the Act is the Customer (who is neither the Consignor nor the Consignee) - the document will have four signatories: the Customer, the Consignor, the Carrier and the Consignee"
+**InitiatorTradeParty**,M,,"Initiator of the act (Customer) (block start). Here is an example when the initiator of the Act is the Customer (who is neither the Consignor nor the Consignee) - the document will have four signatories: the Customer, the Consignor, the Carrier and the Consignee"
 **ram:ID**,M,, Customer identification code (block start)
 schemeAgencyID,M,string, USREOU
 value,M,decimal, Value
 **ram:ID**,,, Identification code of the Customer (the end of the block)
 ram:Name,M,string, Full name of the Customer
 ram:RoleCode,M,string,Participant role (Customer - OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
-**InitiatorTradeParty**,,," The initiator of the act (the customer) (the end of the block). Here is an example when the initiator of the Act is the Customer (who is neither the Consignor nor the Consignee) - the document will have four signatories: the Customer, the Consignor, the Carrier and the Consignee"
+**InitiatorTradeParty**,,,"The initiator of the act (the customer) (the end of the block). Here is an example when the initiator of the Act is the Customer (who is neither the Consignor nor the Consignee) - the document will have four signatories: the Customer, the Consignor, the Carrier and the Consignee"
 **ConsignorTradeParty**,M,,Consignor (block start)
 **ram:ID**,M,, Identification code of the Consignor (block start)
 schemeAgencyID,M,string, USREOU
@@ -120,7 +120,7 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:PostalTradeAddress**,,,Legal address of the Consignee (legal address of a legal entity or address of registration of an individual entrepreneur) (the end of the block)
 **ram:ConsigneeTradeParty**,,, Consignee (the end of the block)
 **ram:CarrierTradeParty**,O,, Carrier (block start)
-ram:Name,M,string," Full name of the Carrier (a legal entity or a natural person - an entrepreneur) or the surname, first name, patronymic of the natural person with whom the consignor concluded an agreement for the provision of transport services"
+ram:Name,M,string,"Full name of the Carrier (a legal entity or a natural person - an entrepreneur) or the surname, first name, patronymic of the natural person with whom the consignor concluded an agreement for the provision of transport services"
 **ram:DefinedTradeContact**,O,, Contacts of the responsible representative (block start)
 ram:PersonName,M,string, Full name of the driver who will drive the vehicle during cargo transportation
 **ram:TelephoneUniversalCommunication**,O,, Main phone (block start)
@@ -145,7 +145,7 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:ID**,M,,"Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (block start)"
 schemeAgencyID,M,string, USREOU / RNTAC
 value,M,decimal, Value
-**ram:ID**,,," Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (the end of the block)"
+**ram:ID**,,,"Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (the end of the block)"
 ram:Name,M,string,"Full name of the Forwarder (legal entity or natural person - entrepreneur) or surname, first name, patronymic of the natural person with whom the consignor (customer) concluded a transport forwarding contract"
 ram:RoleCode,M,string, Participant role (Forwarder - FW). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:DefinedTradeContact**,O,, Contacts of the responsible representative (block start)
@@ -230,7 +230,7 @@ ram:CompleteNumber,O,string,Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string, RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:NotifiedTradeParty** (роль - WD),,," Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (the end of the block)"
+**ram:NotifiedTradeParty** (роль - WD),,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (the end of the block)"
 **ram:NotifiedTradeParty** (роль - COP),O,, Company which provide security services (block start)
 **ram:ID**,M,, Security company identification code. USREOU of an enterprise that provides cargo security services during transportation (block start)
 schemeAgencyID,M,string, USREOU / RNTAC
@@ -278,7 +278,7 @@ value,M,decimal, Value
 **ram:ConsigneeReceiptLogisticsLocation**,,, Unloading point (the end of the block)
 **ram:DeliveryTransportEvent**,O,, Unloading works (block start)
 ram:ID,O,string, Sequence number of the event (events are always numbered in ascending order according to the N+1 principle)
-ram:TypeCode,O,string," Type of operation (unloading=5, loading=10)"
+ram:TypeCode,O,string,"Type of operation (unloading=5, loading=10)"
 ram:Description,O,string, Description
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car for unloading (block start)
 udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
@@ -293,7 +293,7 @@ ram:Content,O,unsignedByte, Idle time (hours) under unloading
 **ram:DeliveryTransportEvent**,,, Unloading works (the end of the block)
 **ram:PickUpTransportEvent**,M,, Loading works (block start)
 ram:ID,O,string, Sequence number of the event (events are always numbered in ascending order according to the N+1 principle)
-ram:TypeCode,O,string," Type of operation (unloading=5, loading=10)"
+ram:TypeCode,O,string,"Type of operation (unloading=5, loading=10)"
 ram:Description,O,string, Description
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car under load (block start)
 udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
@@ -315,14 +315,14 @@ value,O,string, Value
 ram:Identification,O,string, Cargo name
 **ram:NatureIdentificationTransportCargo**,,, Cargo name
 **ram:ApplicableTransportDangerousGoods**,O,, Class of dangerous substances (block start)
-ram:UNDGIdentificationCode,O,decimal," The class of dangerous substances to which the cargo belongs (in the case of transportation of dangerous goods). Code UNDG, 0 - if not used"
+ram:UNDGIdentificationCode,O,decimal,"The class of dangerous substances to which the cargo belongs (in the case of transportation of dangerous goods). Code UNDG, 0 - if not used"
 **ram:ApplicableTransportDangerousGoods**,,, Class of dangerous substances (the end of the block)
 **ram:AssociatedReferencedDocument**,O,, Cargo documents (block start)
 ram:ID,O,string,"The number of the document that the driver receives from the consignor and transfers to the consignee together with the cargo (goods, railway waybills, certificates, certificates, etc.)"
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:AssociatedReferencedDocument**,,, Cargo documents (the end of the block)
 **ram:TransportLogisticsPackage**,O,, Transport and logistics package. IMPORTANT: only one LogisticsPackage for one ConsignmentItem is allowed in Ukraine! (block start)
-ram:ItemQuantity,O,decimal," The number of places determined by each name of the cargo (these can be boxes, baskets, bags, etc.; if the cargo is packed on pallets - indicate the number of pallets)"
+ram:ItemQuantity,O,decimal,"The number of places determined by each name of the cargo (these can be boxes, baskets, bags, etc.; if the cargo is packed on pallets - indicate the number of pallets)"
 ram:TypeCode,O,string,Type of packaging (`Guide to types of packaging <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=1380089959>`__)
 ram:Type,O,string, The unit of measurement for ItemQuantity
 **ram:PhysicalLogisticsShippingMarks**,O,, Marking (block start)
