@@ -33,16 +33,16 @@ ram:Description,M,string, Description (address) of the place where the TTN was c
 unitCode,M,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 value,M,decimal,Value
 **ram:GrossWeightMeasure**,,,The total weight of the shipment (gross weight) in kg with an accuracy of 0.1 (the end of the block)
-**ram:AssociatedInvoiceAmount**,M,," Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (block start)"
+**ram:AssociatedInvoiceAmount**,M,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (block start)"
 currencyID,M,string, Three-digit currency code (UAH)
 value,M,decimal,Value
-**ram:AssociatedInvoiceAmount**,,," Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (the end of the block)"
+**ram:AssociatedInvoiceAmount**,,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (the end of the block)"
 ram:ConsignmentItemQuantity,M,decimal, Total number of cargo spaces (containers)
 **ram:ConsignorTradeParty**,M,,Consignor (block start)
 **ram:ID**,M,,"Identification code of the consignor (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which carries out the shipment (write-off) of the goods and material values listed in the TTN (block start)"
 schemeAgencyID,M,string, USREOU / RNTAC
 value,M,decimal,Value
-**ram:ID**,,," Identification code of the consignor (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which carries out the shipment (write-off) of the goods and material values listed in the TTN (the end of the block)"
+**ram:ID**,,,"Identification code of the consignor (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which carries out the shipment (write-off) of the goods and material values listed in the TTN (the end of the block)"
 ram:Name,M,string,Full name of the Consignor (legal entity or full name of the individual entrepreneur) carrying out the shipment (write-off) of the goods and material values listed in the TTN
 ram:RoleCode,M,string, Participant role (Consignor - CZ). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:DefinedTradeContact**,O,, Contacts of the responsible representative (block start)
@@ -69,7 +69,7 @@ ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
 **ram:ConsignorTradeParty**,,,Consignor (the end of the block)
 **ram:ConsigneeTradeParty**,M,,Consignee (block start)
-**ram:ID**,M,," Identification code of the Consignee (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which receives (posting) the goods and material values listed in the TTN (block start)"
+**ram:ID**,M,,"Identification code of the Consignee (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which receives (posting) the goods and material values listed in the TTN (block start)"
 schemeAgencyID,M,string, USREOU / RNTAC
 value,M,decimal,Value
 **ram:ID**,,,"Identification code of the Consignee (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which receives (posting) the goods and material values listed in the TTN (the end of the block)"
@@ -99,11 +99,11 @@ ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
 **ram:ConsigneeTradeParty**,,,Consignee (the end of the block)
 **ram:CarrierTradeParty**,M,, Carrier (block start)
-**ram:ID**,M,," Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor concluded a contract for the provision of transport services (block start)"
+**ram:ID**,M,,"Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor concluded a contract for the provision of transport services (block start)"
 schemeAgencyID,M,string, USREOU / RNTAC
 value,M,decimal,Value
 **ram:ID**,,,"Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor concluded an agreement for the provision of transport services (the end of the block)"
-ram:Name,M,string," Full name of the Carrier (a legal entity or a natural person - an entrepreneur) or the surname, first name, patronymic of the natural person with whom the consignor concluded an agreement for the provision of transport services"
+ram:Name,M,string,"Full name of the Carrier (a legal entity or a natural person - an entrepreneur) or the surname, first name, patronymic of the natural person with whom the consignor concluded an agreement for the provision of transport services"
 ram:RoleCode,M,string, Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:DefinedTradeContact**,M,, Contacts of the responsible representative (block start)
 ram:PersonName,M,string,Name of the driver who will drive the vehicle during cargo transportation
@@ -132,11 +132,11 @@ ram:ID,M,string,"Driver's license series and number. Filled in the format «3 ca
 **ram:SpecifiedGovernmentRegistration**,,, Driver's license (the end of the block)
 **ram:CarrierTradeParty**,,, Carrier (the end of the block)
 **ram:NotifiedTradeParty** (role - FW),O,, Forwarder (block start)
-**ram:ID**,M,," Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (block start)"
+**ram:ID**,M,,"Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (block start)"
 schemeAgencyID,M,string, USREOU / RNTAC
 value,M,decimal,Value
 **ram:ID**,,,"Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (the end of the block)"
-ram:Name,M,string," Full name of the Forwarder (legal entity or natural person - entrepreneur) or surname, first name, patronymic of the natural person with whom the consignor (customer) concluded a transport forwarding contract"
+ram:Name,M,string,"Full name of the Forwarder (legal entity or natural person - entrepreneur) or surname, first name, patronymic of the natural person with whom the consignor (customer) concluded a transport forwarding contract"
 ram:RoleCode,M,string,Participant role (Forwarder - FW). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:DefinedTradeContact**,O,, Contacts of the responsible representative (block start)
 ram:PersonName,O,string,Full name
@@ -191,7 +191,7 @@ ram:CompleteNumber,O,string, Contacts
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
 **ram:NotifiedTradeParty** (role - OB),,, Customer (the end of the block)
-**ram:NotifiedTradeParty** (role - WD),O,," Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (block start)"
+**ram:NotifiedTradeParty** (role - WD),O,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (block start)"
 **ram:ID**,M,, Identification code of the Intermediate warehouse. USREOU of the enterprise (Consignor/Carrier/Forwarder/Consignee/Warehouse) accepting cargo from the Carrier for temporary storage (block start)
 schemeAgencyID,M,string, USREOU / RNTAC
 value,M,decimal,Value
@@ -220,7 +220,7 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:NotifiedTradeParty** (role - WD),,," Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (the end of the block)"
+**ram:NotifiedTradeParty** (role - WD),,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (the end of the block)"
 **ram:NotifiedTradeParty** (role - COP),O,,A company that provides security services (block start)
 **ram:ID**,M,, Security company identification code. USREOU of an enterprise that provides cargo security services during transportation (block start)
 schemeAgencyID,M,string, USREOU / RNTAC
@@ -308,7 +308,6 @@ qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-1
 **ram:AssociatedReferencedDocument**,,, Other accompanying documents (the end of the block)
 **ram:DeliveryTransportEvent**,M,, Unloading works (block start)
 ram:ID,M,string, Sequence number of the event (events are always numbered in ascending order according to the N+1 principle)
-ram:TypeCode,M,string," Type of operation (unloading=5, loading=10)"
 ram:Description,O,string,Description
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car for unloading (block start)
 udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
@@ -360,10 +359,10 @@ schemeAgencyID,O,string,RNTAC
 value,O,decimal,Value
 **ram:ID**,,, Identification code - RNTAC of the responsible person of the Forwarder (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=FW),,, Information about responsible persons of the Forwarder (the end of the block)
-**ram:ApplicableNote** (with code GROSSWEIGHT),O,," Gross weight, kg (block start)"
+**ram:ApplicableNote** (with code GROSSWEIGHT),O,,"Gross weight, kg (block start)"
 ram:ContentCode,O,string, Code GROSSWEIGHT
 ram:Content,O,decimal,The gross weight of the cargo received at the place of unloading in kilograms with an accuracy of 0.1
-**ram:ApplicableNote** (with code GROSSWEIGHT),,," Gross weight, kg (the end of the block)"
+**ram:ApplicableNote** (with code GROSSWEIGHT),,,"Gross weight, kg (the end of the block)"
 **ram:ApplicableNote** (with code DOWNTIME),O,, Idle time (block start)
 ram:ContentCode,O,string, Code DOWNTIME
 ram:Content,O,unsignedByte, Idle time (hours) under unloading
@@ -371,7 +370,6 @@ ram:Content,O,unsignedByte, Idle time (hours) under unloading
 **ram:DeliveryTransportEvent**,,, Unloading works (the end of the block)
 **ram:PickUpTransportEvent**,O,, Loading works (block start)
 ram:ID,O,string, Sequence number of the event (events are always numbered in ascending order according to the N+1 principle)
-ram:TypeCode,O,string," Type of operation (unloading=5, loading=10)"
 ram:Description,O,string,Description
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car under load (block start)
 udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
@@ -423,10 +421,10 @@ schemeAgencyID,O,string,RNTAC
 value,O,decimal,Value
 **ram:ID**,,, Identification code - RNTAC of the responsible person of the Forwarder (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=FW),,, Information about responsible persons of the Forwarder (the end of the block)
-**ram:ApplicableNote** (with code GROSSWEIGHT),M,," Gross weight, kg (block start)"
+**ram:ApplicableNote** (with code GROSSWEIGHT),M,,"Gross weight, kg (block start)"
 ram:ContentCode,M,string, Code GROSSWEIGHT
 ram:Content,M,decimal,The weight of the delivered/received cargo in kilograms with an accuracy of 0.1
-**ram:ApplicableNote** (with code GROSSWEIGHT),,," Gross weight, kg (the end of the block)"
+**ram:ApplicableNote** (with code GROSSWEIGHT),,,"Gross weight, kg (the end of the block)"
 **ram:ApplicableNote** (with code DOWNTIME),O,, Idle time (block start)
 ram:ContentCode,O,string, Code DOWNTIME
 ram:Content,O,unsignedByte, Idle time (hours) under load
@@ -446,10 +444,10 @@ value,M,decimal,Value
 unitCode,O,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 value,O,decimal,Value
 **ram:TariffQuantity**,,, Price without VAT per unit in hryvnias with an accuracy of 0.01. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the specified unit of measurement (the end of the block)
-**ram:GlobalID**,O,, UKKTZED product code (block start)
-schemeAgencyID,O,string,UKTZED
+**ram:GlobalID**,O,, UCGFEA product code (block start)
+schemeAgencyID,O,string,UCGFEA
 value,O,string,Value
-**ram:GlobalID**,,, UKKTZED product code (the end of the block)
+**ram:GlobalID**,,, UCGFEA product code (the end of the block)
 **ram:NatureIdentificationTransportCargo**,M,, Cargo name
 ram:Identification,M,string, Cargo name
 **ram:NatureIdentificationTransportCargo**,,, Cargo name
@@ -464,7 +462,7 @@ ram:ID,O,string,"The number of the document that the driver receives from the co
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:AssociatedReferencedDocument**,,, Cargo documents (the end of the block)
 **ram:TransportLogisticsPackage**,O,, Transport and logistics package. IMPORTANT: only one LogisticsPackage for one ConsignmentItem is allowed in Ukraine! (block start)
-ram:ItemQuantity,O,decimal," The number of places determined by each name of the cargo (these can be boxes, baskets, bags, etc.; if the cargo is packed on pallets - indicate the number of pallets)"
+ram:ItemQuantity,O,decimal,"The number of places determined by each name of the cargo (these can be boxes, baskets, bags, etc.; if the cargo is packed on pallets - indicate the number of pallets)"
 ram:TypeCode,O,string,Type of packaging (`Guide to types of packaging <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=1380089959>`__)
 ram:Type,O,string, The unit of measurement for ItemQuantity
 **ram:PhysicalLogisticsShippingMarks**,O,, Marking (block start)
@@ -512,7 +510,7 @@ ram:Content,O,string, Net mass
 **ram:ApplicableNote** (with code NET_WEIGHT),,, Net mass (the end of the block)
 **ram:ApplicableNote** (with code RTP_TYPE),O,, Type of transport packaging (block start)
 ram:ContentCode,O,string, RTP_TYPE code
-ram:Content,O,string," The type of transport packaging, for example, a container"
+ram:Content,O,string,"The type of transport packaging, for example, a container"
 **ram:ApplicableNote** (with code RTP_TYPE),,, Type of transport packaging (the end of the block)
 **ram:ApplicableNote** (with code RTP_NAME),O,, Name of the transport package (block start)
 ram:ContentCode,O,string, Code RTP_NAME
@@ -652,7 +650,7 @@ ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTransportEvent**,,, Intermediate unloading (the end of the block)
 **ram:MainCarriageLogisticsTransportMovement**,,, Routing (intermediate points of overloading). Filled in by the Carrier (the end of the block)
 **ram:DeliveryInstructions**,M,, Type of transportation (block start)
-ram:Description,O,string," Description (type of work of the carrier: by unit rate, by hourly rate, by kilometer rate, centralized transportation, etc.)"
+ram:Description,O,string,"Description (type of work of the carrier: by unit rate, by hourly rate, by kilometer rate, centralized transportation, etc.)"
 ram:DescriptionCode,M,string, Code (TRANSPORTATION_TYPE)
 **ram:DeliveryInstructions**,,, Type of transportation (the end of the block)
 **ram:PreviousAdministrativeReferencedDocument**,-/M,, The previous ECMR transaction on which the current document is based. The block is not indicated if the document is created from zero (block start)
@@ -662,13 +660,13 @@ ram:Remarks,O,string, Base64 of the previous version document
 **ram:FormattedIssueDateTime**,O,, Date of drafting the document on the basis of which the current document was drafted (block start)
 qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of preparation of the previous ECMR document
 **ram:FormattedIssueDateTime**,,, Date of drafting the document on the basis of which the current document was drafted (the end of the block)
-**ram:AttachedSpecifiedBinaryFile**,O,," Attached binary document file, on the basis of which the current document is compiled (block start)"
+**ram:AttachedSpecifiedBinaryFile**,O,,"Attached binary document file, on the basis of which the current document is compiled (block start)"
 ram:ID,M,string,Corresponds to document.id from the Central Base of eTTN
 ram:URIID,M,string, Link to the document
 ram:MIMECode,O,string,`MIME typing code <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
 ram:SizeMeasure,M,Long, File size
 **ram:AttachedSpecifiedBinaryFile**,,, Attached binary file of the document on the basis of which the current document is compiled (the end of the block)
-**ram:PreviousAdministrativeReferencedDocument**,,," The previous ECMR transaction on which the current document is based. The block is not indicated if the document is created from ""zero"" (the end of the block)"
+**ram:PreviousAdministrativeReferencedDocument**,,,"The previous ECMR transaction on which the current document is based. The block is not indicated if the document is created from ""zero""(the end of the block)"
 **SpecifiedSupplyChainConsignment**,,, Transportation information (the end of the block)
 **eCMR**,,, (end of document content)
 **UaSignatureStorage**,M,, Signatures (block start)
