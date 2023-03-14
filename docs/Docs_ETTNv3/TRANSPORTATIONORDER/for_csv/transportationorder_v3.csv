@@ -63,7 +63,7 @@ MIN,M,String, Minimum temperature
 MAX,M,String, Maximum temperature
 **TEMPERATURE**,,, Temperature (the end of the block)
 DESCRIPTION,O,String, Cargo name
-TOTALPACKAGEWEIGHT,M,"A positive floating point number (10,3)"," Total gross weight, kg"
+TOTALPACKAGEWEIGHT,M,"A positive floating point number (10,3)","Total gross weight, kg"
 TOTALPACKAGEQUANTITY,O,"A positive floating point number (10,3)", Total number of seats
 LOADFACTOR,O,"A positive floating point number (10,2)", Load factor
 INFO,O,String, Additional Information
@@ -74,7 +74,7 @@ GLN,M,Numeric (13), GLN of the Customer (sender)
 ID,M,"* A positive integer (8) - USREOU
 * A positive integer (10) - TIN
 * String (8) - series, passport number
-* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the Customer"
+* A positive integer (9) - ID card","USREOU / TIN / ID card / series, passport number of the Customer"
 NAME,M,String, Customer's company name
 ADDRESS,M,String, Legal address of the Customer
 **CUSTOMER**,,, Customer data (the end of the block)
@@ -83,7 +83,7 @@ GLN,M,Numeric (13), GLN of the Carrier (recipient)
 ID,M,"* A positive integer (8) - USREOU
 * A positive integer (10) - TIN
 * String (8) - series, passport number
-* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the Customer"
+* A positive integer (9) - ID card","USREOU / TIN / ID card / series, passport number of the Customer"
 NAME,M,String,Company name of the Carrier
 ADDRESS,M,String, Legal address of the Carrier
 **CARRIER**,,, Carrier data (the end of the block)
@@ -92,7 +92,7 @@ GLN,M,Numeric (13), Consignor's GLN
 ID,M,"* A positive integer (8) - USREOU
 * A positive integer (10) - TIN
 * String (8) - series, passport number
-* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the consignor"
+* A positive integer (9) - ID card","USREOU / TIN / ID card / series, passport number of the consignor"
 NAME,M,String, Consignor's company name
 ADDRESS,M,String, Legal address of the Consignor
 **CONSIGNOR**,,, Consignor data (the end of the block)
@@ -101,9 +101,9 @@ GLN,M,Numeric (13), GLN Driver
 ID,M,"* A positive integer (8) - USREOU
 * A positive integer (10) - TIN
 * String (8) - series, passport number
-* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, driver's passport number"
+* A positive integer (9) - ID card","USREOU / TIN / ID card / series, driver's passport number"
 NAME,M,String, Name of the Driver
-LICENSE,M,"String (9) - 3 letters, 6 numbers"," Series, driver's license number"
+LICENSE,M,"String (9) - 3 letters, 6 numbers","Series, driver's license number"
 **DRIVER**,,, Data Driver (the end of the block)
 **POSITION**,M,, Information about the route and cargo (block start)
 POSITIONNUMBER,M,A positive integer,Position number
@@ -131,14 +131,14 @@ GLN,M,Numeric (13), Consignee GLN
 ID,M,"* A positive integer (8) - USREOU
 * A positive integer (10) - TIN
 * String (8) - series, passport number
-* A positive integer (9) - ID card"," USREOU / TIN / ID card / series, passport number of the Consignee"
+* A positive integer (9) - ID card","USREOU / TIN / ID card / series, passport number of the Consignee"
 NAME,M,String, Company name of the Consignee
 ADDRESS,M,String, Legal address of the Consignee
 **CONSIGNEE**,,, Consignee data (the end of the block)
 CONSIGNEECONTACTFACENAME,O,String, Name of the responsible person of the Consignee
 CONSIGNEECONTACTFACENUMBER,O,String, Mob. phone number of the responsible person of the Consignee
 **UNLOAD**,,, Unloading point (the end of the block)
-PACKAGEWEIGHT,O,"A positive floating point number (10,3)"," Gross weight, kg"
+PACKAGEWEIGHT,O,"A positive floating point number (10,3)","Gross weight, kg"
 PACKAGEQUANTITY,O,"A positive floating point number (10,3)", Number of seats
 TRANSPORTTYPE,O,String, Type of transport
 **TEMPERATURE**,O,, Temperature (block start)
