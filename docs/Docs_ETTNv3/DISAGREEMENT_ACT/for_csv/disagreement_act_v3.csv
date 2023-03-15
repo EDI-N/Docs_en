@@ -34,7 +34,7 @@ ram:URIID,O,string, link to the document
 ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
 ram:SizeMeasure,O,long, file size in bytes
 **ram:AttachedSpecifiedBinaryFile**,,, e-TTN data for which the act is drafting (end of block)
-**PreviousAdministrativeReferencedDocument**,,," Information about e-TTN, for which the act is drafting (end of block)"
+**PreviousAdministrativeReferencedDocument**,,,"Information about e-TTN, for which the act is drafting (end of block)"
 **PreviousAdministrativeReferencedDocument**,-/M,,"Information about the previous act, in the case of the next transaction (beginning of block)"
 ram:TypeCode,M,string, Document type. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
 ram:ID,M,string, Number of the basic document (Act); must correspond to the document number ExchangedDocument.ID of the Act
@@ -69,10 +69,10 @@ OriginalItemQuantity,M,decimal, Number of seats per TTN
 ActualItemQuantity,O,decimal, The number of seats is actual
 **DeltaItemQuantity**,O,,Deviation (beginning of block)
 Quantity,O,decimal, Number of seats Deviations. The difference between the fact and data from TTN - is calculated by the system automatically and only for those data for which the actual value is indicated
-Explanation,O,string," the reason for the deviation by the number of seats (shortage/surplus, fight, etc.)"
+Explanation,O,string,"the reason for the deviation by the number of seats (shortage/surplus, fight, etc.)"
 **DeltaItemQuantity**,,, Deviation (end of block)
 **DisagreementItemQuantity**,,, Deviation by the number of places (end of block)
-**DisagreementGrossWeightMeasure**,O,," Deviation by gross weight, kg (beginning of block)"
+**DisagreementGrossWeightMeasure**,O,,"Deviation by gross weight, kg (beginning of block)"
 **OriginalGrossWeightMeasure**,M,, Gross mass at TTN (beginning of block)
 unitCode,M,string, unit code (KGM)
 value,M,decimal, Value; accuracy=0.1
@@ -86,9 +86,9 @@ value,M,decimal, Value; accuracy=0.1
 unitCode,M,string, unit code (KGM)
 value,M,decimal, Value; accuracy=0.1
 **Measure**,,, Gross mass Deviation. The difference between the fact and the data from the TTN is calculated by the system automatically and only for those data for which the actual value is specified (end of block)
-Explanation,O,string," reason for mass deviation (shortage/surplus, etc.)"
+Explanation,O,string,"reason for mass deviation (shortage/surplus, etc.)"
 **DeltaGrossWeightMeasure**,,, Deviation (end of block)
-**DisagreementGrossWeightMeasure**,,," Deviation by gross weight, kg (end of block)"
+**DisagreementGrossWeightMeasure**,,,"Deviation by gross weight, kg (end of block)"
 **DisagreementInvoiceAmount**,O,, Deviation by amount (beginning of block)
 **OriginalInvoiceAmount**,M,, Total amount with VAT for TTN (beginning of block)
 currencyID,M,string, currency code (UAH)
@@ -109,22 +109,22 @@ Explanation,O,string, the reason for the deviation in the amount
 DisagreementOtherNotes,O,string,Other remarks. Comments on the identified discrepancies for each line (name of the cargo)
 **DisagreementSubjectSupplyChainConsignmentItem**,,, Disagreements regarding the quantitative characteristics of the cargo (end of block)
 **DisagreementSubjectSupplyChainConsignmentSummary**,M,, Discrepancies regarding the quantitative characteristics of the cargo (total indicators) (beginning of block)
-**OriginalGrossWeightMeasure**,M,," Total Gross mass by TTN, kg (beginning of block)"
+**OriginalGrossWeightMeasure**,M,,"Total Gross mass by TTN, kg (beginning of block)"
 unitCode,M,string, unit code (KGM)
 value,M,decimal, Value; accuracy=0.1
-**OriginalGrossWeightMeasure**,,," Total Gross mass by TTN, kg (end of block)"
-**DeltaGrossWeightMeasure**,M,," Total Gross mass Deviation, kg (beginning of block)"
+**OriginalGrossWeightMeasure**,,,"Total Gross mass by TTN, kg (end of block)"
+**DeltaGrossWeightMeasure**,M,,"Total Gross mass Deviation, kg (beginning of block)"
 unitCode,M,string, unit code (KGM)
 value,M,decimal, Value; accuracy=0.1
-**DeltaGrossWeightMeasure**,,," Total Gross mass Deviation, kg (end of block)"
-**OriginalInvoiceAmount**,M,," Total Total amount including VAT for TTN, hryvnias. (beginning of block)"
+**DeltaGrossWeightMeasure**,,,"Total Gross mass Deviation, kg (end of block)"
+**OriginalInvoiceAmount**,M,,"Total Total amount including VAT for TTN, hryvnias. (beginning of block)"
 currencyID,M,string, currency code (UAH)
 value,M,decimal, Value; precision=0.01
-**OriginalInvoiceAmount**,,," Total Total amount including VAT for TTN, hryvnias. (end of block)"
+**OriginalInvoiceAmount**,,,"Total Total amount including VAT for TTN, hryvnias. (end of block)"
 **DeltaInvoiceAmount**,M,,"Total Total amount including VAT Deviation, hryvnias. (beginning of block)"
 currencyID,M,string, currency code (UAH)
 value,M,decimal, Value; precision=0.01
-**DeltaInvoiceAmount**,,," Total Total amount including VAT Deviation, hryvnias. (end of block)"
+**DeltaInvoiceAmount**,,,"Total Total amount including VAT Deviation, hryvnias. (end of block)"
 **DisagreementSubjectSupplyChainConsignmentSummary**,,, Disagreements regarding the quantitative characteristics of the cargo (total indicators) (end of block)
 **QualityCharacteristicsDisagreement**,O,, Disagreements regarding the quality characteristics of the cargo (beginning of block)
 **AffixedLogisticsSeal**,O,, Seal number according to TTN (beginning of block)
@@ -142,11 +142,11 @@ value,O,decimal, Value
 **ram:MaximumValueMeasure**,,, Temperature regime before (end of block)
 **ApplicableTransportSettingTemperature**,,, Temperature regime according to TTN (end of block)
 ApplicableTransportSettingTemperatureNotes,O,string, Information about non-compliance with the temperature regime
-PackagingDamageDisagreementNotes,O,string," Information on container damage (description of container damage, packaging, labeling, etc.)"
+PackagingDamageDisagreementNotes,O,string,"Information on container damage (description of container damage, packaging, labeling, etc.)"
 OtherDisagreementNotes,O,string, Information on other discrepancies (description of other discrepancies in cargo characteristics)
 **QualityCharacteristicsDisagreement**,,, Disagreements regarding the quality characteristics of the cargo (end of block)
 ConsigneeNotes,M,string,"Brief or full description of the reasons for drafting the act (for example, discrepancies were found regarding the qualitative and/or quantitative characteristics of the received cargo, etc.)"
-ClaimNotes,M,string," Conclusion (requirements for resolution of disagreements). Information is indicated on whether anyone should file a claim and, if so, to whom"
+ClaimNotes,M,string,"Conclusion (requirements for resolution of disagreements). Information is indicated on whether anyone should file a claim and, if so, to whom"
 CarrierNotes,O,string, Special markings (Carrier). Information on disagreement with the content of the Act (Carrier)
 **DisagreementActPayload**,,, Information about the Act (end of block)
 **CertifyingPartyPayload**,M,, Information about responsible persons (beginning of block)
