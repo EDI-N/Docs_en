@@ -29,7 +29,7 @@ ram:ID,M,string,Basic document number (TTN); must correspond to the document num
 qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
 **ram:FormattedIssueDateTime**,,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eТН (end of block)
 **ram:AttachedSpecifiedBinaryFile**,M,, e-TTN data for which the act is drafting (beginning of block)
-ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to document.id eTTN in the Central Base (value **ettnId** from the method `Getting a list of events from the Central Base <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html> `__ = value of **external_doc_id** `Retrieving meta-data of the document <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
+ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to document.id eTTN in the Central Base (value **ettnId** from the method `Getting a list of events from the Central Base <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value **external_doc_id** `Getting document metadata <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
 ram:URIID,O,string, link to the document
 ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
 ram:SizeMeasure,O,long, file size in bytes
