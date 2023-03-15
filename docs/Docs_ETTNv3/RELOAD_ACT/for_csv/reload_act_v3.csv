@@ -1,0 +1,258 @@
+Field name,Type [1]_,Format,Description
+**UAECMR_ACT**,M,, (beginning of the document)
+**ACT**,M,, (beginning of the document content)
+**ExchangedDocumentContext**,M,, Technical data (beginning of block)
+ram:SpecifiedTransactionID,M,string, Version number of the document (transaction) in the document signing chain
+**ram:BusinessProcessSpecifiedDocumentContextParameter**,M,,Document context parameter defined by the business process (beginning of block)
+ram:ID,M,string,Document code
+**ram:BusinessProcessSpecifiedDocumentContextParameter**,,,Document context parameter defined by the business process (end of block)
+**ram:GuidelineSpecifiedDocumentContextParameter**,M,,Context parameter of the defined document (beginning of block)
+ram:ID,M,unsignedByte,Document subtype
+**ram:GuidelineSpecifiedDocumentContextParameter**,,,Context parameter of the defined document (end of block)
+**ExchangedDocumentContext**,,, Technical data (end of block)
+**ExchangedDocument**,M,, Details of the Act (beginning of block)
+ram:ID,M,string,Document number
+**ram:IssueDateTime**,M,,Date and time of drafting the document (beginning of block)
+**udt:DateTime**,,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the Act
+**ram:IssueDateTime**,,, Date and time of drafting the document (end of block)
+ram:Remarks,O,string, Other notes
+**ram:IssueLogisticsLocation**,M,, Place of compilation of the document (beginning of block)
+ram:Name,M,string, Name of the place of drafting of the Act
+ram:Description,M,string, Description (address) of the place of drafting the Act
+**ram:IssueLogisticsLocation**,,, Place of compilation of the document (end of block)
+**ExchangedDocument**,,, Details of the Act (end of block)
+**ReloadActPayload**,M,, Information about the Act (beginning of block)
+**PreviousAdministrativeReferencedDocument**,M,, Information about e-TTN for which the act is drafting (beginning of block)
+ram:TypeCode,M,string, Document type (730 - TTN). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:ID,M,string,Basic document number (TTN); must correspond to the document number ExchangedDocument.ID eTTN
+**ram:FormattedIssueDateTime**,M,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime e-TTN (beginning of block)
+qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
+**ram:FormattedIssueDateTime**,,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime e-TTN (end of block)
+**ram:AttachedSpecifiedBinaryFile**,M,, e-TTN data for which the act is drafting (beginning of block)
+ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to document.id eTTN in the Central Base (value **ettnId** from the method `Getting a list of events from the Central Base <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value of **external_doc_id** `Retrieving meta-data of the document <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
+ram:URIID,O,string, link to the document
+ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
+ram:SizeMeasure,O,long, file size in bytes
+**ram:AttachedSpecifiedBinaryFile**,,, e-TTN data for which the act is drafting (end of block)
+**PreviousAdministrativeReferencedDocument**,,,"Information about e-TTN, for which the act is drafting (end of block)"
+**PreviousAdministrativeReferencedDocument**,-/M,,"Information about the previous act, in the case of the next transaction (beginning of block)"
+ram:TypeCode,M,string, Document type. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:ID,M,string, Number of the basic document (Act); must correspond to the document number ExchangedDocument.ID of the Act
+**ram:FormattedIssueDateTime**,M,, Date of the basic document (Act); must correspond to the date of the ExchangedDocument.IssueDateTime Act (beginning of block)
+qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (Act)
+**ram:FormattedIssueDateTime**,,, Date of the basic document (Act); must correspond to the date of the ExchangedDocument.IssueDateTime Act (end of block)
+**PreviousAdministrativeReferencedDocument**,,,"Information about the previous act, in the case of the next transaction (end of block)"
+**CarrierTradeParty**,M,, Carrier delivering cargo (beginning of block)
+**ram:ID**,M,, Identification code of the Carrier (beginning of block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Carrier (end of block)
+ram:Name,M,string, Full name of the Carrier
+ram:RoleCode,M,string, Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**CarrierTradeParty**,,, Carrier delivering cargo (end of block)
+**ConnectingCarrierTradeParty**,M,, Carrier receiving cargo (beginning of block)
+**ram:ID**,M,,Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person with whom the consignor concluded a contract for the provision of transport services (beginning of block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person with whom the shipper concluded an agreement for the provision of transport services (end of block)
+ram:Name,M,string,"Full name of the Carrier (name of the business entity (legal entity or natural person - entrepreneur) or surname, first name, patronymic of the natural person with whom the consignor concluded an agreement for the provision of transport services)"
+ram:RoleCode,M,string, Participant role (Carrier (new) - CH). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,O,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,O,string, Full name
+**ram:TelephoneUniversalCommunication**,O,, Main phone (beginning of block)
+ram:CompleteNumber,O,string, Contacts
+**ram:TelephoneUniversalCommunication**,,, Main phone (end of block)
+**ram:MobileTelephoneUniversalCommunication**,O,, Mobile phone (beginning of block)
+ram:CompleteNumber,O,string, Contacts
+**ram:MobileTelephoneUniversalCommunication**,,,Mobile phone (end of block)
+**ram:EmailURIUniversalCommunication**,O,, Email address (beginning of block)
+ram:CompleteNumber,O,string, Contacts
+**ram:EmailURIUniversalCommunication**,,, Email address (end of block)
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:PostalTradeAddress**,M,, Legal address of the Carrier (legal address of a legal entity or address of registration of an individual entrepreneur) (beginning of block)
+ram:PostcodeCode,O,string, Index
+ram:StreetName,M,string, Address (street name + building number)
+ram:CityName,M,string, City (name of settlement)
+ram:CountryID,M,string, Country (UA)
+ram:CountrySubDivisionName,O,string, Region and district (if available)
+**ram:PostalTradeAddress**,,, Legal address of the Carrier (legal address of a legal entity or address of registration of an individual entrepreneur) (end of block)
+**ConnectingCarrierTradeParty**,,,Carrier receiving cargo (end of block)
+**CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),M,, Unloading car (beginning of block)
+ram:ID,M,string,"Registration number of the car according to the technical passport
+
+* Ukrainian numbers: must match one of the patterns for car number plates
+* Euro numbers: without validation"
+ram:CategoryCode,M,string, Code TRUCK - Car
+**ram:AffixedLogisticsSeal**,O,, Seal number (car) (beginning of block)
+ram:ID,O,string, An impression of the seal used to seal the car
+**ram:AffixedLogisticsSeal**,,, Seal number (car) (end of block)
+**ram:ApplicableNote** (з кодом BRAND),M,, Car brand (beginning of block)
+ram:ContentCode,M,string, Code BRAND
+ram:Content,M,string, Car brand according to the technical passport
+**ram:ApplicableNote** (з кодом BRAND),,, Car brand (end of block)
+**ram:ApplicableNote** (з кодом MODEL),M,,Car model (beginning of block)
+ram:ContentCode,M,string, Code MODEL
+ram:Content,M,string, Car model according to the technical passport
+**ram:ApplicableNote** (з кодом MODEL),,, Car model (end of block)
+**CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),,, Unloading car (end of block)
+**CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),O,, Unloading trailer/semi-trailer (beginning of block)
+ram:ID,O,string,"Registration number of the trailer/semi-trailer according to the technical passport
+
+* Ukrainian plates: must correspond to one of the patterns for car license plates
+* Euro plates: without validation"
+ram:CategoryCode,O,string, Code TE - Trailer/semi-trailer
+ram:CharacteristicCode,O,string,"Identification code Trailer/semi-trailer:
+
+* 14 - Trailer
+* 17 - Semi-trailer"
+**ram:AffixedLogisticsSeal**,O,, Seal number (trailer/semi-trailer) (beginning of block)
+ram:ID,O,string,The impression of the seal used to seal the trailer/semi-trailer
+**ram:AffixedLogisticsSeal**,,, Seal number (trailer/semi-trailer) (end of block)
+**ram:ApplicableNote** (з кодом BRAND),O,, Trailer/semi-trailer brand (beginning of block)
+ram:ContentCode,O,string, Code BRAND
+ram:Content,O,string, Make of trailer/semi-trailer according to technical data sheet
+**ram:ApplicableNote** (з кодом BRAND),,, Trailer/semi-trailer brand (end of block)
+**ram:ApplicableNote** (з кодом MODEL),O,, Trailer/semi-trailer model (beginning of block)
+ram:ContentCode,O,string, Code MODEL
+ram:Content,O,string, The model of the trailer/semi-trailer according to the data sheet
+**ram:ApplicableNote** (з кодом MODEL),,, Trailer/semi-trailer model (end of block)
+**CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),,, Unloading trailer/semi-trailer (end of block)
+**ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),M,, Loading car (beginning of block)
+ram:ID,M,string,"Registration number of the car according to the technical passport
+
+* Ukrainian numbers: must match one of the patterns for car number plates
+* Euro numbers: without validation"
+ram:CategoryCode,M,string, Code TRUCK - Car
+**ram:AffixedLogisticsSeal**,O,, Seal number (car) (beginning of block)
+ram:ID,O,string, An impression of the seal used to seal the car
+**ram:AffixedLogisticsSeal**,,, Seal number (car) (end of block)
+**ram:ApplicableNote** (з кодом BRAND),M,, Car brand (beginning of block)
+ram:ContentCode,M,string, Code BRAND
+ram:Content,M,string, Car brand according to the technical passport
+**ram:ApplicableNote** (з кодом BRAND),,, Car brand (end of block)
+**ram:ApplicableNote** (з кодом MODEL),M,,Car model (beginning of block)
+ram:ContentCode,M,string, Code MODEL
+ram:Content,M,string, Car model according to the technical passport
+**ram:ApplicableNote** (з кодом MODEL),,, Car model (end of block)
+**ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),,, Loading car (end of block)
+**ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),O,,Loading trailer/semi-trailer (beginning of block)
+ram:ID,M,string,"Registration number of the trailer/semi-trailer according to the technical passport
+
+* Ukrainian plates: must correspond to one of the patterns for car license plates
+* Euro plates: without validation"
+ram:CategoryCode,M,string, Code TE - Trailer/semi-trailer
+ram:CharacteristicCode,M,string,"Identification code Trailer/semi-trailer:
+
+* 14 - Trailer
+* 17 - Semi-trailer"
+**ram:AffixedLogisticsSeal**,O,, Seal number (trailer/semi-trailer) (beginning of block)
+ram:ID,O,string,The impression of the seal used to seal the trailer/semi-trailer
+**ram:AffixedLogisticsSeal**,,, Seal number (trailer/semi-trailer) (end of block)
+**ram:ApplicableNote** (з кодом BRAND),M,, Trailer/semi-trailer brand (beginning of block)
+ram:ContentCode,M,string, Code BRAND
+ram:Content,M,string, Make of trailer/semi-trailer according to technical data sheet
+**ram:ApplicableNote** (з кодом BRAND),,, Trailer/semi-trailer brand (end of block)
+**ram:ApplicableNote** (з кодом MODEL),M,, Trailer/semi-trailer model (beginning of block)
+ram:ContentCode,M,string, Code MODEL
+ram:Content,M,string, The model of the trailer/semi-trailer according to the data sheet
+**ram:ApplicableNote** (з кодом MODEL),,, Trailer/semi-trailer model (end of block)
+**ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),,, Loading trailer/semi-trailer (end of block)
+CarrierNotes,M,string, A brief or full description of the reasons for drafting the Act
+ConnectingCarrierNotes,O,string, Special notes; Information on disagreement with the content of the Act
+**ReloadActPayload**,,, Information about the Act (end of block)
+**CertifyingPartyPayload**,M,, Information about responsible persons (beginning of block)
+**ram:CertifyingTradeParty** (RoleCode=CA),M,, Information about the Driver of the Carrier delivering the cargo (beginning of block)
+**ram:ID**,O,, Identification code - RNTAC of the Driver (beginning of block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the Driver (end of block)
+ram:Name,M,string, Driver position
+ram:RoleCode,M,string, Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,M,string,Driver's full name
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:SpecifiedGovernmentRegistration**,M,, Driver's license (beginning of block)
+ram:ID,M,string,"Series and number of Driver's license Driver delivering the cargo. Filled in the format ""3 capital Cyrillic letters + 6 numbers without spaces"", for example: ``DGJ123456'', ``АБВ123456''"
+**ram:SpecifiedGovernmentRegistration**,,, Driver's license (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CA),,, Information about the Driver of the Carrier delivering the cargo (end of block)
+**ram:CertifyingTradeParty** (RoleCode=OV),O,, Information on the responsible persons of the Carrier delivering the cargo (beginning of block)
+**ram:ID**,O,, Identification code - RNTAC of the responsible person of the Carrier (beginning of block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the responsible person of the Carrier (end of block)
+ram:Name,M,string, Position of responsible person of the Carrier
+ram:RoleCode,M,string,Participant role (Carrier - OV). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,M,string, Full name of the responsible person of the Carrier
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=OV),,, Information on the responsible persons of the Carrier delivering the cargo (end of block)
+**ram:CertifyingTradeParty** (RoleCode=DR),M,, Information about the Driver of the Carrier receiving the cargo (beginning of block)
+**ram:ID**,O,, Identification code - RNTAC of the Driver (beginning of block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the Driver (end of block)
+ram:Name,M,string, Driver position
+ram:RoleCode,M,string, Participant role (Driver - DR). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,M,string,Driver's full name
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:SpecifiedGovernmentRegistration**,M,, Driver's license (beginning of block)
+ram:ID,M,string,"Driver's license series and number Driver accepting the load. Filled in the format ""3 capital Cyrillic letters + 6 numbers without spaces"", for example: ``DGJ123456'', ``АБВ123456''"
+**ram:SpecifiedGovernmentRegistration**,,, Driver's license (end of block)
+**ram:CertifyingTradeParty** (RoleCode=DR),,,Information about the Driver of the Carrier receiving the cargo (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CH),O,, Information on the responsible persons of the Carrier receiving the cargo (beginning of block)
+**ram:ID**,O,, Identification code - RNTAC of the responsible person of the Carrier (beginning of block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the responsible person of the Carrier (end of block)
+ram:Name,M,string, Position of responsible person of the Carrier
+ram:RoleCode,M,string, Participant role (Carrier (new) - CH). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,M,string, Full name of the responsible person of the Carrier
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CH),,, Information on the responsible persons of the Carrier receiving the cargo (end of block)
+**CertifyingPartyPayload**,,, Information about responsible persons (end of block)
+**ACT**,,, (end of document content)
+**UaSignatureStorage**,M,, Signatures (beginning of block)
+**VisualReferencedDocument**,O,, Graphic display of the document (beginning of block)
+ram:TypeCode,O,string, Type (916 - Act). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:Remarks,O,string, Graphic representation of Act in base64
+**VisualReferencedDocument**,,,Graphic display of the document (end of block)
+**Signature** (SigningPartyRoleCode=CA),M,, QES of the Driver of the Carrier delivering the cargo (beginning of block)
+SigningPartyRoleCode,M,string, Signatory role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Full name of the signatory (Driver of the Carrier)
+Position,O,string, Position of the signatory (Driver of the Carrier)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the Driver of the Carrier (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (Driver of the Carrier)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the Driver of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=CA),,, QES of the Driver of the Carrier delivering the cargo (end of block)
+**Signature** (SigningPartyRoleCode=OV),O,, QES of the Carrier delivering the cargo (beginning of block)
+SigningPartyRoleCode,M,string,Signatory role (Carrier - OV). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Full name of the signatory (responsible person of the Carrier)
+Position,O,string, Position of the signatory (responsible person of the Carrier)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the responsible person of the Carrier (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (responsible person of the Carrier)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=OV),,, QES of the Carrier delivering the cargo (end of block)
+**Signature** (SigningPartyRoleCode=DR),M,, QES of the Driver of the Carrier receiving the cargo (beginning of block)
+SigningPartyRoleCode,M,string,Signatory role (Driver - DR). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Full name of the signatory (Driver of the Carrier)
+Position,O,string, Position of the signatory (Driver of the Carrier)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the Driver of the Carrier (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (Driver of the Carrier)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the Driver of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=DR),,, QES of the Driver of the Carrier receiving the cargo (end of block)
+**Signature** (SigningPartyRoleCode=CH),O,, QES of the Carrier receiving the cargo (beginning of block)
+SigningPartyRoleCode,M,string, Signatory role (Carrier (new) - CH). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Full name of the signatory (responsible person of the Carrier)
+Position,O,string, Position of the signatory (responsible person of the Carrier)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the responsible person of the Carrier (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (responsible person of the Carrier)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=CH),,, QES of the Carrier receiving the cargo (end of block)
+**UaSignatureStorage**,,, Signatures (end of block)
+**UAECMR_ACT**,,, (end of the document)
