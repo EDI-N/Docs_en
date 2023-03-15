@@ -1,0 +1,210 @@
+Field name,Type [1]_,Format,Description
+**UAECMR_ACT**,M,, (beginning of the document)
+**ACT**,M,, (beginning of the document content)
+**ExchangedDocumentContext**,M,, Technical data (beginning of block)
+ram:SpecifiedTransactionID,M,string, Version number of the document (transaction) in the document signing chain
+**ram:BusinessProcessSpecifiedDocumentContextParameter**,M,,Document context parameter defined by the business process (beginning of block)
+ram:ID,M,string,Document code
+**ram:BusinessProcessSpecifiedDocumentContextParameter**,,,Document context parameter defined by the business process (end of block)
+**ram:GuidelineSpecifiedDocumentContextParameter**,M,,Context parameter of the defined document (beginning of block)
+ram:ID,M,unsignedByte,Document subtype (Disagreement act)
+**ram:GuidelineSpecifiedDocumentContextParameter**,,,Context parameter of the defined document (end of block)
+**ExchangedDocumentContext**,,, Technical data (end of block)
+**ExchangedDocument**,M,, Details of the Act (beginning of block)
+ram:ID,M,string,Document number
+**ram:IssueDateTime**,M,,Date and time of drafting the document (beginning of block)
+**udt:DateTime**,,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the Act
+**ram:IssueDateTime**,,, Date and time of drafting the document (end of block)
+ram:Remarks,O,string, Other notes
+**ram:IssueLogisticsLocation**,M,, Place of compilation of the document (beginning of block)
+ram:Name,M,string, Name of the place of drafting of the Act
+ram:Description,M,string, Description (address) of the place of drafting the Act
+**ram:IssueLogisticsLocation**,,, Place of compilation of the document (end of block)
+**ExchangedDocument**,,, Details of the Act (end of block)
+**DisagreementActPayload**,M,, Information about the Act (beginning of block)
+**PreviousAdministrativeReferencedDocument**,M,, Information about e-TTN for which the act is drafting (beginning of block)
+ram:TypeCode,M,string, Document type (730 - TTN). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:ID,M,string,Basic document number (TTN); must correspond to the document number ExchangedDocument.ID eTTN
+**ram:FormattedIssueDateTime**,M,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eТТН (beginning of block)
+qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
+**ram:FormattedIssueDateTime**,,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eТН (end of block)
+**ram:AttachedSpecifiedBinaryFile**,M,, e-TTN data for which the act is drafting (beginning of block)
+ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to document.id eTTN in the Central Base (value **ettnId** from the method `Getting a list of events from the Central Base <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html> `__ = value of **external_doc_id** `Retrieving meta-data of the document <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
+ram:URIID,O,string, link to the document
+ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
+ram:SizeMeasure,O,long, file size in bytes
+**ram:AttachedSpecifiedBinaryFile**,,, e-TTN data for which the act is drafting (end of block)
+**PreviousAdministrativeReferencedDocument**,,," Information about e-TTN, for which the act is drafting (end of block)"
+**PreviousAdministrativeReferencedDocument**,-/M,,"Information about the previous act, in the case of the next transaction (beginning of block)"
+ram:TypeCode,M,string, Document type. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:ID,M,string, Number of the basic document (Act); must correspond to the document number ExchangedDocument.ID of the Act
+**ram:FormattedIssueDateTime**,M,, Date of the basic document (Act); must correspond to the date of the ExchangedDocument.IssueDateTime Act (beginning of block)
+qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (Act)
+**ram:FormattedIssueDateTime**,,, Date of the basic document (Act); must correspond to the date of the ExchangedDocument.IssueDateTime Act (end of block)
+**PreviousAdministrativeReferencedDocument**,,,"Information about the previous act, in the case of the next transaction (end of block)"
+**ConsigneeTradeParty**,M,, Consignee (beginning of block)
+**ram:ID**,M,, Identification code of the Consignee (beginning of block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Consignee (end of block)
+ram:Name,M,string, Full name of the Consignee
+ram:RoleCode,M,string, Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ConsigneeTradeParty**,,, Consignee (end of block)
+**CarrierTradeParty**,M,, Carrier (beginning of block)
+**ram:ID**,M,, Identification code of the Carrier (beginning of block)
+schemeAgencyID,M,string, USREOU
+value,M,decimal, Value
+**ram:ID**,,, Identification code of the Carrier (end of block)
+ram:Name,M,string,Full name of the Carrier
+ram:RoleCode,M,string, Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**CarrierTradeParty**,,, Carrier (end of block)
+**DisagreementSubjectSupplyChainConsignmentItem**,M,, Disagreements regarding the quantitative characteristics of the cargo (beginning of block)
+SequenceNumeric,M,int, Sequence number of the row in the table
+**NatureIdentificationTransportCargo**,M,, Name of cargo (container number) according to TTN (beginning of block)
+ram:Identification,M,string, Cargo name
+**NatureIdentificationTransportCargo**,,, Name of cargo (container number) according to TTN (end of block)
+TransportLogisticsPackageType,M,string, Unit
+**DisagreementItemQuantity**,O,, Deviation by the number of places (beginning of block)
+OriginalItemQuantity,M,decimal, Number of seats per TTN
+ActualItemQuantity,O,decimal, The number of seats is actual
+**DeltaItemQuantity**,O,,Deviation (beginning of block)
+Quantity,O,decimal, Number of seats Deviations. The difference between the fact and data from TTN - is calculated by the system automatically and only for those data for which the actual value is indicated
+Explanation,O,string," the reason for the deviation by the number of seats (shortage/surplus, fight, etc.)"
+**DeltaItemQuantity**,,, Deviation (end of block)
+**DisagreementItemQuantity**,,, Deviation by the number of places (end of block)
+**DisagreementGrossWeightMeasure**,O,," Deviation by gross weight, kg (beginning of block)"
+**OriginalGrossWeightMeasure**,M,, Gross mass at TTN (beginning of block)
+unitCode,M,string, unit code (KGM)
+value,M,decimal, Value; accuracy=0.1
+**OriginalGrossWeightMeasure**,,, Gross mass at TTN (end of block)
+**ActualGrossWeightMeasure**,O,, Actual gross mass (beginning of block)
+unitCode,M,string, unit code (KGM)
+value,M,decimal, Value; accuracy=0.1
+**ActualGrossWeightMeasure**,,, Actual gross mass (end of block)
+**DeltaGrossWeightMeasure**,O,,Deviation (beginning of block)
+**Measure**,O,,Gross mass Deviation. The difference between the fact and the data from the TTN is calculated by the system automatically and only for those data for which the actual value is indicated (beginning of block)
+unitCode,M,string, unit code (KGM)
+value,M,decimal, Value; accuracy=0.1
+**Measure**,,, Gross mass Deviation. The difference between the fact and the data from the TTN is calculated by the system automatically and only for those data for which the actual value is specified (end of block)
+Explanation,O,string," reason for mass deviation (shortage/surplus, etc.)"
+**DeltaGrossWeightMeasure**,,, Deviation (end of block)
+**DisagreementGrossWeightMeasure**,,," Deviation by gross weight, kg (end of block)"
+**DisagreementInvoiceAmount**,O,, Deviation by amount (beginning of block)
+**OriginalInvoiceAmount**,M,, Total amount with VAT for TTN (beginning of block)
+currencyID,M,string, currency code (UAH)
+value,M,decimal, Value; precision=0.01
+**OriginalInvoiceAmount**,,,Total amount with VAT for TTN (end of block)
+**ActualInvoiceAmount**,O,, Total amount with VAT Actual (beginning of block)
+currencyID,M,string, currency code (UAH)
+value,M,decimal, Value; precision=0.01
+**ActualInvoiceAmount**,,, Total amount with VAT Actual (end of block)
+**DeltaInvoiceAmount**,O,,Deviation (beginning of block)
+**Amount**,O,, Total amount from VAT Deviation. The difference between the fact and the data from the TTN is calculated by the system automatically and only for those data for which the actual value is indicated (beginning of block)
+currencyID,M,string, currency code (UAH)
+value,M,decimal, Value; precision=0.01
+**Amount**,,, Total amount from VAT Deviation. The difference between the fact and the data from the TTN is calculated by the system automatically and only for those data for which the actual value is specified (end of block)
+Explanation,O,string, the reason for the deviation in the amount
+**DeltaInvoiceAmount**,,, Deviation (end of block)
+**DisagreementInvoiceAmount**,,, Deviation by amount (end of block)
+DisagreementOtherNotes,O,string,Other remarks. Comments on the identified discrepancies for each line (name of the cargo)
+**DisagreementSubjectSupplyChainConsignmentItem**,,, Disagreements regarding the quantitative characteristics of the cargo (end of block)
+**DisagreementSubjectSupplyChainConsignmentSummary**,M,, Discrepancies regarding the quantitative characteristics of the cargo (total indicators) (beginning of block)
+**OriginalGrossWeightMeasure**,M,," Total Gross mass by TTN, kg (beginning of block)"
+unitCode,M,string, unit code (KGM)
+value,M,decimal, Value; accuracy=0.1
+**OriginalGrossWeightMeasure**,,," Total Gross mass by TTN, kg (end of block)"
+**DeltaGrossWeightMeasure**,M,," Total Gross mass Deviation, kg (beginning of block)"
+unitCode,M,string, unit code (KGM)
+value,M,decimal, Value; accuracy=0.1
+**DeltaGrossWeightMeasure**,,," Total Gross mass Deviation, kg (end of block)"
+**OriginalInvoiceAmount**,M,," Total Total amount including VAT for TTN, hryvnias. (beginning of block)"
+currencyID,M,string, currency code (UAH)
+value,M,decimal, Value; precision=0.01
+**OriginalInvoiceAmount**,,," Total Total amount including VAT for TTN, hryvnias. (end of block)"
+**DeltaInvoiceAmount**,M,,"Total Total amount including VAT Deviation, hryvnias. (beginning of block)"
+currencyID,M,string, currency code (UAH)
+value,M,decimal, Value; precision=0.01
+**DeltaInvoiceAmount**,,," Total Total amount including VAT Deviation, hryvnias. (end of block)"
+**DisagreementSubjectSupplyChainConsignmentSummary**,,, Disagreements regarding the quantitative characteristics of the cargo (total indicators) (end of block)
+**QualityCharacteristicsDisagreement**,O,, Disagreements regarding the quality characteristics of the cargo (beginning of block)
+**AffixedLogisticsSeal**,O,, Seal number according to TTN (beginning of block)
+ram:ID,O,string, Seal number according to TTN
+**AffixedLogisticsSeal**,,, Seal number according to TTN (end of block)
+AffixedLogisticsSealNotes,O,string, Information about damage to the seal
+**ApplicableTransportSettingTemperature**,O,, Temperature regime according to TTN (beginning of block)
+**ram:MinimumValueMeasure**,O,, Temperature mode from (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MinimumValueMeasure**,,, Temperature mode from (end of block)
+**ram:MaximumValueMeasure**,O,,Temperature regime before (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MaximumValueMeasure**,,, Temperature regime before (end of block)
+**ApplicableTransportSettingTemperature**,,, Temperature regime according to TTN (end of block)
+ApplicableTransportSettingTemperatureNotes,O,string, Information about non-compliance with the temperature regime
+PackagingDamageDisagreementNotes,O,string," Information on container damage (description of container damage, packaging, labeling, etc.)"
+OtherDisagreementNotes,O,string, Information on other discrepancies (description of other discrepancies in cargo characteristics)
+**QualityCharacteristicsDisagreement**,,, Disagreements regarding the quality characteristics of the cargo (end of block)
+ConsigneeNotes,M,string,"Brief or full description of the reasons for drafting the act (for example, discrepancies were found regarding the qualitative and/or quantitative characteristics of the received cargo, etc.)"
+ClaimNotes,M,string," Conclusion (requirements for resolution of disagreements). Information is indicated on whether anyone should file a claim and, if so, to whom"
+CarrierNotes,O,string, Special markings (Carrier). Information on disagreement with the content of the Act (Carrier)
+**DisagreementActPayload**,,, Information about the Act (end of block)
+**CertifyingPartyPayload**,M,, Information about responsible persons (beginning of block)
+**ram:CertifyingTradeParty** (RoleCode=CN),O,, Information on responsible persons of the Consignee (beginning of block)
+**ram:ID**,O,,Identification code - RNTAC of the responsible person of the Consignee (beginning of block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,, Identification code - RNTAC of the responsible person of the Consignee (end of block)
+ram:Name,M,string, The position of the responsible person of the Consignee
+ram:RoleCode,M,string, Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,M,string, Name of the responsible person of the Consignee
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CN),,, Information on responsible persons of the Consignee (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CA),M,, Information about the Carrier (beginning of block)
+**ram:ID**,O,, Identification code - RNTAC of the Carrier (beginning of block)
+schemeAgencyID,O,string, RNTAC
+value,O,decimal, Value
+**ram:ID**,,,Identification code - RNTAC of the Carrier (end of block)
+ram:Name,M,string, Carrier position
+ram:RoleCode,M,string, Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:DefinedTradeContact**,M,, Contacts of the responsible representative (beginning of block)
+ram:PersonName,M,string, Name of the Carrier
+**ram:DefinedTradeContact**,,, Contacts of the responsible representative (end of block)
+**ram:CertifyingTradeParty** (RoleCode=CA),,, Information about the Carrier (end of block)
+**CertifyingPartyPayload**,,, Information about responsible persons (end of block)
+**ACT**,,, (end of document content)
+**UaSignatureStorage**,M,, Signatures (beginning of block)
+**VisualReferencedDocument**,O,, Graphic display of the document (beginning of block)
+ram:TypeCode,O,string, Type (916 - Act). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:Remarks,O,string, Graphic representation of Act in base64
+**VisualReferencedDocument**,,, Graphic display of the document (end of block)
+**Signature** (SigningPartyRoleCode=CN),M,, Consignee QES (beginning of block)
+SigningPartyRoleCode,M,string,Signatory role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Name of the signatory (responsible person of the Consignee)
+Position,O,string, Position of the signatory (responsible person of the Consignee)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the responsible person of the Consignee (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (responsible person of the Consignee)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person of the Consignee (end of block)
+**Signature** (SigningPartyRoleCode=CN),,, Consignee QES (end of block)
+**Signature** (SigningPartyRoleCode=CA),M,, QES of the Carrier (beginning of block)
+SigningPartyRoleCode,M,string,Signatory role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Name of signatory (Carrier)
+Position,O,string, Position of signatory (Carrier)
+**ram:SpecifiedTaxRegistration**,M,, Identification code of the Carrier (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (Carrier)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=CA),,, QES of the Carrier (end of block)
+**Signature** (SigningPartyRoleCode=CZ),M,,Consignor QES (beginning of block)
+SigningPartyRoleCode,M,string, Signatory role (Consignor - CZ). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+PartySignature,M,string, Signature (base64 signature p7s)
+Name,M,string, Name of the signatory (responsible person of the Consignor)
+Position,O,string, Position of the signatory (responsible person of the Consignor)
+**ram:SpecifiedTaxRegistration**,M,,Identification code of the responsible person of the Consignor (beginning of block)
+ram:ID,M,string, RNTAC of the signatory (responsible person of the Consignor)
+**ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person of the Consignor (end of block)
+**Signature** (SigningPartyRoleCode=CZ),,,Consignor QES (end of block)
+**UaSignatureStorage**,,, Signatures (end of block)
+**UAECMR_ACT**,,, (end of the document)
