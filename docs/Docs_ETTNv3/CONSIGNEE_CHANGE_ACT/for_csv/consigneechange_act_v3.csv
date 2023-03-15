@@ -29,7 +29,7 @@ ram:ID,M,string, Basic document number (TTN); must correspond to the document nu
 qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
 **ram:FormattedIssueDateTime**,,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eTTN (end of block)
 **ram:AttachedSpecifiedBinaryFile**,M,, e-TTN data for which the act is drafting (beginning of the block)
-ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to the document.id of eTTN in the Central Bank (the **ettnId** value from the method ``Getting a list of events from the Central Bank <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value **external_doc_id** `Getting document metadata <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
+ram:ID,M,string,Identifier (guid) of the basic document (TTN); must correspond to the document.id of eTTN in the Central Base (the **ettnId** value from the method `Getting a list of events from the Central Base <https://wiki.edin.ua/uk/latest/API_ETTNv3_1/Methods/MintransEvents.html>`__ = value **external_doc_id** `Getting document metadata <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/Methods/GetDocument.html>`__)
 ram:URIID,O,string, link to the document
 ram:MIMECode,O,string, `MIME typing <https://uk.wikipedia.org/wiki/MIME_%D1%82%D0%B8%D0%BF>`__
 ram:SizeMeasure,O,long, file size in bytes
@@ -167,7 +167,7 @@ Position,O,string, Position of the signatory (responsible person of the Consigne
 ram:ID,M,string, RNTAC of the signatory (responsible person of the Consignee)
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person of the Consignee (end of block)
 **Signature** (SigningPartyRoleCode=CN),,, Consignee QES (end of block)
-**Signature** (SigningPartyRoleCode=CA),M,,Carrier&apos;s QES (beginning of block)
+**Signature** (SigningPartyRoleCode=CA),M,,Carrier QES (beginning of block)
 SigningPartyRoleCode,M,string, Signatory role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 PartySignature,M,string, Signature (base64 signature p7s)
 Name,M,string, Name of signatory (Carrier)
