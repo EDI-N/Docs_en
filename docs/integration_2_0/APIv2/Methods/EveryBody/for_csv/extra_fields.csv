@@ -129,4 +129,4 @@ For ETTN:
 , carrier_b_uuid ,, BINARY, carrier identifier
 , consignee_b_uuid ,, BINARY, consignee identifier
 , consignor_b_uuid ,, BINARY, shipper ID
-, external_doc_id ,, INT, id TTN document in ЦБД
+, external_doc_id ,, INT, id TTN document in the Central Base
