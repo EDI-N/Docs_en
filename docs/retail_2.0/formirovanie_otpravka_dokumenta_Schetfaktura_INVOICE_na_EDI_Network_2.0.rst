@@ -34,7 +34,7 @@ For this, You need to select "Purchase Order Response" (ORDRSP) for which you ne
 .. image:: /retail_2.0/pics_INVOICE_na_EDI_Network_2.0/INVOICE_na_EDI_Network_001.png
    :align: center
 
-It is necessary to open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Invoice" (INVOICE) for Grocery Store Chain using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html >`__ block:
+It is necessary to open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Invoice" (INVOICE) for Grocery Store Chain using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /retail_2.0/pics_INVOICE_na_EDI_Network_2.0/INVOICE_na_EDI_Network_002.png
    :align: center

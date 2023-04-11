@@ -7,7 +7,12 @@ EDIN | Electronic document management for business
 ===============================
 
 Contents:
+
+.. toctree::
+   :titlesonly:
    
+   ClientProcesses/Clients_list
+
 .. toctree::
    :maxdepth: 2
    :caption: EDI Network

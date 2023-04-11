@@ -138,7 +138,7 @@ For this, You need to select "Purchase Order Response" (ORDRSP) for which you ne
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_transportation_instruction/ATB_International_transportation_instruction_061.png
    :align: center
 
-It is necessary to open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Despatch Advice" (DESADV) for Grocery Store Chain using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html >`__ block:
+It is necessary to open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Despatch Advice" (DESADV) for Grocery Store Chain using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_transportation_instruction/ATB_International_transportation_instruction_062.png
    :align: center
@@ -204,7 +204,7 @@ To form "Universal Document" (CONDRA) at first You need to select "Despatch Advi
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_transportation_instruction/ATB_International_transportation_instruction_071.png
    :align: center
 
-It is necessary to open the sent "Despatch Advice" (DESADV) with the left mouse button and create a "Universal Document" (CONDRA) for Grocery Store Chain using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html >`__ block:
+It is necessary to open the sent "Despatch Advice" (DESADV) with the left mouse button and create a "Universal Document" (CONDRA) for Grocery Store Chain using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_transportation_instruction/ATB_International_transportation_instruction_072.png
    :align: center
