@@ -10,4 +10,4 @@ EDIN 2.0 platform
    :caption: "International deliveries" scheme
    :maxdepth: 1
    
-   International_transportation/International_transportation_instruction
+   International_transportation/International_deliveries_instruction
