@@ -38,7 +38,7 @@ This instruction describes the document flow procedure with Grocery Store Chain 
    :height: 700px
    :align: center
 
-.. початок блоку для Universal_International_transportation
+.. початок блоку для Universal_International_deliveries
 
 1 Login to the platform
 ====================================
@@ -244,7 +244,7 @@ The sent document automatically placed into the **"Outbox"** folder and will be 
 
 If necessary, Grocery Store Chain may create a "Universal Document" (CONDRA) in response, along with suggested edits and comments.
 
-.. кінець блоку для Universal_International_transportation
+.. кінець блоку для Universal_International_deliveries
 
 -------------------------------------
 
