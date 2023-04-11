@@ -1,5 +1,5 @@
 ######################################################################################################################################################
-Document flow with the Grocery Store Chain "ATB" on the EDI Network 2.0 platform: "International transportation". Instruction for the Supplier
+Document flow with the Grocery Store Chain "ATB" on the EDI Network 2.0 platform: "International deliveries". Instruction for the Supplier
 ######################################################################################################################################################
 
 .. сюда закину немного картинок для текста
@@ -24,7 +24,7 @@ Document flow with the Grocery Store Chain "ATB" on the EDI Network 2.0 platform
 Introduction
 ====================================
 
-This instruction describes the document flow procedure with Grocery Store Chain "ATB" on the EDI Network 2.0 platform according to the scheme provided for international transportation. Document flow is organized by the following documents:
+This instruction describes the document flow procedure with Grocery Store Chain "ATB" on the EDI Network 2.0 platform according to the scheme provided for international deliveries. Document flow is organized by the following documents:
 
 - `Purchase Order <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#order>`__
 - `Purchase Order Response <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#ordrsp>`__

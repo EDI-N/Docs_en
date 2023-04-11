@@ -1,5 +1,5 @@
 ########################################################################################################################
-Document flow on the EDI Network 2.0 platform: "International transportation". Instruction for the Supplier
+Document flow on the EDI Network 2.0 platform: "International deliveries". Instruction for the Supplier
 ########################################################################################################################
 
 .. сюда закину немного картинок для текста
@@ -26,7 +26,7 @@ Document flow on the EDI Network 2.0 platform: "International transportation". I
 Introduction
 ====================================
 
-This instruction describes the document flow procedure between Grocery Store Chain and Supplier on the EDI Network 2.0 platform according to the scheme provided for international transportation. Document flow is organized by the following documents:
+This instruction describes the document flow procedure between Grocery Store Chain and Supplier on the EDI Network 2.0 platform according to the scheme provided for international deliveries. Document flow is organized by the following documents:
 
 - `Purchase Order <https://wiki.edin.ua/uk/latest/general_2_0/International_transportation/International_transportation_specs.html#order>`__
 - `Purchase Order Response <https://wiki.edin.ua/uk/latest/general_2_0/International_transportation/International_transportation_specs.html#ordrsp>`__
