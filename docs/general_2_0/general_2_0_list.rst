@@ -7,7 +7,7 @@ EDIN 2.0 platform
    User_registration
 
 .. toctree::
-   :caption: "International Transportation" scheme
+   :caption: "International deliveries" scheme
    :maxdepth: 1
    
    International_transportation/International_transportation_instruction
