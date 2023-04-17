@@ -18,8 +18,22 @@ ram:ID,M,string,serial number (series) of the TTN document
 ram:Remarks,O,string,Remarks
 **ram:IncludedNote**,M,,Included Note (block start)
 **ram:ContentCode**,M,,Content Code (block start)
-listAgencyID,M,String,Identifier (GLN)
-value,M,String,id value
+listAgencyID,"M for GLN (else O)",String,"Identifier:
+
+* GLN
+* transportation_max_temperature
+* logger_return
+* logistic_unit_number_with_logger
+* gps_number
+* logger_number.
+
+Identifiers logistic_unit_number_with_logger / gps_number / logger_number are specified by the counterparty with the role «Consignor». Identifiers transportation_max_temperature and logger_return are specified by the counterparty with the role «Consignee»"
+value,M,"* for GLN = Integer (13)
+* for transportation_max_temperature = Integer (3)
+* for logger_return = «Так» / «Ні»
+* for logistic_unit_number_with_logger = String
+* for gps_number = String
+* for logger_number = String",id value
 **ram:ContentCode**,,,Content Code (the end of the block)
 ram:Content,M,String, Participant role code. `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:IncludedNote**,,,Included Note (the end of the block)
@@ -33,7 +47,7 @@ ram:Description,M,string, Description (address) of the place where the TTN was c
 unitCode,M,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 value,M,decimal,Value
 **ram:GrossWeightMeasure**,,,The total weight of the shipment (gross weight) in kg with an accuracy of 0.1 (the end of the block)
-**ram:AssociatedInvoiceAmount**,M,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (block start)"
+**ram:AssociatedInvoiceAmount**,O,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (block start)"
 currencyID,M,string, Three-digit currency code (UAH)
 value,M,decimal,Value
 **ram:AssociatedInvoiceAmount**,,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (the end of the block)"
@@ -432,7 +446,7 @@ ram:Content,O,unsignedByte, Idle time (hours) under load
 **ram:PickUpTransportEvent**,,, Loading works (the end of the block)
 **ram:IncludedSupplyChainConsignmentItem**,M,, Cargo information (block start)
 ram:SequenceNumeric,M,int, Sequence number of the row in the table
-**ram:InvoiceAmount**,M,, The total amount from VAT in UAH with an accuracy of 0.01 (block start)
+**ram:InvoiceAmount**,O,, The total amount from VAT in UAH with an accuracy of 0.01 (block start)
 currencyID,M,string, Three-digit currency code (UAH)
 value,M,decimal,Value
 **ram:InvoiceAmount**,,, The total amount from VAT in UAH with an accuracy of 0.01 (the end of the block)
