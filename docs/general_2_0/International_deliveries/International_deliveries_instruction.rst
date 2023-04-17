@@ -36,7 +36,7 @@ This instruction describes the document flow procedure between Grocery Store Cha
 
 **General document flow scheme:**
 
-.. image:: pics_International_deliveries_instruction/International_deliveries_instruction_001.png
+.. image:: pics_International_deliveries_instruction/International_deliveries_instruction_002.png
    :height: 700px
    :align: center
 
