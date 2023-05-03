@@ -43,14 +43,14 @@ ram:Description,M,string, Description (address) of the place where the TTN was c
 **ram:IssueLogisticsLocation**,,,Place of drafting the document  (the end of the block)
 **ExchangedDocument**,,,TTN details (the end of the block)
 **SpecifiedSupplyChainConsignment**,M,, Transportation information (block start)
-**ram:GrossWeightMeasure**,M,, The total weight of the shipment (gross weight) in kg with an accuracy of 0.1 (block start)
+**ram:GrossWeightMeasure**,M,, The total weight of the shipment (gross weight) in kg (block start)
 unitCode,M,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 value,M,decimal,Value
-**ram:GrossWeightMeasure**,,,The total weight of the shipment (gross weight) in kg with an accuracy of 0.1 (the end of the block)
-**ram:AssociatedInvoiceAmount**,O,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (block start)"
+**ram:GrossWeightMeasure**,,,The total weight of the shipment (gross weight) in kg (the end of the block)
+**ram:AssociatedInvoiceAmount**,O,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) (block start)"
 currencyID,M,string, Three-digit currency code (UAH)
 value,M,decimal,Value
-**ram:AssociatedInvoiceAmount**,,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) with an accuracy of 0.01 (the end of the block)"
+**ram:AssociatedInvoiceAmount**,,,"Total released for the total amount, uah. The total cost of shipped goods, including VAT and excise duty (if the last is payable) (the end of the block)"
 ram:ConsignmentItemQuantity,M,decimal, Total number of cargo spaces (containers)
 **ram:ConsignorTradeParty**,M,,Consignor (block start)
 **ram:ID**,M,,"Identification code of the consignor (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which carries out the shipment (write-off) of the goods and material values listed in the TTN (block start)"
@@ -375,7 +375,7 @@ value,O,decimal,Value
 **ram:CertifyingTradeParty** (RoleCode=FW),,, Information about responsible persons of the Forwarder (the end of the block)
 **ram:ApplicableNote** (with code GROSSWEIGHT),O,,"Gross weight, kg (block start)"
 ram:ContentCode,O,string, Code GROSSWEIGHT
-ram:Content,O,decimal,The gross weight of the cargo received at the place of unloading in kilograms with an accuracy of 0.1
+ram:Content,O,decimal,The gross weight of the cargo received at the place of unloading in kilograms
 **ram:ApplicableNote** (with code GROSSWEIGHT),,,"Gross weight, kg (the end of the block)"
 **ram:ApplicableNote** (with code DOWNTIME),O,, Idle time (block start)
 ram:ContentCode,O,string, Code DOWNTIME
@@ -437,7 +437,7 @@ value,O,decimal,Value
 **ram:CertifyingTradeParty** (RoleCode=FW),,, Information about responsible persons of the Forwarder (the end of the block)
 **ram:ApplicableNote** (with code GROSSWEIGHT),M,,"Gross weight, kg (block start)"
 ram:ContentCode,M,string, Code GROSSWEIGHT
-ram:Content,M,decimal,The weight of the delivered/received cargo in kilograms with an accuracy of 0.1
+ram:Content,M,decimal,The weight of the delivered/received cargo in kilograms
 **ram:ApplicableNote** (with code GROSSWEIGHT),,,"Gross weight, kg (the end of the block)"
 **ram:ApplicableNote** (with code DOWNTIME),O,, Idle time (block start)
 ram:ContentCode,O,string, Code DOWNTIME
@@ -446,18 +446,18 @@ ram:Content,O,unsignedByte, Idle time (hours) under load
 **ram:PickUpTransportEvent**,,, Loading works (the end of the block)
 **ram:IncludedSupplyChainConsignmentItem**,M,, Cargo information (block start)
 ram:SequenceNumeric,M,int, Sequence number of the row in the table
-**ram:InvoiceAmount**,O,, The total amount from VAT in UAH with an accuracy of 0.01 (block start)
+**ram:InvoiceAmount**,O,, The total amount from VAT in UAH (block start)
 currencyID,M,string, Three-digit currency code (UAH)
 value,M,decimal,Value
-**ram:InvoiceAmount**,,, The total amount from VAT in UAH with an accuracy of 0.01 (the end of the block)
-**ram:GrossWeightMeasure**,M,, Gross mass of the cargo for each line in kg with an accuracy of 0.1 (block start)
+**ram:InvoiceAmount**,,, The total amount from VAT in UAH  (the end of the block)
+**ram:GrossWeightMeasure**,M,, Gross mass of the cargo for each line in kg (block start)
 unitCode,M,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 value,M,decimal,Value
-**ram:GrossWeightMeasure**,,, Gross mass of the cargo for each line in kg with an accuracy of 0.1 (the end of the block)
-**ram:TariffQuantity**,O,,Price without VAT per unit in hryvnias with an accuracy of 0.01. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the indicated unit of measurement (block start)
+**ram:GrossWeightMeasure**,,, Gross mass of the cargo for each line in kg (the end of the block)
+**ram:TariffQuantity**,O,,Price without VAT per unit in hryvnias. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the indicated unit of measurement (block start)
 unitCode,O,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
 value,O,decimal,Value
-**ram:TariffQuantity**,,, Price without VAT per unit in hryvnias with an accuracy of 0.01. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the specified unit of measurement (the end of the block)
+**ram:TariffQuantity**,,, Price without VAT per unit in hryvnias. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the specified unit of measurement (the end of the block)
 **ram:GlobalID**,O,, UCGFEA product code (block start)
 schemeAgencyID,O,string,UCGFEA
 value,O,string,Value

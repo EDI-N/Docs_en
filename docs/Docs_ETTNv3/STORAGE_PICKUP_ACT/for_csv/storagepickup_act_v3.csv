@@ -190,7 +190,7 @@ ram:PersonName,M,string, Full name of the responsible person of the Carrier
 **ram:CertifyingTradeParty** (RoleCode=CA),,, Information on responsible persons of the Carrier (the end of the block)
 **ram:ApplicableNote** (з кодом GROSSWEIGHT),O,,"Gross weight, kg (block start)"
 ram:ContentCode,O,string, Code GROSSWEIGHT
-ram:Content,O,decimal, The gross mass of the cargo received at the place of unloading in kilograms with an accuracy of 0.1
+ram:Content,O,decimal, The gross mass of the cargo received at the place of unloading in kilograms
 **ram:ApplicableNote** (з кодом GROSSWEIGHT),,,"Gross weight, kg (the end of the block)"
 **ram:ApplicableNote** (з кодом DOWNTIME),O,, Idle time (block start)
 ram:ContentCode,O,string, Code DOWNTIME
