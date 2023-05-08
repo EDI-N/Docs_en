@@ -77,12 +77,12 @@ ram:CountryID,M,string, Country (UA)
 ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:PostalTradeAddress**,,, Legal address of the Carrier (legal address of a legal entity or address of registration of an individual entrepreneur) (end of block)
 **ConnectingCarrierTradeParty**,,,Carrier receiving cargo (end of block)
-**CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),M,, Unloading car (beginning of block)
+**CarrierUtilizedLogisticsTransportEquipment**,M,, Unloading car (beginning of block)
 ram:ID,M,string,"Registration number of the car according to the technical passport
 
 * Ukrainian numbers: must match one of the patterns for car number plates
 * Euro numbers: without validation"
-ram:CategoryCode,M,string, Code TRUCK - Car
+ram:CategoryCode,M,string,"For a car, the parameter is passed empty"
 **ram:AffixedLogisticsSeal**,O,, Seal number (car) (beginning of block)
 ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,, Seal number (car) (end of block)
@@ -94,7 +94,7 @@ ram:Content,M,string, Car brand according to the technical passport
 ram:ContentCode,M,string, Code MODEL
 ram:Content,M,string, Car model according to the technical passport
 **ram:ApplicableNote** (з кодом MODEL),,, Car model (end of block)
-**CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),,, Unloading car (end of block)
+**CarrierUtilizedLogisticsTransportEquipment**,,, Unloading car (end of block)
 **CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),O,, Unloading trailer/semi-trailer (beginning of block)
 ram:ID,O,string,"Registration number of the trailer/semi-trailer according to the technical passport
 
@@ -117,12 +117,12 @@ ram:ContentCode,O,string, Code MODEL
 ram:Content,O,string, The model of the trailer/semi-trailer according to the data sheet
 **ram:ApplicableNote** (з кодом MODEL),,, Trailer/semi-trailer model (end of block)
 **CarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),,, Unloading trailer/semi-trailer (end of block)
-**ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),M,, Loading car (beginning of block)
+**ConnectingCarrierUtilizedLogisticsTransportEquipment**,M,, Loading car (beginning of block)
 ram:ID,M,string,"Registration number of the car according to the technical passport
 
 * Ukrainian numbers: must match one of the patterns for car number plates
 * Euro numbers: without validation"
-ram:CategoryCode,M,string, Code TRUCK - Car
+ram:CategoryCode,M,string,"For a car, the parameter is passed empty"
 **ram:AffixedLogisticsSeal**,O,, Seal number (car) (beginning of block)
 ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,, Seal number (car) (end of block)
@@ -134,7 +134,7 @@ ram:Content,M,string, Car brand according to the technical passport
 ram:ContentCode,M,string, Code MODEL
 ram:Content,M,string, Car model according to the technical passport
 **ram:ApplicableNote** (з кодом MODEL),,, Car model (end of block)
-**ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),,, Loading car (end of block)
+**ConnectingCarrierUtilizedLogisticsTransportEquipment**,,, Loading car (end of block)
 **ConnectingCarrierUtilizedLogisticsTransportEquipment** (CategoryCode=TE),O,,Loading trailer/semi-trailer (beginning of block)
 ram:ID,M,string,"Registration number of the trailer/semi-trailer according to the technical passport
 
