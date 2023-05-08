@@ -58,12 +58,12 @@ value,M,decimal, Value
 ram:Name,M,string,Full name of the Carrier
 ram:RoleCode,M,string, Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **CarrierTradeParty**,,, Carrier (end of block)
-**UtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),M,, Car (beginning of block)
+**UtilizedLogisticsTransportEquipment**,M,, Car (beginning of block)
 ram:ID,M,string,"Registration number of the car according to the technical passport
 
 * Ukrainian numbers: must match one of the patterns for car number plates
 * Euro numbers: without validation"
-ram:CategoryCode,M,string,"Vehicle type: TRUCK - Cargo (if not available, then cargo)"
+ram:CategoryCode,M,string,"For a car, the parameter is passed empty"
 **ram:AffixedLogisticsSeal**,O,, Seal number (car) (beginning of block)
 ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,,Seal number (car) (end of block)
@@ -79,7 +79,7 @@ ram:Content,M,string, Car model according to the technical passport
 ram:ContentCode,O,string, COLOR code
 ram:Content,O,string, The color of the car according to the technical passport
 **ram:ApplicableNote** (з кодом COLOR),,, Car color (end of block)
-**UtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),,, Car (end of block)
+**UtilizedLogisticsTransportEquipment**,,, Car (end of block)
 **UtilizedLogisticsTransportEquipment** (CategoryCode=TE),O,, Trailer/semi-trailer (beginning of block)
 ram:CategoryCode,M,string, Type TE - Trailer/semi-trailer
 ram:CharacteristicCode,M,string,"Identification code Trailer/semi-trailer:

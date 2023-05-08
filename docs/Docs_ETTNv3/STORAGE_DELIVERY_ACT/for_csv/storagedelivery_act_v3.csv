@@ -105,12 +105,12 @@ value,M,decimal, Value
 **ram:SystemID**,,, GLN code (the end of the block)
 **ram:PhysicalGeographicalCoordinate**,,, Geographic coordinates (the end of the block)
 **StorageLogisticsLocation**,,,Warehouse location (the end of the block)
-**UtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),M,, Unloading car (block start)
+**UtilizedLogisticsTransportEquipment**,M,, Unloading car (block start)
 ram:ID,M,string,"Registration number of the car according to the technical passport
 
 * Ukrainian numbers: must match one of the patterns for car number plates
 * Euro numbers: without validation"
-ram:CategoryCode,M,string,"Vehicle type: TRUCK - Cargo (if not available, then cargo)"
+ram:CategoryCode,M,string,"For a car, the parameter is passed empty"
 **ram:AffixedLogisticsSeal**,O,, Seal number (car) (block start)
 ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,, Seal number (car) (the end of the block)
@@ -126,7 +126,7 @@ ram:Content,M,string, Car model according to the technical passport
 ram:ContentCode,O,string, COLOR code
 ram:Content,O,string, The color of the car according to the technical passport
 **ram:ApplicableNote** (з кодом COLOR),,, Car color (the end of the block)
-**UtilizedLogisticsTransportEquipment** (CategoryCode=TRUCK),,, Unloading car (the end of the block)
+**UtilizedLogisticsTransportEquipment**,,, Unloading car (the end of the block)
 **UtilizedLogisticsTransportEquipment** (CategoryCode=TE),O,, Unloading trailer/semi-trailer (block start)
 ram:CategoryCode,O,string, Type TE - Trailer/semi-trailer
 ram:CharacteristicCode,O,string,"Identification code Trailer/semi-trailer:
