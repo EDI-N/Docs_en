@@ -321,8 +321,6 @@ qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-1
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument**,,, Other accompanying documents (the end of the block)
 **ram:DeliveryTransportEvent**,M,, Unloading works (block start)
-ram:ID,M,string, Sequence number of the event (events are always numbered in ascending order according to the N+1 principle)
-ram:Description,O,string,Description
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car for unloading (block start)
 udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
 **ram:ActualOccurrenceDateTime**,,, Date and time of arrival of the car for unloading (the end of the block)
@@ -383,8 +381,6 @@ ram:Content,O,unsignedByte, Idle time (hours) under unloading
 **ram:ApplicableNote** (with code DOWNTIME),,, Idle time (the end of the block)
 **ram:DeliveryTransportEvent**,,, Unloading works (the end of the block)
 **ram:PickUpTransportEvent**,O,, Loading works (block start)
-ram:ID,O,string, Sequence number of the event (events are always numbered in ascending order according to the N+1 principle)
-ram:Description,O,string,Description
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car under load (block start)
 udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
 **ram:ActualOccurrenceDateTime**,,, Date and time of arrival of the car under load (the end of the block)
@@ -402,7 +398,7 @@ schemeAgencyID,M,string,RNTAC
 value,M,decimal,Value
 **ram:ID**,,, Identification code - RNTAC of the materially responsible person who releases the cargo (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=CZ),,, Information about the responsible persons of the Consignor (the end of the block)
-**ram:CertifyingTradeParty** (RoleCode=DR),M,, Information about the driver of the Carrier (block start)
+**ram:CertifyingTradeParty** (RoleCode=DR),M/O,, Information about the driver of the Carrier. One of two blocks must be transmitted: about the Driver or the responsible person of the Carrier (block start)
 ram:Name,M,string, The position of the driver who accepted the cargo
 ram:RoleCode,M,string,Participant role (Driver - DR). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:DefinedTradeContact**,M,, Contacts of the responsible representative (block start)
@@ -413,7 +409,7 @@ schemeAgencyID,O,string,RNTAC
 value,O,decimal,Value
 **ram:ID**,,, Identification code - RNTAC of the driver (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=DR),,, Information about the driver of the Carrier (the end of the block)
-**ram:CertifyingTradeParty** (RoleCode=CA),O,, Information about responsible persons of the Carrier (block start)
+**ram:CertifyingTradeParty** (RoleCode=CA),M/O,, Information about responsible persons of the Carrier. One of two blocks must be transmitted: about the Driver or the responsible person of the Carrier (block start)
 ram:Name,M,string, Position of responsible person of the Carrier
 ram:RoleCode,M,string,Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:DefinedTradeContact**,M,, Contacts of the responsible representative (block start)
