@@ -1,0 +1,151 @@
+﻿Field name,Type [1]_,Format,Description
+**ЕлектроннийДокумент**,М, ,The beginning of the document
+**Заголовок**,М,Number of occurrences unit: Min = 1; Max = 1, Heading (block start)
+НомерДокументу,М,String (16),Document number
+ТипДокументу,М,String (50),Type of document: Sales Invoice
+КодТипуДокументу,М,«006»,Allowed value COMDOC code: 006 => Sales Invoice (`all COMDOC types <https://wiki.edin.ua/en/latest/XML/comdoc_type.html>`__)
+ДатаДокументу,М,Date (YYYY-MM-DD),Document date
+НомерЗамовлення,M,String (20),Order number
+ДатаЗамовлення,M,Date (YYYY-MM-DD),Order date
+ПлановаДатаДоставки,M,Date (YYYY-MM-DD),Estimated delivery date
+ДокВерсія,M,A positive number (1-99),Document version
+**ДокПідстава**,M,Number of occurrences unit: Min = 0; Max = 10,Document basis on (block start)
+НомерДокументу,M,String (30),Basis document number
+ТипДокументу,M,String (50),Document type: Договір (Agreement)
+КодТипуДокументу,M,«001»,Valid value: 001 => Договір (Agreement)
+ДатаДокументу,M,Date (YYYY-MM-DD),Basis document date
+**ДокПідстава**, , ,Document basis on (the end of the block)
+НомерВідвантаження,M,String (50),Despatch Advice number
+ДатаВідвантаження,M,Date (YYYY-MM-DD),Despatch Advice date
+**Заголовок**, , ,Heading (the end of the block)
+**Сторони**,M,Number of occurrences unit: Min = 1; Max = 1,The parties between whom the document is concluded (block start)
+**Контрагент**,M,Number of occurrences unit: Min = 2; Max = 10,"Counterparty (block start). The first one indicates the sender's block (Supplier), the second - the recipient (Buyer)"
+СтатусКонтрагента,M,String (30),Valid value: Постачальник (Supplier)
+ВидОсоби,M,String (20),"Type of institution:
+
+* Legal entity
+* Physical person"
+НазваКонтрагента,M,String (50),Counterparty name
+КодКонтрагента,M,String (8),Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)
+ІПН,M,String (12),Counterparty individual tax number
+IBAN,M,String (35),IBAN (international bank account number; use in international settlements)
+Телефон,M,String (20),Phone number
+GLN,M,Integer (13),Counterparty Global Location Number (GLN)
+**ЮрАдреса**,M, ,Legal address of the counterparty (block start)
+Індекс,M,Integer (5),Post index
+Область,M,String (50),"Region. Valid value:
+
+* Одеська
+* Дніпропетровська
+* Чернігівська
+* Харківська
+* Житомирська
+* Полтавська
+* Херсонська
+* Київська
+* Запорізька
+* Луганська
+* Донецька
+* Вінницька
+* Автономна Республіка Крим
+* Миколаївська
+* Кіровоградська
+* Сумська
+* Львівська
+* Черкаська
+* Хмельницька
+* Волинська
+* Рівненська
+* Івано-Франківська
+* Тернопільська
+* Закарпатська
+* Чернівецька
+* м. Севастополь
+* м. Київ"
+Місто,M,String (50),City
+Вулиця,M,String (50),Street
+**ЮрАдреса**, , ,Legal address of the counterparty (the end of the block) 
+**Контрагент**, , ,Counterparty (the end of the block)
+**Контрагент**,M,Number of occurrences unit: Min = 2; Max = 10,"Counterparty (block start). The first one indicates the sender's block (Supplier), the second - the recipient (Buyer)"
+СтатусКонтрагента,M,String (30),Valid value: Покупець (Buyer)
+ВидОсоби,M,String (20),"Type of institution:
+
+* Legal entity
+* Physical person"
+НазваКонтрагента,M,String (50),Counterparty name
+КодКонтрагента,M,String (8),Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)
+ІПН,M,String (12),Counterparty individual tax number
+IBAN,M,String (35),IBAN (international bank account number; use in international settlements)
+Телефон,M,String (20),Phone number
+GLN,M,Integer (13),Counterparty Global Location Number (GLN)
+**ЮрАдреса**,M, ,Legal address of the counterparty (block start)
+Індекс,M,Integer (5),Post index
+Область,M,String (50),"Region. Valid value:
+
+* Одеська
+* Дніпропетровська
+* Чернігівська
+* Харківська
+* Житомирська
+* Полтавська
+* Херсонська
+* Київська
+* Запорізька
+* Луганська
+* Донецька
+* Вінницька
+* Автономна Республіка Крим
+* Миколаївська
+* Кіровоградська
+* Сумська
+* Львівська
+* Черкаська
+* Хмельницька
+* Волинська
+* Рівненська
+* Івано-Франківська
+* Тернопільська
+* Закарпатська
+* Чернівецька
+* м. Севастополь
+* м. Київ"
+Місто,M,String (50),City
+Вулиця,M,String (50),Street
+**ЮрАдреса**, , ,Legal address of the counterparty (the end of the block) 
+**Контрагент**, , ,Counterparty (the end of the block)
+**Сторони**, , ,"The parties between whom the document is concluded (the end of the block)"
+**МісцеДоставки**,M, ,Delivery location (block start)
+GLN,M,Integer (13),Global location number (GLN) of the Delivery location
+Індекс,M,Integer (5),Post index
+Область,M,String (50),Region
+Місто,M,String (50),City
+Вулиця,M,String (50),Street
+**МісцеДоставки**, , ,Delivery location (the end of the block)
+**Параметри**,M, ,"Parameters (block start). The field provides free value. This parameter is used to transfer additional information that is not included in the specification"
+<Параметр ІД=«1» назва=«Точка доставки»>4829900017590</Параметр>,M,String (250),Additional parameters. Each next tag identifier (ID) is incremented by one. For ID=1, the delivery point is specified. Maximum number of tags is 99.
+"<Параметр ІД=«2» назва=«Адреса доставки»>Дніпропетровська обл., Дніпровський р-н, територія Слобожанської селищної ради, комплекс будівель та споруд №8</Параметр>",M,String (250),Additional parameters. Each next tag identifier (ID) is incremented by one. For ID=2, the decoding of the delivery address is specified. Maximum number of tags is 99.
+**Параметри**,M, ,Parameters (the end of the block)
+**Таблиця**,M,Number of occurrences unit: Min = 0; Max = 1,Table (block start)
+**String**,M,Number of occurrences unit: Min = 1;Max = 9999,String (block start). Each next block identifier (ID) is incremented by one
+НомПоз,M,Integer (3),Position number
+Штрихкод,M,String (13),Maximum number of tags is 99. Each next tag identifier (ID) is incremented by one.
+АртикулПокупця,M,String (10),Buyer's article number
+КодУКТЗЕД,M,Integer (10),Product code according to the national classifier (UKT FEA Code) = the value is not less than 4 and not more than 10 characters
+Найменування,M,String (250),Commodity item name
+ПрийнятаКількість,M,Decimal (#.00),Accepted quantity of commodity items
+ОдиницяВиміру,M,String (10),Units [2]_
+БазоваЦіна,M,Decimal (#.00),Price per unit without VAT
+**ВсьогоПоРядку**,M,Number of occurrences unit: Min = 0; Max = 1,Total amount per row (block start)
+СумаБезПДВ,M,Decimal (#.00),Amount without VAT
+СумаПДВ,O,Decimal (#.00),VAT amount
+Сума,O,Decimal (#.00),Sum
+**ВсьогоПоРядку**, , ,Total amount per row (the end of the block)
+СтавкаПДВ,M,«0»/«7»/«20»,Value added tax rate (%); Valid value: 0 / 7 / 20
+**String**, , ,String (the end of the block)
+**Таблиця**, , ,Таблиця (the end of the block)
+**ВсьогоПоДокументу**,M,Total by Document  (block start), 
+СумаБезПДВ,M,Decimal (#.00),Sum without VAT for all positions
+ПДВ,M,Decimal (#.00),VAT amount for all positions
+Сума,M,Decimal (#.00),Sum of all positions
+**ВсьогоПоДокументу**,M, ,Total by Document  (the end of the block)
+**ЕлектроннийДокумент**,M, ,End of the document
