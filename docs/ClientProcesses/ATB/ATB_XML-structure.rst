@@ -9,7 +9,8 @@ XML Specifications for work with "ATB"
   API for `work with tickets of COMDOC <https://wiki.edin.ua/uk/latest/integration_2_0/APIv2/APIv2_list.html#id4>`__ documents!
 
 ---------
-..
+
+.. nope
 
   **XML специфікації електронних документів**
 

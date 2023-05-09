@@ -122,8 +122,8 @@ GLN,M,Integer (13),Global location number (GLN) of the Delivery location
 Вулиця,M,String (50),Street
 **МісцеДоставки**, , ,Delivery location (the end of the block)
 **Параметри**,M, ,"Parameters (block start). The field provides free value. This parameter is used to transfer additional information that is not included in the specification"
-<Параметр ІД=«1» назва=«Точка доставки»>4829900017590</Параметр>,M,String (250),Additional parameters. Each next tag identifier (ID) is incremented by one. For ID=1, the delivery point is specified. Maximum number of tags is 99.
-"<Параметр ІД=«2» назва=«Адреса доставки»>Дніпропетровська обл., Дніпровський р-н, територія Слобожанської селищної ради, комплекс будівель та споруд №8</Параметр>",M,String (250),Additional parameters. Each next tag identifier (ID) is incremented by one. For ID=2, the decoding of the delivery address is specified. Maximum number of tags is 99.
+<Параметр ІД=«1» назва=«Точка доставки»>4829900017590</Параметр>,M,String (250),"Additional parameters. Each next tag identifier (ID) is incremented by one. For ID=1, the delivery point is specified. Maximum number of tags is 99."
+"<Параметр ІД=«2» назва=«Адреса доставки»>Дніпропетровська обл., Дніпровський р-н, територія Слобожанської селищної ради, комплекс будівель та споруд №8</Параметр>",M,String (250),"Additional parameters. Each next tag identifier (ID) is incremented by one. For ID=2, the decoding of the delivery address is specified. Maximum number of tags is 99."
 **Параметри**,M, ,Parameters (the end of the block)
 **Таблиця**,M,Number of occurrences unit: Min = 0; Max = 1,Table (block start)
 **String**,M,Number of occurrences unit: Min = 1;Max = 9999,String (block start). Each next block identifier (ID) is incremented by one
