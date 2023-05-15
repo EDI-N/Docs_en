@@ -110,7 +110,6 @@ ram:ID,M,string,"Registration number of the car according to the technical passp
 
 * Ukrainian numbers: must match one of the patterns for car number plates
 * Euro numbers: without validation"
-ram:CategoryCode,M,string,"For a car, the parameter is passed empty"
 **ram:AffixedLogisticsSeal**,O,, Seal number (car) (block start)
 ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,, Seal number (car) (the end of the block)
