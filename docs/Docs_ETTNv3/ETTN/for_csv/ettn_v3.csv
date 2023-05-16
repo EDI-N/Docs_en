@@ -451,7 +451,7 @@ unitCode,M,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>
 value,M,decimal,Value
 **ram:GrossWeightMeasure**,,, Gross mass of the cargo for each line in kg (the end of the block)
 **ram:TariffQuantity**,O,,Price without VAT per unit in hryvnias. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the indicated unit of measurement (block start)
-unitCode,O,string,`Unit code <https://wiki.edin.ua/uk/latest/XML/units_edi.html>`__
+unitCode,O,string,Unit code («UAH»)
 value,O,decimal,Value
 **ram:TariffQuantity**,,, Price without VAT per unit in hryvnias. It can be both hryvnias per kilogram (hryvnias/kg) and hryvnias per box (hryvnias/box) - depends on the specified unit of measurement (the end of the block)
 **ram:GlobalID**,O,, UCGFEA product code (block start)
