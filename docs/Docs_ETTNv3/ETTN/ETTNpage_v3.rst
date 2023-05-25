@@ -15,7 +15,7 @@ Table 1 - "Electronic consignment note" (XML) specification
   :header-rows: 1
   :stub-columns: 0
 
-:download:`Electronic consignment note example<examples/ettn_v3.xml>`
+:download:`Electronic consignment note example<examples/ettn_v3n.xml>`
 
 -------------------------
 
