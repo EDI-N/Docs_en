@@ -10,12 +10,15 @@ Contents:
 
 .. toctree::
    :titlesonly:
+   :caption: 🚀 Built processes
    
    ClientProcesses/Clients_list
 
+.. todo стандартні / базові процеси
+
 .. toctree::
    :maxdepth: 2
-   :caption: EDI Network
+   :caption: 🛒 EDI Network
 
    general_2_0/general_2_0_list
    retail_2.0/retail_2_0_list
@@ -25,39 +28,39 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Have Product
+   :caption: 🛍️ Have Product
 
    Instruction <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html>
    API_Openprice/API_Openprice_list
 
 .. toctree::
    :maxdepth: 2
-   :caption: Distribution
+   :caption: 🏭 Distribution
 
    Distribution/EDIN_2_0/XML/XML_structure
 
 .. toctree::
    :maxdepth: 2
-   :caption: Vilnyi
+   :caption: 🌟 Vilnyi
 
    Vilnyi/Work_with_Vilnyi
 
 .. toctree::
    :maxdepth: 2
-   :caption: Private area
+   :caption: 🔐 Private area
 
    Personal_Cabinet/PCInstruction
 
 .. toctree::
    :maxdepth: 2
-   :caption: WhiteDoc
+   :caption: 💎 WhiteDoc
 
    API <https://wd-api.edin.ua/swagger-ui/#/>
    WhiteDoc/API/errors
 
 .. toctree::
    :maxdepth: 2
-   :caption: Legal info
+   :caption: 👨‍⚖️ Legal info
 
    Legal_info/Rules
    Legal_info/Dogovir_oferta
