@@ -23,7 +23,7 @@ ram:Description,M,string, Description (address) of the place of drafting the Act
 **ExchangedDocument**,,, Details of the Act (the end of the block)
 **ResealingActPayload**,M,, Information about the Act (block start)
 **PreviousAdministrativeReferencedDocument**,M,,"Information about e-TTN, for which the act is drafting (block start)"
-ram:TypeCode,M,string, Document type (730 - TTN). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:TypeCode,M,string, Document type (730 - TTN). `Document code directory <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__
 ram:ID,M,string,Basic document number (TTN); must correspond to the document number ExchangedDocument.ID eTTN
 **ram:FormattedIssueDateTime**,M,, Date of the basic document (TTN); must correspond to the date of the document ExchangedDocument.IssueDateTime eТТН (block start)
 qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (TTN)
@@ -36,7 +36,7 @@ ram:SizeMeasure,O,long, file size in bytes
 **ram:AttachedSpecifiedBinaryFile**,,, e-TTN data for which the act is drafting (the end of the block)
 **PreviousAdministrativeReferencedDocument**,,,"Information about e-TTN, for which the act is drafting (the end of the block)"
 **PreviousAdministrativeReferencedDocument**,-/M,,"Information about the previous act, in the case of the next transaction (block start)"
-ram:TypeCode,M,string, Document type. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:TypeCode,M,string, Document type. `Document code directory <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__
 ram:ID,M,string, Number of the basic document (Act); must correspond to the document number ExchangedDocument.ID of the Act
 **ram:FormattedIssueDateTime**,M,, Date of the basic document (Act); must correspond to the date of the ExchangedDocument.IssueDateTime Act (block start)
 qdt:DateTimeString,M,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of the basic document (Act)
@@ -177,7 +177,7 @@ ram:PersonName,O,string,Driver full name
 **ACT**,,, (end of document content)
 **UaSignatureStorage**,M,, Signatures (block start)
 **VisualReferencedDocument**,O,, Graphic display of the document (block start)
-ram:TypeCode,O,string, Type (916 - Act). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:TypeCode,O,string, Type (916 - Act). `Document code directory <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__
 ram:Remarks,O,string, Graphic representation of Act in base64
 **VisualReferencedDocument**,,, Graphic display of the document (the end of the block)
 **Signature** (SigningPartyRoleCode=OB),M,, QES of the Customer (block start)

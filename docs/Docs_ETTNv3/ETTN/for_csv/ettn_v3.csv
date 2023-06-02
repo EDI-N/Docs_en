@@ -281,7 +281,7 @@ value,M,decimal,Value
 **ram:PhysicalGeographicalCoordinate**,,, Geographic coordinates (the end of the block)
 **ram:ConsigneeReceiptLogisticsLocation**,,, Unloading point (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=723),O,, Accompanying documents for cargo. Document confirming security services (block start)
-ram:TypeCode,M,string,Type 723 - is used when specifying a document confirming the provision of special security services (`reference of MIU document codes <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__ + `reference of internal codes EDIN documents <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)
+ram:TypeCode,M,string,Type 723 - is used when specifying a document confirming the provision of special security services (`reference of MIU document codes <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__ + `reference of internal codes EDIN documents <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)
 ram:ID,M,string, Number of the document according to which the representative of the Customer is authorized to accompany the cargo subject to special protection
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
@@ -289,14 +289,14 @@ qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-1
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=723),,, Accompanying documents for cargo. Document confirming security services (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=290),O,, Accompanying documents for cargo. Record of transfer of the right to present a claim (block start)
-ram:TypeCode,M,string,Type 290 - is used when specifying the transfer of the right to present a claim (`reference of MIU document codes <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__ + `reference of internal EDIN document codes EDIN <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)
+ram:TypeCode,M,string,Type 290 - is used when specifying the transfer of the right to present a claim (`reference of MIU document codes <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__ + `reference of internal EDIN document codes EDIN <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
 qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=290),,,Accompanying documents for cargo. Record of the transfer of the right to present a claim (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=916),O,, Accompanying documents for cargo. Corrective acts (block start)
-ram:TypeCode,M,string,"Type 916 - is used when forming acts, to indicate the previous transaction of the current act (`reference of MIU document codes <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__ + `reference of internal codes EDIN documents <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)"
+ram:TypeCode,M,string,"Type 916 - is used when forming acts, to indicate the previous transaction of the current act (`reference of MIU document codes <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__ + `reference of internal codes EDIN documents <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)"
 ram:ID,M,string, Act number
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
@@ -313,7 +313,7 @@ ram:TypeCode,O,string,"Type
 * code 290 when specifying the transfer of the right to submit a claim
 * code 119 in operations with the act of loading at an intermediate warehouse, to indicate the previous act of unloading at the same warehouse
 
-(`reference of MIU document codes <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__ + `reference of internal codes EDIN documents <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)"
+(`reference of MIU document codes <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__ + `reference of internal codes EDIN documents <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)"
 ram:ID,O,string,Document number
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
@@ -473,7 +473,7 @@ ram:Remarks,O,string, The UUID of the accompanying document
 **ram:AssociatedReferencedDocument**,,, Cargo documents (the end of the block)
 **ram:TransportLogisticsPackage**,O,, Transport and logistics package. IMPORTANT: only one LogisticsPackage for one ConsignmentItem is allowed in Ukraine! (block start)
 ram:ItemQuantity,O,decimal,"The number of places determined by each name of the cargo (these can be boxes, baskets, bags, etc.; if the cargo is packed on pallets - indicate the number of pallets)"
-ram:TypeCode,O,string,Type of packaging (`Guide to types of packaging <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=1380089959>`__)
+ram:TypeCode,O,string,Type of packaging (`Guide to types of packaging <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#packaging-types>`__)
 ram:Type,O,string, The unit of measurement for ItemQuantity
 **ram:PhysicalLogisticsShippingMarks**,O,, Marking (block start)
 ram:Marking,O,string, The name of the transport package (free name) in which the cargo is transported
@@ -663,7 +663,7 @@ ram:Description,O,string,"Description (type of work of the carrier: by unit rate
 ram:DescriptionCode,M,string, Code (TRANSPORTATION_TYPE)
 **ram:DeliveryInstructions**,,, Type of transportation (the end of the block)
 **ram:PreviousAdministrativeReferencedDocument**,-/M,, The previous ECMR transaction on which the current document is based. The block is not indicated if the document is created from zero (block start)
-ram:TypeCode,O,string,The type of document on which the current document is based. `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:TypeCode,O,string,The type of document on which the current document is based. `Document code directory <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__
 ram:ID,M,string, Corresponds to the ExchangedDocumentContext.SpecifiedTransactionID of previous versions
 ram:Remarks,O,string, Base64 of the previous version document
 **ram:FormattedIssueDateTime**,O,, Date of drafting the document on the basis of which the current document was drafted (block start)
@@ -680,7 +680,7 @@ ram:SizeMeasure,M,Long, File size
 **eCMR**,,, (end of document content)
 **UaSignatureStorage**,M,, Signatures (block start)
 **VisualReferencedDocument**,O,, Graphic display of the document (block start)
-ram:TypeCode,M,string,Type (730 - TTN). `Document code directory <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit#gid=723047960>`__
+ram:TypeCode,M,string,Type (730 - TTN). `Document code directory <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__
 ram:Remarks,O,string,Graphic display of the e-TTN document in base64
 **VisualReferencedDocument**,,,Graphic display of the document (the end of the block)
 **Signature** (SigningPartyRoleCode=CZ),M,, QES of the consignor (block start)
