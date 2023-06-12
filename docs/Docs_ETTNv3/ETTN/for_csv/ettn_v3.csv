@@ -13,7 +13,7 @@ ram:ID,M,unsignedByte,Document subtype. Type E-TTN depending on the type of carg
 **ExchangedDocument**,M,,TTN details (block start)
 ram:ID,M,string,serial number (series) of the TTN document
 **ram:IssueDateTime**,M,,Date and time of drafting the document (block start)
-**udt:DateTime**,,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`,Date and time of drafting the document
+**udt:DateTime**,,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00),Date and time of drafting the document
 **ram:IssueDateTime**,,,Date and time of drafting the document (the end of the block)
 ram:Remarks,O,string,Remarks
 **ram:IncludedNote**,M,,Included Note (block start)
@@ -285,14 +285,14 @@ ram:TypeCode,M,string,Type 723 - is used when specifying a document confirming t
 ram:ID,M,string, Number of the document according to which the representative of the Customer is authorized to accompany the cargo subject to special protection
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=723),,, Accompanying documents for cargo. Document confirming security services (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=290),O,, Accompanying documents for cargo. Record of transfer of the right to present a claim (block start)
 ram:TypeCode,M,string,Type 290 - is used when specifying the transfer of the right to present a claim (`reference of MIU document codes <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__ + `reference of internal EDIN document codes EDIN <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=290),,,Accompanying documents for cargo. Record of the transfer of the right to present a claim (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=916),O,, Accompanying documents for cargo. Corrective acts (block start)
@@ -300,7 +300,7 @@ ram:TypeCode,M,string,"Type 916 - is used when forming acts, to indicate the pre
 ram:ID,M,string, Act number
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=916),,, Accompanying documents for cargo. Corrective acts (the end of the block)
 **ram:AssociatedReferencedDocument**,O,, Other accompanying documents (block start)
@@ -317,15 +317,15 @@ ram:TypeCode,O,string,"Type
 ram:ID,O,string,Document number
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument**,,, Other accompanying documents (the end of the block)
 **ram:DeliveryTransportEvent**,M,, Unloading works (block start)
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car for unloading (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ActualOccurrenceDateTime**,,, Date and time of arrival of the car for unloading (the end of the block)
 **ram:ScheduledOccurrenceDateTime**,O,, Date and time of vehicle release from unloading (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ScheduledOccurrenceDateTime**,,, Date and time of vehicle release from unloading (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=CN),M,,Information on responsible persons of the Consignee (block start)
 ram:Name,M,string, The position of materially responsible person of the consignee
@@ -382,10 +382,10 @@ ram:Content,O,unsignedByte, Idle time (hours) under unloading
 **ram:DeliveryTransportEvent**,,, Unloading works (the end of the block)
 **ram:PickUpTransportEvent**,O,, Loading works (block start)
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car under load (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ActualOccurrenceDateTime**,,, Date and time of arrival of the car under load (the end of the block)
 **ram:ScheduledOccurrenceDateTime**,O,, Date and time of vehicle release from load (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ScheduledOccurrenceDateTime**,,, Date and time of vehicle release from the load (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=CZ),M,,Information about responsible persons of the Consignor (block start)
 ram:Name,M,string, The position of materially responsible person who releases cargo
@@ -667,7 +667,7 @@ ram:TypeCode,O,string,The type of document on which the current document is base
 ram:ID,M,string, Corresponds to the ExchangedDocumentContext.SpecifiedTransactionID of previous versions
 ram:Remarks,O,string, Base64 of the previous version document
 **ram:FormattedIssueDateTime**,O,, Date of drafting the document on the basis of which the current document was drafted (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of preparation of the previous ECMR document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of preparation of the previous ECMR document
 **ram:FormattedIssueDateTime**,,, Date of drafting the document on the basis of which the current document was drafted (the end of the block)
 **ram:AttachedSpecifiedBinaryFile**,O,,"Attached binary document file, on the basis of which the current document is compiled (block start)"
 ram:ID,M,string,Corresponds to document.id from the Central Base of eTTN
