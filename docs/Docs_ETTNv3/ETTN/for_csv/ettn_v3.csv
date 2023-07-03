@@ -18,9 +18,8 @@ ram:ID,M,string,serial number (series) of the TTN document
 ram:Remarks,O,string,Remarks
 **ram:IncludedNote**,M,,Included Note (block start)
 **ram:ContentCode**,M,,Content Code (block start)
-listAgencyID,"M for GLN (else O)",String,"Identifier:
+listAgencyID,"O",String,"Identifier:
 
-* GLN
 * transportation_max_temperature
 * logger_return
 * logistic_unit_number_with_logger
@@ -28,8 +27,7 @@ listAgencyID,"M for GLN (else O)",String,"Identifier:
 * logger_number.
 
 Identifiers logistic_unit_number_with_logger / gps_number / logger_number are specified by the counterparty with the role «Consignor». Identifiers transportation_max_temperature and logger_return are specified by the counterparty with the role «Consignee»"
-value,M,"* for GLN = Integer (13)
-* for transportation_max_temperature = Integer (3)
+value,M,"* for transportation_max_temperature = Integer (3)
 * for logger_return = «Так» / «Ні»
 * for logistic_unit_number_with_logger = String
 * for gps_number = String
@@ -81,6 +79,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignor (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Consignor (the end of the block)
 **ram:ConsignorTradeParty**,,,Consignor (the end of the block)
 **ram:ConsigneeTradeParty**,M,,Consignee (block start)
 **ram:ID**,M,,"Identification code of the Consignee (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which receives (posting) the goods and material values listed in the TTN (block start)"
@@ -111,6 +115,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignee (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Consignee (the end of the block)
 **ram:ConsigneeTradeParty**,,,Consignee (the end of the block)
 **ram:CarrierTradeParty**,M,, Carrier (block start)
 **ram:ID**,M,,"Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor concluded a contract for the provision of transport services (block start)"
@@ -141,9 +151,15 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,M,, Identification code of the responsible person (block start)
 ram:ID,M,string,RNTAC of the responsible person (driver)
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,, Driver's license (block start)
-ram:ID,M,string,"Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``"
-**ram:SpecifiedGovernmentRegistration**,,, Driver's license (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
+ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* DRIVER_GLN
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,Driver's license / Driver's GLN / GLN of the participating company (the end of the block)
 **ram:CarrierTradeParty**,,, Carrier (the end of the block)
 **ram:NotifiedTradeParty** (role - FW),O,, Forwarder (block start)
 **ram:ID**,M,,"Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (block start)"
@@ -174,6 +190,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Forwarder (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Forwarder (the end of the block)
 **ram:NotifiedTradeParty** (role - FW),,, Forwarder (the end of the block)
 **ram:NotifiedTradeParty** (role - OB),M,,Customer (block start)
 **ram:ID**,M,, Identification code of the Customer. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person that pays for transport work and services (block start)
@@ -204,6 +226,12 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Customer (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Customer (the end of the block)
 **ram:NotifiedTradeParty** (role - OB),,, Customer (the end of the block)
 **ram:NotifiedTradeParty** (role - WD),O,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (block start)"
 **ram:ID**,M,, Identification code of the Intermediate warehouse. USREOU of the enterprise (Consignor/Carrier/Forwarder/Consignee/Warehouse) accepting cargo from the Carrier for temporary storage (block start)
@@ -234,6 +262,12 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Intermediate warehouse (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Intermediate warehouse (the end of the block)
 **ram:NotifiedTradeParty** (role - WD),,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (the end of the block)"
 **ram:NotifiedTradeParty** (role - COP),O,,A company that provides security services (block start)
 **ram:ID**,M,, Security company identification code. USREOU of an enterprise that provides cargo security services during transportation (block start)
