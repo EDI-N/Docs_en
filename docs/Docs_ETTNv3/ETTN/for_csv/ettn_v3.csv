@@ -13,14 +13,13 @@ ram:ID,M,unsignedByte,Document subtype. Type E-TTN depending on the type of carg
 **ExchangedDocument**,M,,TTN details (block start)
 ram:ID,M,string,serial number (series) of the TTN document
 **ram:IssueDateTime**,M,,Date and time of drafting the document (block start)
-**udt:DateTime**,,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`,Date and time of drafting the document
+**udt:DateTime**,,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00),Date and time of drafting the document
 **ram:IssueDateTime**,,,Date and time of drafting the document (the end of the block)
 ram:Remarks,O,string,Remarks
 **ram:IncludedNote**,M,,Included Note (block start)
 **ram:ContentCode**,M,,Content Code (block start)
-listAgencyID,"M for GLN (else O)",String,"Identifier:
+listAgencyID,"O",String,"Identifier:
 
-* GLN
 * transportation_max_temperature
 * logger_return
 * logistic_unit_number_with_logger
@@ -28,8 +27,7 @@ listAgencyID,"M for GLN (else O)",String,"Identifier:
 * logger_number.
 
 Identifiers logistic_unit_number_with_logger / gps_number / logger_number are specified by the counterparty with the role «Consignor». Identifiers transportation_max_temperature and logger_return are specified by the counterparty with the role «Consignee»"
-value,M,"* for GLN = Integer (13)
-* for transportation_max_temperature = Integer (3)
+value,M,"* for transportation_max_temperature = Integer (3)
 * for logger_return = «Так» / «Ні»
 * for logistic_unit_number_with_logger = String
 * for gps_number = String
@@ -81,6 +79,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignor (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Consignor (the end of the block)
 **ram:ConsignorTradeParty**,,,Consignor (the end of the block)
 **ram:ConsigneeTradeParty**,M,,Consignee (block start)
 **ram:ID**,M,,"Identification code of the Consignee (the USREOU of a legal entity or the RNTAC of an individual entrepreneur), which receives (posting) the goods and material values listed in the TTN (block start)"
@@ -111,6 +115,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignee (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Consignee (the end of the block)
 **ram:ConsigneeTradeParty**,,,Consignee (the end of the block)
 **ram:CarrierTradeParty**,M,, Carrier (block start)
 **ram:ID**,M,,"Identification code of the Carrier. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor concluded a contract for the provision of transport services (block start)"
@@ -141,9 +151,15 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,M,, Identification code of the responsible person (block start)
 ram:ID,M,string,RNTAC of the responsible person (driver)
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,, Driver's license (block start)
-ram:ID,M,string,"Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``"
-**ram:SpecifiedGovernmentRegistration**,,, Driver's license (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
+ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* DRIVER_GLN
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,Driver's license / Driver's GLN / GLN of the participating company (the end of the block)
 **ram:CarrierTradeParty**,,, Carrier (the end of the block)
 **ram:NotifiedTradeParty** (role - FW),O,, Forwarder (block start)
 **ram:ID**,M,,"Identification code of the Forwarder. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person, with which the consignor (customer) concluded a transport forwarding contract (block start)"
@@ -174,6 +190,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Forwarder (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Forwarder (the end of the block)
 **ram:NotifiedTradeParty** (role - FW),,, Forwarder (the end of the block)
 **ram:NotifiedTradeParty** (role - OB),M,,Customer (block start)
 **ram:ID**,M,, Identification code of the Customer. USREOU of a business entity (a legal entity or a natural person - an entrepreneur) or RNTAC of a natural person that pays for transport work and services (block start)
@@ -204,6 +226,12 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Customer (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Customer (the end of the block)
 **ram:NotifiedTradeParty** (role - OB),,, Customer (the end of the block)
 **ram:NotifiedTradeParty** (role - WD),O,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (block start)"
 **ram:ID**,M,, Identification code of the Intermediate warehouse. USREOU of the enterprise (Consignor/Carrier/Forwarder/Consignee/Warehouse) accepting cargo from the Carrier for temporary storage (block start)
@@ -234,6 +262,12 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Intermediate warehouse (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Intermediate warehouse (the end of the block)
 **ram:NotifiedTradeParty** (role - WD),,,"Intermediate warehouse. More detailed information about intermediate overloads, if any, is provided by the Carrier in the block **Routing** (the end of the block)"
 **ram:NotifiedTradeParty** (role - COP),O,,A company that provides security services (block start)
 **ram:ID**,M,, Security company identification code. USREOU of an enterprise that provides cargo security services during transportation (block start)
@@ -285,14 +319,14 @@ ram:TypeCode,M,string,Type 723 - is used when specifying a document confirming t
 ram:ID,M,string, Number of the document according to which the representative of the Customer is authorized to accompany the cargo subject to special protection
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=723),,, Accompanying documents for cargo. Document confirming security services (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=290),O,, Accompanying documents for cargo. Record of transfer of the right to present a claim (block start)
 ram:TypeCode,M,string,Type 290 - is used when specifying the transfer of the right to present a claim (`reference of MIU document codes <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/Dictionaries/Dictionaries.html#un-edifact-codes>`__ + `reference of internal EDIN document codes EDIN <https://wiki.edin.ua/uk/latest/Docs_ETTNv3/ETTN/TTN_doc_codes.html>`__)
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=290),,,Accompanying documents for cargo. Record of the transfer of the right to present a claim (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=916),O,, Accompanying documents for cargo. Corrective acts (block start)
@@ -300,7 +334,7 @@ ram:TypeCode,M,string,"Type 916 - is used when forming acts, to indicate the pre
 ram:ID,M,string, Act number
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument** (TypeCode=916),,, Accompanying documents for cargo. Corrective acts (the end of the block)
 **ram:AssociatedReferencedDocument**,O,, Other accompanying documents (block start)
@@ -317,15 +351,15 @@ ram:TypeCode,O,string,"Type
 ram:ID,O,string,Document number
 ram:Remarks,O,string, The UUID of the accompanying document
 **ram:FormattedIssueDateTime**,O,,Date and time of drafting the document (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of drafting the accompanying document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of drafting the accompanying document
 **ram:FormattedIssueDateTime**,,,Date and time of drafting the document (the end of the block)
 **ram:AssociatedReferencedDocument**,,, Other accompanying documents (the end of the block)
 **ram:DeliveryTransportEvent**,M,, Unloading works (block start)
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car for unloading (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ActualOccurrenceDateTime**,,, Date and time of arrival of the car for unloading (the end of the block)
 **ram:ScheduledOccurrenceDateTime**,O,, Date and time of vehicle release from unloading (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ScheduledOccurrenceDateTime**,,, Date and time of vehicle release from unloading (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=CN),M,,Information on responsible persons of the Consignee (block start)
 ram:Name,M,string, The position of materially responsible person of the consignee
@@ -382,10 +416,10 @@ ram:Content,O,unsignedByte, Idle time (hours) under unloading
 **ram:DeliveryTransportEvent**,,, Unloading works (the end of the block)
 **ram:PickUpTransportEvent**,O,, Loading works (block start)
 **ram:ActualOccurrenceDateTime**,O,, Date and time of arrival of the car under load (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ActualOccurrenceDateTime**,,, Date and time of arrival of the car under load (the end of the block)
 **ram:ScheduledOccurrenceDateTime**,O,, Date and time of vehicle release from load (block start)
-udt:DateTime,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time
+udt:DateTime,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time
 **ram:ScheduledOccurrenceDateTime**,,, Date and time of vehicle release from the load (the end of the block)
 **ram:CertifyingTradeParty** (RoleCode=CZ),M,,Information about responsible persons of the Consignor (block start)
 ram:Name,M,string, The position of materially responsible person who releases cargo
@@ -667,7 +701,7 @@ ram:TypeCode,O,string,The type of document on which the current document is base
 ram:ID,M,string, Corresponds to the ExchangedDocumentContext.SpecifiedTransactionID of previous versions
 ram:Remarks,O,string, Base64 of the previous version document
 **ram:FormattedIssueDateTime**,O,, Date of drafting the document on the basis of which the current document was drafted (block start)
-qdt:DateTimeString,O,:abbr:`datetime ((yyyy-mm-ddThh:mm:ss+zz:zz) like 2021-12-13T14:19:23+02:00 ( https://www.w3.org/TR/xmlschema-2/#dateTime))`, Date and time of preparation of the previous ECMR document
+qdt:DateTimeString,O,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00), Date and time of preparation of the previous ECMR document
 **ram:FormattedIssueDateTime**,,, Date of drafting the document on the basis of which the current document was drafted (the end of the block)
 **ram:AttachedSpecifiedBinaryFile**,O,,"Attached binary document file, on the basis of which the current document is compiled (block start)"
 ram:ID,M,string,Corresponds to document.id from the Central Base of eTTN
