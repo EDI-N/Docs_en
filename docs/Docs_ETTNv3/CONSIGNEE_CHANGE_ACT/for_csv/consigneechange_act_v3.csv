@@ -49,6 +49,12 @@ value,M,decimal, Value
 **ram:ID**,,, Identification code of the Consignee (end of block)
 ram:Name,M,string, Full name of the Consignee
 ram:RoleCode,M,string,Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignee (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Consignee (the end of the block)
 **InitiatorTradeParty**,,,"The initiator of the act is the Consignee (the end of the block). Here is an example for the option when the Act is initiated by the Consignee - the document will have three signatories: the Consignee, the Carrier and the Customer (if he is not the Consignee)."
 **CarrierTradeParty**,M,, Carrier (start of block)
 **ram:ID**,M,, Identification code of the Carrier (beginning of the block)
@@ -57,6 +63,15 @@ value,M,decimal, Value
 **ram:ID**,,, Identification code of the Carrier (end of block)
 ram:Name,M,string, Full name of the Carrier
 ram:RoleCode,M,string,Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
+ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* DRIVER_GLN
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,Driver's license / Driver's GLN / GLN of the participating company (the end of the block)
 **CarrierTradeParty**,,, Carrier (end of block)
 **CustomerTradeParty**,M,, Customer (start of block)
 **ram:ID**,M,, Identification code of the Customer (beginning of the block)
@@ -65,6 +80,12 @@ value,M,decimal, Value
 **ram:ID**,,, Identification code of the Customer (end of block)
 ram:Name,M,string, Full name of the Customer
 ram:RoleCode,M,string, Participant role (Customer - OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Customer (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Customer (the end of the block)
 **CustomerTradeParty**,,, Customer (end of block)
 **ConsigneeTradeParty**,O,, New Consignee (beginning of block)
 **ram:ID**,M,, Identification code of the Consignee (beginning of the block)
@@ -95,6 +116,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (beginning of the block)
 ram:ID,O,string, RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (end of block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the New Consignee (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the New Consignee (the end of the block)
 **ConsigneeTradeParty**,,, New Consignee (end of block)
 **ConsigneeReceiptLogisticsLocation**,M,, Unloading point (beginning of block)
 **ram:ID**,M,,CATUTTC code of the unloading point in accordance with the Codifier of administrative-territorial units and territories of territorial communities (beginning of the block)

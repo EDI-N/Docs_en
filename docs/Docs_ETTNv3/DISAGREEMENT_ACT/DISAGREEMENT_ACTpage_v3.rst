@@ -15,7 +15,7 @@ Table 1 - "Disagreement act" (XML) specification
   :header-rows: 1
   :stub-columns: 0
 
-:download:`Example of "Disagreement act"<examples/disagreement_act_v3.xml>`
+:download:`Example of "Disagreement act"<examples/disagreement_act_v3n.xml>`
 
 -------------------------
 

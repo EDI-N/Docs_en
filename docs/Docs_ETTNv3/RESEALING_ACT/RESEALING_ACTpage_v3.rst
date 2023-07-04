@@ -15,7 +15,7 @@ Table 1 - "Resealing act" (XML) specification
   :header-rows: 1
   :stub-columns: 0
 
-:download:`Example of "Resealing act"<examples/resealing_act_v3.xml>`
+:download:`Example of "Resealing act"<examples/resealing_act_v3n.xml>`
 
 -------------------------
 

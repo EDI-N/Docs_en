@@ -15,7 +15,7 @@ Table 1 - "Reload act" (XML) specification
   :header-rows: 1
   :stub-columns: 0
 
-:download:`Example of "Reload act"<examples/reload_act_v3.xml>`
+:download:`Example of "Reload act"<examples/reload_act_v3n.xml>`
 
 -------------------------
 
