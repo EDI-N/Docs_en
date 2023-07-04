@@ -56,6 +56,12 @@ value,M,decimal, Value
 **ram:ID**,,, Identification code of the Intermediate warehouse (the end of the block)
 ram:Name,M,string, Full name of the Intermediate warehouse (enterprise that accepts cargo from the Carrier for temporary storage)
 ram:RoleCode,M,string, Participant role (Intermediate warehouse - WD). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Intermediate warehouse (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Intermediate warehouse (the end of the block)
 **StorageTradeParty**,,, Intermediate warehouse (the end of the block)
 **CarrierTradeParty**,M,, Carrier (block start)
 **ram:ID**,M,, Identification code of the Carrier (block start)
@@ -83,6 +89,15 @@ ram:CityName,M,string, City (name of settlement)
 ram:CountryID,M,string, Country (UA)
 ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:PostalTradeAddress**,,, Legal address of the Carrier (legal address of a legal entity or address of registration of an individual entrepreneur) (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
+ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* DRIVER_GLN
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,Driver's license / Driver's GLN / GLN of the participating company (the end of the block)
 **CarrierTradeParty**,,, Carrier (the end of the block)
 **StorageLogisticsLocation**,M,, Warehouse location (block start)
 **ram:ID**,M,, Identification code of the temporary storage facility (block start)

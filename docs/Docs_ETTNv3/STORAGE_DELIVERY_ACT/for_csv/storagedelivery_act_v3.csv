@@ -58,6 +58,15 @@ ram:ID,M,string, Signatory's RNTAC (Driver)
 **ram:SpecifiedGovernmentRegistration**,M,, Driver's license (block start)
 ram:ID,M,string,"Series and number of Driver's license Driver delivering the cargo. Filled in the format ""3 capital Cyrillic letters + 6 numbers without spaces"", for example: ``DGJ123456'', ``АБВ123456''"
 **ram:SpecifiedGovernmentRegistration**,,, Driver's license (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
+ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* DRIVER_GLN
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,Driver's license / Driver's GLN / GLN of the participating company (the end of the block)
 **CarrierTradeParty**,,, Carrier (the end of the block)
 **StorageTradeParty**,M,,Intermediate warehouse (block start) 
 **ram:ID**,M,, Identification code of the Intermediate warehouse (block start)
@@ -88,6 +97,12 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string, RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,,Identification code of the responsible person (the end of the block)
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Intermediate warehouse (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Intermediate warehouse (the end of the block)
 **StorageTradeParty**,,, Intermediate warehouse (the end of the block)
 **StorageLogisticsLocation**,M,, Warehouse location (block start)
 **ram:ID**,M,, Identification code of the temporary storage facility (block start)

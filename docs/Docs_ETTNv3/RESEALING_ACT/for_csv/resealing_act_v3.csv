@@ -49,6 +49,12 @@ value,M,decimal, Value
 **ram:ID**,,, Identification code of the Customer (the end of the block)
 ram:Name,M,string, Full name of the Customer
 ram:RoleCode,M,string, Participant role (Customer - OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Customer (block start)
+ram:ID,M,string,"GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,GLN of the Customer (the end of the block)
 **CustomerTradeParty**,,, Customer (the end of the block)
 **CarrierTradeParty**,M,, Carrier (block start)
 **ram:ID**,M,, Identification code of the Carrier (block start)
@@ -57,6 +63,15 @@ value,M,decimal, Value
 **ram:ID**,,, Identification code of the Carrier (the end of the block)
 ram:Name,M,string, Full name of the Carrier
 ram:RoleCode,M,string,Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
+**ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
+ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:TypeCode,O,string,"Id type code:
+
+* DRIVER_GLN
+* TRADEPARTY_GLN"
+**ram:SpecifiedGovernmentRegistration**,,,Driver's license / Driver's GLN / GLN of the participating company (the end of the block)
 **CarrierTradeParty**,,, Carrier (the end of the block)
 **OriginalUtilizedLogisticsTransportEquipment**,M,, Unloading car (block start)
 ram:ID,M,string,"Registration number of the car according to the technical passport
