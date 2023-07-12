@@ -81,6 +81,16 @@ ram:ID,M,string,"Registration number of the car according to the technical passp
 **ram:AffixedLogisticsSeal**,O,, Seal number (car) (beginning of block)
 ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,,Seal number (car) (end of block)
+**ram:SettingTransportSettingTemperature**,O,,Operating instructions (block start)
+**ram:MinimumValueMeasure**,O,,"The temperature regime necessary for cargo transportation. Temperature mode from (block start)"
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MinimumValueMeasure**,,,"The temperature regime necessary for cargo transportation. Temperature mode from (the end of the block)"
+**ram:MaximumValueMeasure**,O,,"The temperature regime necessary for cargo transportation. Temperature mode to (block start)"
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MaximumValueMeasure**,,,"The temperature regime necessary for cargo transportation. Temperature mode to (the end of the block)"
+**ram:SettingTransportSettingTemperature**,,,Operating instructions (the end of the block)
 **ram:ApplicableNote** (з кодом BRAND),M,, Car brand (beginning of block)
 ram:ContentCode,M,string, Code BRAND
 ram:Content,M,string, Car brand according to the technical passport
@@ -103,6 +113,16 @@ ram:CharacteristicCode,M,string,"Identification code Trailer/semi-trailer:
 **ram:AffixedLogisticsSeal**,O,,Seal number (trailer/semi-trailer) (beginning of block)
 ram:ID,O,string, The impression of the seal used to seal the trailer/semi-trailer
 **ram:AffixedLogisticsSeal**,,, Seal number (trailer/semi-trailer) (end of block)
+**ram:SettingTransportSettingTemperature**,O,,Operating instructions (block start)
+**ram:MinimumValueMeasure**,O,,"The temperature regime necessary for cargo transportation. Temperature mode from (block start)"
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MinimumValueMeasure**,,,"The temperature regime necessary for cargo transportation. Temperature mode from (the end of the block)"
+**ram:MaximumValueMeasure**,O,,"The temperature regime necessary for cargo transportation. Temperature mode to (block start)"
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MaximumValueMeasure**,,,"The temperature regime necessary for cargo transportation. Temperature mode to (the end of the block)"
+**ram:SettingTransportSettingTemperature**,,,Operating instructions (the end of the block)
 **ram:ApplicableNote** (з кодом BRAND),M,, Trailer/semi-trailer brand (beginning of block)
 ram:ContentCode,M,string, Code BRAND
 ram:Content,M,string, Make of trailer/semi-trailer according to technical data sheet
