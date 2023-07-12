@@ -16,9 +16,9 @@ ram:ID,M,string,serial number (series) of the TTN document
 **udt:DateTime**,,`datetime <https://www.w3.org/TR/xmlschema-2/#dateTime>`__ (2021-12-13T14:19:23+02:00),Date and time of drafting the document
 **ram:IssueDateTime**,,,Date and time of drafting the document (the end of the block)
 ram:Remarks,O,string,Remarks
-**ram:IncludedNote**,M,,Included Note (block start)
+**ram:IncludedNote**,O,,Included Note (block start)
 **ram:ContentCode**,M,,Content Code (block start)
-listAgencyID,"O",String,"Identifier:
+listAgencyID,M,String,"Identifier:
 
 * transportation_max_temperature
 * logger_return
@@ -575,8 +575,14 @@ ram:ID,O,string, An impression of the seal used to seal the car
 **ram:AffixedLogisticsSeal**,,, Seal number (car) (the end of the block)
 **ram:HandlingInstructions**,O,, Operating instructions (block start)
 **ram:ApplicableTransportSettingTemperature**,O,, The temperature regime necessary for cargo transportation. The temperature range is specified (block start)
-ram:MinimumValueMeasure,O,string, Minimum temperature value
-ram:MaximumValueMeasure,O,string, Maximum temperature value
+**ram:MinimumValueMeasure**,O,, Temperature mode from (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MinimumValueMeasure**,,, Temperature mode from (end of block)
+**ram:MaximumValueMeasure**,O,,Temperature regime before (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MaximumValueMeasure**,,, Temperature regime before (end of block)
 **ram:ApplicableTransportSettingTemperature**,,, The temperature regime necessary for cargo transportation. The temperature range is indicated (the end of the block)
 **ram:HandlingInstructions**,O,,Operating instructions (the end of the block)
 **ram:ApplicableNote** (with code BRAND),M,, Car brand (block start)
@@ -607,8 +613,14 @@ ram:ID,O,string, The impression of the seal used to seal the trailer/semi-traile
 **ram:AffixedLogisticsSeal**,,, Seal number (trailer/semi-trailer) (the end of the block)
 **ram:HandlingInstructions**,O,, Operating instructions (block start)
 **ram:ApplicableTransportSettingTemperature**,O,, The temperature regime necessary for cargo transportation. The temperature range is specified (block start)
-ram:MinimumValueMeasure,O,string, Minimum temperature value
-ram:MaximumValueMeasure,O,string, Maximum temperature value
+**ram:MinimumValueMeasure**,O,, Temperature mode from (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MinimumValueMeasure**,,, Temperature mode from (end of block)
+**ram:MaximumValueMeasure**,O,,Temperature regime before (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MaximumValueMeasure**,,, Temperature regime before (end of block)
 **ram:ApplicableTransportSettingTemperature**,,, The temperature regime necessary for cargo transportation. The temperature range is indicated (the end of the block)
 **ram:HandlingInstructions**,O,,Operating instructions (the end of the block)
 **ram:ApplicableNote** (with code BRAND),M,,Trailer/semi-trailer brand (block start)
@@ -641,8 +653,14 @@ ram:ID,O,string, Imprint of the seal used to seal the container
 **ram:AffixedLogisticsSeal**,,, Seal number (container) (the end of the block)
 **ram:HandlingInstructions**,O,, Operating instructions (block start)
 **ram:ApplicableTransportSettingTemperature**,O,, The temperature regime necessary for cargo transportation. The temperature range is specified (block start)
-ram:MinimumValueMeasure,O,string, Minimum temperature value
-ram:MaximumValueMeasure,O,string, Maximum temperature value
+**ram:MinimumValueMeasure**,O,, Temperature mode from (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MinimumValueMeasure**,,, Temperature mode from (end of block)
+**ram:MaximumValueMeasure**,O,,Temperature regime before (beginning of block)
+unitCode,O,string, unit code (CEL)
+value,O,decimal, Value
+**ram:MaximumValueMeasure**,,, Temperature regime before (end of block)
 **ram:ApplicableTransportSettingTemperature**,,, The temperature regime necessary for cargo transportation. The temperature range is indicated (the end of the block)
 **ram:HandlingInstructions**,O,,Operating instructions (the end of the block)
 **ram:UtilizedLogisticsTransportEquipment** (CategoryCode=CN),,, Container (the end of the block)
