@@ -18,7 +18,7 @@ ram:ID,M,string,serial number (series) of the TTN document
 ram:Remarks,O,string,Remarks
 **ram:IncludedNote**,O,,Included Note (block start)
 **ram:ContentCode**,M,,Content Code (block start)
-listAgencyID,"O",String,"Identifier:
+listAgencyID,M,String,"Identifier:
 
 * transportation_max_temperature
 * logger_return
