@@ -58,7 +58,7 @@ ram:ID,M,string, Signatory's RNTAC (Driver)
 **ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
 ram:ID,M/O,string,"* Driver's license series and number (field is mandatory). Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
 * for ram:TypeCode=DRIVER_GLN - Driver's GLN (field is optional)
-* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company (field is optional)"
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
 * DRIVER_GLN
