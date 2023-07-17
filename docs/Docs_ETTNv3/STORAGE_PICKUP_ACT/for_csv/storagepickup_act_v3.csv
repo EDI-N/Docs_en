@@ -57,7 +57,7 @@ value,M,decimal, Value
 ram:Name,M,string, Full name of the Intermediate warehouse (enterprise that accepts cargo from the Carrier for temporary storage)
 ram:RoleCode,M,string, Participant role (Intermediate warehouse - WD). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:SpecifiedGovernmentRegistration**,M,,GLN of the Intermediate warehouse (block start)
-ram:ID,M,string,"GLN of the participating company"
+ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
 * TRADEPARTY_GLN"
@@ -90,9 +90,9 @@ ram:CountryID,M,string, Country (UA)
 ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:PostalTradeAddress**,,, Legal address of the Carrier (legal address of a legal entity or address of registration of an individual entrepreneur) (the end of the block)
 **ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
-ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
-* for ram:TypeCode=DRIVER_GLN - Driver's GLN
-* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:ID,M/O,string,"* Driver's license series and number (field is mandatory). Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN (field is optional)
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company (field is optional)"
 ram:TypeCode,O,string,"Id type code:
 
 * DRIVER_GLN

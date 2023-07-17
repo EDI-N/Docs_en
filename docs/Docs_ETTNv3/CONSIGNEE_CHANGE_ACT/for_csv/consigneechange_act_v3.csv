@@ -50,7 +50,7 @@ value,M,decimal, Value
 ram:Name,M,string, Full name of the Consignee
 ram:RoleCode,M,string,Participant role (Consignee - CN). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignee (block start)
-ram:ID,M,string,"GLN of the participating company"
+ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
 * TRADEPARTY_GLN"
@@ -64,9 +64,9 @@ value,M,decimal, Value
 ram:Name,M,string, Full name of the Carrier
 ram:RoleCode,M,string,Participant role (Carrier - CA). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:SpecifiedGovernmentRegistration**,M,,Driver's license / Driver's GLN / GLN of the participating company (block start)
-ram:ID,M,string,"* Driver's license series and number. Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
-* for ram:TypeCode=DRIVER_GLN - Driver's GLN
-* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company"
+ram:ID,M/O,string,"* Driver's license series and number (field is mandatory). Filled in the format «3 capital Cyrillic letters + 6 numbers without spaces», for example: ``DGJ123456``, ``АБВ123456``
+* for ram:TypeCode=DRIVER_GLN - Driver's GLN (field is optional)
+* for ram:TypeCode=TRADEPARTY_GLN - GLN of the participating company (field is optional)"
 ram:TypeCode,O,string,"Id type code:
 
 * DRIVER_GLN
@@ -81,7 +81,7 @@ value,M,decimal, Value
 ram:Name,M,string, Full name of the Customer
 ram:RoleCode,M,string, Participant role (Customer - OB). `Role Handbook <https://docs.google.com/spreadsheets/d/1DTHZKlXo1klqBP_DfiUnaDq1teIeNk1gpMlapN2ZKb4/edit?pli=1#gid=112300961>`__
 **ram:SpecifiedGovernmentRegistration**,M,,GLN of the Customer (block start)
-ram:ID,M,string,"GLN of the participating company"
+ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
 * TRADEPARTY_GLN"
@@ -117,7 +117,7 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 ram:ID,O,string, RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (end of block)
 **ram:SpecifiedGovernmentRegistration**,M,,GLN of the New Consignee (block start)
-ram:ID,M,string,"GLN of the participating company"
+ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
 * TRADEPARTY_GLN"
