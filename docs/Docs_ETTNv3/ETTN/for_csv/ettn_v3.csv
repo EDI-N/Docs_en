@@ -79,7 +79,7 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignor (block start)
+**ram:SpecifiedGovernmentRegistration**,M/O,,GLN of the Consignor (the block is mandatory for the sender of the transaction) (block start)
 ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
@@ -115,7 +115,7 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Consignee (block start)
+**ram:SpecifiedGovernmentRegistration**,M/O,,GLN of the Consignee (the block is mandatory for the sender of the transaction) (block start)
 ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
@@ -190,7 +190,7 @@ ram:CountrySubDivisionName,O,string, Region and district (if available)
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Forwarder (block start)
+**ram:SpecifiedGovernmentRegistration**,M/O,,GLN of the Forwarder (the block is mandatory for the sender of the transaction) (block start)
 ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
@@ -226,7 +226,7 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Customer (block start)
+**ram:SpecifiedGovernmentRegistration**,M/O,,GLN of the Customer (the block is mandatory for the sender of the transaction) (block start)
 ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
@@ -262,7 +262,7 @@ ram:CompleteNumber,O,string, Contacts
 **ram:SpecifiedTaxRegistration**,O,, Identification code of the responsible person (block start)
 ram:ID,O,string,RNTAC of the responsible person
 **ram:SpecifiedTaxRegistration**,,, Identification code of the responsible person (the end of the block)
-**ram:SpecifiedGovernmentRegistration**,M,,GLN of the Intermediate warehouse (block start)
+**ram:SpecifiedGovernmentRegistration**,M/O,,GLN of the Intermediate warehouse (the block is mandatory for the sender of the transaction) (block start)
 ram:ID,M/O,string,"GLN of the participating company (the field is mandatory for the transaction sender)"
 ram:TypeCode,O,string,"Id type code:
 
