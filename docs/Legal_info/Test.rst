@@ -1,707 +1,503 @@
 Tables test
 ################################################################################
 
-.. contents:: Contents:
-   :depth: 3
-
--------------------------------------
-
 .. raw:: html
 
     <embed>
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTRUek19RSIDfO8n6iMPbTw4HwDaI_eimm3Fpdr7DuQgw6iuzW4LlZ6f5ixEH98Ew/pubhtml?gid=1934956634&amp;single=true&amp;widget=true&amp;headers=false" width="1100" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrSft75XLCHJK-EsFJsq_rSCmhiwaX1pkEvqxXROD6rVTh2fbdd2pmr1TmYeNjRA/pubhtml?gid=254043882&single=true" width="1100" height="9000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </embed>
 
-.. hmm comment
+-------------------------
 
-    1
-                Посилання на приклад XML						
-    2
-                Посилання на друковану форму (з тегами)						
-    3
-                Посилання на друковану форму (шаблон)						
-    4
-                ТОВАРНО-ТРАНСПОРТНА НАКЛАДНА						UN/CEFACT
-    5
-        № з/п		Назва тегу Uncefact	Тип даних	Значення тегу	Обмеження	Обов'язковість	Зміст тегу (як заповнювати)	Посилання на документацію UN/CEFACT
-                                        
-    6
-        I		eCMR						MMT CCBDA e-CMR Message Structure
-    7
-        1		ExchangedDocumentContext		Технічні дані		mandatory		BSP Master. Exchanged Document_ Context
-    8
-        1.1		ExchangedDocumentContext.SpecifiedTransactionID	string	версія документа		mandatory	Номер версії документа (транзакції) в ланцюгу підписання документів	Exchanged Document_ Context. Specified_ Transaction. Identifier
-    9
-        1.2		ExchangedDocumentContext.BusinessProcessSpecifiedDocumentContextParameter.ID	string	код документа		mandatory		Exchanged Document_ Context. Business Process_ Specified. Document Context_ Parameter
-    10
-        1.3		ExchangedDocumentContext.GuidelineSpecifiedDocumentContextParameter.ID	unsignedByte	підтип документа	001 - generic (default)	mandatory	Тип е-ТТН залежно від виду вантажу:
-    - основний	Exchanged Document_ Context. Guideline_ Specified. Document Context_ Parameter
-    11
-        2		ExchangedDocument		Реквізити ТТН		mandatory		BSP Master. Exchanged_ Document
-    12
-        2.1		ExchangedDocument. ID	string	Номер документа		mandatory	порядковий номер (серія) ТТН	Exchanged_ Document. Identification. Identifier
-    13
-        2.2		ExchangedDocument.IssueDateTime	datetime	Дата і час складання документа	yyyy:mm:dd hh:mm:ss	mandatory	дату виписування ТТН	Exchanged_ Document. Issue. Date Time
-    14
-        2.3		ExchangedDocument.IssueLogisticsLocation.Name + ExchangedDocument.IssueLogisticsLocation.Description	string	Місце складання		mandatory	найменування та опис (адреса) місця складання ТТН	Logistics_ Location. Name. Text + Logistics_ Location. Description.Text
-    15
-        3		SpecifiedSupplyChainConsignment		Інформація про перевезення		mandatory		BSP Master. Specified. Supply Chain_ Consignment
-    16
-        3.1		GrossWeightMeasure	decimal	Маса брутто, кг	0,1	mandatory	загальна вага перевезення в кг з точністю до 0,1	Supply Chain_ Consignment. Gross Weight. Measure
-    17
-        3.2		AssociatedInvoiceAmount	decimal	Усього відпущено на загальну суму, грн	0,01	mandatory	загальна вартість відвантажених товарів з урахуванням ПДВ та акцизного збору (якщо останній сплачується)	Supply Chain_ Consignment. Associated Invoice. Amount
-    18
-        3.3		ConsignmentItemQuantity	decimal	Кількість місць		mandatory	вказується загальна кількість місць вантажу (контейнерів)	Supply Chain_ Consignment. Consignment Item. Quantity
-    19
-        3.5		DeliveryInstructions (код TRANSPORTATION_TYPE)		Вид перевезень		optional		Supply Chain_ Consignment. Delivery. Delivery_ Instructions
-    20
-        3.5.1		DeliveryInstructions.Description	string	Опис		mandatory	вид роботи перевізника: за відрядним тарифом, за погодинним тарифом, за покілометровим тарифом, централізовані перевезення тощо	Delivery_ Instructions. Description. Text
-    21
-        3.5.2		DeliveryInstructions.DescriptionCode	string	Код	TRANSPORTATION_TYPE	mandatory		Delivery_ Instructions. Description. Code
-    22
-        3.6		ConsignorTradeParty		Вантажовідправник		mandatory		Supply Chain_ Consignment. Consignor. Trade_ Party
-    23
-        3.6.1		ConsignorTradeParty. ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Вантажовідправник	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ідентифікаційний код підприємства (ЄДРПОУ юридичної особи або РНОКПП фізичної-особи підприємця), що проводить відвантаження (списання) перелічених в ТТН товарно-матеріальних цінностей	Trade_ Party. Identification. Identifier
-    24
-        3.6.2		ConsignorTradeParty.Name	string	Повне найменування Вантажовідправник		mandatory	найменування підприємства (юридичної особи або ПІБ фізичної-особи підприємця), що проводить відвантаження (списання) перелічених в ТТН товарно-матеріальних цінностей	Trade_ Party. Name. Text
-    25
-        3.6.3		ConsignorTradeParty.RoleCode	string	Роль учасника	вантажовідправник CZ	mandatory	довідник ролей	Trade_ Party. Role. Code
-    26
-        3.6.4		ConsignorTradeParty.PostalTradeAddress		Юридична адреса Вантажовідправник		mandatory	юридична адреса юридичної особи або адреса реєстрації фізичної особи-підприємця	Trade_ Party. Postal. Trade_ Address
-    27
-        3.6.4.1		ConsignorTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    28
-        3.6.4.2		ConsignorTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    29
-        3.6.4.3		ConsignorTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    30
-        3.6.4.4		ConsignorTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    31
-        3.6.4.5		ConsignorTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    32
-        3.6.5		ConsignorTradeParty.DefinedTradeContact		Контактні/відповідальні особи Вантажовідправник		optional		Trade_ Party. Defined. Trade_ Contact
-    33
-        3.6.5.1		ConsignorTradeParty.DefinedTradeContact.PersonName	string	ПІБ		optional		Trade_ Contact. Person Name. Text
-    34
-        3.6.5.2		ConsignorTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    35
-        3.6.5.3		ConsignorTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    36
-        3.6.5.4		ConsignorTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    37
-        3.6.6		ConsignorTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код в.о.		optional	РНОКПП відповідальної особи за необхідності	Trade_ Party. Specified. Tax_ Registration
-    38
-        3.7		ConsigneeTradeParty		Вантажоодержувач		mandatory		Supply Chain_ Consignment. Consignee. Trade_ Party
-    39
-        3.7.1		ConsigneeTradeParty. ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Вантажоодержувач	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ідентифікаційний код підприємства (ЄДРПОУ юридичної особи або РНОКПП фізичної-особи підприємця), що проводить одержання (оприбуткування) перелічених в ТТН товарно-матеріальних цінностей	Trade_ Party. Identification. Identifier
-    40
-        3.7.2		ConsigneeTradeParty.Name	string	Повне найменування Вантажоодержувач		mandatory	найменування підприємства (юридичної особи або ПІБ фізичної-особи підприємця), що проводить одержання (оприбуткування) перелічених в ТТН товарно-матеріальних цінностей	Trade_ Party. Name. Text
-    41
-        3.7.3		ConsigneeTradeParty.RoleCode	string	Роль учасника	вантажоодержувач CN	mandatory	довідник ролей	Trade_ Party. Role. Code
-    42
-        3.7.4		ConsigneeTradeParty.PostalTradeAddress		Юридична адреса Вантажоодержувач		mandatory	юридична адреса юридичної особи або адреса реєстрації фізичної особи-підприємця	Trade_ Party. Postal. Trade_ Address
-    43
-        3.7.4.1		ConsigneeTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    44
-        3.7.4.2		ConsigneeTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    45
-        3.7.4.3		ConsigneeTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    46
-        3.7.4.4		ConsigneeTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    47
-        3.7.4.5		ConsigneeTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    48
-        3.7.5		ConsigneeTradeParty.DefinedTradeContact		Контактні/відповідальні особи Вантажоодержувач		optional		Trade_ Party. Defined. Trade_ Contact
-    49
-        3.7.5.1		ConsigneeTradeParty.DefinedTradeContact.PersonName	string	ПІБ		optional		Trade_ Contact. Person Name. Text
-    50
-        3.7.5.2		ConsigneeTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    51
-        3.7.5.3		ConsigneeTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    52
-        3.7.5.4		ConsigneeTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    53
-        3.7.6		ConsigneeTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код в.о.		optional	РНОКПП відповідальної особи за необхідності	Trade_ Party. Specified. Tax_ Registration
-    54
-        3.8		CarrierTradeParty		Перевізник		mandatory		Supply Chain_ Consignment. Carrier. Trade_ Party
-    55
-        3.8.1		CarrierTradeParty. ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Перевізник	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ЄДРПОУ суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або РНОКПП фізичної особи, з яким вантажовідправник уклав договір на надання транспортних послуг	Trade_ Party. Identification. Identifier
-    56
-        3.8.2		CarrierTradeParty.Name	string	Повне найменування Перевізник		mandatory	найменування суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або прізвище, ім’я, по батькові фізичної особи, з яким вантажовідправник уклав договір на надання транспортних послуг	Trade_ Party. Name. Text
-    57
-        3.8.3		CarrierTradeParty.RoleCode	string	Роль учасника	перевізник CA	mandatory	довідник ролей	Trade_ Party. Role. Code
-    58
-        3.8.4		CarrierTradeParty.PostalTradeAddress	string	Юридична адреса Перевізник		mandatory	юридична адреса суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або адреса реєстрації фізичної особи, з яким вантажовідправник уклав договір на надання транспортних послуг	Trade_ Party. Postal. Trade_ Address
-    59
-        3.8.4.1		CarrierTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    60
-        3.8.4.2		CarrierTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    61
-        3.8.4.3		CarrierTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    62
-        3.8.4.4		CarrierTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    63
-        3.8.4.5		CarrierTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    64
-        3.8.5		CarrierTradeParty.DefinedTradeContact		Контактні/відповідальні особи Перевізник		mandatory		Trade_ Party. Defined. Trade_ Contact
-    65
-        3.8.5.1		CarrierTradeParty.DefinedTradeContact.PersonName	string	ПІБ Водій		mandatory	ПІБ водія, що керуватиме ТЗ при перевезенні вантажу	Trade_ Contact. Person Name. Text
-    66
-        3.8.5.2		CarrierTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    67
-        3.8.5.3		CarrierTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    68
-        3.8.5.4		CarrierTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    69
-        3.8.6		CarrierTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код Водій	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	РНКОПП водія	Trade_ Party. Specified. Tax_ Registration
-    70
-        3.8.7		CarrierTradeParty.SpecifiedGovernmentRegistration.ID	string	Номер посвідчення Водій	1. лише кирилиця
-    2. має відповідати одному з патернів водійського посвідчення
-    (новий формат: три літери + шість цифр)	mandatory	серія та номер водійського посвідчення водія	Trade_ Party. Specified. Government_ Registration (Government_ Registration. Identification. Identifier)
-    71
-        3.9		NotifiedTradeParty (роль - FW)		Експедитор		optional		Supply Chain_ Consignment. Notified. Trade_ Party
-    72
-        3.9.1		NotifiedTradeParty.ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Експедитор	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ЄДРПОУ суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або РНОКПП фізичної особи, з яким вантажовідправник (замовник) уклав договір траспортного експедирування	Trade_ Party. Identification. Identifier
-    73
-        3.9.2		NotifiedTradeParty.Name	string	Повне найменування Експедитор		mandatory	найменування суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або прізвище, ім’я, по батькові фізичної особи, з яким вантажовідправник (замовник) уклав договір траспортного експедирування	Trade_ Party. Name. Text
-    74
-        3.9.3		NotifiedTradeParty.RoleCode	string	Роль учасника	експедитор FW	mandatory	довідник ролей	Trade_ Party. Role. Code
-    75
-        3.9.4		NotifiedTradeParty.PostalTradeAddress	string	Юридична адреса Експедитор		optional	юридична адреса суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або адреса реєстрації фізичної особи, з яким вантажовідправник (замовник) уклав договір траспортного експедирування	Trade_ Party. Postal. Trade_ Address
-    76
-        3.9.4.1		NotifiedTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    77
-        3.9.4.2		NotifiedTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    78
-        3.9.4.3		NotifiedTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    79
-        3.9.4.4		NotifiedTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    80
-        3.9.4.5		NotifiedTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    81
-        3.9.5		NotifiedTradeParty.DefinedTradeContact		Контактні/відповідальні особи Експедитор		optional		Trade_ Party. Defined. Trade_ Contact
-    82
-        3.9.5.1		NotifiedTradeParty.DefinedTradeContact.PersonName	string	ПІБ		optional		Trade_ Contact. Person Name. Text
-    83
-        3.9.5.2		NotifiedTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    84
-        3.9.5.3		NotifiedTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    85
-        3.9.5.4		NotifiedTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    86
-        3.9.6		NotifiedTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код в.о.		optional	РНОКПП відповідальної особи за необхідності	Trade_ Party. Specified. Tax_ Registration
-    87
-        3.10		NotifiedTradeParty (роль - OB)		Замовник		mandatory		Supply Chain_ Consignment. Notified. Trade_ Party
-    88
-        3.10.1		NotifiedTradeParty.ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Замовник	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ЄДРПОУ суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або РНОКПП фізичної особи, що проводить оплату транспортної роботи і послуг	Trade_ Party. Identification. Identifier
-    89
-        3.10.2		NotifiedTradeParty.Name	string	Найменування Замовник		mandatory	найменування суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або прізвище, ім’я, по батькові фізичної особи, що проводить оплату транспортної роботи і послуг	Trade_ Party. Name. Text
-    90
-        3.10.3		NotifiedTradeParty.RoleCode	string	Роль учасника	замовник OB	mandatory	довідник ролей	Trade_ Party. Role. Code
-    91
-        3.10.4		NotifiedTradeParty.PostalTradeAddress		Юридична адреса Замовник		mandatory	юридична адреса суб’єкта господарювання (юридичної особи або фізичної особи - підприємця) або адреса реєстрації фізичної особи, що проводить оплату транспортної роботи і послуг	Trade_ Party. Postal. Trade_ Address
-    92
-        3.10.4.1		NotifiedTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    93
-        3.10.4.2		NotifiedTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    94
-        3.10.4.3		NotifiedTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    95
-        3.10.4.4		NotifiedTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    96
-        3.10.4.5		NotifiedTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    97
-        3.10.5		NotifiedTradeParty.DefinedTradeContact		Контактні/відповідальні особи Замовник		optional		Trade_ Party. Defined. Trade_ Contact
-    98
-        3.10.5.1		NotifiedTradeParty.DefinedTradeContact.PersonName	string	ПІБ		optional		Trade_ Contact. Person Name. Text
-    99
-        3.10.5.2		NotifiedTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    100
-        3.10.5.3		NotifiedTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    101
-        3.10.5.4		NotifiedTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    102
-        3.10.6		NotifiedTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код в.о.		optional	РНОКПП відповідальної особи за необхідності	Trade_ Party. Specified. Tax_ Registration
-    103
-        3.11		NotifiedTradeParty (роль - WD)		Проміжний склад		optional	Опційний блок.
-    Більш детальна інформація про проміжні перевантаження, якщо вона є, надається Перевізником у блоці "Маршрутизація"	Supply Chain_ Consignment. Notified. Trade_ Party
-    104
-        3.11.1		NotifiedTradeParty.ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Проміжний склад	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ЄДРПОУ підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж 	Trade_ Party. Identification. Identifier
-    105
-        3.11.2		NotifiedTradeParty.Name	string	Повне найменування Проміжний склад		mandatory	Повне найменування підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж 	Trade_ Party. Name. Text
-    106
-        3.11.3		NotifiedTradeParty.RoleCode	string	Роль учасника	проміжний склад WD	mandatory	довідник ролей	Trade_ Party. Role. Code
-    107
-        3.11.4		NotifiedTradeParty.PostalTradeAddress		Юридична адреса Проміжний склад		optional	Юридична адреса підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж 	Trade_ Party. Postal. Trade_ Address
-    108
-        3.11.4.1		NotifiedTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    109
-        3.11.4.2		NotifiedTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    110
-        3.11.4.3		NotifiedTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    111
-        3.11.4.4		NotifiedTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    112
-        3.11.4.5		NotifiedTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    113
-        3.11.5		NotifiedTradeParty.DefinedTradeContact		Контактні/відповідальні особи Проміжний склад		optional		Trade_ Party. Defined. Trade_ Contact
-    114
-        3.11.5.1		NotifiedTradeParty.DefinedTradeContact.PersonName	string	ПІБ		optional		Trade_ Contact. Person Name. Text
-    115
-        3.11.5.2		NotifiedTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    116
-        3.11.5.3		NotifiedTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    117
-        3.11.5.4		NotifiedTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    118
-        3.11.6		NotifiedTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код в.о.		optional	РНОКПП відповідальної особи за необхідності	Trade_ Party. Specified. Tax_ Registration
-    119
-        3.12		NotifiedTradeParty (роль - COP)		Компанія, що надає охоронні послуги		optional		Supply Chain_ Consignment. Notified. Trade_ Party
-    120
-        3.12.1		NotifiedTradeParty.ID (schemeAgencyID="ЄДРПОУ")	string	Ідентифікаційний код Охоронна компанія	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ЄДРПОУ підприємства, що надає охоронні послуги вантажу під час перевезення 	Trade_ Party. Identification. Identifier
-    121
-        3.12.2		NotifiedTradeParty.Name	string	Повне найменування Охоронна компанія		mandatory	Повне найменування підприємства, що надає охоронні послуги вантажу під час перевезення	Trade_ Party. Name. Text
-    122
-        3.12.3		NotifiedTradeParty.RoleCode	string	Роль учасника	охоронна фірма COP	mandatory	довідник ролей	Trade_ Party. Role. Code
-    123
-        3.12.4		NotifiedTradeParty.DefinedTradeContact.PersonName	string	ПІБ відп. особи		optional	ПІБ представника Замовника, який уповноважений супроводжувати вантаж, що підлягає спеціальній охороні	Trade_ Contact. Person Name. Text
-    124
-        3.13		CarrierAcceptanceLogisticsLocation		Пункт навантаження		mandatory		Supply Chain_ Consignment. Carrier Acceptance. Logistics_ Location
-    125
-        3.13.1		CarrierAcceptanceLogisticsLocation.ID (schemeAgencyID="КАТОТТГ")	string	Код КАТОТТГ пункту навантаження	валідація за кодифікатором	mandatory	код пункту навантаження відповідно до Кодифікатора адміністративно-територіальних одиниць та територій територіальних громад	Logistics_ Location. Identification. Identifier
-    126
-        3.13.2		CarrierAcceptanceLogisticsLocation.TypeCode	string	Тип операції	5	mandatory	5 - навантаження
-    10 - розвантаження	Logistics_ Location. Type. Code
-    127
-        3.13.3		CarrierAcceptanceLogisticsLocation.Name + CarrierAcceptanceLogisticsLocation.Description	string	Місцезнаходження пункту навантаження		mandatory	Найменування та опис (адреса) пункту навантаження	Logistics_ Location. Name. Text + Logistics_ Location. Description. Text
-    128
-        3.13.4		CarrierAcceptanceLogisticsLocation. PhysicalGeographicalCoordinate. LatitudeMeasure +
-    CarrierAcceptanceLogisticsLocation. PhysicalGeographicalCoordinate. LongitudeMeasure	string	Географічні координати		optional	широта та довгота	Logistics_ Location. Physical. Geographical Coordinate
-    129
-        3.14		ConsigneeReceiptLogisticsLocation		Пункт розвантаження		mandatory		Supply Chain_ Consignment. Consignee Receipt. Logistics_ Location
-    130
-        3.14.1		ConsigneeReceiptLogisticsLocation. ID (schemeAgencyID="КАТОТТГ")	string	Код КАТОТТГ пункту розвантаження	валідація за кодифікатором	mandatory	код пункту розвантаження відповідно до Кодифікатора адміністративно-територіальних одиниць та територій територіальних громад	Logistics_ Location. Identification. Identifier
-    131
-        3.14.2		ConsigneeAcceptanceLogisticsLocation.TypeCode	string	Тип операції	10	mandatory	5 - навантаження
-    10 - розвантаження	Logistics_ Location. Type. Code
-    132
-        3.14.3		ConsigneeReceiptLogisticsLocation.Name + ConsigneeReceiptLogisticsLocation.Description	string	Місцезнаходження пункту розвантаження		mandatory	Найменування та опис (адреса) пункту розвантаження	Logistics_ Location. Name. Text + Logistics_ Location. Description. Text
-    133
-        3.14.4		ConsigneeAcceptanceLogisticsLocation. PhysicalGeographicalCoordinate. LatitudeMeasure +
-    ConsigneeAcceptanceLogisticsLocation. PhysicalGeographicalCoordinate. LongitudeMeasure	string	Географічні координати		optional	широта та довгота	Logistics_ Location. Physical. Geographical Coordinate
-    134
-        3.15		AssociatedReferencedDocument		Супровідні документи на вантаж		optional		Supply Chain_ Consignment. Associated. Referenced_ Document
-    135
-        3.15.1		AssociatedReferencedDocument (TypeCode=723)	string	Документ, що підтверджує охоронні послуги		optional		Supply Chain_ Consignment. Associated. Referenced_ Document
-    136
-        13.15.1.1		AssociatedReferencedDocument.TypeCode	string	Тип	723	mandatory	довідник кодів документів	Referenced_ Document. Type. Code
-    137
-        13.15.1.2		AssociatedReferencedDocument.ID + AssociatedReferencedDocument.Remarks	string	Назва та номер документа		mandatory	Документ, згідно з яким представник Замовника уповноважений супроводжувати вантаж, який підлягає спеціальній охороні	Referenced_ Document. Identification. Identifier + Referenced_ Document. Remarks. Text
-    138
-        13.15.1.3		AssociatedReferencedDocument.FormattedIssueDateTime	datetime	Дата складання документа	yyyy:mm:dd hh:mm:ss	optional		Referenced_ Document. Formatted_ Issue. Date Time
-    139
-        3.15.2		AssociatedReferencedDocument (TypeCode=290)		Запис про передачу права на пред'явлення претензії		optional		Supply Chain_ Consignment. Associated. Referenced_ Document
-    140
-        3.15.2.1		AssociatedReferencedDocument.TypeCode	string	Тип	290	mandatory	довідник кодів документів	Referenced_ Document. Type. Code
-    141
-        3.15.2.2		AssociatedReferencedDocument.Remarks	string	Право на пред'явлення претензії передане		mandatory	Передача права на пред'явлення претензії засвідчується написом на ТТН такого змісту: "Право на пред'явлення претензії передане П.І.Б. " (довірена особа)	Referenced_ Document. Remarks. Text
-    142
-        3.15.2.3		AssociatedReferencedDocument.FormattedIssueDateTime	datetime	Дата складання документа	yyyy:mm:dd hh:mm:ss	optional		Referenced_ Document. Formatted_ Issue. Date Time
-    143
-        3.15.3		AssociatedReferencedDocument (TypeCode=916)		Коригуючі акти		optional		Supply Chain_ Consignment. Associated. Referenced_ Document
-    144
-        3.15.3.1		AssociatedReferencedDocument.TypeCode	string	Тип	916	mandatory	довідник кодів документів	Referenced_ Document. Type. Code
-    145
-        3.15.3.2		AssociatedReferencedDocument.ID + AssociatedReferencedDocument.Remarks	string	Назва та номер акта		mandatory		Referenced_ Document. Identification. Identifier + Referenced_ Document. Remarks. Text
-    146
-        3.15.3.3		AssociatedReferencedDocument.FormattedIssueDateTime	datetime	Дата акта	yyyy:mm:dd hh:mm:ss	optional		Referenced_ Document. Formatted_ Issue. Date Time
-    147
-        3.15.4		AssociatedReferencedDocument		Інші супровідні документи		optional		Supply Chain_ Consignment. Associated. Referenced_ Document
-    148
-        3.15.4.1		AssociatedReferencedDocument.TypeCode	string	Тип	вибір значення із довідника	optional	довідник кодів документів якщо код не присвоєно цим довідником, його (код) можна не вказувати	Referenced_ Document. Type. Code
-    149
-        3.15.4.2		AssociatedReferencedDocument.ID + AssociatedReferencedDocument.Remarks	string	Назва та номер документа		mandatory		Referenced_ Document. Identification. Identifier + Referenced_ Document. Remarks. Text
-    150
-        3.15.4.3		AssociatedReferencedDocument.FormattedIssueDateTime	datetime	Дата документа	yyyy:mm:dd hh:mm:ss	optional		Referenced_ Document. Formatted_ Issue. Date Time
-    151
-        3.16		DeliveryTransportEvent		Розвантажувальні роботи		mandatory		Supply Chain_ Consignment. Delivery. Transport_ Event
-    152
-        3.16.1		DeliveryTransportEvent.ApplicableNote (з кодом GROSSWEIGHT)	decimal	Маса брутто, кг	0,1	optional	маса отриманого вантажу в місці розвантаження в кілограмах з точністю до 0,1	Transport_ Event. Applicable. Note
-    153
-        3.16.2		DeliveryTransportEvent.ActualOccurrenceDateTime	datetime	Дата і час прибуття	yyyy:mm:dd hh:mm:ss	optional	дата і час прибуття автомобіля на розвантаження	Transport_ Event. Actual_ Occurrence. Date Time
-    154
-        3.16.3		DeliveryTransportEvent.ScheduledOccurrenceDateTime	datetime	Дата і час відправлення	yyyy:mm:dd hh:mm:ss	optional	дата і час відправлення автомобіля з-під розвантаження	Transport_ Event. Scheduled_ Occurrence. Date Time
-    155
-        3.16.4		DeliveryTransportEvent.ApplicableNote (з кодом DOWNTIME)	unsignedByte	Час простою		optional	час (години) простою під розвантаженням	Transport_ Event. Applicable. Note
-    156
-        3.16.5		DeliveryTransportEvent.CertifyingTradeParty (RoleCode=CN)		
-    Інформація про відповідальних осіб Вантажоодержувача
-            mandatory		Transport_ Event. Certifying. Trade_ Party
-    157
-        3.16.5.1		DeliveryTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	посада матеріально відповідальної особи вантажоодержувача	Trade_ Party. Name. Text
-    158
-        3.16.5.2		DeliveryTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	вантажоодержувач CN	mandatory	роль - вантажоодержувач	Trade_ Party. Role. Code
-    159
-        3.16.5.3		DeliveryTransportEvent.CertifyingTradeParty.DefinedTradeContact.Person Name	string	П.І.Б.		mandatory	ПІБ матеріально відповідальної особи вантажоодержувача	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    160
-        3.16.5.4		DeliveryTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП матеріально відповідальної особи вантажоодержувача	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    161
-        3.16.6		DeliveryTransportEvent.CertifyingTradeParty (RoleCode=DR)		Інформація про водія Перевізника		mandatory		Transport_ Event. Certifying. Trade_ Party
-    162
-        3.16.6.1		DeliveryTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	посада водія, що здав вантаж	Trade_ Party. Name. Text
-    163
-        3.16.6.2		DeliveryTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	водій DR	mandatory	роль - водій	Trade_ Party. Role. Code
-    164
-        3.16.6.3		DeliveryTransportEvent.CertifyingTradeParty.DefinedTradeContact.PersonName	string	П.І.Б.		mandatory	ПІБ водія, що здав вантаж 	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    165
-        3.16.6.4		DeliveryTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП водія	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    166
-        3.16.7		DeliveryTransportEvent.CertifyingTradeParty (RoleCode=CA)		
-    Інформація про відповідальних осіб Перевізника
-            optional		Transport_ Event. Certifying. Trade_ Party
-    167
-        3.16.7.1		DeliveryTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	Посада відповідальної особи Перевізника	Trade_ Party. Name. Text
-    168
-        3.16.7.2		DeliveryTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	перевізник СА	mandatory	роль - перевізник	Trade_ Party. Role. Code
-    169
-        3.16.7.3		DeliveryTransportEvent.CertifyingTradeParty.DefinedTradeContact.Person Name	string	П.І.Б.		mandatory	П.І.Б. відповідальної особи Перевізника	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    170
-        3.16.7.4		DeliveryTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП відповідальної особи Перевізника	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    171
-        3.16.8		DeliveryTransportEvent.CertifyingTradeParty (RoleCode=FW)		
-    Інформація про відповідальних осіб Експедитора
-            optional		Transport_ Event. Certifying. Trade_ Party
-    172
-        3.16.8.1		DeliveryTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	посада відповідальної особи Експедитора	Trade_ Party. Name. Text
-    173
-        3.16.8.2		DeliveryTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	експедитор FW	mandatory	роль - експедитор	Trade_ Party. Role. Code
-    174
-        3.16.8.3		DeliveryTransportEvent.CertifyingTradeParty.DefinedTradeContact.Person Name	string	П.І.Б.		mandatory	ПІБ відповідальної особи Експедитора	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    175
-        3.16.8.4		DeliveryTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП відповідальної особи Експедитора	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    176
-        3.17		PickUpTransportEvent		Навантажувальні роботи		optional		Supply Chain_ Consignment. Pick-Up. Transport_ Event
-    177
-        3.17.1		PickUpTransportEvent.ApplicableNote (з кодом GROSSWEIGHT)	decimal	Маса брутто, кг	0,1	optional	маса зданого/отриманого для перевезення вантажу в кілограмах з точністю до 0,1	Transport_ Event. Applicable. Note
-    178
-        3.17.2		PickUpTransportEvent.ActualOccurrenceDateTime	datetime	Дата і час прибуття	yyyy:mm:dd hh:mm:ss	optional	дата і час прибуття автомобіля під навантаження	Transport_ Event. Actual_ Occurrence. Date Time
-    179
-        3.17.3		PickUpTransportEvent.ScheduledOccurrenceDateTime	datetime	Дата і час відправлення	yyyy:mm:dd hh:mm:ss	optional	дата і час відправлення автомобіля з-під навантаження	Transport_ Event. Scheduled_ Occurrence. Date Time
-    180
-        3.17.4		PickUpTransportEvent.ApplicableNote (з кодом DOWNTIME)	unsignedByte	Час простою	hh:mm:ss	optional	час простою під навантаженням	Transport_ Event. Applicable. Note
-    181
-        3.17.5		PickUpTransportEvent.CertifyingTradeParty (RoleCode=CZ)		
-    Інформація про відповідальних осіб Вантажовідправника
-            mandatory		Transport_ Event. Certifying. Trade_ Party
-    182
-        3.17.5.1		PickUpTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	посада матеріально відповідальної особи, яка відпускає вантаж	Trade_ Party. Name. Text
-    183
-        3.17.5.2		PickUpTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	вантажовідправник CZ	mandatory	роль - вантажовідправник	Trade_ Party. Role. Code
-    184
-        3.17.5.3		PickUpTransportEvent.CertifyingTradeParty.DefinedTradeContact.PersonName	string	П.І.Б.		mandatory	ПІБ матеріально відповідальної особи, яка відпускає вантаж	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    185
-        3.17.5.4		PickUpTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП матеріально відповідальної особи, яка відпускає вантаж	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    186
-        3.17.6		PickUpTransportEvent.CertifyingTradeParty (RoleCode=DR)		Інформація про водія Перевізника		mandatory		Transport_ Event. Certifying. Trade_ Party
-    187
-        3.17.6.1		PickUpTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	посада водія, що прийняв вантаж	Trade_ Party. Name. Text
-    188
-        3.17.6.2		PickUpTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	водій DR	mandatory	роль - водій	Trade_ Party. Role. Code
-    189
-        3.17.6.3		PickUpTransportEvent.CertifyingTradeParty.DefinedTradeContact.PersonName	string	П.І.Б.		mandatory	ПІБ водія, що прийняв вантаж 	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    190
-        3.17.6.4		PickUpTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП водія	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    191
-        3.17.7		PickUpTransportEvent.CertifyingTradeParty (RoleCode=CA)		
-    Інформація про відповідальних осіб Перевізника
-            optional		Transport_ Event. Certifying. Trade_ Party
-    192
-        3.17.7.1		PickUpTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	Посада відповідальної особи Перевізника	Trade_ Party. Name. Text
-    193
-        3.17.7.2		PickUpTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	перевізник СА	mandatory	роль - перевізник	Trade_ Party. Role. Code
-    194
-        3.17.7.3		PickUpTransportEvent.CertifyingTradeParty.DefinedTradeContact.PersonName	string	П.І.Б.		mandatory	П.І.Б. відповідальної особи Перевізника	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    195
-        3.17.7.4		PickUpTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП відповідальної особи Перевізника	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    196
-        3.17.8		PickUpTransportEvent.CertifyingTradeParty (RoleCode=FW)		
-    Інформація про відповідальних осіб Експедитора
-            optional		Transport_ Event. Certifying. Trade_ Party
-    197
-        3.17.8.1		PickUpTransportEvent.CertifyingTradeParty.Name	string	Посада		mandatory	посада відповідальної особи Експедитора	Trade_ Party. Name. Text
-    198
-        3.17.8.2		PickUpTransportEvent.CertifyingTradeParty.RoleCode	string	Роль	експедитор FW	mandatory	роль - експедитор	Trade_ Party. Role. Code
-    199
-        3.17.8.3		PickUpTransportEvent.CertifyingTradeParty.DefinedTradeContact.PersonName	string	П.І.Б.		mandatory	ПІБ відповідальної особи Експедитора	Trade_ Party. Defined. Trade_ Contact (Trade_ Contact. Person Name. Text)
-    200
-        3.17.8.4		PickUpTransportEvent.CertifyingTradeParty.ID (schemeAgencyID="РНОКПП")	string	Ідентифікаційний код		optional	РНОКПП відповідальної особи Експедитора	Trade_ Party. Identification. Identifier (Identification Scheme Agency. Identifier)
-    201
-        3.18		IncludedSupplyChainConsignmentItem		Відомості про вантаж		mandatory		Supply Chain_ Consignment. Included. Supply Chain_ Consignment Item
-    202
-        3.18.1		IncludedSupplyChainConsignmentItem.SequenceNumeric	int	Порядковий номер		mandatory	порядковий номер рядка в таблиці	Supply Chain_ Consignment Item. Sequence. Numeric
-    203
-        3.18.2		IncludedSupplyChainConsignmentItem.InvoiceAmount	decimal	Загальна сума з ПДВ, грн	0,01	mandatory	загальна сума товару з ПДВ	Supply Chain_ Consignment Item. Invoice. Amount
-    204
-        3.18.3		IncludedSupplyChainConsignmentItem.GrossWeightMeasure	decimal	Маса брутто, кг	0,1	mandatory	маса вантажу по кожному рядку з точністю до 0,1	Supply Chain_ Consignment Item. Gross Weight. Measure
-    205
-        3.18.4		IncludedSupplyChainConsignmentItem.TariffQuantity	decimal	Ціна без ПДВ за одиницю, грн	0,01	optional	ціна товару без ПДВ (це можуть бути як гривні на кілограм (грн./кг), так і гривні на ящик (грн./ящик)) - залежить від зазначеної одиниці виміру	Supply Chain_ Consignment Item. Tariff. Quantity
-    206
-        3.18.5		IncludedSupplyChainConsignmentItem.GlobalID (schemeAgencyID="УКТЗЕД")	string	Код УКТЗЕД продукції	валідація за кодифікатором	optional	Код УКТЗЕД продукції	Supply Chain_ Consignment Item. Global_ Identification. Identifier
-    207
-        3.18.6		IncludedSupplyChainConsignmentItem.NatureIdentificationTransportCargo. Identification	string	Найменування вантажу		mandatory	Найменування вантажу	Supply Chain_ Consignment Item. Nature Identification. Transport_ Cargo
-    208
-        3.18.7		IncludedSupplyChainConsignmentItem.ApplicableTransportDangerousGoods.UNDGIdentificationCode	decimal	Клас небезпечних речовин		optional	у разі перевезення небезпечних вантажів: клас небезпечних речовин, до якого віднесено вантаж	Supply Chain_ Consignment Item. Applicable. Transport_ Dangerous Goods (Transport_ Dangerous Goods. UNDG Identification. Code)
-    209
-        3.18.8		IncludedSupplyChainConsignmentItem.AssociatedReferencedLogisticsTransportEquipment. ID	string	Номер контейнера		optional	Відсилка до номеру контейнера, в якому завантажено цей вантаж.
-    Використовуєься опційно для контейнерих перевезень і має відповідати даним тегу UtilizedLogisticsTransportEquipment 	Supply Chain_ Consignment Item. Associated. Referenced_ Logistics_ Transport Equipment (Referenced_ Logistics_ Transport Equipment. Identification. Identifier)
-    210
-        3.18.9		IncludedSupplyChainConsignmentItem.AssociatedReferencedDocument.ID
-    + IncludedSupplyChainConsignmentItem.AssociatedReferencedDocument.Remarks	string	Документи з вантажем		optional	реквізити документів, які водій отримує від вантажовідправника і передає вантажоодержувачеві разом з вантажем (товарні, залізничні накладні, сертифікати, свідоцтва тощо)	Supply Chain_ Consignment Item. Associated. Referenced_ Document (Referenced_ Document. Identification. Identifier + Referenced_ Document. Remarks. Text)
-    211
-        3.18.10		IncludedSupplyChainConsignmentItem.TransportLogisticsPackage		Транспортна упаковка		optional		Supply Chain_ Consignment Item. Transport. Logistics_ Package
-    212
-        3.18.10.1		IncludedSupplyChainConsignmentItem.TransportLogisticsPackage.ItemQuantity	decimal	Кількість місць		optional	кількість місць, які визначаються за кожним найменуванням вантажу (це можуть бути ящики, кошики, мішки тощо; якщо вантаж упаковано на піддонах - вказують кількість піддонів)	Logistics_ Package. Item. Quantity
-    213
-        3.18.10.2		IncludedSupplyChainConsignmentItem.TransportLogisticsPackage.TypeCode	string	Вид пакування	значення з довідника	optional	довідник видів упаковок	Logistics_ Package. Type. Code
-    214
-        3.18.10.3		IncludedSupplyChainConsignmentItem.TransportLogisticsPackage.Type	string	Одиниця виміру		optional	одиниця виміру для ItemQuantity	Logistics_ Package. Type. Text
-    215
-        3.18.10.4		IncludedSupplyChainConsignmentItem.TransportLogisticsPackage.PhysicalLogisticsShippingMarks.Marking	string	Назва транспортної упаковки		optional	вільна назва транспортної упаковки, в якій перевозиться вантаж (див.приклад)	Logistics_ Package. Physical. Logistics_ Shipping Marks
-    216
-        3.18.10.5		IncludedSupplyChainConsignmentItem.TransportLogisticsPackage.PhysicalLogisticsShippingMarks.BarcodeLogisticsLabel.ID	string	Штрихкод товару		optional	Штрихкод товару	Logistics_ Shipping Marks. Barcode. Logistics_ Label
-    217
-        3.18.11		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом VENDOR_CODE)	string	Артикул товару		optional	Артикул товару	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    218
-        3.18.12		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом QUANTITY)	string	Кількість товару		optional		Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    219
-        3.18.13		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом URL)	string	Посилання на документ		optional		Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    220
-        3.18.14		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом BASE_UOM)	string	Одиниця виміру кількості товару		optional	одиниця виміру для QUANTITY	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    221
-        3.18.15		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом BUYER_CODE)	string	Артикул покупця		optional	Артикул покупця (використовується для ідентифікації товарної позиції при прийманні)	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    222
-        3.18.16		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом PRICE_WITH_VAT)	string	Ціна за одиницю з ПДВ		optional	Ціна за одиницю з ПДВ	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    223
-        3.18.17		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом SUM_WITHOUT_VAT)	string	Загальна сума без ПДВ		optional	Загальна сума без ПДВ	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    224
-        3.18.18		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом RETURN_TARE)	string	Ознака "зворотня тара"		optional		Logistics_ Package. Returnable. Indicator
-    225
-        3.18.19		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом NET_WEIGHT)	string	Маса нетто		optional	Маса нетто	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    226
-        3.18.20		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом RTP_TYPE)	string	Тип транспортної упаковки		optional	Тип транспортної упаковки, наприклад, контейнер	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    227
-        3.18.21		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом RTP_NAME)	string	Назва транспортної упаковки		optional	Назва транспортної упаковки, наприклад, контейнер для перевезення сипучих речовин	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    228
-        3.18.22		IncludedSupplyChainConsignmentItem.ApplicableNote.Content (з кодом RTP_QUANTITY)	string	Кількість транспортної упаковки		optional	Кількість транспортної упаковки (використовується для обліку оборотної тари)	Supply Chain_ Consignment Item. Applicable. Note (Note. Content. Text)
-    229
-        3.19		
-    UtilizedLogisticsTransportEquipment (CategoryCode=TRUCK)
-            Автомобіль		mandatory		Supply Chain_ Consignment. Utilized. Logistics_ Transport Equipment
-    230
-        3.19.1		UtilizedLogisticsTransportEquipment.CategoryCode (якщо відсутній - то вантажний)	string	Тип автомобіля	Вантажний TRUCK 	mandatory	тип автомобіля: вантажний	Logistics_ Transport Equipment. Category. Code
-    231
-        3.19.2		UtilizedLogisticsTransportEquipment. ID	string	Реєстраційний номер автомобіля	1. укр.номери: має відповідати одному з патернів для автомобільних номерних знаків
-    2. єврономери: без валідації	mandatory	реєстраційний номер автомобіля згідно з техпаспортом	Logistics_ Transport Equipment. Identification. Identifier
-    232
-        3.19.3		UtilizedLogisticsTransportEquipment.AffixedLogisticsSeal. ID	string	Номер пломби (автомобіль)		optional	відбиток пломби, якою проводилося пломбування автомобіля	Logistics_ Transport Equipment. Affixed. Logistics_ Seal (Logistics_ Seal. Identification. Identifier)
-    233
-        3.19.4		HandlingInstructions.ApplicableTransportSettingTemperature.MinimumValueMeasure + HandlingInstructions.ApplicableTransportSettingTemperature.MaximumValueMeasure	string	Температурний режим		optional	опис температурного режиму, необхідного для перевезення вантажу.
-    діапазон температур	Transport Setting_ Temperature. Minimum_ Value. Measure +
-    Transport Setting_ Temperature. Maximum_ Value. Measure
-    234
-        3.19.5		UtilizedLogisticsTransportEquipment.ApplicableNote (BRAND)	string	Марка автомобіля		mandatory	марка автомобіля згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    235
-        3.19.6		UtilizedLogisticsTransportEquipment.ApplicableNote (MODEL)	string	Модель автомобіля		mandatory	модель автомобіля згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    236
-        3.19.7		UtilizedLogisticsTransportEquipment.ApplicableNote (COLOR)	string	Колір автомобіля		optional	колір автомобіля згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    237
-        3.19.8		UtilizedLogisticsTransportEquipment.ApplicableNote (TYPE)	string	Тип (назва) автомобіля		optional	тип автомобіля згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    238
-        3.20		
-    UtilizedLogisticsTransportEquipment (CategoryCode=TE)
-            Причіп/напівпричіп		optional		Supply Chain_ Consignment. Utilized. Logistics_ Transport Equipment
-    239
-        3.20.1		UtilizedLogisticsTransportEquipment.CategoryCode	string	Вид транспортного засобу	TE	mandatory	причіп/напівпричіп	Logistics_ Transport Equipment. Category. Code
-    240
-        3.20.2		UtilizedLogisticsTransportEquipment.CharacteristicCode	string	Тип причіп/напівпричіп	Причіп 14
-    Напівпричіп 17 	mandatory	тип: причіп або напівпричіп	Logistics_ Transport Equipment. Characteristic. Code
-    241
-        3.20.3		UtilizedLogisticsTransportEquipment. ID	string	Реєстраційний номер причіп/напівпричіп		mandatory	реєстраційний номер причіпа/напівпричіпа 1 згідно з техпаспортом	Logistics_ Transport Equipment. Identification. Identifier
-    242
-        3.20.4		UtilizedLogisticsTransportEquipment.AffixedLogisticsSeal. ID	string	Номер пломби (причіп/напівпричіп)		optional	відбиток пломби, якою проводилося пломбування причіпа/напівпричіпа	Logistics_ Transport Equipment. Affixed. Logistics_ Seal (Logistics_ Seal. Identification. Identifier)
-    243
-        3.20.5		HandlingInstructions.ApplicableTransportSettingTemperature.MinimumValueMeasure + HandlingInstructions.ApplicableTransportSettingTemperature.MaximumValueMeasure	string	Температурний режим		optional	опис температурного режиму, необхідного для перевезення вантажу.
-    діапазон температур	Transport Setting_ Temperature. Minimum_ Value. Measure +
-    Transport Setting_ Temperature. Maximum_ Value. Measure
-    244
-        3.20.6		UtilizedLogisticsTransportEquipment.ApplicableNote (BRAND)	string	Марка причіп/напівпричіп		mandatory	марка причіпа/напівпричіпа 1 згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    245
-        3.20.7		UtilizedLogisticsTransportEquipment.ApplicableNote (MODEL)	string	Модель причіп/напівпричіп		mandatory	модель причіпа/напівпричіпа 1 згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    246
-        3.20.8		UtilizedLogisticsTransportEquipment.ApplicableNote (TYPE)	string	Тип (назва) причіп/напівпричіп		optional	тип причіпа/напівпричіпа згідно з техпаспортом	Logistics_ Transport Equipment. Applicable. Note
-    247
-        3.21		
-    UtilizedLogisticsTransportEquipment (CategoryCode=CN)
-            Контейнер		optional		Supply Chain_ Consignment. Utilized. Logistics_ Transport Equipment
-    248
-        3.21.1		UtilizedLogisticsTransportEquipment.CategoryCode	string	Вид транспортного засобу	CN	mandatory	контейнер	Logistics_ Transport Equipment. Category. Code
-    249
-        3.21.2		UtilizedLogisticsTransportEquipment.CharacteristicCode	string	Тип контейнера	20-футовий 21
-    40-футовий 23	mandatory	тип: 20-футовий або 40-футовий контейнер 	Logistics_ Transport Equipment. Characteristic. Code
-    250
-        3.21.3		UtilizedLogisticsTransportEquipment. ID	string	Ідентифікаційний номер контейнера		mandatory	Ідентифікаційний номер контейнера	Logistics_ Transport Equipment. Identification. Identifier
-    251
-        3.21.4		UtilizedLogisticsTransportEquipment.AffixedLogisticsSeal. ID	string	Номер пломби контейнера		optional	відбиток пломби, якою проводилося пломбування контейнера	Logistics_ Transport Equipment. Affixed. Logistics_ Seal (Logistics_ Seal. Identification. Identifier)
-    252
-        3.21.5		HandlingInstructions.ApplicableTransportSettingTemperature.MinimumValueMeasure + HandlingInstructions.ApplicableTransportSettingTemperature.MaximumValueMeasure	string	Температурний режим		optional	опис температурного режиму, необхідного для перевезення вантажу.
-    діапазон температур	Transport Setting_ Temperature. Minimum_ Value. Measure +
-    Transport Setting_ Temperature. Maximum_ Value. Measure
-    253
-        3.22		MainCarriageLogisticsTransportMovement		
-    Маршрутизація (проміжні пункти перевантаження)
-            optional	Заповнюється Перевізником	Supply Chain_ Consignment. Main Carriage. Logistics_ Transport Movement
-    254
-        3.22.1		MainCarriageLogisticsTransportMovement.ModeCode	string	Код	3	mandatory	завжди одне значення (3), оскільки використовується лише для дорожніх перевезень	Logistics_ Transport Movement. Mode. Code
-    255
-        3.22.2		MainCarriageLogisticsTransportMovement.SpecifiedTransportEvent		Проміжне розвантаження		mandatory		Logistics_ Transport Movement. Specified. Transport_ Event
-    256
-        3.22.2.1		SpecifiedTransportEvent.ID	string	Порядковий номер події		mandatory	Події завжди нумеруються в порядку поступового зростання за принципом N+1	Transport_ Event. Identification. Identifier
-    257
-        3.22.2.2		SpecifiedTransportEvent.TypeCode	string	Тип операції	розвантаження 5	mandatory	завжди одне значення (5), оскільки використовується як планові пункти розвантаження	Transport_ Event. Type. Code
-    258
-        3.22.2.3		SpecifiedTransportEvent.Description	string	Опис		optional		Transport_ Event. Description. Text
-    259
-        3.22.2.4		SpecifiedTransportEvent.OccurrenceLogisticsLocation		Місцезнаходження		mandatory		Transport_ Event. Occurrence. Logistics_ Location
-    260
-        3.22.2.4.1		SpecifiedTransportEvent.OccurrenceLogisticsLocation.ID (schemeAgencyID="КАТОТТГ")	string	Код КАТОТТГ складу		mandatory	код складу тимчасового зберігання відповідно до Кодифікатора адміністративно-територіальних одиниць та територій територіальних громад 	Logistics_ Location. Identification. Identifier (Identification Scheme Agency. Identifier)
-    261
-        3.22.2.4.2		SpecifiedTransportEvent.OccurrenceLogisticsLocation.TypeCode	string	Тип операції	розвантаження 5	mandatory	завжди одне значення (5), оскільки використовується як планові пункти розвантаження	Logistics_ Location. Type. Code
-    262
-        3.22.2.4.3		SpecifiedTransportEvent.OccurrenceLogisticsLocation.Name + SpecifiedTransportEvent.OccurrenceLogisticsLocation.Description	string	Місцезнаходження складу 		optional	найменування та адреса, додаткова інформація складу тимчасового зберігання	Logistics_ Location. Name. Text + Logistics_ Location. Description. Text
-    263
-        3.22.2.5		SpecifiedTransportEvent.CertifyingTradeParty (роль - WD)		Юридична особа Проміжний склад		mandatory		Transport_ Event. Certifying. Trade_ Party
-    264
-        3.22.2.5.1		SpecifiedTransportEvent.CertifyingTradeParty.ID	string	Ідентифікаційний код Проміжний склад	валідація за кількістю символів та згідно з алгоритмом перевірки контрольної суми	mandatory	ЄДРПОУ підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж 	Trade_ Party. Identification. Identifier
-    265
-        3.22.2.5.2		SpecifiedTransportEvent.CertifyingTradeParty.Name	string	Повне найменування Проміжний склад		mandatory	Повне найменування підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж 	Trade_ Party. Name. Text
-    266
-        3.22.2.5.3		SpecifiedTransportEvent.CertifyingTradeParty.RoleCode	string	Роль учасника	проміжний склад WD	mandatory	довідник ролей	Trade_ Party. Role. Code
-    267
-        3.22.2.5.4		CertifyingTradeParty.PostalTradeAddress		Юридична адреса Проміжний склад		mandatory	Юридична адреса підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж 	Trade_ Party. Postal. Trade_ Address
-    268
-        3.22.2.5.4.1		CertifyingTradeParty.PostalTradeAddress.PostcodeCode	string	Індекс		optional	Індекс	Trade_ Address. Postcode. Code
-    269
-        3.22.2.5.4.2		CertifyingTradeParty.PostalTradeAddress.StreetName	string	Адреса		mandatory	Назва вулиці + номер будівлі	Trade_ Address. Street Name. Text
-    270
-        3.22.2.5.4.3		CertifyingTradeParty.PostalTradeAddress.CityName	string	Місто		mandatory	Назва населеного пункту	Trade_ Address. City Name. Text
-    271
-        3.22.2.5.4.4		CertifyingTradeParty.PostalTradeAddress.CountryID	string	Країна	Україна UA	mandatory	Країна	Trade_ Address. Country. Identifier
-    272
-        3.22.2.5.4.5		CertifyingTradeParty.PostalTradeAddress.CountrySubDivisionName	string	Область + район		optional	Область та район (за наявності)	Trade_ Address. Country Sub-Division Name. Text
-    273
-        3.22.2.5.5		CertifyingTradeParty.DefinedTradeContact		Контактні/відповідальні особи Проміжний склад		optional		Trade_ Party. Defined. Trade_ Contact
-    274
-        3.22.2.5.5.1		CertifyingTradeParty.DefinedTradeContact.PersonName	string	ПІБ		optional		Trade_ Contact. Person Name. Text
-    275
-        3.22.2.5.5.2		CertifyingTradeParty.DefinedTradeContact.TelephoneUniversalCommunication.CompleteNumber	string	Основний телефон		optional		Trade_ Contact. Telephone. Universal_ Communication
-    276
-        3.22.2.5.5.3		CertifyingTradeParty.DefinedTradeContact.MobileTelephoneUniversalCommunication.CompleteNumber	string	Мобільний телефон		optional		Trade_ Contact. Mobile_ Telephone. Universal_ Communication
-    277
-        3.22.2.5.5.4		CertifyingTradeParty.DefinedTradeContact.EmailURIUniversalCommunication.CompleteNumber	string	Електронна адреса		optional		Trade_ Contact. Email_ URI. Universal_ Communication
-    278
-        3.22.2.5.5.5		CertifyingTradeParty.SpecifiedTaxRegistration	string	Ідентифікаційний код в.о.		optional	РНОКПП відповідальної особи за необхідності	Trade_ Party. Specified. Tax_ Registration
-    279
-        II		UaSignatureStorage		Підписи				
-    280
-        1		UaSignatureStorage.VisualReferencedDocument				optional		
-    281
-        1.1		UaSignatureStorage.VisualReferencedDocument.TypeCode	string	Тип	ТТН 730	mandatory	довідник кодів документів	
-    282
-        1.2		UaSignatureStorage.VisualReferencedDocument.Remarks	string	Графічне зображення е-ТТН		optional	base64 графічного відображення документа	
-    283
-        2		UaSignatureStorage.Signature (SigningPartyRoleCode=CZ)		ЕП в.о. Вантажовідправника		mandatory		
-    284
-        2.1		UaSignatureStorage.Signature.SigningPartyRoleCode	string	Роль підписувача	вантажовідправник CZ	mandatory	вантажовідправник	
-    285
-        2.2		UaSignatureStorage.Signature.PartySignature	string	Підпис		mandatory	base64 підпису p7s	
-    286
-        2.3		UaSignatureStorage.Signature.Name	string	ПІБ		mandatory	ПІБ підписувача (відповідальної особи вантажовідправника)	
-    287
-        2.4		UaSignatureStorage.Signature.Position	string	Посада		optional	Посада підписувача (відповідальної особи вантажовідправника)	
-    288
-        2.5		UaSignatureStorage.Signature.SpecifiedTaxRegistration.ID	string	Ідентифікаційний код		mandatory	РНОКПП підписувача (відповідальної особи вантажовідправника)	
-    289
-        3		UaSignatureStorage.Signature (SigningPartyRoleCode=DR)		ЕП водія Перевізника		mandatory		
-    290
-        3.1		UaSignatureStorage.Signature.SigningPartyRoleCode	string	Роль підписувача	водій DR	mandatory	водій	
-    291
-        3.2		UaSignatureStorage.Signature.PartySignature	string	Підпис		mandatory	base64 підпису p7s	
-    292
-        3.3		UaSignatureStorage.Signature.Name	string	ПІБ		mandatory	ПІБ підписувача (водія)	
-    293
-        3.4		UaSignatureStorage.Signature.Position	string	Посада		optional	Посада підписувача (водія)	
-    294
-        3.5		UaSignatureStorage.Signature.SpecifiedTaxRegistration.ID	string	Ідентифікаційний код		mandatory	РНОКПП підписувача (водія)	
-    295
-        4		UaSignatureStorage.Signature (SigningPartyRoleCode=CA)		ЕП в.о. Перевізника		optional		
-    296
-        4.1		UaSignatureStorage.Signature.SigningPartyRoleCode	string	Роль підписувача	перевізник СА	mandatory	перевізник	
-    297
-        4.2		UaSignatureStorage.Signature.PartySignature	string	Підпис		mandatory	base64 підпису p7s	
-    298
-        4.3		UaSignatureStorage.Signature.Name	string	ПІБ		mandatory	ПІБ підписувача (відповідальної особи перевізника)	
-    299
-        4.4		UaSignatureStorage.Signature.Position	string	Посада		optional	Посада підписувача (відповідальної особи перевізника)	
-    300
-        4.5		UaSignatureStorage.Signature.SpecifiedTaxRegistration.ID	string	Ідентифікаційний код		mandatory	РНОКПП підписувача (відповідальної особи перевізника)	
-    301
-        5		UaSignatureStorage.Signature (SigningPartyRoleCode=CN)		ЕП в.о. Вантажоодержувача		mandatory		
-    302
-        5.1		UaSignatureStorage.Signature.SigningPartyRoleCode	string	Роль підписувача	вантажоодержувач CN	mandatory	вантажоодержувач	
-    303
-        5.2		UaSignatureStorage.Signature.PartySignature	string	Підпис		mandatory	base64 підпису p7s	
-    304
-        5.3		UaSignatureStorage.Signature.Name	string	ПІБ		mandatory	ПІБ підписувача (відповідальної особи вантажоодержувача)	
-    305
-        5.4		UaSignatureStorage.Signature.Position	string	Посада		optional	Посада підписувача (відповідальної особи вантажоодержувача)	
-    306
-        5.5		UaSignatureStorage.Signature.SpecifiedTaxRegistration.ID	string	Ідентифікаційний код		mandatory	РНОКПП підписувача (відповідальної особи вантажоодержувача)	
-    307
-                                        
-    308
-                                        
-    309
-        III		Extensions				
-    310
-        №		Назва тегу Uncefact	тип даних	значення тегу	обмеження	обов'язковість	зміст тегу (як заповнювати)	
-    311
-        1		Logistics_ Location. Identification (schemeAgencyID="КАТОТТГ")	string	Код КАТОТТГ		optional		Logistics_ Location. Identification. Identifier (Identification Scheme Agency. Identifier)
-    312
-        2		Logistics_ Location. Physical. Geographical Coordinate	string	GLN		optional		Logistics_ Location. Physical. Geographical Coordinate
-    313
-        3		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (TypeCode=315)	string	Номер договору	315	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    314
-        4		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (Referenced_ Document. Effective. Specified_ Period)	datetime	Дата договору	315	optional		Supply Chain_ Consignment. Associated. Referenced_ Document (Referenced_ Document. Effective. Specified_ Period)
-    315
-        5		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (TypeCode=303)	string	Номер заявки на перевезення	303	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    316
-        6		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (Referenced_ Document. Effective. Specified_ Period)	datetime	Дата заявки на перевезення	303	optional		Supply Chain_ Consignment. Associated. Referenced_ Document (Referenced_ Document. Effective. Specified_ Period)
-    317
-        7		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (TypeCode=220)	string	номер замовлення	220	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    318
-        8		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (Referenced_ Document. Effective. Specified_ Period)	datetime	дата замовлення	220	optional		Supply Chain_ Consignment. Associated. Referenced_ Document (Referenced_ Document. Effective. Specified_ Period)
-    319
-        9		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (TypeCode=171)	string	номер повідомлення про відвантаження	171	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    320
-        10		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (Referenced_ Document. Effective. Specified_ Period)	datetime	дата повідомлення про відвантаження	171	optional		Supply Chain_ Consignment. Associated. Referenced_ Document (Referenced_ Document. Effective. Specified_ Period)
-    321
-        11		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument	string	номер сертифіката	значення згідно з довідником	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    322
-        12		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (TypeCode=395)	string	номер товарної накладної	395	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    323
-        13		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (Referenced_ Document. Effective. Specified_ Period)	datetime	дата товарної накладної	395	optional		Supply Chain_ Consignment. Associated. Referenced_ Document (Referenced_ Document. Effective. Specified_ Period)
-    324
-        14		SpecifiedSupplyChainConsignment.AssociatedReferencedDocument (TypeCode=441)	string	Номер рейсу	441	optional	довідник кодів документів	Supply Chain_ Consignment. Associated. Referenced_ Document
-    325
-        15		Exchanged_ Document. Included. Note	string	Текстове поле	other	optional		Exchanged_ Document. Included. Note
-    Published by Google Sheets–Report Abuse–Updated automatically every 5 minutes
+.. [#] Під визначенням колонки **Тип поля** мається на увазі скорочене позначення:
+
+   * M (mandatory) — обов'язкові до заповнення поля;
+   * O (optional) — необов'язкові (опціональні) до заповнення поля.
+
+.. [#] елементи структури мають наступний вигляд:
+
+   * параметрЗіЗначенням;
+   * **об'єктЗПараметрами**;
+   * :green:`масивОб'єктів`
+
+.. data from table (remember to renew time to time)
+
+    № з/п,Параметр²,Тип¹,Формат,Опис
+    I,ecmr,M, ,Початок змісту документа
+    1,documentContext,M, ,Технічні дані
+    1.1,transactionID,M,string,Номер версії документа (транзакції) в ланцюгу підписання документів
+    1.2.1,documentCode.id,M,string,код типу документа
+    1.3.1,documentSubCode.id,M,string,код підтипу документа
+    2,exchangedDocument,M, ,Реквізити ТТН
+    2.1,id,M,string,порядковий номер (серія) документа
+    2.2.1,issueDateTime.dateTime,M,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата і час складання документа
+    2.3,remarks,O,string,Ремарки
+    2.4,includedNote,O, ,Додані записи
+    2.4.1.1,contentCode.listAgencyID,M,String,"Ідентифікатор:
+
+    * transportation_max_temperature (Максимальна температура під час перевезення)
+    * logger_return (Повернення логера)
+    * logistic_unit_number_with_logger (Номер логістичної одиниці з термологером)
+    * gps_number (Номер GPS)
+    * logger_number (Номер термологера).
+
+    Ідентифікатори logistic_unit_number_with_logger / gps_number / logger_number вказуються контрагентом з роллю «Вантажовідправник». Ідентифікатори transportation_max_temperature та logger_return вказуються контрагентом з роллю «Вантажоодержувач»"
+    2.4.1.2,contentCode.value,M,"* Число (3)
+    * «Так» / «Ні»
+    * Рядок","значення ідентифікатора
+
+    * для transportation_max_temperature = Число (3)
+    * для logger_return = «Так» / «Ні»
+    * для logistic_unit_number_with_logger = Рядок
+    * для gps_number = Рядок
+    * для logger_number = Рядок"
+    2.4.2,content,M,string,"Код ролі учасника. Довідник ролей
+
+    * перевізник - CA
+    * новий перевізник - CH
+    * водій - DR
+    * новий водій - DRS"
+    2.5.1,issueLogisticsLocation.name,M,string,Найменування місця складання ТТН
+    2.5.2,issueLogisticsLocation.description,M,string,Опис (адреса) місця складання ТТН
+    3,specifiedSupplyChainConsignment,M, ,Інформація про перевезення
+    3.1.1,grossWeightMeasure.unitCode,M,string,Код одиниці виміру
+    3.1.2,grossWeightMeasure.value,M,decimal,Значення
+    3.2.1,associatedInvoiceAmount.currencyId,M,string,Тризначний код валюти (UAH)
+    3.2.2,associatedInvoiceAmount.value,M,decimal,Значення
+    3.3,consignmentItemQuantity,M,decimal,Загальна кількість місць вантажу (контейнерів)
+    3.4,consignor,M, ,Вантажовідправник
+    3.4.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Вантажовідправника
+    3.4.1.2,id.value,M,decimal,Значення
+    3.4.2,name,M,string,"Повне найменування Вантажовідправника (юридичної особи або ПІБ фізичної-особи підприємця), що проводить відвантаження (списання) перелічених в ТТН товарно-матеріальних цінностей"
+    3.4.3,roleCode,M,string,Роль учасника (Вантажовідправник - CZ). Довідник ролей
+    3.4.4,tradeContact,O, ,Контакти відповідального представника
+    3.4.4.1,personName,O,string,ПІБ
+    3.4.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.4.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.4.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.4.5,postalTradeAddress,M, ,Юридична адреса Вантажовідправника
+    3.4.5.1,postCode,O,string,Індекс
+    3.4.5.2,streetName,M,string,Адреса (назва вулиці + номер будівлі)
+    3.4.5.3,cityName,M,string,Місто (назва населеного пункту)
+    3.4.5.4,countryID,M,string,Країна (UA)
+    3.4.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.4.6.1,taxRegistration.id,O,string,РНОКПП відповідальної особи
+    3.4.7,specifiedGovernmentRegistrations,M/O, ,GLN Вантажовідправника (блок обов'язковий до заповнення для відправника транзакції)
+    3.4.7.1,id,M/O,string,GLN Вантажовідправника (поле обов'язкове до заповнення для відправника транзакції)
+    3.4.7.2,typeCode,O,string,"Код типу:
+
+    * TRADEPARTY_GLN"
+    3.5,consignee,M, ,Вантажоодержувач
+    3.5.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Вантажоодержувача
+    3.5.1.2,id.value,M,decimal,Значення
+    3.5.2,name,M,string,"Повне найменування Вантажоодержувача (юридичної особи або ПІБ фізичної-особи підприємця), що проводить одержання (оприбуткування) перелічених в ТТН товарно-матеріальних цінностей"
+    3.5.3,roleCode,M,string,Роль учасника (Вантажоодержувач - CN). Довідник ролей
+    3.5.4,tradeContact,O, ,Контакти відповідального представника
+    3.5.4.1,personName,O,string,ПІБ
+    3.5.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.5.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.5.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.5.5,postalTradeAddress,M, ,Юридична адреса Вантажоодержувача
+    3.5.5.1,postCode,O,string,Індекс
+    3.5.5.2,streetName,M,string,Адреса (назва вулиці + номер будівлі)
+    3.5.5.3,cityName,M,string,Місто (назва населеного пункту)
+    3.5.5.4,countryID,M,string,Країна (UA)
+    3.5.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.5.6.1,taxRegistration.id,O,string,РНОКПП відповідальної особи
+    3.5.7,specifiedGovernmentRegistrations,M/O, ,GLN Вантажоодержувача (блок обов'язковий до заповнення для відправника транзакції)
+    3.5.7.1,id,M/O,string,GLN Вантажоодержувача (поле обов'язкове до заповнення для відправника транзакції)
+    3.5.7.2,typeCode,O,string,"Код типу:
+
+    * TRADEPARTY_GLN"
+    3.6,carrier,M, ,Перевізник
+    3.6.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Перевізника
+    3.6.1.2,id.value,M,decimal,Значення
+    3.6.2,name,M,string,"Повне найменування Перевізника (юридичної особи або фізичної особи - підприємця) або прізвище, ім’я, по батькові фізичної особи, з яким вантажовідправник уклав договір на надання транспортних послуг"
+    3.6.3,roleCode,M,string,Роль учасника (Перевізник - CA). Довідник ролей
+    3.6.4,tradeContact,M, ,Контакти відповідального представника
+    3.6.4.1,personName,M,string,"ПІБ водія, що керуватиме ТЗ при перевезенні вантажу"
+    3.6.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.6.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.6.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.6.5,postalTradeAddress,M, ,Юридична адреса Перевізника
+    3.6.5.1,postCode,O,string,Індекс
+    3.6.5.2,streetName,M,string,Адреса (назва вулиці + номер будівлі)
+    3.6.5.3,cityName,M,string,Місто (назва населеного пункту)
+    3.6.5.4,countryID,M,string,Країна (UA)
+    3.6.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.6.6.1,taxRegistration.id,M,string,РНОКПП відповідальної особи (водія)
+    3.6.7,specifiedGovernmentRegistrations,M, ,Посвідчення Водія / GLN Водія / GLN компанії-учасника
+    3.6.7.1,id,M/O,string,"* Серія та номер водійського посвідчення Водія (поле обов'язкове до заповнення). Заповнюється в форматі «3 заголовні кириличні літери + 6 цифр без пробілів», наприклад: DGJ123456, АБВ123456
+    * для typeCode=DRIVER_GLN - GLN Водія (поле опціональне до заповнення)
+    * для typeCode=TRADEPARTY_GLN - GLN компанії-учасника (поле обов'язкове до заповнення для відправника транзакції)"
+    3.6.7.2,typeCode,O,string,"Код типу:
+
+    * DRIVER_GLN
+    * TRADEPARTY_GLN"
+    3.7,notifiedTradeParties (роль - FW),O, ,Експедитор
+    3.7.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Експедитора
+    3.7.1.2,id.value,M,decimal,Значення
+    3.7.2,name,M,string,"Повне найменування Експедитора (юридичної особи або фізичної особи - підприємця) або прізвище, ім’я, по батькові фізичної особи, з яким вантажовідправник (замовник) уклав договір траспортного експедирування"
+    3.7.3,roleCode,M,string,Роль учасника (Експедитор - FW). Довідник ролей
+    3.7.4,tradeContact,O, ,Контакти відповідального представника
+    3.7.4.1,personName,O,string,ПІБ
+    3.7.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.7.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.7.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.7.5,postalTradeAddress,O, ,Юридична адреса Експедитора
+    3.7.5.1,postCode,O,string,Індекс
+    3.7.5.2,streetName,M,string,Адреса (назва вулиці + номер будівлі)
+    3.7.5.3,cityName,M,string,Місто (назва населеного пункту)
+    3.7.5.4,countryID,M,string,Країна (UA)
+    3.7.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.7.6.1,taxRegistration.id,O,string,РНОКПП відповідальної особи
+    3.7.7,specifiedGovernmentRegistrations,M/O, ,GLN Експедитора (блок обов'язковий до заповнення для відправника транзакції)
+    3.7.7.1,id,M/O,string,GLN Експедитора (поле обов'язкове до заповнення для відправника транзакції)
+    3.7.7.2,typeCode,O,string,"Код типу:
+
+    * TRADEPARTY_GLN"
+    3.8,notifiedTradeParties (роль - OB),M, ,Замовник
+    3.8.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Замовника
+    3.8.1.2,id.value,M,decimal,Значення
+    3.8.2,name,M,string,"Повне найменування Замовника (юридичної особи або фізичної особи - підприємця) або прізвище, ім’я, по батькові фізичної особи, що проводить оплату транспортної роботи і послуг"
+    3.8.3,roleCode,M,string,Роль учасника (Замовник - OB). Довідник ролей
+    3.8.4,tradeContact,O, ,Контакти відповідального представника
+    3.8.4.1,personName,O,string,ПІБ
+    3.8.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.8.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.8.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.8.5,postalTradeAddress,M, ,Юридична адреса Замовника
+    3.8.5.1,postCode,O,string,Індекс
+    3.8.5.2,streetName,M,string,Адреса (назва вулиці + номер будівлі)
+    3.8.5.3,cityName,M,string,Місто (назва населеного пункту)
+    3.8.5.4,countryID,M,string,Країна (UA)
+    3.8.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.8.6.1,taxRegistration.id,O,string,РНОКПП відповідальної особи
+    3.8.7,specifiedGovernmentRegistrations,M/O, ,GLN Замовника (блок обов'язковий до заповнення для відправника транзакції)
+    3.8.7.1,id,M/O,string,GLN Замовника (поле обов'язкове до заповнення для відправника транзакції)
+    3.8.7.2,typeCode,O,string,"Код типу:
+
+    * TRADEPARTY_GLN"
+    3.9,notifiedTradeParties (роль - WD),O, ,Проміжний склад
+    3.9.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Проміжного складу
+    3.9.1.2,id.value,M,decimal,Значення
+    3.9.2,name,M,string,"Повне найменування Проміжного складу (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж"
+    3.9.3,roleCode,M,string,Роль учасника (Проміжний склад - WD). Довідник ролей
+    3.9.4,tradeContact,O, ,Контакти відповідального представника
+    3.9.4.1,personName,O,string,ПІБ
+    3.9.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.9.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.9.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.9.5,postalTradeAddress,O, ,Юридична адреса Проміжного складу
+    3.9.5.1,postCode,O,string,Індекс
+    3.9.5.2,streetName,M,string,Адреса (назва вулиці + номер будівлі)
+    3.9.5.3,cityName,M,string,Місто (назва населеного пункту)
+    3.9.5.4,countryID,M,string,Країна (UA)
+    3.9.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.9.6.1,taxRegistration.id,O,string,РНОКПП відповідальної особи
+    3.9.7,specifiedGovernmentRegistrations,M/O, ,GLN Проміжного складу (блок обов'язковий до заповнення для відправника транзакції)
+    3.9.7.1,id,M/O,string,GLN Проміжного складу (поле обов'язкове до заповнення для відправника транзакції)
+    3.9.7.2,typeCode,O,string,"Код типу:
+
+    * TRADEPARTY_GLN"
+    3.10,notifiedTradeParties (роль - COP),O, ,Охоронна компанія
+    3.10.1.1,id.schemeAgencyID,M,string,ЄДРПОУ / РНОКПП Охоронної компанії
+    3.10.1.2,id.value,M,decimal,Значення
+    3.10.2,name,M,string,"Повне найменування Охоронної компанії, що надає охоронні послуги вантажу під час перевезення"
+    3.10.3,roleCode,M,string,Роль учасника (Охоронна компанія - COP). Довідник ролей
+    3.10.4,tradeContact,O, ,Контакти відповідального представника
+    3.10.4.1,personName,O,string,"ПІБ представника Замовника, який уповноважений супроводжувати вантаж, що підлягає спеціальній охороні"
+    3.11,carrierAcceptanceLogisticsLocation,M, ,Пункт навантаження 
+    3.11.1.1,id.schemeAgencyID,M,string,КАТОТТГ пункту навантаження
+    3.11.1.2,id.value,M,decimal,Значення
+    3.11.2,name,M,string,Найменування пункту навантаження
+    3.11.3,typeCode,M,string,Тип операції: 5 - навантаження; 10 - розвантаження
+    3.11.4,description,M,string,Опис (адреса) пункту навантаження
+    3.11.5,physicalGeographicalCoordinate,M, ,Географічні координати
+    3.11.5.1,latitudeMeasure,O,string,Географічні координати (Широта)
+    3.11.5.2,longitudeMeasure,O,string,Географічні координати (Довгота)
+    3.11.5.3.1,systemId.schemeAgencyID,M,string,GLN
+    3.11.5.3.2,systemId.value,M,decimal,Значення
+    3.12,consigneeReceiptLogisticsLocation,M, ,Пункт розвантаження 
+    3.12.1.1,id.schemeAgencyID,M,string,КАТОТТГ пункту розвантаження
+    3.12.1.2,id.value,M,decimal,Значення
+    3.12.2,name,M,string,Найменування пункту розвантаження
+    3.12.3,typeCode,M,string,Тип операції: 5 - навантаження; 10 - розвантаження
+    3.12.4,description,M,string,Опис (адреса) пункту розвантаження
+    3.12.5,physicalGeographicalCoordinate,M, ,Географічні координати
+    3.12.5.1,latitudeMeasure,O,string,Географічні координати (Широта)
+    3.12.5.2,longitudeMeasure,O,string,Географічні координати (Довгота)
+    3.12.5.3.1,systemId.schemeAgencyID,M,string,GLN
+    3.12.5.3.2,systemId.value,M,decimal,Значення
+    3.13,associatedReferencedDocuments (TypeCode=723),O, ,"Супровідні документи на вантаж. Документ, що підтверджує охоронні послуги"
+    3.13.1,typeCode,M,string,"Тип 723 - використовується при зазначенні документа, що підтверджує надання спеціальних охоронних послуг (довідник кодів документів МІУ + довідник внутрішніх кодів документів EDIN)"
+    3.13.2,id,M,string,"Номер документа, згідно з яким представник Замовника уповноважений супроводжувати вантаж, який підлягає спеціальній охороні"
+    3.13.3,remarks,O,string,UUID супровідного документа
+    3.13.4.1,formattedIssueDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час складання супровідного документа
+    3.14,associatedReferencedDocuments (TypeCode=290),O, ,Супровідні документи на вантаж. Запис про передачу права на пред’явлення претензії
+    3.14.1,typeCode,M,string,Тип 290 - використовується при зазначенні передачі права предʼявлення претензії (довідник кодів документів МІУ + довідник внутрішніх кодів документів EDIN)
+    3.14.2,id,O,string,Номер документа
+    3.14.3,remarks,O,string,UUID супровідного документа
+    3.14.4.1,formattedIssueDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час складання супровідного документа
+    3.15,associatedReferencedDocuments (TypeCode=916),O, ,Супровідні документи на вантаж. Коригуючі акти
+    3.15.1,typeCode,M,string,"Тип 916 - використовується при формуванні актів, для вказання попередньої транзакції поточного акту (довідник кодів документів МІУ + довідник внутрішніх кодів документів EDIN)"
+    3.15.2,id,M,string,Номер акта
+    3.15.3,remarks,O,string,UUID супровідного документа
+    3.15.4.1,formattedIssueDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час складання супровідного документа
+    3.16,associatedReferencedDocuments (інші),O, ,Інші супровідні документи
+    3.16.1,typeCode,O,string,"Тип 
+
+    * код 730 використовується для вказання попередніх транзакцій типу е-ТТН
+    * код 730 також використовується при створенні актів для вказання е-ТТН до якого створюється акт
+    * код 916 використовується при формуванні актів, для вказання попередньої транзакції поточного акту
+    * код 723 при зазначенні документа, що підтверджує надання спеціальних охоронних послуг
+    * код 290 при зазначенні передачі права предʼявлення претензії
+    * код 119 при операціях з актом навантаження на проміжному складі, для зазначення попереднього акту розвантаження на цьому ж складі
+
+    (довідник кодів документів МІУ + довідник внутрішніх кодів документів EDIN)"
+    3.16.2,id,O,string,Номер документа
+    3.16.3,remarks,O,string,UUID супровідного документа
+    3.16.4.1,formattedIssueDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час складання супровідного документа
+    3.17,deliveryTransportEvent,M, ,Розвантажувальні роботи
+    3.17.1.1,actualOccurrenceDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час прибуття автомобіля на розвантаження
+    3.17.2.1,scheduledOccurrenceDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час вибуття автомобіля з-під розвантаження
+    3.17.3,certifyingTradeParties (RoleCode=CN),M, ,Інформація про відповідальних осіб Вантажоодержувача
+    3.17.3.1,name,M,string,Посада матеріально відповідальної особи вантажоодержувача
+    3.17.3.2,roleCode,M,string,Роль учасника (Вантажоодержувач - CN). Довідник ролей
+    3.17.3.3.1,tradeContact.personName,M,string,ПІБ матеріально відповідальної особи вантажоодержувача
+    3.17.3.4.1,id.schemeAgencyID,M,string,РНОКПП матеріально відповідальної особи вантажоодержувача
+    3.17.3.4.2,id.value,M,decimal,Значення
+    3.17.4,certifyingTradeParties (RoleCode=DR),M, ,Інформація про водія Перевізника
+    3.17.4.1,name,M,string,"Посада водія, що здав вантаж"
+    3.17.4.2,roleCode,M,string,Роль учасника (Водій - DR). Довідник ролей
+    3.17.4.3.1,tradeContact.personName,M,string,"ПІБ водія, що здав вантаж"
+    3.17.4.4.1,id.schemeAgencyID,O,string,РНОКПП Водія
+    3.17.4.4.2,id.value,O,decimal,Значення
+    3.17.5,certifyingTradeParties (RoleCode=CA),M, ,Інформація про відповідальних осіб Перевізника
+    3.17.5.1,name,M,string,Посада відповідальної особи Перевізника
+    3.17.5.2,roleCode,M,string,Роль учасника (Перевізник - CA). Довідник ролей
+    3.17.5.3.1,tradeContact.personName,M,string,ПІБ відповідальної особи Перевізника
+    3.17.5.4.1,id.schemeAgencyID,O,string,РНОКПП Перевізника
+    3.17.5.4.2,id.value,O,decimal,Значення
+    3.17.6,certifyingTradeParties (RoleCode=FW),O, ,Інформація про відповідальних осіб Експедитора
+    3.17.6.1,name,M,string,Посада відповідальної особи Експедитора
+    3.17.6.2,roleCode,M,string,Роль учасника (Експедитор - FW). Довідник ролей
+    3.17.6.3.1,tradeContact.personName,M,string,ПІБ відповідальної особи Експедитора
+    3.17.6.4.1,id.schemeAgencyID,O,string,РНОКПП Експедитора
+    3.17.6.4.2,id.value,O,decimal,Значення
+    3.17.7.1,applicableNotes (з кодом GROSSWEIGHT).contentCode,O,string,Код GROSSWEIGHT
+    3.17.7.2,applicableNotes (з кодом GROSSWEIGHT).content,O,decimal,Маса брутто отриманого вантажу в місці розвантаження в кілограмах
+    3.17.8.1,applicableNotes (з кодом DOWNTIME).contentCode,O,string,Код DOWNTIME
+    3.17.8.2,applicableNotes (з кодом DOWNTIME).content,O,unsignedByte,Час (години) простою під розвантаженням
+    3.18,pickUpTransportEvent,O, ,Навантажувальні роботи
+    3.18.1.1,actualOccurrenceDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час прибуття автомобіля під навантаження
+    3.18.2.1,scheduledOccurrenceDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час вибуття автомобіля з-під навантаження
+    3.18.3,certifyingTradeParties (RoleCode=CZ),M, ,Інформація про відповідальних осіб Вантажовідправника
+    3.18.3.1,name,M,string,"Посада матеріально відповідальної особи, яка відпускає вантаж"
+    3.18.3.2,roleCode,M,string,Роль учасника (Вантажовідправник - CZ). Довідник ролей
+    3.18.3.3.1,tradeContact.personName,M,string,"ПІБ матеріально відповідальної особи, яка відпускає вантаж"
+    3.18.3.4.1,id.schemeAgencyID,M,string,"РНОКПП матеріально відповідальної особи, яка відпускає вантаж"
+    3.18.3.4.2,id.value,M,decimal,Значення
+    3.18.4,certifyingTradeParties (RoleCode=DR),M/O, ,Інформація про водія Перевізника. Обов’язково має передаватись один з двох блоків: про Водія або про відповідальну особу Перевізника
+    3.18.4.1,name,M,string,"Посада водія, що прийняв вантаж"
+    3.18.4.2,roleCode,M,string,Роль учасника (Водій - DR). Довідник ролей
+    3.18.4.3.1,tradeContact.personName,M,string,"ПІБ водія, що прийняв вантаж"
+    3.18.4.4.1,id.schemeAgencyID,O,string,РНОКПП Водія
+    3.18.4.4.2,id.value,O,decimal,Значення
+    3.18.5,certifyingTradeParties (RoleCode=CA),M/O, ,Інформація про відповідальних осіб Перевізника. Обов’язково має передаватись один з двох блоків: про Водія або про відповідальну особу Перевізника
+    3.18.5.1,name,M,string,Посада відповідальної особи Перевізника
+    3.18.5.2,roleCode,M,string,Роль учасника (Перевізник - CA). Довідник ролей
+    3.18.5.3.1,tradeContact.personName,M,string,ПІБ відповідальної особи Перевізника
+    3.18.5.4.1,id.schemeAgencyID,O,string,РНОКПП Перевізника
+    3.18.5.4.2,id.value,O,decimal,Значення
+    3.18.6,certifyingTradeParties (RoleCode=FW),O, ,Інформація про відповідальних осіб Експедитора
+    3.18.6.1,name,M,string,Посада відповідальної особи Експедитора
+    3.18.6.2,roleCode,M,string,Роль учасника (Експедитор - FW). Довідник ролей
+    3.18.6.3.1,tradeContact.personName,M,string,ПІБ відповідальної особи Експедитора
+    3.18.6.4.1,id.schemeAgencyID,O,string,РНОКПП Експедитора
+    3.18.6.4.2,id.value,O,decimal,Значення
+    3.18.7.1,applicableNotes (з кодом GROSSWEIGHT).contentCode,M,string,Код GROSSWEIGHT
+    3.18.7.2,applicableNotes (з кодом GROSSWEIGHT).content,M,decimal,Маса брутто зданого/отриманого вантажу в кілограмах
+    3.18.8.1,applicableNotes (з кодом DOWNTIME).contentCode,O,string,Код DOWNTIME
+    3.18.8.2,applicableNotes (з кодом DOWNTIME).content,O,unsignedByte,Час простою
+    3.19,includedSupplyChainConsignmentItems,M, ,Відомості про вантаж
+    3.19.1,sequenceNumeric,M,int,Порядковий номер рядка в таблиці
+    3.19.2.1,invoiceAmount.currencyId,M,string,Загальна сума з ПДВ. Тризначний код валюти (UAH)
+    3.19.2.2,invoiceAmount.value,M,decimal,Загальна сума з ПДВ. Значення
+    3.19.3.1,grossWeightMeasure.unitCode,M,string,Маса брутто вантажу по кожному рядку в кг. Код одиниці виміру
+    3.19.3.2,grossWeightMeasure.value,M,decimal,Маса брутто вантажу по кожному рядку в кг. Значення
+    3.19.4.1,tariffQuantity.unitCode,O,string,Ціна без ПДВ за одиницю в грн. Це можуть бути як гривні на кілограм (грн./кг) так і гривні на ящик (грн./ящик) - залежить від зазначеної одиниці виміру. Код одиниці виміру («UAH»)
+    3.19.4.2,tariffQuantity.value,O,decimal,Значення
+    3.19.5.1,globalID.schemeAgencyID,O,string (min 4 - max 10),УКТЗЕД (код продукції)
+    3.19.5.2,globalID.value,O,string,Значення
+    3.19.6.1,natureIdentificationTransportCargo.identification,M,string,Найменування вантажу
+    3.19.7.1,applicableTransportDangerousGoods.UNDGIdentificationCode,O,decimal,"Клас небезпечних речовин, до якого віднесено вантаж (у разі перевезення небезпечних вантажів). Код UNDG, 0 - якщо не використовується"
+    3.19.8.1,associatedReferencedLogisticsTransportEquipment.id,O,string,"Номер контейнера, в якому завантажено цей вантаж. Використовуєься опційно для контейнерих перевезень і має відповідати даним тегу utilizedLogisticsTransportEquipments"
+    3.19.9.1,associatedReferencedDocuments.id,O,string,"Документи з вантажем. Номер документа, який водій отримує від вантажовідправника і передає вантажоодержувачеві разом з вантажем (товарні, залізничні накладні, сертифікати, свідоцтва тощо)"
+    3.19.9.2,associatedReferencedDocuments.remarks,O,string,UUID супровідного документа
+    3.19.10,transportLogisticsPackage,M, ,Транспортно-логістичний пакет. ВАЖЛИВО: в Україні дозволяється лише один LogisticsPackage для одного ConsignmentItem!
+    3.19.10.1,itemQuantity,O,decimal,"Кількість місць, які визначаються за кожним найменуванням вантажу (це можуть бути ящики, кошики, мішки тощо; якщо вантаж упаковано на піддонах - вказують кількість піддонів)"
+    3.19.10.2,typeCode,O,string,Вид пакування (Довідник видів упаковок)
+    3.19.10.3,type,O,string,Одиниця виміру для itemQuantity
+    3.19.10.4,physicalLogisticsShippingMarks,O, ,Маркування
+    3.19.10.4.1,marking,O,string,"Назва транспортної упаковки (вільна назва), в якій перевозиться вантаж"
+    3.19.10.4.2.1,barcodeLogisticsLabel.id,O,string,Штрихкод товару
+    3.19.11.1,applicableNotes (з кодом VENDOR_CODE).contentCode,O,string,Код VENDOR_CODE
+    3.19.11.2,applicableNotes (з кодом VENDOR_CODE).content,O,string,Артикул товару
+    3.19.12.1,applicableNotes (з кодом QUANTITY).contentCode,O,string,Код QUANTITY
+    3.19.12.2,applicableNotes (з кодом QUANTITY).content,O,string,Кількість товару
+    3.19.13.1,applicableNotes (з кодом URL).contentCode,O,string,Код URL
+    3.19.13.2,applicableNotes (з кодом URL).content,O,string,Посилання на документ
+    3.19.14.1,applicableNotes (з кодом BASE_UOM).contentCode,O,string,Код BASE_UOM
+    3.19.14.2,applicableNotes (з кодом BASE_UOM).content,O,string,Одиниця виміру кількості товару для QUANTITY
+    3.19.15.1,applicableNotes (з кодом BUYER_CODE).contentCode,O,string,Код BUYER_CODE
+    3.19.15.2,applicableNotes (з кодом BUYER_CODE).content,O,string,Артикул покупця (використовується для ідентифікації товарної позиції при прийманні)
+    3.19.16.1,applicableNotes (з кодом PRICE_WITH_VAT).contentCode,O,string,Код PRICE_WITH_VAT
+    3.19.16.2,applicableNotes (з кодом PRICE_WITH_VAT).content,O,string,Ціна за одиницю з ПДВ
+    3.19.17.1,applicableNotes (з кодом SUM_WITHOUT_VAT).contentCode,O,string,Код SUM_WITHOUT_VAT
+    3.19.17.2,applicableNotes (з кодом SUM_WITHOUT_VAT).content,O,string,Загальна сума без ПДВ
+    3.19.18.1,applicableNotes (з кодом RETURN_TARE).contentCode,O,string,Код RETURN_TARE
+    3.19.18.2,applicableNotes (з кодом RETURN_TARE).content,O,string,Ознака «зворотня тара»
+    3.19.19.1,applicableNotes (з кодом NET_WEIGHT).contentCode,O,string,Код NET_WEIGHT
+    3.19.19.2,applicableNotes (з кодом NET_WEIGHT).content,O,string,Маса нетто
+    3.19.20.1,applicableNotes (з кодом RTP_TYPE).contentCode,O,string,Код RTP_TYPE
+    3.19.20.2,applicableNotes (з кодом RTP_TYPE).content,O,string,"Тип транспортної упаковки, наприклад, контейнер"
+    3.19.21.1,applicableNotes (з кодом RTP_NAME).contentCode,O,string,Код RTP_NAME
+    3.19.21.2,applicableNotes (з кодом RTP_NAME).content,O,string,"Назва транспортної упаковки, наприклад, контейнер для перевезення сипучих речовин"
+    3.19.22.1,applicableNotes (з кодом RTP_QUANTITY).contentCode,O,string,Код RTP_QUANTITY
+    3.19.22.2,applicableNotes (з кодом RTP_QUANTITY).content,O,string,Кількість транспортної упаковки (використовується для обліку оборотної тари)
+    3.20,utilizedLogisticsTransportEquipments,M, ,Автомобіль
+    3.20.1,id,M,string,"Реєстраційний номер автомобіля згідно з техпаспортом
+
+    * укр.номери: має відповідати одному з патернів для автомобільних номерних знаків
+    * єврономери: без валідації"
+    3.20.2.1,affixedLogisticsSeals.id,O,string,"Номер пломби, якою проводилося пломбування автомобіля"
+    3.20.3,settingTransportSettingTemperature,O, ,Інструкції з експлуатації
+    3.20.3.1,minimum,O, ,"Температурний режим, необхідний для перевезення вантажу. Мінімальне значення температури"
+    3.20.3.1.1,unitCode,O,string,код одиниці виміру (CEL)
+    3.20.3.1.2,value,O,decimal,Значення
+    3.20.3.2,maximum,O, ,"Температурний режим, необхідний для перевезення вантажу. Максимальне значення температури"
+    3.20.3.2.1,unitCode,O,string,код одиниці виміру (CEL)
+    3.20.3.2.2,value,O,decimal,Значення
+    3.20.4.1,applicableNotes (з кодом BRAND).contentCode,M,string,Код BRAND
+    3.20.4.2,applicableNotes (з кодом BRAND).content,M,string,Марка автомобіля згідно з техпаспортом
+    3.20.5.1,applicableNotes (з кодом MODEL).contentCode,M,string,Код MODEL
+    3.20.5.2,applicableNotes (з кодом MODEL).content,M,string,Модель автомобіля згідно з техпаспортом
+    3.20.6.1,applicableNotes (з кодом COLOR).contentCode,O,string,Код COLOR
+    3.20.6.2,applicableNotes (з кодом COLOR).content,O,string,Колір автомобіля згідно з техпаспортом
+    3.20.7.1,applicableNotes (з кодом TYPE).contentCode,O,string,Код TYPE
+    3.20.7.2,applicableNotes (з кодом TYPE).content,O,string,Тип автомобіля згідно з техпаспортом
+    3.21,utilizedLogisticsTransportEquipments (CategoryCode=TE),O, ,Причіп/напівпричіп
+    3.21.1,id,O,string,Реєстраційний номер причіпа/напівпричіпа згідно з техпаспортом
+    3.21.2,categoryCode,M,string,Тип TE - Причіп/напівпричіп
+    3.21.3,characteristicCode,M,string,"Код визначення Причіп/напівпричіп:
+
+    * 14 - Причіп
+    * 17 - Напівпричіп"
+    3.21.4.1,affixedLogisticsSeals.id,O,string,"Номер пломби, якою проводилося пломбування причіпа/напівпричіпа"
+    3.21.5,settingTransportSettingTemperature,O, ,Інструкції з експлуатації
+    3.21.5.1,minimum,O, ,"Температурний режим, необхідний для перевезення вантажу. Мінімальне значення температури"
+    3.21.5.1.1,unitCode,O,string,код одиниці виміру (CEL)
+    3.21.5.1.2,value,O,decimal,Значення
+    3.21.5.2,maximum,O, ,"Температурний режим, необхідний для перевезення вантажу. Максимальне значення температури"
+    3.21.5.2.1,unitCode,O,string,код одиниці виміру (CEL)
+    3.21.5.2.2,value,O,decimal,Значення
+    3.21.6.1,applicableNotes (з кодом BRAND).contentCode,M,string,Код BRAND
+    3.21.6.2,applicableNotes (з кодом BRAND).content,M,string,Марка причіпа/напівпричіпа згідно з техпаспортом
+    3.21.7.1,applicableNotes (з кодом MODEL).contentCode,M,string,Код MODEL
+    3.21.7.2,applicableNotes (з кодом MODEL).content,M,string,Модель причіпа/напівпричіпа згідно з техпаспортом
+    3.21.8.1,applicableNotes (з кодом COLOR).contentCode,O,string,Код COLOR
+    3.21.8.2,applicableNotes (з кодом COLOR).content,O,string,Колір причіпа/напівпричіпа згідно з техпаспортом
+    3.21.9.1,applicableNotes (з кодом TYPE).contentCode,O,string,Код TYPE
+    3.21.9.2,applicableNotes (з кодом TYPE).content,O,string,Тип причіпа/напівпричіпа згідно з техпаспортом
+    3.22,utilizedLogisticsTransportEquipments (CategoryCode=CN),O, ,Контейнер
+    3.22.1,categoryCode,M,string,Тип CN - Контейнер
+    3.22.2,characteristicCode,M,string,"Тип контейнера:
+
+    * 21 - 20-футовий
+    * 23 - 40-футовий"
+    3.22.3,id,M,string,Ідентифікаційний номер контейнера
+    3.22.4.1,affixedLogisticsSeals.id,O,string,"Номер пломби, якою проводилося пломбування контейнера"
+    3.22.5,handlingInstructions,O, ,Інструкції з експлуатації
+    3.22.5.1.1,applicableTransportSettingTemperature. minimum,O, ,"Температурний режим, необхідний для перевезення вантажу. Мінімальне значення температури"
+    3.22.5.1.1.1,unitCode,O,string,код одиниці виміру (CEL)
+    3.22.5.1.1.2,value,O,decimal,Значення
+    3.22.5.1.2,applicableTransportSettingTemperature. maximum,O, ,"Температурний режим, необхідний для перевезення вантажу. Максимальне значення температури"
+    3.22.5.1.2.1,unitCode,O,string,код одиниці виміру (CEL)
+    3.22.5.1.2.2,value,O,decimal,Значення
+    3.23,mainCarriageLogisticsTransportMovement,O, ,Маршрутизація (проміжні пункти перевантаження). Заповнюється Перевізником
+    3.23.1,specifiedTransportEvents,M, ,Проміжне розвантаження
+    3.23.1.1,id,M,string,Порядковий номер проміжного розвантаження події (події завжди нумеруються в порядку поступового зростання за принципом N+1)
+    3.23.1.2,typeCode,M,string,"Тип операції (розвантаження=5); завжди одне значення (5), оскільки використовується як планові пункти розвантаження"
+    3.23.1.3,description,O,string,Опис
+    3.23.1.4,occurrenceLogisticsLocation,M, ,Місцезнаходження
+    3.23.1.4.1.1,id.schemeAgencyID,M,string,Код КАТОТТГ складу тимчасового зберігання відповідно до Кодифікатора адміністративно-територіальних одиниць та територій територіальних громад
+    3.23.1.4.1.2,id.value,M,string,Значення
+    3.23.1.4.2,name,O,string,Найменування та адреса (Місцезнаходження складу)
+    3.23.1.4.3,typeCode,M,string,"Тип операції (розвантаження=5); завжди одне значення (5), оскільки використовується як планові пункти розвантаження"
+    3.23.1.4.4,description,O,string,Додаткова інформація складу тимчасового зберігання
+    3.23.1.5,certifyingTradeParties (RoleCode=WD),M, ,Юридична особа Проміжного складу
+    3.23.1.5.1.1,id.schemeAgencyID,M,string,"ЄДРПОУ підприємства (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж"
+    3.23.1.5.1.2,id.value,M,decimal,Значення
+    3.23.1.5.2,name,M,string,"Повне найменування Проміжного складу (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж"
+    3.23.1.5.3,roleCode,M,string,Роль учасника (Проміжний склад - WD). Довідник ролей
+    3.23.1.5.4,tradeContact,O, ,Контакти відповідальні особи Проміжного складу
+    3.23.1.5.4.1,personName,O,string,ПІБ відповідальні особи Проміжного складу
+    3.23.1.5.4.2.1,telephoneUniversalCommunication.completeNumber,O,string,Основний телефон
+    3.23.1.5.4.3.1,mobileTelephoneUniversalCommunication.completeNumber,O,string,Мобільний телефон
+    3.23.1.5.4.4.1,emailURIUniversalCommunication.completeNumber,O,string,Електронна адреса
+    3.23.1.5.5,postalTradeAddress,M, ,"Юридична адреса Проміжного складу (Вантажовідправник/Перевізник/Експедитор/Вантажоодержувач/Товарний склад), що приймає від Перевізника на тимчасове зберігання вантаж"
+    3.23.1.5.5.1,postCode,O,string,Індекс
+    3.23.1.5.5.2,streetName,M,string,Адреса (Назва вулиці + номер будівлі)
+    3.23.1.5.5.3,cityName,M,string,Місто (Назва населеного пункту)
+    3.23.1.5.5.4,countryID,M,string,Країна (UA)
+    3.23.1.5.5.5,countrySubDivisionName,O,string,Область та район (за наявності)
+    3.23.1.5.6.1,taxRegistration.id,O,string,РНОКПП відповідальної особи
+    3.24,deliveryInstructions,M, ,Вид перевезень
+    3.24.1,description,O,string,"Опис (вид роботи перевізника: за відрядним тарифом, за погодинним тарифом, за покілометровим тарифом, централізовані перевезення тощо)"
+    3.24.2,descriptionCode,M,string,Код (TRANSPORTATION_TYPE)
+    3.25,previousAdministrativeReferencedDocument,-/M, ,"Попередня транзакція ECMR, на основі якої складено поточний документ. Блок не вказується, якщо документ створено з «нуля»"
+    3.25.1,typeCode,O,string,"Тип документа, на основі якого складено поточний документ. Довідник кодів документів"
+    3.25.2,id,M,string,Відповідає ExchangedDocumentContext.SpecifiedTransactionID попередніх версій
+    3.25.3,remarks,O,string,Base64 документа попередньої версії
+    3.25.4.1,formattedIssueDateTime.dateTime,O,"datetime
+    (2021-12-13T14:19:23+02:00)",Дата та час складання попереднього ECMR документа
+    3.25.5,attachedSpecifiedBinaryFile,O, ,"Вкладений бінарний файл документа, на основі якого складено поточний документ"
+    3.25.5.1,id,M,string,Відповідає document.id із ЦБД еТТН
+    3.25.5.2,uriid,M,string,Посилання на документ
+    3.25.5.3,MIMECode,O,string,Код MIME типізації
+    3.25.5.4,SizeMeasure,M,Long,Розмір файлу
+    II,signatureStorage,M, ,Підписи
+    4,signatures (SigningPartyRoleCode=CZ),M, ,КЕП Вантажовідправника
+    4.1,signingPartyRoleCode,M,string,Роль підписанта (Вантажовідправник - CZ). Довідник ролей
+    4.2,partySignature,M,string,Підпис (base64 підпису p7s)
+    4.3,name,M,string,ПІБ підписанта (відповідальної особи вантажовідправника)
+    4.4,position,O,string,Посада підписанта (відповідальної особи вантажовідправника)
+    4.5.1,specifiedTaxRegistration.id,M,string,РНОКПП відповідальної особи вантажовідправника
+    5,signatures (SigningPartyRoleCode=DR),M, ,КЕП Водія
+    5.1,signingPartyRoleCode,M,string,Роль підписанта (Водій - DR). Довідник ролей
+    5.2,partySignature,M,string,Підпис (base64 підпису p7s)
+    5.3,name,M,string,ПІБ підписанта (Водія)
+    5.4,position,O,string,Посада підписанта (Водія)
+    5.5.1,specifiedTaxRegistration.id,M,string,РНОКПП підписанта (Водія)
+    6,signatures (SigningPartyRoleCode=CA),M, ,КЕП Перевізника
+    6.1,signingPartyRoleCode,M,string,Роль підписанта (Перевізник - CA). Довідник ролей
+    6.2,partySignature,M,string,Підпис (base64 підпису p7s)
+    6.3,name,M,string,ПІБ підписанта (відповідальної особи Перевізника)
+    6.4,position,O,string,Посада підписанта (відповідальної особи Перевізника)
+    6.5.1,specifiedTaxRegistration.id,M,string,РНОКПП підписанта (Перевізника)
+    7,signatures (SigningPartyRoleCode=CN),M, ,КЕП Вантажоодержувача
+    7.1,signingPartyRoleCode,M,string,Роль підписанта (Вантажоодержувач - CN). Довідник ролей
+    7.2,partySignature,M,string,Підпис (base64 підпису p7s)
+    7.3,name,M,string,ПІБ підписанта (відповідальної особи Вантажоодержувача)
+    7.4,position,O,string,Посада підписанта (відповідальної особи Вантажоодержувача)
+    7.5.1,specifiedTaxRegistration.id,M,string,РНОКПП підписанта (Вантажоодержувача)
