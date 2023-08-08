@@ -1,6 +1,8 @@
 Tables test
 ################################################################################
 
+.. role:: orange
+
 .. raw:: html
 
     <embed>
@@ -18,7 +20,7 @@ Tables test
 
    * параметрЗіЗначенням;
    * **об'єктЗПараметрами**;
-   * :green:`масивОб'єктів`
+   * :orange:`масивОб'єктів`
 
 .. data from table (remember to renew time to time)
 
