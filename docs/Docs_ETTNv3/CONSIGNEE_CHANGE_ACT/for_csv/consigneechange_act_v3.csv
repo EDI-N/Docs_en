@@ -129,7 +129,7 @@ schemeAgencyID,M,string, CATUTTC
 value,M,decimal, Value
 **ram:ID**,,, CATUTTC code of the unloading point in accordance with the Codifier of administrative-territorial units and territories of territorial communities (end of block)
 ram:Name,M,string, Name of the unloading point
-ram:TypeCode,M,string, Type of operation: 5 - load; 10 — unload
+ram:TypeCode,M,string, Type of operation: 10 - load; 5 - unload
 ram:Description,M,string, Description (address) of the unloading point
 **ram:PhysicalGeographicalCoordinate**,M,, Geographical coordinates (start of the block)
 ram:LatitudeMeasure,O,string, Latitude
