@@ -29,7 +29,7 @@
 КодКонтрагента,M,String (8),Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)
 ІПН,M,String (12),Counterparty individual tax number
 IBAN,M,String (35),IBAN (international bank account number; use in international settlements)
-Телефон,M,String (20),Phone number
+Телефон,O,String (20),Phone number
 GLN,M,Integer (13),Counterparty Global Location Number (GLN)
 **ЮрАдреса**,M, ,Legal address of the counterparty (block start)
 Індекс,M,Integer (5),Post index
@@ -76,7 +76,7 @@ GLN,M,Integer (13),Counterparty Global Location Number (GLN)
 КодКонтрагента,M,String (8),Counterparty code. The value of the code is the payer's code in accordance with the USREOU (Registration (accounting) number from Interim Register of State Tax Administration of Ukraine) or the registration number of the taxpayer registration card (passport number recorded as a sequence of two uppercase letters of the Ukrainian alphabet and six digits)
 ІПН,M,String (12),Counterparty individual tax number
 IBAN,M,String (35),IBAN (international bank account number; use in international settlements)
-Телефон,M,String (20),Phone number
+Телефон,O,String (20),Phone number
 GLN,M,Integer (13),Counterparty Global Location Number (GLN)
 **ЮрАдреса**,M, ,Legal address of the counterparty (block start)
 Індекс,M,Integer (5),Post index
