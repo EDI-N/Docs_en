@@ -1,6 +1,16 @@
 Tables test
 ################################################################################
 
+.. dropdown:: Dropdown title
+
+    Dropdown content
+
+
+.. dropdown:: 1. Sure?
+
+   Yep
+
+
 .. role:: orange
 
 .. raw:: html
