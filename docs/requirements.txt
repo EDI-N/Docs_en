@@ -6,6 +6,7 @@ sphinx-notfound-page
 -e git+https://github.com/sphinx-contrib/plantuml.git#egg=sphinxcontrib-plantuml
 # Fix Toctree error https://github.com/readthedocs/readthedocs.org/issues/8070 add latest versions sphinx & sphinx_rtd_theme
 # sphinx_rtd_theme==0.5.2
+sphinx_rtd_theme
 # sphinx==4.5.0
 # For warning message to new site (versionwarning)
 git+https://github.com/humitos/sphinx-version-warning@master#egg=sphinx-version-warning
