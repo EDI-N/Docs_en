@@ -2,7 +2,7 @@ Tables test
 ################################################################################
 
 .. dropdown:: Dropdown title
-   :color: info
+   :color: #58ae90
    :icon: question
    :animate: fade-in-slide-down
 
