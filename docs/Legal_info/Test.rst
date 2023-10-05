@@ -22,6 +22,9 @@ Tables test
 
     This is a toggled content block!
 
+.. hint:: Click the title to toggle
+    :class: dropdown
+
 .. role:: orange
 
 .. raw:: html
