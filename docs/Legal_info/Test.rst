@@ -2,28 +2,17 @@ Tables test
 ################################################################################
 
 .. dropdown:: Dropdown title
+   :color: info
+   :icon: question
+   :animate: fade-in-slide-down
 
-    Dropdown content
+   Dropdown content
 
 
 .. dropdown:: 1. Sure?
 
    Yep
 
-.. admonition:: Click the title to toggle
-    :class: dropdown
-
-    This title was made into a dropdown admonition by adding ``:class: dropdown`` to it.
-
-.. image:: https://media.giphy.com/media/FaKV1cVKlVRxC/giphy.gif
-    :class: toggle
-
-.. toggle:: Хороша назва
-
-    This is a toggled content block!
-
-.. hint:: Click the title to toggle
-    :class: dropdown
 
 .. role:: orange
 
