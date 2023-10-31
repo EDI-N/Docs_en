@@ -22,7 +22,7 @@
 * **Operator (Provider)** – «АТС» Limited Liability Company, owner and administrator of software products. Operator's website – https://edin.ua/. The Operator is the executor according to the agreement on providing access to software products.
 * **GLN** – global location identifier, used for User identification.
 * **Tariff, tariff package** –  a proposal that determines the list of available functionalities of software products, as well as the procedure for determining their price. Tariffs are available for Users only. The list of available tariff packages can be found at the hyperlink: https://edin.ua/tariff/. Payment of the cost of the selected tariff package by the User confirms the agreement on the price of access to software, as well as the timing and frequency of payments. Data on selected tariff packages are stored in the Personal Account. 
-* **Tariff option** – a special parameter of the software service, which determines the additional limits (restrictions) on the use of the service. Tariff options include "number of deliveries", "number of ESD transactions", "number of users" and others.
+* **Tariff option** – a special parameter of the software service, which determines the additional limits (restrictions) on the use of the service. Tariff options include "number of deliveries", "number of ESD transactions", "number of users", "number of transportations" and others.
 * **Service** – certain functionalities of software products to which the User has access.
 * **Software products** — object of intellectual property rights, computer program “EDI NETWORK”, which includes updated versions, results of refinements, upgrades, improvements, as well as derivatives, interconnected, embedded programs that are the result of computer programming and operation and is possible only with Internet connection. Term “Software products” according to the text of the Terms of Use is also used as “platform”.
 
@@ -45,7 +45,7 @@ Before using the platform, the visitor must:
 4.1 User sessions
 ----------------------------------------------------------------
 
-By default, the User of «EDI+ESD», «Distribution», «E-Certificates», «E-Specification», «Have Product», «Commercial offer» services is granted access of 1 session (1 User in one browser can perform actions in these services). If n "Additional sessions" are purchased in the Balance and tariff selection, then such User can work with the above services in n + 1 sessions (log in in n + 1 browsers) at the same time. Restrictions on use of user sessions which are provided with Terms of Use do not apply to «Vilnyi», «E-TTN», «Products», «Tender» services.
+By default, the User of «EDI Network», «Market», «E-Certificates», «E-Specification», «Commercial offer» services is granted access of 1 session (it is meant that at the same time only 1 User in the 1 browser can use the specified services). If **n "Additional sessions"** are purchased, then such User can work with the above services in **"n + 1 sessions"** at the same time. Restrictions on use of user sessions which are provided with Terms of Use do not apply to «Vilnyi», «E-TTN v2», «Products», «Tender» services.
 
 5 Platform usage procedure 
 ==================================================
@@ -53,13 +53,13 @@ By default, the User of «EDI+ESD», «Distribution», «E-Certificates», «E-S
 5.1 Prerequisites to get started work at the platform services
 ----------------------------------------------------------------
 
-Before starting work at «EDI+ESD», «E-Specification», «Е-Certificates», «Distribution», «Have Product», «Commercial offer», «Products» services:
+Before starting work at «EDI Network», «E-Specification», «Е-Certificates», «Market», «Commercial offer» and also for work in "Personal Cabinet":
 
 * The user must create and / (or enter an existing) GLN according to the instructions «GLN creation»;
 * Connect to one or more networks or connect user's providers;
 * The user can add it's employees if it is necessary, give them the appropriate authority. Employees adding, authority managing is performed in accordance with the instructions.
 
-Before starting work in «E-TTN», «Tender», «Vilnyi» services:
+Before starting work in «E-TTN v2», «Tender», «Vilnyi» services:
 
 * The user can add new company if it is necessary. When you create an account, a company is automatically created.
 * The user can add it's employees if it is necessary, give them the appropriate authority. Employees adding, authority managing is performed in accordance with the instructions.
@@ -141,8 +141,9 @@ Blocking access to software is based on:
 4. Access to all services is blocked, even if they have been paid - in case of non-payment of debts for previous periods.
 5. At the initiative of the User (Client).
 6. In case of gross violations of the agreement on providing access to software, these Terms of Use.
+7. In case the Provider receives information: about the extension to the User of sanctions of the UN Security Council, the Department of Foreign Assets Control of the US State Treasury, the Department of Commerce of the US Bureau of Industry and Security, the US State Department, the European Union, Great Britain, Ukraine or another country or organization, the decision and whose acts are legally binding; about the User's cooperation (directly or through intermediaries) and connectedness of control relations with persons subject to sanctions; that the User is a legal entity created under the laws of Ukraine, the ultimate beneficial owner, member or participant (shareholder) that has a share in the authorized capital of 10 percent or more, which is the Russian Federation, a citizen of the Russian Federation, in addition to living on the territory of Ukraine on legal grounds; on the transfer by the User of material resources to illegal armed or paramilitary formations created on the temporarily occupied territory and/or armed or paramilitary formations of the aggressor state to illegal authorities created on the temporarily occupied territory of Ukraine, including the occupation administration of the aggressor state.
 
-To restore access blocked by terms in subparagraphs 1-4 of paragraph 6.7 of the Terms of Use - it is necessary to replenish with money the Personal Account for the appropriate (sufficient) amount. To resolve issues regarding the restoration of access blocked by terms in subparagraphs 5-6 of paragraph 6.7 of the Terms of Use you need to contact the Provider by e-mail: sales@edin.ua
+To restore access blocked by terms in subparagraphs 1-4 of paragraph 6.7 of the Terms of Use - it is necessary to replenish with money the Personal Account for the appropriate (sufficient) amount. To resolve issues regarding the restoration of access blocked by terms in subparagraphs 5-7 of paragraph 6.7 of the Terms of Use you need to contact the Provider by e-mail: sales@edin.ua
 
 6.8 Individual tariffs
 ----------------------------------------------------------------
@@ -211,7 +212,7 @@ Recommended payment is optional.
 Debiting from the personal account is performed:
 
 * During the activation of the tariff package (adding services, choosing a new package, changing the tariff package) for the current month in full value of the tariff package without taking into account the activation date, unused options (number of deliveries, number of ESD transactions, etc.);
-* Out-of-limit options will be debited from the Personal Account on the 1st of the following month as EUR 2.00 each in UAH equivalent by the exchange rate of the National Bank of Ukraine on the date of the out-of-limit option + 3%.
+* Out-of-limit options will be debited from the Personal Account on the 1st of the following month in accordance with the value specified in the description of the tariff package.
 * Every 01 day of the month in full price of the selected tariff package, if the parameter "Auto prolongation" is set when choosing a tariff package. Debiting from the Personal Account is performed automatically. Debiting from the Personal Account is performed in the national currency of Ukraine - hryvnia in euro equivalent at the rate of the National Bank of Ukraine on the date of crediting to the Personal Account + 3%. In case of insufficiency of funds on the Personal Account, debiting does not take place and access is blocked until the Personal Account is replenished by the appropriate amount.
 
 7.3 Annulment of the remaining funds of the selected tariff package on the Personal Account
@@ -227,7 +228,7 @@ The balance of the Personal Account changes in accordance with the operations (r
 7.5 Out-of-limit options
 ----------------------------------------------------------------
 
-Out-of-limit options are options that go beyond the established tariff options, according to the selected tariff package. The value of the non-limit option is the hryvnia equivalent of EUR 2.00 at the exchange rate of the National Bank of Ukraine on the date of the non-limit option + 3%. For example, the User used all paid X deliveries within a month, so all subsequent deliveries are paid at 2.00 euros per delivery. In order to prevent the occurrence of out-of-limit options, the Provider may inform the User when his account reaching 90% of the tariff option by e-mail (specified during registration).
+Out-of-limit options are options that go beyond the established tariff options, according to the selected tariff package. The cost of the out-of-limit option is indicated in the description of the corresponding tariff package. For example, the User used all paid X deliveries within a month, so all subsequent deliveries are paid at the cost of X euros (which is indicated in the description of the tariff package) per delivery. In order to prevent the occurrence of out-of-limit options, the Provider may inform the User when his account reaching 90% of the tariff option by e-mail (specified during registration).
 
 In order to avoid debt for the use of out-of-limit options, the User may:
 
@@ -235,7 +236,7 @@ In order to avoid debt for the use of out-of-limit options, the User may:
 * Choose an additional tariff package by the end of the current month;
 * Replenishment the Personal Account for the required amount. 
 
-If the User does not use the tariff package change or does not choose an additional tariff package by the end of the current month, then out-of-limit options will be debited from the Personal Account on the 01st of the following month in UAH at the exchange rate of the National Bank of Ukraine on the date of the out-of-limit option + 3%. In case of debt (negative balance on the Personal Account) - access is blocked until the debt will be closed. Access is blocked even if the next period was previously paid. 
+If the User does not use the tariff package change or does not choose an additional tariff package by the end of the current month, then out-of-limit options will be debited from the Personal Account on the 01st of the following month according to the cost of the out-of-limit option specified in the description of the tariff package. In case of debt (negative balance on the Personal Account) - access is blocked until the debt will be closed. Access is blocked even if the next period was previously paid. 
 
 8 Platform service support
 ===============================================================
@@ -266,4 +267,4 @@ The service support service provides the following parameters aimed at ensuring 
 
 ---------------------------------------------
 
-:download:`"EDI Network" platform Terms of Use<files/Правила користування платформою 19-04-22.pdf>`
+:download:`"EDI Network" platform Terms of Use<files/Правила користування платформою 01-11-23.pdf>`
