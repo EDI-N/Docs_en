@@ -28,6 +28,12 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :caption: 🚚 EDIN Driver
+
+   Driver/Instructions_list
+
+.. toctree::
+   :maxdepth: 2
    :caption: 🛍️ Have Product
 
    Instruction <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html>
