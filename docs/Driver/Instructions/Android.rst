@@ -17,6 +17,7 @@
 
 .. contents:: Contents:
    :depth: 5
+   :local:
 
 ---------
 
@@ -307,7 +308,10 @@ We recommend timely **"Update the application"** (1 click in the **"User"** tab)
       :height: 500px
       :align: center
 
------------------------------
+.. _delete-account:
+
+7 Deleting your account in EDIN "Driver"
+====================================================================
 
 .. caution::
    We care about the confidentiality of your credentials, and you can **"Delete account"** by specifying the reason and reconfirming the action with the button:
@@ -316,7 +320,7 @@ We recommend timely **"Update the application"** (1 click in the **"User"** tab)
       :height: 500px
       :align: center
 
-   However, you should know that you will be deprived of the opportunity to use EDIN Driver, and other participants of electronic document circulation will be deprived of the opportunity to exchange electronic documents with you using EDIN Driver!
+   However, you should know that you will be deprived of the opportunity to use EDIN Driver, and other participants of electronic document circulation will be deprived of the opportunity to exchange electronic documents with you using EDIN Driver! You may find out more about the deletion and storage of data from our `Privacy Policy <https://wiki.edin.ua/en/latest/Legal_info/Politic.html>`__ (p.5 and p.9.2.3 respectively).
 
 .. кінець блоку для Android_to_iOS_001
 

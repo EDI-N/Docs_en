@@ -17,6 +17,7 @@
 
 .. contents:: Contents:
    :depth: 5
+   :local:
 
 ---------
 
