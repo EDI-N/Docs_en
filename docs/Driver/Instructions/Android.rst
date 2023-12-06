@@ -316,7 +316,7 @@ We recommend timely **"Update the application"** (1 click in the **"User"** tab)
 .. caution::
    We care about the confidentiality of your credentials, and you can **"Delete account"** by specifying the reason and reconfirming the action with the button:
 
-   .. image:: /Driver/Instructions/pics_Android/Android_047.png
+   .. image:: /Driver/Instructions/pics_Android/Android_048.png
       :height: 500px
       :align: center
 
