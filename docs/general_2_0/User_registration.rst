@@ -37,7 +37,7 @@ To start work with the **EDIN Network** platform, you need to log in (https://ed
 **2 Registration**
 ================================================
 
-User registration is the first step to gaining access to the EDIN Network platform. To register on the platform, click the **"Sign up"** button or follow the link https://edo-v2.edin.ua/register :
+User registration is the first step to gaining access to the EDIN Network platform. To register on the platform, click the **"Sign up"** button or follow the link `link <https://edo-v2.edin.ua/register?source=reg-wiki>`__:
 
 .. image:: pics_User_registration/User_registration_007.png
    :align: center
