@@ -18,7 +18,7 @@
 * **ESD** – electronic signed document.
 * **Account** – accounting business unit (legal or natural person of the User) which regulates the relationship between the Provider and the User.
 * **Visitor** – any person who has the right to use open information sections of software products that are available without registration.
-* **User** – a visitor who has registered on the Provider's website at the link https://edo-v2.edin.ua/register and logged in to the platform with a login / password. The user is also a party to the agreement on access to software, using which such a person receives the right to use software.
+* **User** – a visitor who has registered on the Provider's website at the link `https://edo-v2.edin.ua/register <https://edo-v2.edin.ua/register?source=reg-wiki>`__ and logged in to the platform with a login / password. The user is also a party to the agreement on access to software, using which such a person receives the right to use software.
 * **Operator (Provider)** – «АТС» Limited Liability Company, owner and administrator of software products. Operator's website – https://edin.ua/. The Operator is the executor according to the agreement on providing access to software products.
 * **GLN** – global location identifier, used for User identification.
 * **Tariff, tariff package** –  a proposal that determines the list of available functionalities of software products, as well as the procedure for determining their price. Tariffs are available for Users only. The list of available tariff packages can be found at the hyperlink: https://edin.ua/tariff/. Payment of the cost of the selected tariff package by the User confirms the agreement on the price of access to software, as well as the timing and frequency of payments. Data on selected tariff packages are stored in the Personal Account. 
@@ -33,7 +33,7 @@ Other terms and definitions that are not provided by the Terms of Use are used i
 
 Before using the platform, the visitor must:
 
-* Go through the registration by the link https://edo-v2.edin.ua/register. Registration is considered to be completed after entering the password.
+* Go through the registration by the link `https://edo-v2.edin.ua/register <https://edo-v2.edin.ua/register?source=reg-wiki>`__. Registration is considered to be completed after entering the password.
 * Have a valid QES, which is issued by a qualified provider of electronic trust services (hereinafter - a qualified provider) in accordance with the laws of Ukraine;
 * Create an account and fill in the account data using the appropriate form and tools of the platform. When the User creates an account, he must specify the details and data independently. The User is given access to software products after creating an account.
 * According to the process of creating an Account it is necessary to:
