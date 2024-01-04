@@ -182,9 +182,45 @@ The rejected document changes its status to **"The driver rejected TTN"** and au
    :height: 500px
    :align: center
 
+.. _acts:
+
+5 Working with Acts to e-TTN in EDIN "Driver"
+====================================================================
+
+If an Act was drawn up for the e-TTN document, then this document is also displayed in the tab **"In process"**:
+
+.. image:: /Driver/Instructions/pics_Android/Android_049.png
+   :height: 500px
+   :align: center
+
+At the same time, the e-TTN document itself, to which this Act is drawn up, contains information about the acts (in orange):
+
+.. image:: /Driver/Instructions/pics_Android/Android_050.png
+   :height: 500px
+   :align: center
+
+When viewing the e-TTN document in detail, the **"Corrective Acts"** block is displayed, where all accompanying Acts are displayed (the Act is opened by clicking on its tile):
+
+.. image:: /Driver/Instructions/pics_Android/Android_051.png
+   :height: 500px
+   :align: center
+
+.. _disagreement-act:
+
+5.1 Processing of incoming "Disagreement Act" in EDIN "Driver"
+----------------------------------------------------------------------------------------------------
+
+When the Consignee creates a "Cargo Discrepancy Act" work with e-TTN is blocked and to continue work the Carrier/Driver needs to **"Sign"** or **"Reject"** this Act:
+
+.. image:: /Driver/Instructions/pics_Android/Android_052.png
+   :height: 500px
+   :align: center
+
+The processes of **Signing** and **Rejection** of Acts are identical to the actions performed before e-TTN and described in the sections above (section 3 and section 4, respectively). After Signing or Rejection, the Act changes its status from :orange:`"Awaiting signature by the driver"` to :green:`"Signed by all parties"` or :red:`"Rejected by the carrier/driver"`, respectively.
+
 .. _useful-info:
 
-5 Useful Information
+6 Useful Information
 ====================================================================
 
 In order to **view the printed TTN form**, you need to go to the document card => "three dots" => **"Open the printed form"**:
@@ -232,7 +268,7 @@ Blocking of the Driver takes place in the personal account of the Carrier (for m
 
 .. _settings:
 
-6 EDIN "Driver" settings
+7 EDIN "Driver" settings
 ====================================================================
 
 Your personal settings, application policy and rules, our contacts and other useful information are stored in the **"User"** tab.
@@ -310,7 +346,7 @@ We recommend timely **"Update the application"** (1 click in the **"User"** tab)
 
 .. _delete-account:
 
-7 Deleting your account in EDIN "Driver"
+8 Deleting your account in EDIN "Driver"
 ====================================================================
 
 .. caution::
