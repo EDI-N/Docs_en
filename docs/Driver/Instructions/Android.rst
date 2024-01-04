@@ -2,6 +2,16 @@
 |android_logo| **Android** | Work in "EDIN Driver" application (instructions for Drivers)
 ########################################################################################################################
 
+.. role:: green
+
+.. role:: blue
+
+.. role:: navy
+
+.. role:: red
+
+.. role:: orange
+
 .. сюда закину немного картинок для текста
 
 .. |diskette| image:: /_constant/icons/diskette.png
