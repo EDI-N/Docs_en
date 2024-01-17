@@ -32,12 +32,14 @@ Contents:
 
    Driver/Instructions_list
 
-.. toctree::
-   :maxdepth: 2
-   :caption: 🛍️ Have Product
+.. deprecated
 
-   Instruction <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html>
-   API_Openprice/API_Openprice_list
+   .. toctree::
+      :maxdepth: 2
+      :caption: 🛍️ Have Product
+
+      Instruction <https://wiki.edin.ua/en/latest/Openprice/Instructions/Openprice_instruction.html>
+      API_Openprice/API_Openprice_list
 
 .. toctree::
    :maxdepth: 2
