@@ -21,6 +21,8 @@
 
 .. because of google App Privacy Policy (must be html): https://support.google.com/cloud/answer/13806988?hl=en&ref_topic=13841839&sjid=12291702121998961128-NA#zippy=%2Cyour-privacy-policy-is-improperly-formatted
 
+.. початок блоку для Politic_WD
+
 Version dated 29 November 2023, effective date 29 November 2023
 
 1. GENERAL PROVISIONS
@@ -215,3 +217,5 @@ ATS LLC |br|
 e-mail: kliusao@edin.ua
 
 In your application, be sure to include your name, surname, e-mail address, as well as detailed questions, comments, requests.
+
+.. кінець блоку для Politic_WD
