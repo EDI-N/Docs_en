@@ -15,6 +15,7 @@
 
     <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/EDI-N/Docs_en/master/docs/_static/files/Politic/Privacy_policy.pdf&embedded=true" style="width:100%; height:907px;" frameborder="0"></iframe>
 
+.. because of google App Privacy Policy (must be html): https://support.google.com/cloud/answer/13806988?hl=en&ref_topic=13841839&sjid=12291702121998961128-NA#zippy=%2Cyour-privacy-policy-is-improperly-formatted
 
 Version dated 29 November 2023, effective date 29 November 2023
 
@@ -204,12 +205,9 @@ If you are an employee of the company on whose behalf you perform electronic doc
 
 If you have any questions, comments or suggestions regarding protection and processing of your personal data, you can contact EDIN:
 
-Oleh Kliusa, General Director
-
-ATS LLC
-
-6 Mykhaylo Donets str., Kyiv 03061, Ukraine 
-
-e-mail: kliusao@edin.ua 
+|Oleh Kliusa, General Director|
+|ATS LLC|
+|6 Mykhaylo Donets str., Kyiv 03061, Ukraine|
+|e-mail: kliusao@edin.ua|
 
 In your application, be sure to include your name, surname, e-mail address, as well as detailed questions, comments, requests.
