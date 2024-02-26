@@ -205,9 +205,9 @@ If you are an employee of the company on whose behalf you perform electronic doc
 
 If you have any questions, comments or suggestions regarding protection and processing of your personal data, you can contact EDIN:
 
-  Oleh Kliusa, General Director
-  ATS LLC
-  6 Mykhaylo Donets str., Kyiv 03061, Ukraine
-  e-mail: kliusao@edin.ua
+Oleh Kliusa, General Director
+ATS LLC
+6 Mykhaylo Donets str., Kyiv 03061, Ukraine
+e-mail: kliusao@edin.ua
 
 In your application, be sure to include your name, surname, e-mail address, as well as detailed questions, comments, requests.
