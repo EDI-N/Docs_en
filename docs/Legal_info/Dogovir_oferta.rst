@@ -25,21 +25,12 @@ new for test
 
 .. raw:: html
 
-  <object
-    data="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/EDI-N/Docs_en/master/docs/_static/files/Oferty/EDI_NETWORK_Offer_contract.pdf"
-    type="application/pdf"
-    width="100%"
-    height="100%"
-  >
-    <iframe
-      src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/EDI-N/Docs_en/master/docs/_static/files/Oferty/EDI_NETWORK_Offer_contract.pdf"
-      width="100%"
-      height="100%"
-      style="border: none"
-    >
-      <p>
-        Your browser does not support PDFs.
-        <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/EDI-N/Docs_en/master/docs/_static/files/Oferty/EDI_NETWORK_Offer_contract.pdf">Download the PDF</a>
-      </p>
-    </iframe>
-  </object>
+    <embed>
+      <iframe align="middle" frameborder="1" height="907px" id="ID" scrolling="auto" src="/_static/files/Oferty/EDI_NETWORK_Offer_contract.pdf" style="border:1px solid #666CCC" title="PDF" width="99.5%"></iframe>
+    </embed>
+
+2
+
+.. raw:: html
+
+   <iframe src="/_static/files/Oferty/EDI_NETWORK_Offer_contract.pdf" style="width:100%; height:907px;" frameborder="0"></iframe>
