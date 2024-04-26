@@ -43,8 +43,9 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🏭 Distribution
+   :caption: 🏭 Market
 
+   Distribution/EDIN_2_0/Instructions_2_0/Distribution_instructions_2_0_list
    Distribution/EDIN_2_0/XML/XML_structure
 
 .. toctree::
