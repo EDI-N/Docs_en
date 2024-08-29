@@ -35,7 +35,7 @@ You can use any browser to work with the WEB service (**Google Chrome** latest v
    :align: center
 
 .. hint::
-   New users can easy go throught self-`"Register" <https://wiki.edin.ua/en/latest/general_2_0/User_registration.html#register>`__ on the "EDI Network" platform.
+   New users can easy go throught self- `"Register" <https://wiki.edin.ua/en/latest/general_2_0/User_registration.html#register>`__ on the "EDI Network" platform using Email. You can change your password, e-mail or other personal data in your `"User Profile" <https://wiki.edin.ua/en/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#pers-settings>`__.
 
 .. кінець блоку для Enter
 
