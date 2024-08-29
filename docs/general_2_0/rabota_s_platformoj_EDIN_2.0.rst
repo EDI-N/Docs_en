@@ -31,7 +31,7 @@ Work with "EDI Network" platform
 
 You can use any browser to work with the WEB service (**Google Chrome** latest version is recommended). To start work with the **EDIN Network** platform, you need to `Authorize <https://wiki.edin.ua/en/latest/general_2_0/User_registration.html#auth>`__ : follow the link https://edo-v2.edin.ua/auth, enter your user login and password, press **"Sign In"**, as shown in the image below:
 
-.. image:: /general_2_0/pics_rabota_s_platformoj_EDIN_2.0/rabota_s_platformoj_06n.png
+.. image:: /general_2_0/pics_rabota_s_platformoj_EDIN_2.0/rabota_s_platformoj_072.png
    :align: center
 
 .. hint::
