@@ -22,6 +22,18 @@
    .wy-menu-vertical header,
    .wy-menu-vertical p.caption {color: #01a068}
 
+/* Iframe select text */ 
+   .docsshared-no-download .docsshared-no-select-when-no-download,
+   .docsshared-no-select {
+      -khtml-user-select: auto;
+      -moz-user-select: auto;
+      -ms-user-select: auto;
+      -webkit-touch-callout: auto;
+      -webkit-user-drag: auto;
+      -webkit-user-select: auto;
+      user-select: auto;
+   }
+
 /* Colors and text decoration.
  For example, :black:`text in black` or :blink:`text blinking` in rST.
  В общем сначала на странице прописываем руками роли а потом уже вызываем внутри текста, например :red:`красный текст`. Роли:
