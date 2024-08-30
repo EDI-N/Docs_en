@@ -22,6 +22,16 @@
    .wy-menu-vertical header,
    .wy-menu-vertical p.caption {color: #01a068}
 
+/* Iframe select text */ 
+   .docsshared-no-select {
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      user-select: auto;
+
 
 /* Colors and text decoration.
  For example, :black:`text in black` or :blink:`text blinking` in rST.
