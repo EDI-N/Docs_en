@@ -143,7 +143,6 @@ html_theme = 'sphinx_rtd_theme'
 
 def setup(app):
     app.add_stylesheet('theme_overrides2.css')
-    app.add_stylesheet('1828167213-waffle_k_ltr.css')
 
 # old js was added like this
 #def setup(app):

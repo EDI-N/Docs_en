@@ -351,4 +351,9 @@ Tabs style (in conf.py parameter sphinx_tabs_disable_css_loading = True )
 	margin-bottom: 24 px;
 }
  
- 
+/* Iframe select text */ 
+
+.text {
+   -webkit-user-select: text;
+   user-select: text;
+}
