@@ -215,10 +215,12 @@ Debiting from the personal account is performed:
 * Out-of-limit options will be debited from the Personal Account on the 1st of the following month in accordance with the value specified in the description of the tariff package.
 * Every 01 day of the month in full price of the selected tariff package, if the parameter "Auto prolongation" is set when choosing a tariff package. Debiting from the Personal Account is performed automatically. Debiting from the Personal Account is performed in the national currency of Ukraine - hryvnia in euro equivalent at the rate of the National Bank of Ukraine on the date of crediting to the Personal Account + 3%. In case of insufficiency of funds on the Personal Account, debiting does not take place and access is blocked until the Personal Account is replenished by the appropriate amount.
 
-7.3 Annulment of the remaining funds of the selected tariff package on the Personal Account
---------------------------------------------------------------------------------------------
+7.3 Annulment of the remaining funds of the selected tariff package on the Personal Account. Return of funds deposited to the Personal Account
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Unused tariff options (number of deliveries, number of ESD transactions, etc.) are canceled every month on the day after the expiration of the selected tariff package or when the tariff package is changed both upwards and downwards.
+
+Refunds of funds deposited to top up the Personal Account and which were not debited to the account of tariff packages, services or out-of-limit options are returned by the Provider within 10 calendar days on the basis of a written statement from the User, which indicates: the name of the recipient, the EDRPOU code, the date and number of the payment order, current account, bank name, amount, reason for return.
 
 7.4 Personal Account Balance
 ----------------------------------------------------------------
@@ -267,4 +269,4 @@ The service support service provides the following parameters aimed at ensuring 
 
 ---------------------------------------------
 
-:download:`"EDI Network" platform Terms of Use<files/Правила користування платформою 01-11-23.pdf>`
+:download:`"EDI Network" platform Terms of Use<files/Правила користування платформою 16-09-24.pdf>`

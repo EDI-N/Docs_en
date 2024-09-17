@@ -350,15 +350,4 @@ Tabs style (in conf.py parameter sphinx_tabs_disable_css_loading = True )
 .sphinx-tab img {
 	margin-bottom: 24 px;
 }
- 
-/* Iframe select text */ 
 
-.docsshared-no-download .docsshared-no-select-when-no-download, .docsshared-no-select {
-   -khtml-user-select: text;
-   -moz-user-select: text;
-   -ms-user-select: text;
-   -webkit-touch-callout: text;
-   -webkit-user-drag: text;
-   -webkit-user-select: text;
-   user-select: text;
-}
