@@ -167,7 +167,7 @@ The description of services and conditions of providing access, opportunities an
 6.11 Tariff package activation
 ----------------------------------------------------------------
 
-The user selects the desired tariff package to activate the tariff package. If there are enough funds on the Personal Account to debit the value of the selected package, the automatic debit from the Personal Account is performed. The invoice is formed in the amount of the recommended payment to replenish the Personal Account in case of insufficient funds on the Personal Account. The invoice is valid for 7 banking days. The selected tariff package will be canceled and the transferred funds will be credited to the Personal Account if the payment is will be made later than 7 calendar days. To activate the tariff package, the User must repeat the procedure of selecting the tariff package.
+The user selects the desired tariff package to activate the tariff package. If there are enough funds on the Personal Account to debit the value of the selected package, the automatic debit from the Personal Account is performed. The invoice is formed in the amount of the recommended payment to replenish the Personal Account in case of insufficient funds on the Personal Account. The invoice is valid until the first day of the following month. If the payment was made later, the selected tariff package is canceled, and the paid funds are credited to the Personal account. To activate the tariff package, the User must repeat the procedure of selecting the tariff package.
 
 7 Rules of work with the Personal account
 ===============================================================
@@ -269,4 +269,4 @@ The service support service provides the following parameters aimed at ensuring 
 
 ---------------------------------------------
 
-:download:`"EDI Network" platform Terms of Use<files/Правила користування платформою 16-09-24.pdf>`
+:download:`"EDI Network" platform Terms of Use<files/Правила користування платформою 18-09-24.pdf>`
