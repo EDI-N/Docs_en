@@ -91,9 +91,35 @@ After installation, to enter the application, you must pass authentication: ente
    :height: 300px
    :align: center
 
+.. _auth:
+
+2 User Registration/Authorization in the **"EDIN Market"** App
+=======================================================================
+
+To self-register in the **"EDIN Market"** app, the user needs to click the **"Register"** button on the login page, enter their email, create a password, and click **"Register"** again. After that, the user will receive an email with a confirmation link—click the link (valid for 72 hours) to verify your email:
+
+.. image:: pics_EDIN_Market/EDIN_Market_059.png
+   :align: center
+
+.. attention::
+   The letter could have gone to spam. Therefore, check not only "Inbox", but also "Spam". In case of spam, configure the rules so that the following emails from EDIN are not sent to spam.
+
+To continue the registration, you need to create a user profile by filling out the following fields: Last Name, First Name, Position, Email, and Phone Number. To ensure that you're using your own mobile number, please verify it using an SMS code:
+
+.. image:: pics_EDIN_Market/EDIN_Market_060.png
+   :height: 500px
+   :align: center
+
+To verify your company data, enter the EDRPOU or RNOKPP (TIN), and we will pull all the information from public sources:
+
+.. image:: pics_EDIN_Market/EDIN_Market_061.png
+   :align: center
+
+Registration is complete.
+
 .. _main:
 
-2 Main functional elements of the **"EDIN Market"** application
+3 Main functional elements of the **"EDIN Market"** application
 =====================================================================
 
 The application **"EDIN Market"** has several main functional sections:
@@ -108,7 +134,7 @@ The application **"EDIN Market"** has several main functional sections:
 
 .. _prod-pricelist:
 
-3 Viewing the "Price list" of the Seller (Manufacturer)
+4 Viewing the "Price list" of the Seller (Manufacturer)
 =====================================================================
 
 To view the Seller's "Price List" in the **"Sellers"** section, you need to select one of your counterparties (you can search by name), after which a list of products will open (the Seller's name is displayed at the top of the screen):
@@ -157,7 +183,7 @@ All product positions of the "Price List" can be sorted by three levels. The fir
 
 .. _order-create:
 
-3 Creation of "Order" / "Preorder" according to the Seller's (Manufacturer's) Price List
+5 Creation of "Order" / "Preorder" according to the Seller's (Manufacturer's) Price List
 =================================================================================================
 
 Before starting, make sure that you have chosen the right company! To create a document, go to the **Sellers** section and select one (you can use the search by name).
@@ -220,7 +246,7 @@ The submitted "Order" / "Preorder" is automatically displayed in the **"Orders"*
 
 .. _order-repeat:
 
-3.1 Repeat "Order" / "Preorder"
+5.1 Repeat "Order" / "Preorder"
 ----------------------------------------------------------------
 
 If necessary, it is possible to **"Repeat order"** (create a draft "Order" / "Preorder" with data identical to the already sent document). To do this, you need to open the sent document in the **Orders** section and select **"Repeat order"** in the available actions with the help of an ellipsis (**...**); it remains to specify the delivery date and click **"Send order/preorder"**:
@@ -238,7 +264,7 @@ The automatically created Draft can be sent immediately or after editing.
 
 .. _order-repeat:
 
-3.2 Replace/edit "Order"
+5.2 Replace/edit "Order"
 ----------------------------------------------------------------
 
 .. attention::
@@ -264,7 +290,7 @@ In this way, one "Order" can be edited multiple times (as long as it is in the :
 
 .. _next-steps:
 
-4 Further document management
+6 Further document management
 =====================================================================
 
 After sending the "Order" / "Preorder", the documents are displayed in the **"Orders"** section, where they can be viewed and all further actions are carried out. Documents change their status during their life cycle:
@@ -278,7 +304,7 @@ After sending the "Order" / "Preorder", the documents are displayed in the **"Or
 
 .. _doc-search:
 
-4.1 Document search
+6.1 Document search
 ----------------------------------------------------------------
 
 It is possible to sort documents in the **"Orders"** section by status by selecting one of the quick filters available when scrolling the line sideways:
@@ -303,7 +329,7 @@ According to the selected criteria, press the **"Search"** button - if your docu
 
 .. _products-acceptance:
 
-4.2 Accept products
+6.2 Accept products
 ----------------------------------------------------------------
 
 After the Seller (Manufacturer) forms confirmation and/or shipment according to your "Order", this document automatically changes its status to :orange:`"In Process"` (the action of your counterparty is reflected in `"Order History" <https://wiki.edin.ua/en/latest/Distribution/EDIN_2_0/Instructions_2_0/EDIN_Market.html#history>`__).
@@ -333,7 +359,7 @@ Document flow is complete.
 
 .. _products-return:
 
-4.3 Return products
+6.3 Return products
 ----------------------------------------------------------------
 
 .. attention::
@@ -369,7 +395,7 @@ When viewing the document, the quantity and reason (if available) for the return
 
 .. _history:
 
-4.4 Order history
+6.4 Order history
 ----------------------------------------------------------------
 
 The history appears in the "Order" if some action has been performed with it: "Order editing" (Buyer) has been created; confirmation / shipment (Seller); acceptance (Buyer). That is, when the document is in the status :orange:`"In process"` / :green:`"Completed"`, it definitely has a "history". In order to view the history of the document, you need to use the ellipsis (**...**) in the available actions to select **"Order history"**, where the main changes to the document are displayed: the total amount and by quantity, the price of each product item :
@@ -379,7 +405,7 @@ The history appears in the "Order" if some action has been performed with it: "O
 
 .. _settings:
 
-5 Settings and useful information
+7 Settings and useful information
 =====================================================================
 
 The **Settings** section is available by clicking the |user_app| button. **Settings** can be conditionally divided into functional blocks where your personal settings, policy and rules for using the application, our contacts and other useful information are stored:
@@ -455,6 +481,20 @@ We recommend timely **"Update app"**. You will also receive a notification that 
    .. image:: pics_EDIN_Market/EDIN_Market_058.png
       :height: 500px
       :align: center
+
+.. _delete-account:
+
+8 Deleting your account in EDIN "Market" App
+====================================================================
+
+.. caution::
+   We care about the confidentiality of your credentials, and you can **"Delete account"** by specifying the reason and reconfirming the action with the button:
+
+   .. image:: pics_EDIN_Market/EDIN_Market_062.png
+      :height: 500px
+      :align: center
+
+   However, you should know that you will be deprived of the opportunity to use EDIN Market, and other participants of electronic document circulation will be deprived of the opportunity to exchange electronic documents with you using EDIN Market! You may find out more about the deletion and storage of data from our `Privacy Policy <https://wiki.edin.ua/en/latest/Legal_info/Politic.html>`__ (p.5 and p.9.2.3 respectively).
 
 -------------------------------------
 
