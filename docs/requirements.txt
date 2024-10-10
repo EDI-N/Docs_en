@@ -26,4 +26,4 @@ sphinx-design
 sphinxcontrib-jquery==4.1
 
 # костиль на зміни
--e git+https://github.com/readthedocs/sphinx-build-compatibility#egg=sphinx-build-compatibility
+sphinx-build-compatibility
