@@ -150,7 +150,7 @@ todo_include_todos = False
 # a list of builtin themes.
 
 # Это самый рабочий вариант:
-html_theme = 'furo'
+html_theme = 'sphinx_rtd_theme'
 
 def setup(app):
     app.add_stylesheet('theme_overrides2.css')
