@@ -24,4 +24,4 @@ sphinx-design
 # sphinx==4.5.0
 # jinja2==2.9.22
 
-pip install git+https://github.com/readthedocs/sphinx-build-compatibility#egg=sphinx-build-compatibility
+git+https://github.com/readthedocs/sphinx-build-compatibility#egg=sphinx-build-compatibility
