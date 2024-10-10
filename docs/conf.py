@@ -38,6 +38,7 @@ extensions = [
     'versionwarning.extension',
     'sphinx_tabs.tabs',
     'sphinx_design',
+    'sphinx_build_compatibility.extension',
 ]
 
 # Tabs. By default, tabs can be closed by selecting the open tab. This functionality can be disabled using the sphinx_tabs_disable_tab_closing configuration option:
@@ -152,7 +153,6 @@ def setup(app):
 html_js_files = [
     'lang.js',
     'galaga.js',
-    'searchtools.js',
 ]
 
 # А это то, что я нагородил (не используй это):
