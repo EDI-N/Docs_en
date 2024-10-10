@@ -20,6 +20,6 @@ sphinx-design
 
 # Fix Toctree error https://github.com/readthedocs/readthedocs.org/issues/8070 add latest versions sphinx & sphinx_rtd_theme
 # They fix name bug in some version
-# sphinx_rtd_theme==0.5.2
+# sphinx_rtd_theme==3.0.0
 # sphinx==4.5.0
 # jinja2==2.9.22
