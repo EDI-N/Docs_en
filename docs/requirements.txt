@@ -24,7 +24,7 @@ sphinx-design
 # sphinx==4.5.0
 # jinja2==2.9.22
 
-sphinx_search
+sphinx_search==0.3.0
 
 
 
