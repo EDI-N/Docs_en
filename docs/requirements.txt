@@ -5,6 +5,7 @@ sphinx-notfound-page
 # For UML
 -e git+https://github.com/sphinx-contrib/plantuml.git#egg=sphinxcontrib-plantuml
 sphinx_rtd_theme
+furo
 # For warning message to new site (versionwarning)
 git+https://github.com/humitos/sphinx-version-warning@master#egg=sphinx-version-warning
 # sphinx-version-warning == 1.1.2
