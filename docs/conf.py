@@ -163,6 +163,7 @@ def setup(app):
 html_js_files = [
     'lang.js',
     'galaga.js',
+    'search_js.js',
 ]
 
 # А это то, что я нагородил (не используй это):
