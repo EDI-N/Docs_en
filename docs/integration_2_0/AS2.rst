@@ -23,5 +23,5 @@ AS2 Certification
 
 **Certificates** are used when transferring messages (data) via AS2 channels for their encryption and signing, as well as for connecting via the https protocol.
 
-* Certificate from EDIN for signing and encryption messages via AS2 protocol - :download:`EDIN-certificate<edin.ua.as2.crt>`
-* Certificate is issued by the Certification Authority for connection via https protocol - :download:`root-intermediate-EDIN<star_edin_ua.crt>`
+* Certificate from EDIN for signing and encryption messages via AS2 protocol - :download:`EDIN-certificate<AS2/edin.ua.as2.crt>`
+* Certificate is issued by the Certification Authority for connection via https protocol - :download:`root-intermediate-EDIN<AS2/star_edin_ua.crt>`
