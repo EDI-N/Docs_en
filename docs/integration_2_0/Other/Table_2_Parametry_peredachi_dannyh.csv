@@ -1,0 +1,8 @@
+**Description**,**Value**,**Comment**
+,**Transferring data to EDIN**,
+URL for AS2 connection,https://as2-v2.edin.ua/as2/HttpReceiver,URL (Encoding set applied)
+Port,"80, 443",Required for firewall
+Transport,"https, http",http recommended
+Basic HTTP authentication,No,
+,**Transferring data from EDIN**,
+Transport,"https, http",https port 443; http port 80 - recommended
