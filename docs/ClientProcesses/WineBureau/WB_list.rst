@@ -1,12 +1,12 @@
-ATB
+Wine Bureau
 #############################################
 
 .. toctree::
    :maxdepth: 1
    
-   ATB_XML-structure
+   WB_XML-structure
 
 .. toctree::
    :maxdepth: 1
    
-   ATB_Instructions/ATB_International_deliveries_instruction
+   WB_Instructions/WB_International_deliveries_instruction
