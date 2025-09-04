@@ -30,7 +30,6 @@ This instruction describes the document flow procedure with Grocery Store Chain 
 - `Purchase Order Response <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#ordrsp>`__
 - `Despatch Advice <https://wiki.edin.ua/uk/latest/ClientProcesses/ATB/ATB_XML-structure.html#desadv>`__
 - `Invoice <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#invoice>`__
-- `Universal Document <https://wiki.edin.ua/uk/latest/XML/XML-structure.html#condra>`__
 
 **General document flow scheme:**
 
@@ -47,7 +46,7 @@ This instruction describes the document flow procedure with Grocery Store Chain 
    :start-after: .. початок блоку для Enter
    :end-before: .. кінець блоку для Enter
 
-After successful authorization, the main menu will be opened, where You need to select the **"EDI+UZD"** service in the **"Services"** EDIN tab:
+After successful authorization, the main menu will be opened, where You need to select the **"EDI Network"** service in the **"Services"** EDIN tab:
 
 .. image:: /_constant/pics_landing/landing_edi.png
    :align: center
