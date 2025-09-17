@@ -56,22 +56,31 @@ After successful authorization, the main menu will be opened, where You need to 
 2 Formation of "Purchase Order Response" (ORDRSP) based on incoming "Purchase Order" (ORDER)
 ==============================================================================================================
 
-Distribution Company is the initiator of the document flow and sends the "Purchase Order" (ORDER). To form a "Purchase Order Response" (ORDRSP), you need to select "Purchase Order" (ORDER) in the **"Inbox"** folder, which You need to confirm (for convenience You can use `search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__):
+Distribution Company is the initiator of the document flow and sends the "Purchase Order" (ORDER). Supplier receives an email notification about that. 
 
-.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_054.png
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_002.png
    :align: center
 
-It is necessary to open the incoming "Purchase Order" (ORDER) with the left mouse button and create a "Purchase Order Response" (ORDRSP) for Grocery Store Chain with **"Create document"** button in the block `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ :
+To form a "Purchase Order Response" (ORDRSP), you should open the incoming "Purchase Order" (ORDER). Use one of the following ways to do that:
 
-.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_055.png
+**Way #1** - opening "Purchase Order" from the incoming email notification. Click on the "View document" button in the email (see the screen above). You should be authorized to watch the ORDER.
+
+**Way #2** - opening "Purchase Order" on the web platform. Choose "Purchase Order" (ORDER) in the **"Inbox"** folder (use `search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__ for convenience):
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_003.png
    :align: center
 
-In the open "Purchase Order Response" (ORDRSP) form, some fields are filled automatically from the associated "Purchase Order" (mandatory fields are marked with a red asterisk :red:`*`):
+After using on of the ways above "Purchase Order" (ORDER) form will be opened. To create a "Purchase Order Response" (ORDRSP) click **"Create document"** button in the block `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ :
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_004.png
+   :align: center
+
+In the opened "Purchase Order Response" (ORDRSP) form, some fields are filled automatically from the associated "Purchase Order" (mandatory fields are marked with a red asterisk :red:`*`):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_056.png
    :align: center
 
-**Sender** / **Recipient** data are filled in automatically from the base document and the selected company and cannot be edited. Document subtype **Purchase Order Response** (*Purchase Order Response*, *Purchase Order Response Replacement*, *Deleting a Purchase Order Response*), **Number**, **Date** / time of the document are filled automatically, but available for editing as necessary. **Buyer**, **Supplier**, **Shipping Address** data are also filled in automatically - they can be edited using the "Search counterparty" buttons (|лупа|) or "Point yourself" (|будинок|);
+**Sender** / **Recipient** data are filled in automatically from the base document and the selected company and cannot be edited. Document subtype **Purchase Order Response** (*Purchase Order Response*, *Purchase Order Response Replacement*, *Deleting a Purchase Order Response*), **Number**, **Date** / time of the document are filled automatically, but available for editing if necessary. **Buyer**, **Supplier**, **Shipping Address** data are also filled in automatically - they can be edited using the "Search counterparty" buttons (|лупа|) or "Point yourself" (|будинок|);
 
 .. hint::
    With **"Search counterparty"** (|лупа|) button or **"Point yourself"** (|будинок|) button it is possible to specify or change the data of counterparties. When using **"Search counterparty"** (|лупа|), enter the company name, GLN or TIN in the window that appears:
@@ -81,14 +90,11 @@ In the open "Purchase Order Response" (ORDRSP) form, some fields are filled auto
 
 In the same way, it is possible to add (optionally) information about **Final recipient**, **Payer**, **Shipments point**, **Consignee**. Data from "Purchase Order" is transferred automatically and cannot be edited.
 
-You must select a order currency from the drop-down list (UAH / EUR / USD):
+The order currency is set automatically from "Purchase Order" (UAH / EUR / USD).
 
-.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_070.png
-   :align: center
+The **Additional Information** and **Ramps** blocks are optional and collapsed by default. Block **Total** is calculated automatically after filling table positions in.
 
-The **Additional Information** and **Ramps** blocks are optional and "collapsed" by default. Block **Total** is calculated automatically after filling table positions.
-
-The tabular part displays basic information on the ordered **goods items**. **Items** are carried from "Purchase Order" and "Will be delivered" by default. It is possible to adjust the value of **Confirmed quantity** of the product directly in the table (with adjustments at the same time the item automatically will receive "Quantity change"):
+The tabular part displays basic information on the ordered **goods items**. **Items** are taken from "Purchase Order" and "Will be delivered" by default. It is possible to adjust the value of **Confirmed quantity** of the product directly in the table (with adjustments at the same time the item automatically will receive "Quantity change"):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_057.png
    :align: center
