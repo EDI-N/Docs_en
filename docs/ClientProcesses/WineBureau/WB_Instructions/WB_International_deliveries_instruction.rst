@@ -17,7 +17,7 @@ Document flow with the "Wine Bureau" Import and Distribution Company on the EDI 
 .. role:: red
 
 .. contents:: Contents:
-   :depth: 1
+   :depth: 2
 
 --------------
 
