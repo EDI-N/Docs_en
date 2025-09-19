@@ -1,12 +1,10 @@
 Wine Bureau
 #############################################
 
-.. deprecated
-
-   .. toctree::
-      :maxdepth: 1
+.. toctree::
+   :maxdepth: 1
    
-      WB_XML-structure
+   WB_XML-structure
 
 .. toctree::
    :maxdepth: 1
