@@ -2,6 +2,7 @@ XML Specifications for work with "Wine Bureau"
 ###############################################
 
 .. contents:: Contents:
+   :depth: 2
 
 ---------
 
@@ -17,8 +18,11 @@ XML specifications of documents for "Wine Bureau" are standard. Follow the links
 Here are XML examples of documents for "Wine Bureau". Click to download to your computer.
 
 :download:`XML example ORDERS</ClientProcesses/WineBureau/WB_XML/examples/ORDERS_example.xml>`
+
 :download:`XML example ORDRSP</ClientProcesses/WineBureau/WB_XML/examples/ORDRSP_example.xml>`
+
 :download:`XML example DESADV</ClientProcesses/WineBureau/WB_XML/examples/DESADV_example.xml>`
+
 :download:`XML example INVOICE</ClientProcesses/WineBureau/WB_XML/examples/INVOICE_example.xml>`
 
 ---------
