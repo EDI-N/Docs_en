@@ -162,7 +162,7 @@ In the table positions the supplier can edit the "Delivered Quantity", "Price wi
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_064.png
    :align: center
 
-:red:`It is important to fill the **Expiration date** field in the advanced form "Position info" for each position! (see the screen above).`
+:red:`It is important to fill the "Expiration date" field in the advanced form "Position info" for each position (see the screen above).`
 
 If there is no delivery for some of the items, they should be marked with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Distribution company.
 
@@ -182,13 +182,62 @@ The sent document will be automatically placed into the **"Outbox"** folder and 
 4 Formation of "Invoice" (INVOICE)
 =========================================================================================================================
 
-.. зараз все стандартно, тому копіпастимо сюди:
+.. стандартний інвойс тут: /retail_2.0/formirovanie_otpravka_dokumenta_Schetfaktura_INVOICE_na_EDI_Network_2.0.rst блок INVOICE_standart. Але трохи переробила його
 
-.. include:: /retail_2.0/formirovanie_otpravka_dokumenta_Schetfaktura_INVOICE_na_EDI_Network_2.0.rst
-   :start-after: .. початок блоку для INVOICE_standart
-   :end-before: .. кінець блоку для INVOICE_standart
+The "Invoice" document (INVOICE) on the EDI Network platform can be created based on "Purchase Order" (ORDER), as well as based on "Purchase Order Response" (ORDRSP).
 
-.. кінець блоку для Universal_International_deliveries
+Let's consider the formation of the document "Invoice" (INVOICE) based on "Purchase Order Response" (ORDRSP).
+
+For this, choose "Purchase Order Response" (ORDRSP) for which you need to make a shipment in the **"Outbox"** folder (for convenience you can use `search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__):
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_061.png
+   :align: center
+
+Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create an "Invoice" (INVOICE) for Distribution company using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_068.png
+   :align: center
+
+In the opened "Invoice" (INVOICE) form, almost all fields are filled in automatically from the related basic document (mandatory fields are marked with a red asterisk :red:`*`):
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_069.png
+   :align: center
+
+- **Sender** data is automatically filled in from the selected company and cannot be edited. 
+- **Recipient** data is also filled in automatically (from the basic document) - they can be edited using the "Search counterparty" button (|лупа|) (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__). 
+- **Document number** matches the basic document number, **Date** of the document, which is filled automatically, are also editable if necessary. 
+- **Supplier**, **Buyer**, **Shipment Address** data are also filled in automatically - they can be edited using the "Search counterparty" (|лупа|) or "Point yourself" (|будинок|) buttons (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__).
+- **Consignor**, **Consignee**, **Final recipient**, **Customer**, **Payer** fields can be filled in optionally in the same way.
+- **Account currency** and **With VAT rate** values are filled automatically in from the basic document.
+
+In addition, it is important to specify **Delivery note №** / **from** - number and date of the original document - :red:`must completely match the number/date of the original paper waybill!`. It is also important to choose a delivery date (**Delivery must be made** field):
+
+.. image:: /retail_2.0/pics_INVOICE_na_EDI_Network_2.0/INVOICE_na_EDI_Network_006.png
+   :align: center
+
+Data from "Purchase Order" is transferred automatically and cannot be edited. **Additional information** and **Supplier information** blocks are optional and collapsed by default. The **Total** block is calculated automatically after filling in the table positions.
+
+:red:`All changes in positions should be done only after coordination with the Distribution company!`
+
+The Supplier can edit the "Quantity", "Price without VAT" directly in the table or **"Change"** the data of the item in the advanced form "Position info" after clicking on the bar code of the item:
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_070.png
+   :align: center
+
+If there will be no delivery for some items, mark them with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Distribution company.
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_071.png
+   :align: center
+
+After entering all the data in the document, click the button **"Save"** (1), then **"Send"** (2):
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_072.png
+   :align: center
+
+The sent document will be placed automatically into the **"Outbox"** folder and will be shown in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ documents together with other documents (the number indicates the amount of documents in the chain):
+
+.. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_073.png
+   :align: center
 
 Search Counterparty in a document
 ----------------------------------------
