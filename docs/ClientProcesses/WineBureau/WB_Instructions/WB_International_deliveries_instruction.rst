@@ -42,11 +42,15 @@ This instruction describes the document flow procedure with "Wine Bureau" Import
 1 Login to the platform
 ====================================
 
-.. include:: /general_2_0/rabota_s_platformoj_EDIN_2.0.rst
-   :start-after: .. початок блоку для Enter
-   :end-before: .. кінець блоку для Enter
+You can use any browser to work with the WEB service (**Google Chrome** latest version is recommended). To start work with the **EDI Network** platform, you need to `Authorize <https://wiki.edin.ua/en/latest/general_2_0/User_registration.html#auth>`__ : follow the link https://edo-v2.edin.ua/auth, enter your user login and password, press **"Sign In"**, as shown in the image below:
 
-After successful authorization, the main menu will be opened, where You need to select the **"EDI Network"** service in the **"Services"** EDIN tab:
+.. image:: /general_2_0/pics_rabota_s_platformoj_EDIN_2.0/rabota_s_platformoj_072.png
+   :align: center
+
+.. hint::
+   After entering to the **EDI Network** platform, you can change your personal data in the `"User profile" <https://wiki.edin.ua/en/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#user-profile>`__.
+
+After successful authorization, the main menu will be opened, where you need to select the **"EDI Network"** service in the **"Services"** EDIN tab:
 
 .. image:: /_constant/pics_landing/landing_edi.png
    :align: center
@@ -54,7 +58,7 @@ After successful authorization, the main menu will be opened, where You need to 
 2 Formation of "Purchase Order Response" (ORDRSP) based on incoming "Purchase Order" (ORDER)
 ==============================================================================================================
 
-Distribution Company is the initiator of the document flow and sends the "Purchase Order" (ORDER). Supplier receives an email notification about that. 
+Wine Bureau is the initiator of the document flow and sends the "Purchase Order" (ORDER). Supplier receives an email notification about that. 
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_006.png
    :align: center
@@ -85,7 +89,7 @@ In the opened "Purchase Order Response" (ORDRSP) form, some fields are filled au
 
 - **Sender** / **Recipient** data are filled in automatically from the base document and the selected company and cannot be edited. 
 - Document subtype **Purchase Order Response** (*Purchase Order Response*, *Purchase Order Response Replacement*, *Deleting a Purchase Order Response*), **Number**, **Date** / time of the document are filled automatically, but available for editing if necessary. 
-- **Buyer**, **Supplier**, **Shipping Address** data are also filled in automatically - they can be edited using the "Search counterparty" buttons (|лупа|) or "Point yourself" (|будинок|) (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__).
+- **Buyer**, **Supplier**, **Shipping Address** data are also filled in automatically.
 
 In the same way, it is possible to add (optionally) information about **Final recipient**, **Payer**, **Shipments point**, **Consignee**. Data from "Purchase Order" is transferred automatically and cannot be edited.
 
@@ -98,7 +102,7 @@ The tabular part displays basic information on the ordered **goods items**. **It
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_deliveries_instruction/ATB_International_deliveries_instruction_057.png
    :align: center
 
-The Supplier can edit "Confirmed quantity" and "Price without VAT" directly in the table or **"Change"** item data in the advanced form "Position info" after clicking on the barcode of the item:
+The Supplier can edit "Confirmed quantity" and "Price without VAT" **directly in the table** or change item data in the advanced form "Position info" after clicking on the barcode of the item:
 
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_deliveries_instruction/ATB_International_deliveries_instruction_068.png
    :align: center
@@ -108,9 +112,9 @@ It is also possible to choose (mark with a checker) the items for which you need
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_deliveries_instruction/ATB_International_deliveries_instruction_058.png
    :align: center
 
-:red:`All changes in positions must be made only after coordination with the Distribution company!`
+:red:`Before confirming the "Purchase Order", please make sure all updates are discussed with Wine Bureau!`
 
-If there is no delivery for some of the items, they should be marked with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Distribution company.
+If there is no delivery for some of the items, they should be marked with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Wine Bureau.
 
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_deliveries_instruction/ATB_International_deliveries_instruction_069.png
    :align: center
@@ -125,6 +129,8 @@ The sent document will be automatically placed into the **"Outbox"** folder and 
 .. image:: /ClientProcesses/ATB/ATB_Instructions/pics_ATB_International_deliveries_instruction/ATB_International_deliveries_instruction_060.png
    :align: center
 
+Wine Bureau will receive an email notification about incoming "Purchase Order Response" (ORDRSP).
+
 3 Formation of "Despatch Advice" (DESADV)
 =========================================================================================================================
 
@@ -137,34 +143,34 @@ For that, you need to select "Purchase Order Response" (ORDRSP) (for which you n
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_061.png
    :align: center
 
-Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Despatch Advice" (DESADV) for Distribution company using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
+Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Despatch Advice" (DESADV) for the Wine Bureau using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_062.png
    :align: center
 
-In the opened "Despatch Advice" (DESADV) form, almost all fields are filled in automatically from the associated basic document (mandatory fields are marked with a red asterisk :red:`*`):
+In the opened "Despatch Advice" (DESADV) form almost all fields are filled in automatically from the associated basic document (mandatory fields are marked with a red asterisk :red:`*`):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_063.png
    :align: center
 
 - **Sender** data is automatically filled in from the selected company and cannot be edited. The data of the **Recipient** are also filled in automatically (from the base document) - they can be edited using the "Search counterparty" button (|лупа|) (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__). 
 - **Document number** matches the base document number, **Date** / time of the document, which are filled automatically, are also available for editing if necessary. 
-- **Supplier**, **Buyer**, **Shipment Address** data are also filled in automatically - they can be edited using the "Search counterparty" (|лупа|) or "Point yourself" (|будинок|) buttons (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__).
+- **Supplier**, **Buyer**, **Shipment Address** data are also filled in automatically.
 
 In the same way, it is possible to add (optionally) information about the **Final Recipient**. Data from "Purchase Order" is transferred automatically and cannot be edited. 
 
 **Additional information** and **Transportation** blocks are optional and "collapsed" by default. The **Total** block is calculated automatically after filling in the table positions.
 
-:red:`All changes in positions must be made only after coordination with the Disrtibution company!`
+:red:`Please make any changes in the positions only after coordination with Wine Bureau!`
 
-In the table positions the supplier can edit the "Delivered Quantity", "Price without VAT" and "VAT rate" directly in the table or **"Change"** the data of the item in the advanced form "Position info" after clicking on the bar code of the item:
+In the table positions the supplier can edit the "Delivered Quantity", "Price without VAT" and "VAT rate" **directly in the table** or change the item data in the advanced form "Position info" after clicking on the barcode of the item:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_064.png
    :align: center
 
 :red:`It is important to fill the "Expiration date" field in the advanced form "Position info" for each position (see the screen above).`
 
-If there is no delivery for some of the items, they should be marked with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Distribution company.
+If there is no delivery for some of the items, they should be marked with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Wine Bureau.
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_065.png
    :align: center
@@ -174,7 +180,7 @@ After entering all the data in the document, click the button **"Save"** (1), th
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_066.png
    :align: center
 
-The sent document will be automatically placed into the **"Outbox"** folder and will be shown in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ documents together with "Purchase Order" and "Purchase Order Response" (the number indicates an amount of documents in the chain):
+The sent document will be automatically placed into the **"Outbox"** folder and will be shown in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ documents together with "Purchase Order" and "Purchase Order Response" (the number in brackets indicates an amount of documents in the chain):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_067.png
    :align: center
@@ -193,12 +199,12 @@ For this, choose "Purchase Order Response" (ORDRSP) for which you need to make a
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_061.png
    :align: center
 
-Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create an "Invoice" (INVOICE) for Distribution company using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
+Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create an "Invoice" (INVOICE) for the Wine Bureau using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_068.png
    :align: center
 
-In the opened "Invoice" (INVOICE) form, almost all fields are filled in automatically from the related basic document (mandatory fields are marked with a red asterisk :red:`*`):
+In the opened "Invoice" (INVOICE) form almost all fields are filled in automatically from the related basic document (mandatory fields are marked with a red asterisk :red:`*`):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_069.png
    :align: center
@@ -206,25 +212,25 @@ In the opened "Invoice" (INVOICE) form, almost all fields are filled in automati
 - **Sender** data is automatically filled in from the selected company and cannot be edited. 
 - **Recipient** data is also filled in automatically (from the basic document) - they can be edited using the "Search counterparty" button (|лупа|) (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__). 
 - **Document number** matches the basic document number, **Date** of the document, which is filled automatically, are also editable if necessary. 
-- **Supplier**, **Buyer**, **Shipment Address** data are also filled in automatically - they can be edited using the "Search counterparty" (|лупа|) or "Point yourself" (|будинок|) buttons (for more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__).
+- **Supplier**, **Buyer**, **Shipment Address** data are also filled in automatically.
 - **Consignor**, **Consignee**, **Final recipient**, **Customer**, **Payer** fields can be filled in optionally in the same way.
 - **Account currency** and **With VAT rate** values are filled automatically in from the basic document.
 
-In addition, it is important to specify **Delivery note №** / **from** - number and date of the original document - :red:`must completely match the number/date of the original paper waybill!`. It is also important to choose a delivery date (**Delivery must be made** field):
+In addition, it is important to specify **Delivery note №** / **from** - number and date of the original document - :red:`must completely match the number/date of the original paper waybill!` It is also important to choose a delivery date (**Delivery must be made** field):
 
 .. image:: /retail_2.0/pics_INVOICE_na_EDI_Network_2.0/INVOICE_na_EDI_Network_006.png
    :align: center
 
 Data from "Purchase Order" is transferred automatically and cannot be edited. **Additional information** and **Supplier information** blocks are optional and collapsed by default. The **Total** block is calculated automatically after filling in the table positions.
 
-:red:`All changes in positions should be done only after coordination with the Distribution company!`
+:red:`Please make any changes in the positions only after coordination with Wine Bureau!`
 
-The Supplier can edit the "Quantity", "Price without VAT" directly in the table or **"Change"** the data of the item in the advanced form "Position info" after clicking on the bar code of the item:
+The Supplier can edit the "Quantity", "Price without VAT" **directly in the table** or change the item data in the advanced form "Position info" after clicking on the barcode of the item:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_070.png
    :align: center
 
-If there will be no delivery for some items, mark them with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Distribution company.
+If there is no delivery for some items, mark them with a check mark and **"Delete"**. It is also possible to **"+Add"** new product positions, but these actions should be coordinated with the Wine Bureau.
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_071.png
    :align: center
@@ -234,7 +240,7 @@ After entering all the data in the document, click the button **"Save"** (1), th
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_072.png
    :align: center
 
-The sent document will be placed automatically into the **"Outbox"** folder and will be shown in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ documents together with other documents (the number indicates the amount of documents in the chain):
+The sent document will be placed automatically into the **"Outbox"** folder and will be shown in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ documents together with other documents (the number in brackets indicates the amount of documents in the chain):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_073.png
    :align: center
