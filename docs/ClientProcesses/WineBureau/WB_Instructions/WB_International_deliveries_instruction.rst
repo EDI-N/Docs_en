@@ -42,7 +42,7 @@ This instruction describes the document flow procedure with "Wine Bureau" Import
 1 Login to the platform
 ====================================
 
-You can use any browser to work with the WEB service (**Google Chrome** latest version is recommended). To start work with the **EDI Network** platform, you need to `Authorize <https://wiki.edin.ua/en/latest/general_2_0/User_registration.html#auth>`__ : follow the link https://edo-v2.edin.ua/auth, enter your user login and password, press **"Sign In"**, as shown in the image below:
+You can use any browser to work with the WEB service (**Google Chrome** latest version is recommended). To start work with the **EDI Network** platform, you need to `Authorize <https://wiki.edin.ua/en/latest/general_2_0/User_registration.html#auth>`__ : follow the link https://edo-v2.edin.ua/auth, enter your user login and password, click **"Sign In"** button, as shown on the image below:
 
 .. image:: /general_2_0/pics_rabota_s_platformoj_EDIN_2.0/rabota_s_platformoj_072.png
    :align: center
@@ -65,7 +65,7 @@ Wine Bureau is the initiator of the document flow and sends the "Purchase Order"
 
 To form a "Purchase Order Response" (ORDRSP), you should open the incoming "Purchase Order" (ORDER). Use one of the following ways to do that:
 
-**Way #1** - opening "Purchase Order" from the incoming email notification. Click on the "View document" button in the email (see the screen above). You should be authorized to watch the ORDER.
+**Way #1** - opening "Purchase Order" from the incoming email notification. Click on the **"View document"** button in the email (see the screen above). You should be authorized to watch the ORDER.
 
 **Way #2** - opening "Purchase Order" on the web platform. Choose "Purchase Order" (ORDER) in the **"Inbox"** folder (use `search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__ for convenience):
 
@@ -143,7 +143,7 @@ For that, you need to select "Purchase Order Response" (ORDRSP) (for which you n
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_061.png
    :align: center
 
-Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create a "Despatch Advice" (DESADV) for the Wine Bureau using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
+Click on the sent "Purchase Order Response" (ORDRSP) to open it. To create a "Despatch Advice" (DESADV) for the Wine Bureau, click on the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_062.png
    :align: center
@@ -199,7 +199,7 @@ For this, choose "Purchase Order Response" (ORDRSP) for which you need to make a
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_061.png
    :align: center
 
-Open the sent "Purchase Order Response" (ORDRSP) with the left mouse button and create an "Invoice" (INVOICE) for the Wine Bureau using the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
+Click on the sent "Purchase Order Response" (ORDRSP) to open it. To create an "Invoice" (INVOICE) for the Wine Bureau,  click on the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_068.png
    :align: center
