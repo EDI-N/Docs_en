@@ -157,7 +157,7 @@ In the opened "Despatch Advice" (DESADV) form almost all fields are filled in au
 - **Document number** matches the base document number, **Date** / time of the document, which are filled automatically, are also available for editing if necessary. 
 - **Supplier**, **Buyer**, **Shipment Address** data are also filled in automatically.
 
-In the same way, it is possible to add (optionally) information about the **Final Recipient**. Data from "Purchase Order" is transferred automatically and cannot be edited. 
+In the same way, it is possible to add (optionally) information about the **Final Recipient**. 
 
 **Additional information** and **Transportation** blocks are optional and "collapsed" by default. The **Total** block is calculated automatically after filling in the table positions.
 
