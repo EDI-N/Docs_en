@@ -87,14 +87,14 @@ After that "Purchase Order Response" (ORDRSP) form will be opened:
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_009.png
    :align: center
 
-The following fields of "Purchase Order Response" form are filled in automatically from the related "Purchase Order" [1]:
+The following fields of "Purchase Order Response" form are filled in automatically from the related "Purchase Order" [#1]:
 
 - **Sender** / **Recipient** data (cannot be edited). 
 - **Number**, **Date**, **Time** of the document (can be edited if necessary). 
 - **Buyer**, **Supplier**, **Shipping Address** data.
 - **Order currency** (UAH / EUR / USD).
 
-Document subtype is **Purchase Order Response** by default (can be changed if nessesary [2]):
+Document subtype is **Purchase Order Response** by default (can be changed if nessesary [#2]):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_076.png
    :align: center
@@ -159,7 +159,7 @@ Click on the sent "Purchase Order Response" (ORDRSP) to open it. To create a "De
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_063.png
    :align: center
 
-In "Despatch Advice" (DESADV) form the following fields are filled automatically in from the related basic document [1]:
+In "Despatch Advice" (DESADV) form the following fields are filled automatically in from the related basic document [#1]:
 
 - **Sender** data (cannot be edited). 
 - **Recipient** data (can be edited using the "Search counterparty" button (|лупа|). For more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__). 
@@ -219,7 +219,7 @@ Click on the sent "Despatch Advice" to open it. To create an "Invoice" (INVOICE)
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_069.png
    :align: center
 
-In the opened "Invoice" (INVOICE) form the following fields are filled in automatically from the related basic document [1]:
+In the opened "Invoice" (INVOICE) form the following fields are filled in automatically from the related basic document [#1]:
 
 - **Sender** data (cannot be edited)
 - **Recipient** data (can be edited using the "Search counterparty" button (|лупа|). For more details see `here <https://wiki.edin.ua/en/latest/ClientProcesses/WineBureau/WB_Instructions/WB_International_deliveries_instruction.html#search-counterparty-in-a-document>`__)
@@ -269,9 +269,9 @@ With **"Search counterparty"** (|лупа|) button or **"Point yourself"** (|б�
 
 -------------------------------------
 
-.. [1] Mandatory fields are marked with a red asterisk :red:`*`
+.. [#1] Mandatory fields are marked with a red asterisk :red:`*`
 
-.. [2] In case you need to make changes in the sent "Purchase Order Response", create one more "Purchase Order Response" in the same way, choose the appropriate document subtype (Purchase Order Response Replacement or Deleting a Purchase Order Response), provide required changes, save and send the document.
+.. [#2] In case you need to make changes in the sent "Purchase Order Response", create one more "Purchase Order Response" in the same way, choose the appropriate document subtype (Purchase Order Response Replacement or Deleting a Purchase Order Response), provide required changes, save and send the document.
 
 -------------------------------------
 
