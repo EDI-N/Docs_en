@@ -200,16 +200,16 @@ The sent document will be automatically placed into the **"Outbox"** folder and 
 
 .. стандартний інвойс тут: /retail_2.0/formirovanie_otpravka_dokumenta_Schetfaktura_INVOICE_na_EDI_Network_2.0.rst блок INVOICE_standart. Але трохи переробила його
 
-The "Invoice" document (INVOICE) on the EDI Network platform can be created based on one of the following documents: "Purchase Order" (ORDER), "Purchase Order Response" (ORDRSP), "Despatch Advice" (DESADV).
+The "Invoice" document (INVOICE) on the EDI Network platform can be created based on one of the following documents: "Purchase Order" (ORDER), "Purchase Order Response" (ORDRSP).
 
-Let's consider the formation of the document "Invoice" (INVOICE) based on "Despatch Advice" (DESADV) because that flow is preferable for using.
+Let's consider the formation of the document "Invoice" (INVOICE) based on "Purchase Order Response" (ORDRSP) because that flow is preferable for using.
 
-To do that, open the **"Outbox"** folder and find the "Despatch Advice" for which you need to make a shipment (for convenience you can use `search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__):
+To do that, open the **"Outbox"** folder and find the "Purchase Order Response" for which you need to make a shipment (for convenience you can use `search <https://wiki.edin.ua/uk/latest/general_2_0/rabota_s_platformoj_EDIN_2.0.html#doc-search>`__):
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_061.png
    :align: center
 
-Click on the sent "Despatch Advice" to open it. To create an "Invoice" (INVOICE) for the Wine Bureau,  click on the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
+Click on the sent "Purchase Order Response" to open it. To create an "Invoice" (INVOICE) for the Wine Bureau,  click on the **"Create document"** button in the `document chain <https://wiki.edin.ua/uk/latest/_constant/chain/chain.html>`__ block:
 
 .. image:: /ClientProcesses/WineBureau/WB_Instructions/pics_WB_International_deliveries_instruction/WB_International_deliveries_instruction_068.png
    :align: center
